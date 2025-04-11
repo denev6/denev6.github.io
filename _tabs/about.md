@@ -23,7 +23,7 @@ Sung-jin Park
 사용 경험은 없으나, 이론적 지식이 있는 기술
 
 - Programing Languages: `Go`, `SQL`
-- ETC: `Tensorflow`, `Linux`
+- ETC: `Tensorflow`
 
 ## 소개
 
@@ -41,7 +41,7 @@ Sung-jin Park
   - **사용자 테스트 및 전문가 피드백**을 통한 성능 개선
 - 사용언어 및 환경: `Python3`, `Mediapipe`, `Opencv`, `Pyautogui`
 - Github: [face-mouse-control](https://github.com/denev6/face-mouse-control)
-- 논문: [koreascience/JAKO202228049092231](http://koreascience.or.kr/article/JAKO202228049092231.page)
+- 논문: [koreascience/JAKO202228049092231](https://koreascience.or.kr/article/JAKO202228049092231.page)
 - 블로그: [기록 보기](/projects/2022/10/07/face-mouse-control.html)
 
 ## 개인 프로젝트
