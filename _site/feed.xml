@@ -4,7 +4,7 @@
   <id>https://denev6.github.io/</id>
   <title>Jin's Notes</title>
   <subtitle>AI, 수학, Python, Golang을 다루는 학생입니다.</subtitle>
-  <updated>2025-04-19T10:32:11+09:00</updated>
+  <updated>2025-04-26T11:52:08+09:00</updated>
   <author>
     <name>박성진</name>
     <uri>https://denev6.github.io/</uri>
@@ -17,6 +17,52 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Human-level control through deep reinforcement learning</title>
+    <link href="https://denev6.github.io/paper-review/2025/04/25/dqn.html" rel="alternate" type="text/html" title="Human-level control through deep reinforcement learning" />
+    <published>2025-04-25T00:00:00+09:00</published>
+  
+    <updated>2025-04-25T00:00:00+09:00</updated>
+  
+    <id>https://denev6.github.io/paper-review/2025/04/25/dqn.html</id>
+    <content src="https://denev6.github.io/paper-review/2025/04/25/dqn.html" />
+    <author>
+      <name>박성진</name>
+    </author>
+
+  
+    
+    <category term="Paper-Review" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      문제 정의
+
+
+
+게임(Atari 2600)을 플레이하는 상황을 State, Action, Reward를 가진 MDP(Markov Decision Process) 상황으로 해석할 수 있다. 하지만 각 state가 복잡해서 state-action value를 정의하기 어렵다. 따라서 Convolutional Network을 사용해 state에서 특징을 추출하고, Feed Forward Network를 통해 state-action value를 예측한다.
+
+
+  State: 게임 화면 (픽셀 이미지)
+  Action: 게임기를 통해 각 time-step마다 입력된다.
+  Reward: 게임 내 점수 변화
+
+
+학습된 agent가 게임기를 통해 reward를 높이는 방향으로 행동하는 것이 최종 목표다. 참고로 본...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -152,7 +198,7 @@ Github: ADHD-EEG-ViT
     <link href="https://denev6.github.io/computer-vision/2025/02/08/fcn.html" rel="alternate" type="text/html" title="Image Segmentation with FCN" />
     <published>2025-02-08T00:00:00+09:00</published>
   
-    <updated>2025-02-08T00:00:00+09:00</updated>
+    <updated>2025-04-19T10:32:40+09:00</updated>
   
     <id>https://denev6.github.io/computer-vision/2025/02/08/fcn.html</id>
     <content src="https://denev6.github.io/computer-vision/2025/02/08/fcn.html" />
@@ -185,54 +231,6 @@ Image Segmentation
 
 
 기존의 CNN classification 모델은 2차원 feature map을 1차원으로 압축해 결과를 출력한다. 만약 2차원 정보를 유지한 채...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>An Image is Worth 16x16 Words, Transformers For Image Recognition At Scale</title>
-    <link href="https://denev6.github.io/paper-review/2025/02/06/vit.html" rel="alternate" type="text/html" title="An Image is Worth 16x16 Words, Transformers For Image Recognition At Scale" />
-    <published>2025-02-06T00:00:00+09:00</published>
-  
-    <updated>2025-02-06T00:00:00+09:00</updated>
-  
-    <id>https://denev6.github.io/paper-review/2025/02/06/vit.html</id>
-    <content src="https://denev6.github.io/paper-review/2025/02/06/vit.html" />
-    <author>
-      <name>박성진</name>
-    </author>
-
-  
-    
-    <category term="Paper-Review" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      
-  논문: arXiv
-  공식 구현: Pytorch-vision
-  분석 코드: Github
-
-
-본문에 L000으로 적힌 링크는 줄번호로, 클릭하면 Pytorch에서 어떻게 구현되어 있는지 확인할 수 있다.
-
-Abstract
-
-Transformer는 자연어 처리 분야에서 활발히 사용되고 있지만, 비전(vision) 문제에 적용된 경우는 제한적이다. 우리는 이미지 조각을 순수한 transformer에 입력해 분류 문제를 풀었다. Vision Transformer(ViT)는 CNN과 비교해 SOTA를 달성했으며, 더 적은 연산 비용이 든다.
-
-Introduction
-
-Self-attention 구조의 transformer가 자연어 처리에서 좋은 성능을 보이고 있지만, 비전 분야는 여전히 CNN이 우세하다...
     </summary>
   
 
