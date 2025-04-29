@@ -56,4 +56,10 @@ $$q_{\pi}(s, a) = R(s, a) + \gamma \sum_{s'\in S} P(s'|s, a) v_{\pi}(s')$$
 
 $q$는 '현재 보상' + '미래 보상'의 형태를 띈다. $\gamma$는 discount factor로 미래에 대한 보상을 얼마나 중요하게 생각할지를 결정한다. $\gamma$가 작으면 당장 눈 앞에 주어진 보상을 중요하게 생각한다. 반대로 $\gamma$가 크면 미래에 있을 큰 보상을 기대하고 움직인다.
 
-앞서 설명했듯 환경을 전부 알면 planning이지 학습은 아니다. 즉, 위에서 정의한 $v$와 $q$는 학습이 아닌 예측에 사용하는 보상 값이다. Planning은 가능한 모든 선택을 반영해 평가하는 반면, Learning은 한 가지 행동을 선택하고, 선택한 결과를 평가한다. 이때 transition probability도 알지 못하기 때문에 훨씬 간단하게 정의된다. 자세한 내용은 Monte-Carlo나 Temporal-Difference라는 주제로 다룬다.
+어떤 문제는 action을 취하고, 다음 state에 따라 보상이 주어지기도 한다. 이럴 때는 $q_{\pi}(s, a)$를 다르게 표현한다.
+
+$$q_{\pi}(s, a) = \sum_{s',r} P(s',r|s, \pi(s)) [r + \gamma q(s')]$$
+
+이러한 표현식은 policy iteration이나 value iteration 알고리즘에서 볼 수 있다. value는 문제에 따라 다르게 표현할 수 있다는 점을 기억해야 한다.
+
+앞서 설명했듯 환경을 전부 알면 planning이지 학습은 아니다. 위에서 정의한 $v$와 $q$는 학습이 아닌 예측에 사용하는 보상 값이다. Planning은 가능한 모든 선택을 반영해 평가하는 반면, Learning은 한 가지 행동을 선택하고, 선택한 결과를 평가한다. 이때 transition probability도 알지 못하기 때문에 훨씬 간단하게 정의된다. 자세한 내용은 Monte-Carlo나 Temporal-Difference라는 주제로 다룬다.

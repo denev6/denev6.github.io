@@ -754,6 +754,30 @@ Jin's Notes
       
 
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
 
     
 
@@ -843,9 +867,9 @@ Jin's Notes
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1403 단어"
+  title="1698 단어"
 >
-  <em>7 
+  <em>9 
 분</em>
 읽는 시간
 </span>
@@ -861,9 +885,9 @@ Jin's Notes
 <div class="content">
   <h2 id="프로젝트를-시작하며"><span class="me-2">프로젝트를 시작하며</span><a href="#프로젝트를-시작하며" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p><strong>Retrieval-Augmented Generation(RAG)</strong>를 이용해 학교 공지를 빠르게 찾는 챗봇을 구현했다. <code class="language-plaintext highlighter-rouge">Encoder</code> + <code class="language-plaintext highlighter-rouge">FAISS</code> + <code class="language-plaintext highlighter-rouge">SQLite</code>를 이용해 로컬 GPU로 실험했으며, 문장 요약을 위해 <code class="language-plaintext highlighter-rouge">GPT-3.5-turbo</code>를 사용했다.</p>
+<p><strong>Retrieval-Augmented Generation(RAG)</strong>를 이용해 학교 공지를 빠르게 찾는 챗봇을 구현했다. <code class="language-plaintext highlighter-rouge">Encoder</code> + <code class="language-plaintext highlighter-rouge">FAISS</code> + <code class="language-plaintext highlighter-rouge">SQLite</code>를 이용해 로컬 GPU로 실험했으며, 문장 요약을 위해 <code class="language-plaintext highlighter-rouge">Claude3 Sonnet</code>을 사용했다.</p>
 
-<video src="https://github.com/user-attachments/assets/a7f7a292-75cb-4493-8411-5ded8fa783e9" width="100%" controls="" muted=""></video>
+<video src="https://github.com/user-attachments/assets/cbe11f31-254b-4dfa-8296-09ad93406c66" width="100%" controls="" muted=""></video>
 
 <p><a href="https://github.com/denev6/retrieve-notice">Github 보기</a></p>
 
@@ -931,24 +955,26 @@ Jin's Notes
 </pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">sentence_transformers</span> <span class="kn">import</span> <span class="n">SentenceTransformer</span>
 
 <span class="n">encoder</span> <span class="o">=</span> <span class="nc">SentenceTransformer</span><span class="p">(</span><span class="sh">"</span><span class="s">snunlp/KR-SBERT-V40K-klueNLI-augSTS</span><span class="sh">"</span><span class="p">)</span>
-<span class="n">encoder</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">texts</span><span class="p">,</span> <span class="n">convert_to_numpy</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
+<span class="n">encoder</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">texts</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <h3 id="faiss"><span class="me-2">FAISS</span><a href="#faiss" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>Embedding space를 저장할 때 <strong>Facebook AI Similarity Search</strong>(FAISS)를 이용했다. FAISS는 벡터 간 유사도를 빠르게 찾아주는 오픈소스 라이브러리다. Embedding된 벡터를 FAISS에 저장하고, L2(Euclidean distance)를 계산해 K개의 유사한 벡터를 찾아온다.</p>
+<p>Embedding space를 저장할 때 <strong>Facebook AI Similarity Search</strong>(FAISS)를 이용했다. FAISS는 벡터 간 유사도를 빠르게 찾아주는 오픈소스 라이브러리다. Embedding된 벡터를 FAISS에 저장하고, 유사도를 계산해 K개의 유사한 벡터를 찾아온다.</p>
 
 <div class="language-python highlighter-rouge"><div class="code-header">
         <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed=""><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre><span class="n">distances</span><span class="p">,</span> <span class="n">indices</span> <span class="o">=</span> <span class="n">index</span><span class="p">.</span><span class="nf">search</span><span class="p">(</span><span class="n">query_embedding</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">notice_id</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-    <span class="n">title</span><span class="p">,</span> <span class="n">content</span> <span class="o">=</span> <span class="nf">parse_sqlite</span><span class="p">(</span><span class="n">cursor</span><span class="p">,</span> <span class="n">table</span><span class="p">,</span> <span class="n">notice_id</span><span class="p">)</span>
+4
+</pre></td><td class="rouge-code"><pre><span class="n">hf_embeddings</span> <span class="o">=</span> <span class="nc">HuggingFaceEmbeddings</span><span class="p">(</span>
+    <span class="n">model_name</span><span class="o">=</span><span class="n">ENCODER_MODEL</span><span class="p">,</span> <span class="n">model_kwargs</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">device</span><span class="sh">"</span><span class="p">:</span> <span class="n">device</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="n">faiss_index</span> <span class="o">=</span> <span class="n">FAISS</span><span class="p">.</span><span class="nf">from_documents</span><span class="p">(</span><span class="n">docs</span><span class="p">,</span> <span class="n">hf_embeddings</span><span class="p">)</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>FAISS에서 검색을 완료하면 id(공지번호)를 뱉도록 구현했다. 따라서 유사한 공지의 id를 이용해 데이터베이스에서 공지 전체 내용을 조회한다.</p>
+<p>FAISS에서 검색을 완료하면 공지 내용과 id(공지번호)를 뱉도록 구현했다. 따라서 유사한 공지의 id를 이용해 데이터베이스에서 공지 전체 내용을 조회할 수 있다.</p>
 
 <h2 id="llm"><span class="me-2">LLM</span><a href="#llm" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -956,12 +982,12 @@ Jin's Notes
 
 <p><a href="/assets/posts/retrieve-notice/compare-demo.png" class="popup img-link "><img data-src="/assets/posts/retrieve-notice/compare-demo.png" alt="데모 비교" class="lazyload" data-proofer-ignore></a></p>
 
-<p>그런데 정보를 그대로 던져주는 것보다는 짧게 요약해서 보여주는 게 사용자 입장에서 더 편할 거다. 그래서 Retriever가 물어온 정보를 <strong>GPT-3.5-turbo</strong>를 이용해 요약한다. 이 과정에서는 Openai API를 사용했다.</p>
+<p>그런데 정보를 그대로 던져주는 것보다는 짧게 요약해서 보여주는 게 사용자 입장에서 더 편할 거다. 그래서 Retriever가 물어온 정보를 LLM API를 이용해 요약한다. Version 1에서는 <strong>GPT-3.5-turbo</strong>를, Version 2는 <strong>Claude3 Sonnet</strong>을 사용했다.</p>
 
 <p>요약을 위해 사용한 프롬프트는 다음과 같다.</p>
 
-<div class="language-python highlighter-rouge"><div class="code-header">
-        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-text highlighter-rouge"><div class="code-header">
+        <span data-label-text="Text"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed=""><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -973,20 +999,24 @@ Jin's Notes
 9
 10
 11
-</pre></td><td class="rouge-code"><pre><span class="n">system_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"""</span><span class="s">You are an assistant that specialized in summarizing and answering documents about school notices.
-You need to take given documents and return a detailed summary.
-Here are the documents:
-</span><span class="si">{</span><span class="n">references</span><span class="si">}</span><span class="s">
-You must answer in Korean based on the documents.
-</span><span class="sh">"""</span>
-<span class="n">user_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">User question: </span><span class="sh">'</span><span class="si">{</span><span class="nf">str</span><span class="p">(</span><span class="n">user_query</span><span class="p">.</span><span class="nf">strip</span><span class="p">())</span><span class="si">}</span><span class="sh">'</span><span class="s">.</span><span class="sh">"</span>
-<span class="n">prompt</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span><span class="sh">"</span><span class="s">role</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">system</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">content</span><span class="sh">"</span><span class="p">:</span> <span class="n">system_prompt</span><span class="p">},</span>
-    <span class="p">{</span><span class="sh">"</span><span class="s">role</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">user</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">content</span><span class="sh">"</span><span class="p">:</span> <span class="n">user_prompt</span><span class="p">},</span>
-<span class="p">]</span>
+</pre></td><td class="rouge-code"><pre>[system]
+You are an assistant for question-answering tasks. 
+Use the following pieces of retrieved context to answer the question. 
+If you don't know the answer, just say that you don't know. 
+Always answer in Korean based on the documents.
+{history}
+
+[user]
+Question: {user_query} 
+Context: {reference_documents} 
+Answer
 </pre></td></tr></tbody></table></code></div></div>
 
 <h2 id="결과-및-제안"><span class="me-2">결과 및 제안</span><a href="#결과-및-제안" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>데모 영상: <a href="https://github.com/denev6/retrieve-notice/issues/1">Github: v1, v2</a></p>
+
+<h3 id="version-1"><span class="me-2">Version 1</span><a href="#version-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p>빠른 시연을 위해 Streamlit을 사용했다. RTX 4060 위에서 Embedding 및 FAISS 검색을 처리했다. 데모 영상 기준, 관련된 공지 3개를 찾는데 총 <strong>0.062초</strong>, LLM 요약까지 총 <strong>3.594초</strong>가 걸렸다. 데모 영상에서 볼 수 있듯 필요한 정보를 잘 물어온다.</p>
 
@@ -996,6 +1026,19 @@ You must answer in Korean based on the documents.
   <li>LLM을 이용해 사용자 질문(입력)에서 키워드를 추출하고, 이를 FAISS 검색 쿼리로 사용한다.</li>
   <li>검색된 K개의 공지 중 distance(거리)가 특정 threshold를 넘지 못하면, ChatGPT 프롬프트에서 제외한다. Threshold를 직접 상수 값으로 지정해도 되고, LLM에게 판단을 맡겨도 된다.</li>
 </ol>
+
+<h3 id="version-2"><span class="me-2">Version 2</span><a href="#version-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>Version 2는 멀티턴 대화가 가능하다. v1은 이전 대화를 기억하지 못하고, 사용자 화면에도 기록하지 않는다. v2는 대화 맥락을 저장하고, 사용자 화면에도 보여준다. 데모 영상에서 이전 대화 정보도 잘 답변하는 모습을 보였다.</p>
+
+<ul>
+  <li>Gradio로 이전 대화를 화면에 보여준다.</li>
+  <li>Langchain으로 기록한 대화를 다음 질문에 반영한다.</li>
+</ul>
+
+<p>LLM 모델도 변경했다. 기존 ChatGPT-3.5에서 Claude3 Sonnet으로 변경했다. v1은 ‘인공지능 마이크로디그리’에 대해 질문했을 때 주어진 정보를 바탕으로 답변을 생성했다. 하지만 v2는 주어진 정보가 부족하다고 판단해 요약만 제시하고, 자세한 정보는 모른다고 답했다. 정보를 지어내거나 부풀리지 않았다.</p>
+
+<p>RAG로 문서를 검색할 때 v1은 문서 전체를 임베딩 했지만, v2는 chunk 단위로 나누어 저장했다.</p>
 
 </div>
 
