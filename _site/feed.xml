@@ -4,7 +4,7 @@
   <id>https://denev6.github.io/</id>
   <title>Jin's Notes</title>
   <subtitle>AI, 수학, Python, Golang을 다루는 학생입니다.</subtitle>
-  <updated>2025-04-29T16:41:46+09:00</updated>
+  <updated>2025-04-30T12:20:34+09:00</updated>
   <author>
     <name>박성진</name>
     <uri>https://denev6.github.io/</uri>
@@ -70,7 +70,7 @@
     <link href="https://denev6.github.io/machine-learning/2025/04/18/markov-process.html" rel="alternate" type="text/html" title="MDP에 대한 오해와 Value function 정의" />
     <published>2025-04-18T00:00:00+09:00</published>
   
-    <updated>2025-04-18T00:00:00+09:00</updated>
+    <updated>2025-04-29T16:42:53+09:00</updated>
   
     <id>https://denev6.github.io/machine-learning/2025/04/18/markov-process.html</id>
     <content src="https://denev6.github.io/machine-learning/2025/04/18/markov-process.html" />
@@ -110,7 +110,7 @@ Planning은 환경을 완전히 알고 있을 때 사용한다. 현재 상태에
     <link href="https://denev6.github.io/projects/2025/03/24/retrieve-notice.html" rel="alternate" type="text/html" title="RAG로 학교 공지 검색" />
     <published>2025-03-24T00:00:00+09:00</published>
   
-    <updated>2025-03-24T00:00:00+09:00</updated>
+    <updated>2025-04-29T16:42:53+09:00</updated>
   
     <id>https://denev6.github.io/projects/2025/03/24/retrieve-notice.html</id>
     <content src="https://denev6.github.io/projects/2025/03/24/retrieve-notice.html" />

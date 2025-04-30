@@ -14,52 +14,59 @@ Sung-jin Park
 
 ## 기술 스택
 
-기능 구현 등의 사용 경험이 있는 기술
+🛠️ 기능 구현 경험이 있는 기술
 
-- Programing Languages: `Python`, `C++`
-- Framework/ Library: `Pytorch`, `Sklearn`, `Huggingface`, `Opencv`, `Openai`
-- Tools: `Git`, `Docker`
+- Programing Languages: `Python`
+- Framework/ Library: `PyTorch`, `HuggingFace`, `LangChain`, `OpenCV`
+- Tools: `Git`, `Docker`, `uv`
 
-사용 경험은 없으나, 이론적 지식이 있는 기술
+📚 이론적 지식이 있는 기술
 
-- Programing Languages: `Go`, `SQL`
-- ETC: `Tensorflow`
+- Programing Languages: `C++`, `Go`, `SQL`
+- ETC: `Tensorflow`, `Scikit-learn`, `Spark`, `FastAPI`
 
 ## 소개
 
-인공지능을 전공하고 있는 학부생입니다. Multi-modal learning을 연구 및 학습하고 있습니다. 엔지니어는 기술로 문제를 해결하고 사회에 새로운 가치를 제공하는 사람이라고 생각합니다. 이론을 넘어 실제 구현하고 적용하는 활동에 관심이 많습니다. 항상 기록하는 습관을 가지고 있으며 지식 공유를 좋아합니다.
+인공지능을 전공하고 있는 학부생입니다. 이론도 중요하지만, 직접 만들어보고 적용해보는 데 더 큰 재미를 느껴요. 새로운 기술을 빠르게 익히고, 실제 문제를 해결하는 걸 좋아합니다. 최근에는 LLM을 활용해서 사회나 심리와 같은 사람의 문제를 풀어보는 데 관심이 많아요.
+
+배운 내용을 정리하고 다른 사람과 나누는 과정을 중요하게 생각합니다. 이런 습관 덕분에 스스로도 더 깊이 이해하게 되고, 팀원들에게도 도움이 될 수 있었어요. 함께 성장할 수 있는 개발자가 되고 싶습니다.
 
 ## 팀 프로젝트
 
 ### 💻 실시간 얼굴 인식을 통한 대체 입력 기법 연구
 
-- 2022.04 ~ 11 (약 8개월)
+- 2022.04 ~ 11(팀), 2025. 03 ~ 현재(개인)
 - 학부생 3명 및 지도 교수
 - 주요 내용:
   - 실시간 **얼굴 방향 및 눈 깜빡임 인식** 기능 구현
-  - 서비스 구조 설계 및 리팩토링
   - **사용자 테스트 및 전문가 피드백**을 통한 성능 개선
 - 사용언어 및 환경: `Python3`, `Mediapipe`, `Opencv`, `Pyautogui`
-- Github: [face-mouse-control](https://github.com/denev6/face-mouse-control)
+- 코드: [face-mouse-control](https://github.com/denev6/face-mouse-control)
 - 논문: [koreascience/JAKO202228049092231](https://koreascience.or.kr/article/JAKO202228049092231.page)
 - 블로그: [기록 보기](/projects/2022/10/07/face-mouse-control.html)
 
 ## 개인 프로젝트
 
-### 😀 문장을 이용한 발화자 감정 인식
+### 🐕 Retriever + LLM 기반 공지 검색 챗봇
 
-- **RoBERTa fine-tuning**을 통한 텍스트 분류
-- 발화 문장 특성에 따른 정규화 및 전처리
-- 사용언어 및 환경: `Python3`, `Pytorch`, `Huggingface`, `NLTK`, `Colab`
-- DACON "_발화자의 감정인식 AI 경진대회_" 참여 및 수상
-- Github: [deep-learning-codes/roberta](https://github.com/denev6/deep-learning-codes/tree/main/roberta)
-- 블로그: [기록 보기](/projects/2022/12/17/dacon.html)
+- Anthropic API와 LangChain을 이용한 챗봇 제작
+- 크롤링과 VectorDB로 문서 검색 RAG 구현
+- 사용언어 및 환경: `Python3`, `Langchain`, `Huggingface`, `Gradio`
+- 코드: [retrieve-notice](https://github.com/denev6/retrieve-notice)
+- 블로그: [기록 보기](/projects/2025/03/24/retrieve-notice.html)
+
+### 🧠 EEG 뇌파 신호를 활용한 청소년 ADHD 탐지
+
+- 97%의 높은 정확도로 ADHD 환자 뇌파 분류
+- CNN + Transformer 모델 설계 및 학습
+- 사용언어 및 환경: `Python3`, `Pytorch`, `Colab`
+- 코드: [ADHD-EEG-ViT](https://github.com/denev6/ADHD-EEG-ViT)
+- 블로그: [기록 보기](/projects/2025/03/05/eeg-transformer.html)
 
 ### 기타
 
-- 🧠 EEG 뇌파 신호를 활용한 청소년 ADHD 탐지: [Github](https://github.com/denev6/ADHD-EEG-ViT), [블로그](https://denev6.github.io/projects/2025/03/05/eeg-transformer.html)
-- 🐕 Retriever + LLM으로 공지 검색 챗봇: [Github](https://github.com/denev6/retrieve-notice), [블로그](https://denev6.github.io/projects/2025/03/24/retrieve-notice.html)
-- ⚡ SvelteKit + FastAPI를 이용한 모델 서빙: [Github](https://github.com/denev6/serve-models), [블로그](https://denev6.github.io/playground/2025/01/17/ml-api.html)
+- ⚡ SvelteKit + FastAPI로 딥러닝 모델 서빙: [코드](https://github.com/denev6/serve-models), [블로그](/playground/2025/01/17/ml-api.html)
+- 😀 문장 분석을 통해 발화자 감정 인식(AI 경진대회): [코드](https://github.com/denev6/deep-learning-codes/tree/main/roberta), [블로그](/projects/2022/12/17/dacon.html)
 
 ## 자격증 및 논문
 
@@ -67,7 +74,7 @@ Sung-jin Park
 
 ## 수상 내역
 
-- 월간 데이콘 **발화자의 감정인식 AI 경진대회**: 최종 2위 (2022.12.26)
+- 월간 DACON **발화자의 감정인식 AI 경진대회**: 최종 2위 (2022.12.26)
 - 성균관대학교 **Co-Deep Learning**: 우수상 (Team Palette) (2022.08.10)
 
 ## 학력
