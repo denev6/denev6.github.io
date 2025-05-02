@@ -867,9 +867,9 @@ Jin's Notes
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1698 단어"
+  title="1846 단어"
 >
-  <em>9 
+  <em>10 
 분</em>
 읽는 시간
 </span>
@@ -887,7 +887,7 @@ Jin's Notes
 
 <p><strong>Retrieval-Augmented Generation(RAG)</strong>를 이용해 학교 공지를 빠르게 찾는 챗봇을 구현했다. <code class="language-plaintext highlighter-rouge">Encoder</code> + <code class="language-plaintext highlighter-rouge">FAISS</code> + <code class="language-plaintext highlighter-rouge">SQLite</code>를 이용해 로컬 GPU로 실험했으며, 문장 요약을 위해 <code class="language-plaintext highlighter-rouge">Claude3 Sonnet</code>을 사용했다.</p>
 
-<video src="https://github.com/user-attachments/assets/cbe11f31-254b-4dfa-8296-09ad93406c66" width="100%" controls="" muted=""></video>
+<video src="https://github.com/user-attachments/assets/ff755377-6dfe-43a6-9bbc-fdd464bf4207" width="100%" controls="" muted=""></video>
 
 <p><a href="https://github.com/denev6/retrieve-notice">Github 보기</a></p>
 
@@ -1003,7 +1003,7 @@ Jin's Notes
 You are an assistant for question-answering tasks. 
 Use the following pieces of retrieved context to answer the question. 
 If you don't know the answer, just say that you don't know. 
-Always answer in Korean based on the documents.
+Always answer in Korean based on the school notice.
 {history}
 
 [user]
@@ -1024,7 +1024,7 @@ Answer
 
 <ol>
   <li>LLM을 이용해 사용자 질문(입력)에서 키워드를 추출하고, 이를 FAISS 검색 쿼리로 사용한다.</li>
-  <li>검색된 K개의 공지 중 distance(거리)가 특정 threshold를 넘지 못하면, ChatGPT 프롬프트에서 제외한다. Threshold를 직접 상수 값으로 지정해도 되고, LLM에게 판단을 맡겨도 된다.</li>
+  <li>검색된 K개의 공지 중 distance(거리)가 특정 threshold를 넘지 못하면, LLM 프롬프트에서 제외한다. Threshold를 직접 상수 값으로 지정해도 되고, LLM에게 판단을 맡겨도 된다.</li>
 </ol>
 
 <h3 id="version-2"><span class="me-2">Version 2</span><a href="#version-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
@@ -1038,7 +1038,9 @@ Answer
 
 <p>LLM 모델도 변경했다. 기존 ChatGPT-3.5에서 Claude3 Sonnet으로 변경했다. v1은 ‘인공지능 마이크로디그리’에 대해 질문했을 때 주어진 정보를 바탕으로 답변을 생성했다. 하지만 v2는 주어진 정보가 부족하다고 판단해 요약만 제시하고, 자세한 정보는 모른다고 답했다. 정보를 지어내거나 부풀리지 않았다.</p>
 
-<p>RAG로 문서를 검색할 때 v1은 문서 전체를 임베딩 했지만, v2는 chunk 단위로 나누어 저장했다.</p>
+<p>RAG로 문서를 검색할 때 v1은 문서 전체를 임베딩 했지만, v2는 chunk 단위로 나누어 저장했다. 문서를 작은 단위로 나누면 v1에 비해 성능이 떨어졌다. 현재는 chunk를 크게 설정해 긴 맥락을 읽을 수 있도록 했다.</p>
+
+<p>Buffer를 이용해 실시간으로 LLM 출력을 streaming한다. v1은 답변을 한 번에 사용자 화면으로 출력한다. 이 방식은 답변이 끝날 때까지 오랫동안 기다려야 한다는 단점이 있다. v2는 토큰이 도착하는대로 바로 보여주기 때문에 response time이 약 1.8초 정도로 짧아졌다.</p>
 
 </div>
 
