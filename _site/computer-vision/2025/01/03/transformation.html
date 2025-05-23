@@ -48,7 +48,7 @@
 <meta property="og:description" content="이미지 행렬의 이동, 확대, 축소 등 기하학적 변환에 대해 다룬다. C++로 작성한 OpenCV 코드를 사용한다. 원본 이미지 좌표는 $(x, y)$로, 변환된 이미지 좌표는 $(x’,y’)$로 표현한다. 간결한 코드를 위해 네임스페이스를 생략하며, 이미지를 읽는 과정도 생략한다. 코드에서 img는 원본 이미지, dst는 변환된 이미지이다." />
 <link rel="canonical" href="https://denev6.github.io/computer-vision/2025/01/03/transformation.html" />
 <meta property="og:url" content="https://denev6.github.io/computer-vision/2025/01/03/transformation.html" />
-<meta property="og:site_name" content="Jin’s Notes" />
+<meta property="og:site_name" content="Palette" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-01-03T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
@@ -61,7 +61,7 @@
   
 
   <title>이미지 변환 행렬과 OpenCV | 
-Jin's Notes
+Palette
   </title>
 
   <!--
@@ -76,8 +76,8 @@ Jin's Notes
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
 <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
 <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
-<meta name="apple-mobile-web-app-title" content="Jin's Notes">
-<meta name="application-name" content="Jin's Notes">
+<meta name="apple-mobile-web-app-title" content="Palette">
+<meta name="application-name" content="Palette">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
@@ -168,9 +168,9 @@ Jin's Notes
     </a>
 
     <h1 class="site-title">
-      <a href="/">Jin's Notes</a>
+      <a href="/">Palette</a>
     </h1>
-    <p class="site-subtitle fst-italic mb-0">호기심 가득한 개발자의 노트</p>
+    <p class="site-subtitle fst-italic mb-0">개발자의 노트</p>
   </header>
   <!-- .profile-wrapper -->
 
@@ -2170,7 +2170,7 @@ Output:
     
       
       <a
-        href="https://twitter.com/intent/tweet?text=%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%B3%80%ED%99%98%20%ED%96%89%EB%A0%AC%EA%B3%BC%20OpenCV%20-%20Jin's%20Notes&url=https%3A%2F%2Fdenev6.github.io%2Fcomputer-vision%2F2025%2F01%2F03%2Ftransformation.html"
+        href="https://twitter.com/intent/tweet?text=%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%B3%80%ED%99%98%20%ED%96%89%EB%A0%AC%EA%B3%BC%20OpenCV%20-%20Palette&url=https%3A%2F%2Fdenev6.github.io%2Fcomputer-vision%2F2025%2F01%2F03%2Ftransformation.html"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Twitter"
@@ -2183,7 +2183,7 @@ Output:
     
       
       <a
-        href="https://www.facebook.com/sharer/sharer.php?title=%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%B3%80%ED%99%98%20%ED%96%89%EB%A0%AC%EA%B3%BC%20OpenCV%20-%20Jin's%20Notes&u=https%3A%2F%2Fdenev6.github.io%2Fcomputer-vision%2F2025%2F01%2F03%2Ftransformation.html"
+        href="https://www.facebook.com/sharer/sharer.php?title=%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%B3%80%ED%99%98%20%ED%96%89%EB%A0%AC%EA%B3%BC%20OpenCV%20-%20Palette&u=https%3A%2F%2Fdenev6.github.io%2Fcomputer-vision%2F2025%2F01%2F03%2Ftransformation.html"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Facebook"
@@ -2196,7 +2196,7 @@ Output:
     
       
       <a
-        href="https://t.me/share/url?url=https%3A%2F%2Fdenev6.github.io%2Fcomputer-vision%2F2025%2F01%2F03%2Ftransformation.html&text=%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%B3%80%ED%99%98%20%ED%96%89%EB%A0%AC%EA%B3%BC%20OpenCV%20-%20Jin's%20Notes"
+        href="https://t.me/share/url?url=https%3A%2F%2Fdenev6.github.io%2Fcomputer-vision%2F2025%2F01%2F03%2Ftransformation.html&text=%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%B3%80%ED%99%98%20%ED%96%89%EB%A0%AC%EA%B3%BC%20OpenCV%20-%20Palette"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Telegram"
@@ -2375,25 +2375,6 @@ Output:
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2403,91 +2384,6 @@ Output:
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2537,6 +2433,125 @@ Output:
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2624,21 +2639,6 @@ Output:
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2680,10 +2680,10 @@ Output:
         <a class="post-tag btn btn-outline-primary" href="/tags/blog/">blog</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/mlops/">MLOps</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/llm/">LLM</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/rl/">RL</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/mlops/">MLOps</a>
       
     </div>
   </section>
@@ -3219,25 +3219,6 @@ Output:
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3247,91 +3228,6 @@ Output:
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -3381,6 +3277,125 @@ Output:
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -3468,21 +3483,6 @@ Output:
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -3524,10 +3524,10 @@ Output:
         <a class="post-tag btn btn-outline-primary" href="/tags/blog/">blog</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/mlops/">MLOps</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/llm/">LLM</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/rl/">RL</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/mlops/">MLOps</a>
       
     </div>
   </section>

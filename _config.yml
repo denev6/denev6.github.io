@@ -18,12 +18,12 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Jin's Notes
+title: Palette
 
-tagline: 호기심 가득한 개발자의 노트 # it will display as the sub-title
+tagline: 개발자의 노트 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  AI, 수학, Python, Golang을 다루는 학생입니다.
+  머신러닝, 수학, 프로그래밍을 다루는 개발자의 노트입니다.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://denev6.github.io"
@@ -32,20 +32,20 @@ github:
   username: denev6
 
 twitter:
-  username: 
+  username:
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: 박성진
-  email: dev.seongjin@gmail.com
+  email: sungjin.code@gmail.com
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/denev6
     # Uncomment below to add more social links
-    - https://denev6.tistory.com/ 
+    - https://denev6.tistory.com/
     - https://www.instagram.com/color_dnv
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/denev6
 
 google_site_verification: # fill in to your verification string
 # ↑ --------------------------
@@ -136,7 +136,6 @@ collections:
     output: true
     sort_by: order
 
-
 defaults:
   - scope:
       path: "" # An empty string here means all files in the project
@@ -187,7 +186,6 @@ defaults:
       path: page/**
     values:
       sitemap: false
-
 
 sass:
   style: compressed
