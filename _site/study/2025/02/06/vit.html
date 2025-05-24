@@ -1078,7 +1078,7 @@ Palette
 
 <p>Transformer는 일련의 1D token embedding을 입력으로 받는다. 우리는 <strong>이미지를 일련의 2D patch로 나누어 사용</strong>한다.</p>
 
-<p><a href="architecture.png" class="popup img-link "><img data-src="architecture.png" alt="전체 구조" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/vit/architecture.png" class="popup img-link "><img data-src="/assets/posts/vit/architecture.png" alt="전체 구조" class="lazyload" data-proofer-ignore></a></p>
 
 <p>Transformer는 정해진 크기의 latent vector를 가지기 때문에 이미지 patch가 정해진 차원으로 매핑될 수 있도록 한다.</p>
 
@@ -1124,7 +1124,7 @@ Palette
 
 <p>ViT는 CNN처럼 이미지에 특화된 inductive bias가 없다. 따라서 position embedding을 이용해 위치 정보를 조정하며, patch의 2차원 위치 정보를 처음부터 학습해야 한다.</p>
 
-<p><a href="hybrid.png" class="popup img-link "><img data-src="hybrid.png" alt="Hybrid 모델" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/vit/hybrid.png" class="popup img-link "><img data-src="/assets/posts/vit/hybrid.png" alt="Hybrid 모델" class="lazyload" data-proofer-ignore></a></p>
 
 <p>대안으로 <strong>CNN의 feature map을 입력으로 사용</strong>하는 방법이 있다 (<a href="https://github.com/pytorch/vision/blob/main/torchvision/models/vision_transformer.py#L213">L213</a>). 이러한 방법을 <code class="language-plaintext highlighter-rouge">hybrid</code>라고 표현한다. 만약에 1x1 필터를 사용하면 이미지를 feature map 차원으로 flatten하는 과정이 된다.</p>
 
@@ -1176,17 +1176,17 @@ Palette
 
 <h3 id="inspecting-vision-transformer"><span class="me-2">Inspecting Vision Transformer</span><a href="#inspecting-vision-transformer" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="filters.png" class="popup img-link "><img data-src="filters.png" alt="filters" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/vit/filters.png" class="popup img-link "><img data-src="/assets/posts/vit/filters.png" alt="filters" class="lazyload" data-proofer-ignore></a></p>
 
 <p>첫 레이어는 이미지를 저차원으로 매핑시킨다. 위 이미지는 학습된 필터 중 PCA를 통해 찾아낸 주요 28개 필터 모습이다. 이미지 patch에서 구조를 찾아내기 위한 모양으로 보인다.</p>
 
-<p><a href="position-embedding.png" class="popup img-link "><img data-src="position-embedding.png" alt="position embedding" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/vit/position-embedding.png" class="popup img-link "><img data-src="/assets/posts/vit/position-embedding.png" alt="position embedding" class="lazyload" data-proofer-ignore></a></p>
 
 <p>이후 position embedding이 더해진다. <strong>가까운 patch는 유사한 position embedding</strong>을 보인다. 위 이미지는 patch와 position embedding 간의 유사도를 2차원으로 나타낸다.</p>
 
 <p>Attention 가중치를 바탕으로 어느 정도 깊이(거리)의 네트워크에서 전반적인 정보를 수집해 내는지 확인했다. 여기서 “attention distance”는 CNN의 receptive field 크기와 같다. 몇몇 head는 초기에 대부분의 정보를 잡아내기도 했다. 다른 head는 지속적으로 작은 attention distance를 보였다. 이렇게 강한 localized attention은 hybrid model에서 적게 나타났다. 이는 CNN이 지역적인 정보를 찾기 때문에 attention head에서 지역적인 패턴을 찾을 필요가 없기 때문으로 보인다. 다시 말해, <strong>CNN은 지역적인 정보를, Attention은 넓은 범위의 정보를 찾는데 유리</strong>하다고 볼 수 있다. 이러한 정보를 바탕으로 분류에 필요한 이미지 부분을 찾아낸다.</p>
 
-<p><a href="attention.png" class="popup img-link "><img data-src="attention.png" alt="attention image" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/vit/attention.png" class="popup img-link "><img data-src="/assets/posts/vit/attention.png" alt="attention image" class="lazyload" data-proofer-ignore></a></p>
 
 <p>Attention 가중치를 이미지에 투영한 예시다. 강아지의 윤곽(귀, 앞발 등)에 강한 가중치를 주어 중요도가 높은 정보로 판단한다. 반면 뒤에 사람은 낮은 가중치를 준다. 따라서 분류 문제를 풀 때, 강아지가 있는 부분은 강하게, 사람이 있는 부분은 약하게 반영된다.</p>
 
@@ -1357,6 +1357,13 @@ Palette
   <section id="access-lastmod">
     <h2 class="panel-heading">최근 수정</h2>
     <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/projects/2025/03/05/eeg-transformer.html">EEG 신호를 활용한 청소년 ADHD 진단</a>
+        </li>
       
         
         

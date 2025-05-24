@@ -4,7 +4,7 @@ category: Study
 tags: [NLP, AI]
 toc: true 
 math: true
-media_subpath: /assets/posts/transformer/
+img_path: /assets/posts/transformer/
 ---
 
 [Attention Is All You Need](https://arxiv.org/abs/1706.03762)

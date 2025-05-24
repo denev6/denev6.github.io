@@ -1303,7 +1303,7 @@ Palette
 
 <p>원본 데이터는 고화질 이미지이다. 하지만 본 연구는 크기를 256 x 256로 고정하고 down-sampling해 사용했다. 이미지의 짧은 쪽 길이를 256으로 두고, 중앙을 256 x 256 크기로 잘라냈다. 다른 전처리는 하지 않았기 때문에 RGB 픽셀 값을 그대로 사용했다고 할 수 있다.</p>
 
-<p><a href="preprocess.png" class="popup img-link "><img data-src="preprocess.png" alt="전처리 예시" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/alexnet/preprocess.png" class="popup img-link "><img data-src="/assets/posts/alexnet/preprocess.png" alt="전처리 예시" class="lazyload" data-proofer-ignore></a></p>
 
 <h2 id="the-architecture"><span class="me-2">The Architecture</span><a href="#the-architecture" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -1319,7 +1319,7 @@ Palette
 
 <p>본 논문에서 nonlinearity는 Rectified Linear Units(ReLU)를 뜻한다.</p>
 
-<p><a href="relu-tanh.png" class="popup img-link "><img data-src="relu-tanh.png" alt="nonlinearity 속도 비교" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/alexnet/relu-tanh.png" class="popup img-link "><img data-src="/assets/posts/alexnet/relu-tanh.png" alt="nonlinearity 속도 비교" class="lazyload" data-proofer-ignore></a></p>
 
 <p>CIFAR-10 데이터에서 ReLU(실선)는 tanh(점선)에 비해 약 6배 정도 빠르게 학습했다.</p>
 
@@ -1327,7 +1327,7 @@ Palette
 
 <p>GTX 580 GPU는 3GB의 메모리 밖에 없기 때문에 데이터를 완전히 학습할 수 없었다. 따라서 2개의 GPU를 병렬로 처리했다. 각 GPU에 kernel을 절반 씩 나누었으며, 일부 layer에서만 두 GPU가 상호 작용한다.</p>
 
-<p><a href="architecture.png" class="popup img-link "><img data-src="architecture.png" alt="병렬 GPU 구조" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/alexnet/architecture.png" class="popup img-link "><img data-src="/assets/posts/alexnet/architecture.png" alt="병렬 GPU 구조" class="lazyload" data-proofer-ignore></a></p>
 
 <p>1개의 GPU를 최대로 활용했을 때보다 성능이 좋았으며 학습 속도도 약간 더 빨랐다.</p>
 
@@ -1350,7 +1350,7 @@ Palette
 
 <p>$N$은 전체 feature map 개수이며, $n$은 합산할 인접한 feature map 개수다.</p>
 
-<p><a href="normalize.png" class="popup img-link "><img data-src="normalize.png" alt="정규화 예시" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/alexnet/normalize.png" class="popup img-link "><img data-src="/assets/posts/alexnet/normalize.png" alt="정규화 예시" class="lazyload" data-proofer-ignore></a></p>
 
 <p>위 예시는 $n=5$일 때, $a^j_{x,y}$를 선택하는 모습이다.</p>
 
@@ -1362,7 +1362,7 @@ Palette
 
 <p>우리는 $s=2$와 $z=3$으로 <strong>overlapping pooling</strong>을 진행했다. 이러한 방식은 약간의 overfitting 방지 효과가 있다.</p>
 
-<p><a href="pooling.png" class="popup img-link "><img data-src="pooling.png" alt="overlapping pooling" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/alexnet/pooling.png" class="popup img-link "><img data-src="/assets/posts/alexnet/pooling.png" alt="overlapping pooling" class="lazyload" data-proofer-ignore></a></p>
 
 <h3 id="overall-architecture"><span class="me-2">Overall Architecture</span><a href="#overall-architecture" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1446,7 +1446,7 @@ Palette
 
 <p>첫 번째 방법은 <strong>256 x 256 이미지에서 랜덤한 224 x 224 패치를 만들고 랜덤하게 가로 방향으로 뒤집는다.</strong></p>
 
-<p><a href="augmentation1.png" class="popup img-link "><img data-src="augmentation1.png" alt="crop-and-flip" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/alexnet/augmentation1.png" class="popup img-link "><img data-src="/assets/posts/alexnet/augmentation1.png" alt="crop-and-flip" class="lazyload" data-proofer-ignore></a></p>
 
 <p>테스트 단계에서는 10개의 랜덤 변환(5개 랜덤 패치 + 가로 뒤집기)한 이미지를 넣고, softmax 출력을 평균내 사용했다.</p>
 
@@ -1458,7 +1458,7 @@ Palette
 
 <p>이렇게 계산된 값을 이미지 픽셀에 더한다.</p>
 
-<p><a href="augmentation2.png" class="popup img-link "><img data-src="augmentation2.png" alt="2nd Augmentation" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/alexnet/augmentation2.png" class="popup img-link "><img data-src="/assets/posts/alexnet/augmentation2.png" alt="2nd Augmentation" class="lazyload" data-proofer-ignore></a></p>
 
 <p>시각적으로 큰 차이는 없어 보이지만, 코드로 비교했을 때 약간의 색상 차이를 보인다.</p>
 
@@ -1489,7 +1489,7 @@ Palette
 
 <p><strong>모델을 거친 벡터 간 Euclidean 거리가 가깝다면, 두 이미지가 비슷하다고 할 수 있다.</strong> 참고로 이미지 픽셀 간 L2 거리가 가까운 것은 아니다.</p>
 
-<p><a href="distance.png" class="popup img-link "><img data-src="distance.png" alt="이미지 예시" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/alexnet/distance.png" class="popup img-link "><img data-src="/assets/posts/alexnet/distance.png" alt="이미지 예시" class="lazyload" data-proofer-ignore></a></p>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
@@ -1656,6 +1656,13 @@ Palette
   <section id="access-lastmod">
     <h2 class="panel-heading">최근 수정</h2>
     <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/projects/2025/03/05/eeg-transformer.html">EEG 신호를 활용한 청소년 ADHD 진단</a>
+        </li>
       
         
         

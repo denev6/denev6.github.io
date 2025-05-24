@@ -2027,7 +2027,7 @@ Palette
 
 <p>경계 검출의 핵심은 <strong>변화</strong>를 찾는 것이다. 객체와 배경은 밝기 차이가 있을 것이라고 가정한다. 밝기 변화가 일정 수준을 넘어가면 경계로 예측한다. 이미지가 복잡하면 잘못 검출될 가능성도 있지만 합리적인 아이디어라고 볼 수 있다.</p>
 
-<p><a href="color-diff.png" class="popup img-link "><img data-src="color-diff.png" alt="객체와 배경 밝기 비교" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/color-diff.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/color-diff.png" alt="객체와 배경 밝기 비교" class="lazyload" data-proofer-ignore></a></p>
 
 <p>그렇다면 <strong>변화</strong>를 정의해야 한다. 수학에서 변화율은 <strong>미분</strong>으로 정의한다. 연속 함수 $f(x)$에 대해 미분은 아래와 같다.</p>
 
@@ -2035,7 +2035,7 @@ Palette
 
 <p>$\bigtriangleup x$는 <strong>변화량</strong>이다. <strong>미분값</strong>은 변화량이 0에 가까워질 때 함수 값의 차이를 뜻한다. 쉽게 말해, 특정 시점에서 함수 값의 변화로 볼 수 있다. 위 파란 그래프는 함수 $f(x)$, 아래 빨간 그래프는 $f(x)$를 미분한 $f’(x)$다. 변화가 멈춘 순간에 미분값은 0이 된다. 급격한 변화가 발생하면 미분값이 0에서 멀어진다.</p>
 
-<p><a href="derivative-graph.png" class="popup img-link "><img data-src="derivative-graph.png" alt="미분 함수 그래프" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/derivative-graph.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/derivative-graph.png" alt="미분 함수 그래프" class="lazyload" data-proofer-ignore></a></p>
 
 <h3 id="이산-함수-미분"><span class="me-2">이산 함수 미분</span><a href="#이산-함수-미분" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -2053,7 +2053,7 @@ Palette
 
 <p>이를 시각화해보면 이해가 쉽다. 인접한 픽셀과의 차를 구하는 식이다.</p>
 
-<p><a href="discrete-derivative-mask.png" class="popup img-link "><img data-src="discrete-derivative-mask.png" alt="이산 미분 마스크" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/discrete-derivative-mask.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/discrete-derivative-mask.png" alt="이산 미분 마스크" class="lazyload" data-proofer-ignore></a></p>
 
 \[f'_x\approx \cfrac{f(x+1,y)-f(x,y)}{1}=59 - 30\]
 
@@ -2063,7 +2063,7 @@ Palette
 
 <p>중앙 차분은 인접한 두 픽셀의 미분 값을 구하는 방식이다.</p>
 
-<p><a href="centered-diff-mask.png" class="popup img-link "><img data-src="centered-diff-mask.png" alt="중앙 차분 마스크" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/centered-diff-mask.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/centered-diff-mask.png" alt="중앙 차분 마스크" class="lazyload" data-proofer-ignore></a></p>
 
 \[f'_x\approx \cfrac{f(x+1,y)-f(x-1,y)}{2}\]
 
@@ -2087,7 +2087,7 @@ Palette
 
 <p>y 방향도 같은 방법으로 행렬을 만들 수 있다.</p>
 
-<p><a href="mask-computation.png" class="popup img-link "><img data-src="mask-computation.png" alt="마스크 연산 예시" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/mask-computation.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/mask-computation.png" alt="마스크 연산 예시" class="lazyload" data-proofer-ignore></a></p>
 
 <p>정리하면, $f(x,y)$와 인접한 픽셀의 변화량을 통해 현재 위치가 경계인지 판별할 수 있다. 이때 효율적인 연산을 위해 행렬을 이용한다.</p>
 
@@ -2105,7 +2105,7 @@ Palette
 
 \[\theta =tan^{-1}(\cfrac{f_y}{f_x})\]
 
-<p><a href="grad-vectors.png" class="popup img-link "><img data-src="grad-vectors.png" alt="gradient 벡터 예시" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/grad-vectors.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/grad-vectors.png" alt="gradient 벡터 예시" class="lazyload" data-proofer-ignore></a></p>
 
 <p>이미지 일부를 확대한 뒤 2차원 공간에 gradient 벡터를 나타냈다. 경계로 판단되는 부분은 벡터의 크기가 매우 크다. 벡터의 방향은 변화가 발생하는 방향을 나타낸다. 다시 말해, <strong>벡터에 수직인 방향이 경계</strong>라고 볼 수 있다. 확실히 경계가 아니라고 판단되는 곳은 크기와 방향 모두 0을 가진다.</p>
 
@@ -2119,11 +2119,11 @@ Palette
 
 <p><strong>Sobel 마스크</strong>는 가장 대표적인 마스크다. 인접한 두 픽셀뿐만 아니라 근접한 픽셀까지 고려한다.</p>
 
-<p><a href="sobel-mask.png" class="popup img-link "><img data-src="sobel-mask.png" alt="sobel 마스크" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/sobel-mask.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/sobel-mask.png" alt="sobel 마스크" class="lazyload" data-proofer-ignore></a></p>
 
 <p>앞서 벡터의 크기를 통해 경계가 맞는지 확인한다고 했다. 하지만 의미없는 노이즈도 섞여 있을 수 있다. 따라서 벡터가 특정 범위를 넘어서면 경계로 판별한다. 이때 기준이 되는 값을 <strong>threshold</strong> 또는 <strong>임계값</strong>이라고 한다. threshold는 상황에 맞게 직접 설정해주어야 한다.</p>
 
-<p><a href="sobel-result.png" class="popup img-link "><img data-src="sobel-result.png" alt="sobel 결과 이미지" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/sobel-result.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/sobel-result.png" alt="sobel 결과 이미지" class="lazyload" data-proofer-ignore></a></p>
 
 <div class="language-cpp highlighter-rouge"><div class="code-header">
         <span data-label-text="Cpp"><i class="fas fa-code fa-fw small"></i></span>
@@ -2157,11 +2157,11 @@ Palette
 
 <p><strong>Scharr 마스크</strong>는 인접한 픽셀에 더 큰 가중치를 준다. 따라서 Sobel보다 변화에 더 민감하다.</p>
 
-<p><a href="scharr-mask.png" class="popup img-link "><img data-src="scharr-mask.png" alt="scharr 마스크" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/scharr-mask.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/scharr-mask.png" alt="scharr 마스크" class="lazyload" data-proofer-ignore></a></p>
 
 <p>theshold를 높게 설정했음에도 신발 얼룩까지 포함하는 모습을 보인다. 얼룩도 밝기 변화가 있는 영역이기 때문이다.</p>
 
-<p><a href="scharr-result.png" class="popup img-link "><img data-src="scharr-result.png" alt="scharr 결과 이미지" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/scharr-result.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/scharr-result.png" alt="scharr 결과 이미지" class="lazyload" data-proofer-ignore></a></p>
 
 <div class="language-cpp highlighter-rouge"><div class="code-header">
         <span data-label-text="Cpp"><i class="fas fa-code fa-fw small"></i></span>
@@ -2207,13 +2207,13 @@ Palette
 
 \[G_{\sigma_x\sigma_y}(x,y)=\cfrac{1}{2\pi\sigma_x\sigma_y}e^{-(\cfrac{x^2}{2\sigma^2_x}+\cfrac{y^2}{2\sigma^2_y})}\]
 
-<p><a href="gaussian-graph.png" class="popup img-link "><img data-src="gaussian-graph.png" alt="가우시안 분포 시각화" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/gaussian-graph.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/gaussian-graph.png" alt="가우시안 분포 시각화" class="lazyload" data-proofer-ignore></a></p>
 
 <p>가우시안 필터를 사용하면 중앙에 비교적 큰 값이 곱해지고, 주변은 작은 값이 곱해진다. 주변 상황을 약하게 반영하는 과정에서 비교적 완만한 값이 만들어진다. 따라서 부드러운 이미지를 만드는 블러 효과로 사용한다.</p>
 
 <p>평균이 0이고 표준편차가 $\sigma$일 때, $[-4\sigma ,4\sigma]$ 사이에 99.99%의 값이 들어가 있기 때문에 마스크 크기는 $8\sigma +1$이나 그보다 작은 크기를 사용한다.</p>
 
-<p><a href="gaussian-result.png" class="popup img-link "><img data-src="gaussian-result.png" alt="가우시안 필터 결과 이미지" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/gaussian-result.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/gaussian-result.png" alt="가우시안 필터 결과 이미지" class="lazyload" data-proofer-ignore></a></p>
 
 <p>동일한 조건에서 5 x 5 가우시안 필터를 적용했을 때와 적용하지 않았을 때 검출된 경계의 모습이다. 신발 발등의 불규칙한 얼룩이 제거되었다.</p>
 
@@ -2225,21 +2225,21 @@ Palette
 
 <p>추가로 gradient 방향도 함께 계산한다. 계산된 방향은 4가지 방향[0, 45, 90, 135]으로 단순화할 수 있다. 각 픽셀이 사각형의 형태로 붙어 있기 때문이다.</p>
 
-<p><a href="grad-direction.png" class="popup img-link "><img data-src="grad-direction.png" alt="gradient 방향 시각화" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/grad-direction.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/grad-direction.png" alt="gradient 방향 시각화" class="lazyload" data-proofer-ignore></a></p>
 
 <h3 id="nms-non-maximum-suppression"><span class="me-2">NMS: Non-maximum suppression</span><a href="#nms-non-maximum-suppression" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p>Sobel을 거친 gradient는 비슷한 지역에서 여러 경계를 만들기도 한다. 이 현상 때문에 일부 경계가 두껍게 나타난다.</p>
 
-<p><a href="bold-edge.png" class="popup img-link "><img data-src="bold-edge.png" alt="두꺼운 경계의 픽셀 확대" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/bold-edge.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/bold-edge.png" alt="두꺼운 경계의 픽셀 확대" class="lazyload" data-proofer-ignore></a></p>
 
 <p><strong>NMS: non-maximum suppression</strong>은 경계로 판단되는 픽셀 중 가장 확실한 픽셀만 선택한다. gradient 방향으로 인접한 두 픽셀을 비교한다. 그리고 가운데 픽셀이 가장 클 경우 경계로 사용하고, 그렇지 않을 경우 0으로 처리한다.</p>
 
-<p><a href="nms.png" class="popup img-link "><img data-src="nms.png" alt="nms 실행 과정" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/nms.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/nms.png" alt="nms 실행 과정" class="lazyload" data-proofer-ignore></a></p>
 
 <p>이 과정을 통해 겹쳐있는 경계 영역 중 정확한 경계를 가려낸다.</p>
 
-<p><a href="nms-result.png" class="popup img-link "><img data-src="nms-result.png" alt="nms 결과 이미지" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/nms-result.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/nms-result.png" alt="nms 결과 이미지" class="lazyload" data-proofer-ignore></a></p>
 
 <p>동일한 조건에서 NMS를 실행했을 때와 실행하지 않았을 때의 모습이다. 겹쳐있던 선이 제거되었다.</p>
 
@@ -2259,17 +2259,17 @@ Palette
 
 <p><strong>Hysteresis edge tracking</strong>은 확실한 경계를 넓혀가는 방식으로 경계를 추가한다.</p>
 
-<p><a href="edge-tracking.png" class="popup img-link "><img data-src="edge-tracking.png" alt="edge tracking 실행 과정" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/edge-tracking.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/edge-tracking.png" alt="edge tracking 실행 과정" class="lazyload" data-proofer-ignore></a></p>
 
 <p>확실하게 경계로 판별된 픽셀에 대해 주변 픽셀을 검사한다. 만약 주변 픽셀 중 $T_{high}$보다는 작지만, $T_{low}$보다 큰 값이 있다면 경계로 판별한다. 다시 말해, $T_{high}$와 $T_{low}$ 사이 값 중 $T_{high}$와 연결된 픽셀은 경계로 인정한다. 반면에 $T_{low}$와 연결된 사이 값은 경계로 인정하지 않는다. tracking을 통해 연결된 테두리를 추가로 찾을 수 있다.</p>
 
-<p><a href="edge-tracking-result.png" class="popup img-link "><img data-src="edge-tracking-result.png" alt="edge tracking 결과" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/edge-tracking-result.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/edge-tracking-result.png" alt="edge tracking 결과" class="lazyload" data-proofer-ignore></a></p>
 
 <h3 id="정리"><span class="me-2">정리</span><a href="#정리" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p>Canny 알고리즘의 각 단계가 어떤 과정으로 진행되고, 적용했을 때와 적용하지 않을 때의 결과 차이를 알아보았다. 전체 과정을 정리하면 아래와 같다.</p>
 
-<p><a href="canny-result.png" class="popup img-link "><img data-src="canny-result.png" alt="gaussian-gradient-nms-edge tracking" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/edge-detection/canny-result.png" class="popup img-link "><img data-src="/assets/posts/edge-detection/canny-result.png" alt="gaussian-gradient-nms-edge tracking" class="lazyload" data-proofer-ignore></a></p>
 
 <p>각 단계를 거친 이미지 행렬이다. OpenCV는 <code class="language-plaintext highlighter-rouge">Canny</code> 함수를 통해 이 복잡한 과정을 한 번에 처리할 수 있다.</p>
 
@@ -2432,6 +2432,13 @@ Palette
   <section id="access-lastmod">
     <h2 class="panel-heading">최근 수정</h2>
     <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/projects/2025/03/05/eeg-transformer.html">EEG 신호를 활용한 청소년 ADHD 진단</a>
+        </li>
       
         
         

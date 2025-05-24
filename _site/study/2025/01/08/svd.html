@@ -1335,7 +1335,7 @@ Palette
 
 \[Av=\begin{bmatrix}2 &amp; 1 \\ 1 &amp; 3 \end{bmatrix}v\]
 
-<p><a href="eigen-2d.png" class="popup img-link "><img data-src="eigen-2d.png" alt="eigenvectors 시각화" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/svd/eigen-2d.png" class="popup img-link "><img data-src="/assets/posts/svd/eigen-2d.png" alt="eigenvectors 시각화" class="lazyload" data-proofer-ignore></a></p>
 
 <p>하지만 <strong>같은 방향을 유지하는 벡터</strong>도 존재한다. 이 벡터를 <strong>eigenvector</strong>라고 부른다. 방향은 유지하고 있지만 크기는 바뀌었다. 따라서 변형된 벡터를 $\lambda v$로 표현할 수 있다. $\lambda$는 크기를 조절하는 scaling factor 역할을 한다. eigenvector의 크기를 결정하는 $\lambda$를 <strong>eigenvalue</strong>라고 한다.</p>
 
@@ -1365,7 +1365,7 @@ Palette
 
 <p>$V$는 각 열이 eigenvector인 행렬이다. $\Sigma =diag(…eigenvalue)$로 eigenvalue를 담고 있는 diagonal matrix이다.</p>
 
-<p><a href="eigen-matrix.png" class="popup img-link "><img data-src="eigen-matrix.png" alt="eigen 행렬 시각화" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/svd/eigen-matrix.png" class="popup img-link "><img data-src="/assets/posts/svd/eigen-matrix.png" alt="eigen 행렬 시각화" class="lazyload" data-proofer-ignore></a></p>
 
 <p>다시 말해, <strong>행렬 A는 eigenvector와 eigenvalue로 분해(decompose)할 수 있고</strong>, 이 값들을 통해 재구성할 수 있다. 이 개념이 이미지를 압축하고 재구성하는 과정에도 적용된다. 하지만 eigendecomposition은 n x n의 square matrix에만 적용 가능하다. 따라서 eigenvector 대신 singular vector가 등장한다.</p>
 
@@ -1383,7 +1383,7 @@ Palette
 
 <p>이번에는 orthogonal matrix $V$와 선형 변환해도 여전히 orthogonal 한 $U$를 찾는 문제다.</p>
 
-<p><a href="svd-plot.png" class="popup img-link "><img data-src="svd-plot.png" alt="singular vectors 시각화" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/svd/svd-plot.png" class="popup img-link "><img data-src="/assets/posts/svd/svd-plot.png" alt="singular vectors 시각화" class="lazyload" data-proofer-ignore></a></p>
 
 <p>식을 조금 더 정리해보면,</p>
 
@@ -1393,7 +1393,7 @@ Palette
 
 <p>글 초반에 소개했던 행렬의 특성을 이용해 정리한 식이다. 위 식을 시각화하면 다음과 같다.</p>
 
-<p><a href="svd-matrix.png" class="popup img-link "><img data-src="svd-matrix.png" alt="svd 행렬" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/svd/svd-matrix.png" class="popup img-link "><img data-src="/assets/posts/svd/svd-matrix.png" alt="svd 행렬" class="lazyload" data-proofer-ignore></a></p>
 
 <p>눈치챘다시피 $U$는 eigenvector와 동일하다. $\Sigma^T\Sigma$는 diagonal matrix로 eigenvalue와 같다.</p>
 
@@ -1433,7 +1433,7 @@ Palette
 
 <p>서로 다른 자연수 m과 n에 대해, m x n 행렬에 SVD를 수행하면 버려지는 singular vector가 존재한다. 3 x 2 행렬을 살펴보자.</p>
 
-<p><a href="svd-matrix-trunc.png" class="popup img-link "><img data-src="svd-matrix-trunc.png" alt="3x2 행렬 분해 과정" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/svd/svd-matrix-trunc.png" class="popup img-link "><img data-src="/assets/posts/svd/svd-matrix-trunc.png" alt="3x2 행렬 분해 과정" class="lazyload" data-proofer-ignore></a></p>
 
 <p>left singular vector인 $U$는 색칠된 3 x 2 행렬의 값만 연산에 사용한다. 따라서 3 x 3이 아닌 3 x 2 행렬만 저장하면 된다. singular value인 $\Sigma$ 도 [0 0]을 저장하고 있는 행은 버려도 된다.</p>
 
@@ -1463,15 +1463,15 @@ Palette
 
 <p>가로 500, 세로 600의 600 x 500 행렬에 대해 실험을 해보았다.</p>
 
-<p><a href="img-composition-all.png" class="popup img-link "><img data-src="img-composition-all.png" alt="단계별 이미지 재구성" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/svd/img-composition-all.png" class="popup img-link "><img data-src="/assets/posts/svd/img-composition-all.png" alt="단계별 이미지 재구성" class="lazyload" data-proofer-ignore></a></p>
 
 <p>당연히 벡터를 많이 사용할수록 이미지가 선명해진다.</p>
 
-<p><a href="img-threshold.png" class="popup img-link "><img data-src="img-threshold.png" alt="singular values 시각화" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/svd/img-threshold.png" class="popup img-link "><img data-src="/assets/posts/svd/img-threshold.png" alt="singular values 시각화" class="lazyload" data-proofer-ignore></a></p>
 
 <p>singular value를 시각화해보면 n = 184에서 이미 singular value 총합의 80%를 넘어간다. 184 쌍의 singular vector만으로도 이미지 80%를 복원할 수 있다.</p>
 
-<p><a href="img-composition-threshold.png" class="popup img-link "><img data-src="img-composition-threshold.png" alt="50%, 80% 이미지 재구성" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/svd/img-composition-threshold.png" class="popup img-link "><img data-src="/assets/posts/svd/img-composition-threshold.png" alt="50%, 80% 이미지 재구성" class="lazyload" data-proofer-ignore></a></p>
 
 <p>만약 600 x 500 행렬을 모두 사용하면 총 300,000개의 정보가 필요하다. 하지만, n = 200이라면 총 220,200개의 정보만 있으면 된다.</p>
 
@@ -1645,11 +1645,11 @@ Palette
 
 <p>공분산 행렬을 구하기 전 원점을 중심으로 $X$를 이동시킨다. 그리고 공분산 행렬에 대해 SVD를 실행한다.</p>
 
-<p><a href="pca-component.png" class="popup img-link "><img data-src="pca-component.png" alt="공분산 행렬 singular vector 시각화" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/svd/pca-component.png" class="popup img-link "><img data-src="/assets/posts/svd/pca-component.png" alt="공분산 행렬 singular vector 시각화" class="lazyload" data-proofer-ignore></a></p>
 
 <p>공분산 행렬에 대한 Singular vector를 시각화한 그래프다. 데이터의 중심축을 따라 vector가 만들어진 것을 확인할 수 있다. Singular vector가 만드는 축을 <strong>Principle Component</strong>라고 부른다. 그림에서 빨간 색으로 표현된 Component 1이 가장 큰 singular value를 가진다. 동시에 데이터 정보를 가장 잘 표현한 축이다. 따라서 3차원 데이터를 Component 1에 대해 매핑하면 차원 축소가 일어난다.</p>
 
-<p><a href="pca-result.png" class="popup img-link "><img data-src="pca-result.png" alt="PCA 결과" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/svd/pca-result.png" class="popup img-link "><img data-src="/assets/posts/svd/pca-result.png" alt="PCA 결과" class="lazyload" data-proofer-ignore></a></p>
 
 <p>데이터의 주요한 분포를 유지한 채 차원만 축소시켰다.</p>
 
@@ -1839,6 +1839,13 @@ Palette
   <section id="access-lastmod">
     <h2 class="panel-heading">최근 수정</h2>
     <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/projects/2025/03/05/eeg-transformer.html">EEG 신호를 활용한 청소년 ADHD 진단</a>
+        </li>
       
         
         

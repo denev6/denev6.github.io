@@ -3,7 +3,7 @@ title: 영상을 통한 우울증 예측 모델 분석
 tags: [AI, CV, Python]
 category: Study
 toc: true
-media_subpath: /assets/posts/multimodal-dep/
+img_path: /assets/posts/multimodal-dep/
 ---
 
 ## 동기

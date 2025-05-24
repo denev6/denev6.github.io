@@ -55,7 +55,7 @@
 <meta property="twitter:title" content="EEG 신호를 활용한 청소년 ADHD 진단" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-05T00:00:00+09:00","datePublished":"2025-03-05T00:00:00+09:00","description":"요약","headline":"EEG 신호를 활용한 청소년 ADHD 진단","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/projects/2025/03/05/eeg-transformer.html"},"url":"https://denev6.github.io/projects/2025/03/05/eeg-transformer.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-24T15:21:54+09:00","datePublished":"2025-03-05T00:00:00+09:00","description":"요약","headline":"EEG 신호를 활용한 청소년 ADHD 진단","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/projects/2025/03/05/eeg-transformer.html"},"url":"https://denev6.github.io/projects/2025/03/05/eeg-transformer.html"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -1027,7 +1027,7 @@ Palette
 
 <p>본 연구에서는 <a href="https://ieee-dataport.org/open-access/eeg-data-adhd-control-children">IEEE data-port</a>의 “<em>EEG Data ADHD-Control Children</em>” 데이터셋을 활용했다.</p>
 
-<p><a href="eeg-sample.png" class="popup img-link "><img data-src="eeg-sample.png" alt="EEG 시각화" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/eeg-vit/eeg-sample.png" class="popup img-link "><img data-src="/assets/posts/eeg-vit/eeg-sample.png" alt="EEG 시각화" class="lazyload" data-proofer-ignore></a></p>
 
 <p>데이터 주요 특징은 다음과 같다.</p>
 
@@ -1048,7 +1048,7 @@ Palette
 
 <p>IEEE 데이터셋은 아이들이 캐릭터 수를 세는 과제 중 측정된 EEG 신호를 포함하고 있다. 참가자마다 과제 완료 시간이 다르기 때문에, EEG 신호의 길이도 다양하다. 구체적으로 신호 길이는 7,983부터 43,252까지 다양하며, 대체로 ADHD 그룹의 과제 완료 시간이 더 길었다.</p>
 
-<p><a href="eeg-length.png" class="popup img-link "><img data-src="eeg-length.png" alt="EEG 신호 길이" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/eeg-vit/eeg-length.png" class="popup img-link "><img data-src="/assets/posts/eeg-vit/eeg-length.png" alt="EEG 신호 길이" class="lazyload" data-proofer-ignore></a></p>
 
 <p>선행 연구(M. Y. Esas and F. Latifoğlu)에서는 <strong>데이터 길이를 9,250으로 고정하는 접근 방식</strong>을 제안했다. 이 방법은 여러 장점이 있다.</p>
 
@@ -1070,7 +1070,7 @@ Palette
 
 <p>본 모델은 크게 Embedding과 Transformer 두 부분으로 구성되어 있다. <strong>Embedding</strong>은 Vision Transformer(A. Dosovitskiy et al., 2021)를 참고했으며, <strong>Transformer</strong>는 EEG-Transformer(Y. He et al., 2023)의 구조를 기반으로 일부 파라미터를 수정했다.</p>
 
-<p><a href="model-structure.png" class="popup img-link "><img data-src="model-structure.png" alt="모델 구조" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/eeg-vit/model-structure.png" class="popup img-link "><img data-src="/assets/posts/eeg-vit/model-structure.png" alt="모델 구조" class="lazyload" data-proofer-ignore></a></p>
 
 <h3 id="convolutional-embedding"><span class="me-2">Convolutional Embedding</span><a href="#convolutional-embedding" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1166,7 +1166,7 @@ Palette
 
 <p>학습 과정에서 validation loss를 통해 모델의 <strong>과적합(overfitting) 현상을 관찰</strong>했다.</p>
 
-<p><a href="loss-history.png" class="popup img-link "><img data-src="loss-history.png" alt="Loss 기록" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/eeg-vit/loss-history.png" class="popup img-link "><img data-src="/assets/posts/eeg-vit/loss-history.png" alt="Loss 기록" class="lazyload" data-proofer-ignore></a></p>
 
 <p>Dropout이나 weight decay와 같은 정규화 기법을 적용했음에도 불구하고 과적합 문제를 완전히 해결하지 못했다. 이는 제한된 데이터셋의 근본적인 한계로 보인다.</p>
 
@@ -1352,6 +1352,13 @@ Palette
   <section id="access-lastmod">
     <h2 class="panel-heading">최근 수정</h2>
     <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/projects/2025/03/05/eeg-transformer.html">EEG 신호를 활용한 청소년 ADHD 진단</a>
+        </li>
       
         
         

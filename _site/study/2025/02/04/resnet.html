@@ -1026,7 +1026,7 @@ Palette
 
 <p>하지만 <strong>degradation 문제</strong>도 발생한다. 정확도가 낮아지지 않고 training error가 얕은 모델보다 크다.</p>
 
-<p><a href="layer-error.png" class="popup img-link "><img data-src="layer-error.png" alt="error rate" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/resnet/layer-error.png" class="popup img-link "><img data-src="/assets/posts/resnet/layer-error.png" alt="error rate" class="lazyload" data-proofer-ignore></a></p>
 
 <p>본 연구는 <strong>deep residual learning framework</strong>로 degradation 문제를 해결했다.</p>
 
@@ -1034,7 +1034,7 @@ Palette
 
 <h3 id="residual-learning"><span class="me-2">Residual Learning</span><a href="#residual-learning" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="identity-map.png" class="popup img-link "><img data-src="identity-map.png" alt="residual learning" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/resnet/identity-map.png" class="popup img-link "><img data-src="/assets/posts/resnet/identity-map.png" alt="residual learning" class="lazyload" data-proofer-ignore></a></p>
 
 <ul>
   <li>layer 입력을 $x$라고 가정</li>
@@ -1076,7 +1076,7 @@ Palette
 
 <p>stride를 2로 두어 직접적인 down-sampling을 시도한다. 마지막에 global average pooling과 1000-way softmax를 적용한다.</p>
 
-<p><a href="architecture.png" class="popup img-link "><img data-src="architecture.png" alt="ResNet architecture" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/resnet/architecture.png" class="popup img-link "><img data-src="/assets/posts/resnet/architecture.png" alt="ResNet architecture" class="lazyload" data-proofer-ignore></a></p>
 
 <p><code class="language-plaintext highlighter-rouge">Residual Network</code>: 위에서 소개한 baseline을 기반으로 shortcut을 추가한다. 차원이 증가했을 때는 2가지 옵션 중 하나를 사용한다.</p>
 
@@ -1132,7 +1132,7 @@ Palette
 
 <p>학습 시간 단축을 위해 <code class="language-plaintext highlighter-rouge">Bottleneck 구조</code>를 사용했다.</p>
 
-<p><a href="bottleneck.png" class="popup img-link "><img data-src="bottleneck.png" alt="3-layer bottleneck 구조" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/resnet/bottleneck.png" class="popup img-link "><img data-src="/assets/posts/resnet/bottleneck.png" alt="3-layer bottleneck 구조" class="lazyload" data-proofer-ignore></a></p>
 
 <p>첫 1x1 conv는 차원을 압축(또는 유지)하고, 마지막 1x1 conv는 차원을 복원한다. 이 구조에서 projection을 사용하면 모델 복잡도가 커진다. 따라서 identity shortcut이 더 효율적이다.</p>
 
@@ -1142,7 +1142,7 @@ Palette
 
 <p>모델 별 layer 출력의 표준편차를 비교했다.</p>
 
-<p><a href="layer-std.png" class="popup img-link "><img data-src="layer-std.png" alt="signal-std" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/resnet/layer-std.png" class="popup img-link "><img data-src="/assets/posts/resnet/layer-std.png" alt="signal-std" class="lazyload" data-proofer-ignore></a></p>
 
 <p>출력은 3x3 conv + 정규화 결과로, 비선형 함수(ReLU)를 거치기 전이다. ResNet이 Plain 모델보다 작은 반응을 보였다. 이는 residual 함수가 0과 가까운 값($\mathcal{F}$)을 낼 것이라는 가정을 증명한다. 또 레이어가 많을수록 각 레이어는 큰 변화를 보이지 않았다.</p>
 
@@ -1299,6 +1299,13 @@ Palette
   <section id="access-lastmod">
     <h2 class="panel-heading">최근 수정</h2>
     <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/projects/2025/03/05/eeg-transformer.html">EEG 신호를 활용한 청소년 ADHD 진단</a>
+        </li>
       
         
         

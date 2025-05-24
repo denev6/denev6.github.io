@@ -2,7 +2,7 @@
 title: EEG 신호를 활용한 청소년 ADHD 진단
 tags: [AI, CV, Python, Pytorch]
 category: Projects 
-media_subpath: /assets/posts/eeg-vit/
+img_path: /assets/posts/eeg-vit/
 math: true
 toc: true
 pin: true

@@ -3,7 +3,7 @@ title: 월간 DACON 발화자의 감정 인식 AI
 tags: [AI, NLP, Python]
 category: Projects 
 toc: true
-media_subpath: /assets/posts/dacon-2022/
+img_path: /assets/posts/dacon-2022/
 ---
 
 > 대회: [월간 데이콘 발화자의 감정인식 AI 경진대회](https://dacon.io/competitions/official/236027/overview/description)  
