@@ -3,7 +3,7 @@ title: 얼굴 인식을 이용한 마우스 제어
 tags: [AI, CV, Python]
 category: Projects 
 toc: true
-img_path: /assets/posts/face-control/
+media_subpath: /assets/posts/face-control/
 pin: true
 ---
 

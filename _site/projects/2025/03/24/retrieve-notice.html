@@ -55,7 +55,7 @@
 <meta property="twitter:title" content="RAG로 학교 공지 검색" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-02T11:23:16+09:00","datePublished":"2025-03-24T00:00:00+09:00","description":"프로젝트를 시작하며","headline":"RAG로 학교 공지 검색","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/projects/2025/03/24/retrieve-notice.html"},"url":"https://denev6.github.io/projects/2025/03/24/retrieve-notice.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-23T09:29:54+09:00","datePublished":"2025-03-24T00:00:00+09:00","description":"프로젝트를 시작하며","headline":"RAG로 학교 공지 검색","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/projects/2025/03/24/retrieve-notice.html"},"url":"https://denev6.github.io/projects/2025/03/24/retrieve-notice.html"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -895,11 +895,11 @@ Palette
 
 <p>이후에도 챗봇을 이용해 여러 실험을 해봤지만 계속 모른다는 이야기만 반복했다.</p>
 
-<p><a href="/assets/posts/retrieve-notice/kingo.png" class="popup img-link "><img data-src="/assets/posts/retrieve-notice/kingo.png" alt="학교 챗봇 예시" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="kingo.png" class="popup img-link "><img data-src="kingo.png" alt="학교 챗봇 예시" class="lazyload" data-proofer-ignore></a></p>
 
 <p>그래서 그날 밤 혼자 만든 챗봇이 바로 이 <a href="https://github.com/denev6/retrieve-notice">프로젝트</a>다.</p>
 
-<p><a href="/assets/posts/retrieve-notice/overview.png" class="popup img-link "><img data-src="/assets/posts/retrieve-notice/overview.png" alt="architecture" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="overview.png" class="popup img-link "><img data-src="overview.png" alt="architecture" class="lazyload" data-proofer-ignore></a></p>
 
 <p>초록색 화살표는 새로운 데이터를 수집 + 저장하는 과정이며, 회색 화살표는 사용자가 공지를 검색하는 과정이다.</p>
 
@@ -980,7 +980,7 @@ Palette
 
 <p>LLM은 가져온 정보를 요약해서 보여준다. 물론 LLM 없이도 검색 시스템은 만들 수 있다.</p>
 
-<p><a href="/assets/posts/retrieve-notice/compare-demo.png" class="popup img-link "><img data-src="/assets/posts/retrieve-notice/compare-demo.png" alt="데모 비교" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="compare-demo.png" class="popup img-link "><img data-src="compare-demo.png" alt="데모 비교" class="lazyload" data-proofer-ignore></a></p>
 
 <p>그런데 정보를 그대로 던져주는 것보다는 짧게 요약해서 보여주는 게 사용자 입장에서 더 편할 거다. 그래서 Retriever가 물어온 정보를 LLM API를 이용해 요약한다. Version 1에서는 <strong>GPT-3.5-turbo</strong>를, Version 2는 <strong>Claude3 Sonnet</strong>을 사용했다.</p>
 
@@ -1209,28 +1209,7 @@ Answer
         
         
         <li class="text-truncate lh-lg">
-          <a href="/machine-learning/2025/04/18/markov-process.html">MDP에 대한 오해와 Value function 정의</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/computer-vision/2025/02/08/fcn.html">Image Segmentation with FCN</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
           <a href="/projects/2022/10/07/face-mouse-control.html">얼굴 인식을 이용한 마우스 제어</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/playground/2025/01/17/ml-api.html">FastAPI 기반 딥러닝 모델 API 구축하기</a>
         </li>
       
     </ul>
@@ -1278,36 +1257,6 @@ Answer
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -1322,139 +1271,6 @@ Answer
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -1544,12 +1360,121 @@ Answer
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
     
     
     
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -1587,13 +1512,10 @@ Answer
         <a class="post-tag btn btn-outline-primary" href="/tags/ai/">AI</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/python/">Python</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/cv/">CV</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/pytorch/">Pytorch</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/python/">Python</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/c/">C++</a>
@@ -1602,16 +1524,16 @@ Answer
         <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/go/">Go</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/blog/">blog</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/llm/">LLM</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/mlops/">MLOps</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/pytorch/">Pytorch</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/rl/">RL</a>
       
     </div>
   </section>
@@ -1667,127 +1589,19 @@ Answer
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -1971,7 +1785,7 @@ Answer
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/projects/2022/12/17/dacon.html" class="post-preview card h-100">
+          <a href="/projects/2022/12/17/dacon-roberta.html" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2019,49 +1833,7 @@ Answer
         </article>
       
         <article class="col">
-          <a href="/paper-review/2025/01/31/alexnet.html" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-    class="small"
-  
-  data-ts="1738249200"
-  data-df="YYYY/MM/DD"
-  
->
-  2025/01/31
-</time>
-
-              <h4 class="pt-0 my-2">ImageNet Classification with Deep Convolutional Neural Networks</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  ImageNet Classification with Deep Convolutional Neural Networks: 논문은 AlexNet을 소개한 논문으로 CNN 모델의 각 레이어가 어떤 역할을 하는지 잘 분석했다.
-
-논문을 정리한 글이며, CNN의 기본적인 개념을 생략하고 정리했다. 자세한 부분은 BLOG: CNN에 볼 수 있다.
-
-본 글에서 분석을...
-                </p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/computer-vision/2025/02/08/fcn.html" class="post-preview card h-100">
+          <a href="/study/2025/02/08/fcn.html" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2104,6 +1876,54 @@ Image Segmentation
           </a>
         </article>
       
+        <article class="col">
+          <a href="/study/2023/02/06/multimodal-depression.html" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+    class="small"
+  
+  data-ts="1675609200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2023/02/06
+</time>
+
+              <h4 class="pt-0 my-2">영상을 통한 우울증 예측 모델 분석</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  동기
+
+성균관대 우수학부생 프로그램을 통해 우울증 챗봇 개발에 참여하는 기회를 얻었다.
+
+
+
+논문 요약 (번역/ 정리)
+
+이미지를 중심으로한 우울증 연구 중 논문: Automatic Depression Detection via Learning and Fusing Features from Visual Cues을 찾게 되었다.
+
+문맥을 위해 일부 표현이 ...
+                </p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
     </nav>
   </aside>
   <!-- #related-posts -->
@@ -2129,11 +1949,11 @@ Image Segmentation
 
   
     <a
-      href="/machine-learning/2025/04/18/markov-process.html"
+      href="/study/2025/04/25/dqn.html"
       class="btn btn-outline-primary"
       aria-label="다음 글"
     >
-      <p>MDP에 대한 오해와 Value function 정의</p>
+      <p>Human-level control through deep reinforcement learning</p>
     </a>
   
 </nav>
@@ -2274,36 +2094,6 @@ Image Segmentation
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -2318,139 +2108,6 @@ Image Segmentation
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -2540,12 +2197,121 @@ Image Segmentation
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
     
     
     
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -2583,13 +2349,10 @@ Image Segmentation
         <a class="post-tag btn btn-outline-primary" href="/tags/ai/">AI</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/python/">Python</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/cv/">CV</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/pytorch/">Pytorch</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/python/">Python</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/c/">C++</a>
@@ -2598,16 +2361,16 @@ Image Segmentation
         <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/go/">Go</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/blog/">blog</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/llm/">LLM</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/mlops/">MLOps</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/pytorch/">Pytorch</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/rl/">RL</a>
       
     </div>
   </section>
