@@ -10,7 +10,7 @@ Sung-jin Park
 
 - sungjin.code@gmail.com
 - Github: [denev6](https://github.com/denev6)
-- 🇰🇷 Seoul, South Korea.
+- 🇰🇷 Seoul, South Korea.
 
 ## 기술 스택
 
@@ -18,7 +18,7 @@ Sung-jin Park
 
 - Programing Languages: `Python`
 - Framework/ Library: `PyTorch`, `HuggingFace`, `LangChain`, `OpenCV`
-- Tools: `Git`, `Docker`, `uv`
+- Tools: `Git`, `Docker`, `uv`, `WandB`
 
 📚 이론적 지식이 있는 기술
 
@@ -77,6 +77,7 @@ Sung-jin Park
 - 월간 DACON **발화자의 감정인식 AI 경진대회**: 최종 2위 (2022.12.26)
 - 성균관대학교 **Co-Deep Learning**: 우수상 (Team Palette) (2022.08.10)
 
-## 학력
+## 학력 및 경력
 
-- 2021.03 ~ (현재) 성균관대학교 인공지능융합학과 재학 중
+- 성균관대학교 [LAMDA](https://sites.google.com/site/hyoh79/research) Lab 학부연구생
+- 성균관대학교 인공지능융합학과 재학 중: 2021.03 ~ (현재)

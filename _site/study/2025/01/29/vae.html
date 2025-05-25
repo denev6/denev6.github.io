@@ -55,7 +55,7 @@
 <meta property="twitter:title" content="Auto-Encoding Variational Bayes" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-29T00:00:00+09:00","datePublished":"2025-01-29T00:00:00+09:00","description":"Auto Encoder","headline":"Auto-Encoding Variational Bayes","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/study/2025/01/29/vae.html"},"url":"https://denev6.github.io/study/2025/01/29/vae.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-24T15:29:20+09:00","datePublished":"2025-01-29T00:00:00+09:00","description":"Auto Encoder","headline":"Auto-Encoding Variational Bayes","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/study/2025/01/29/vae.html"},"url":"https://denev6.github.io/study/2025/01/29/vae.html"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -1444,21 +1444,35 @@ Palette
         
         
         <li class="text-truncate lh-lg">
-          <a href="/projects/2025/03/05/eeg-transformer.html">EEG 신호를 활용한 청소년 ADHD 진단</a>
+          <a href="/study/2025/01/27/hog.html">Histograms of Oriented Gradients for Human Detection</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/projects/2025/03/24/retrieve-notice.html">RAG로 학교 공지 검색</a>
+          <a href="/study/2025/01/29/vae.html">Auto-Encoding Variational Bayes</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/projects/2022/10/07/face-mouse-control.html">얼굴 인식을 이용한 마우스 제어</a>
+          <a href="/study/2025/01/31/alexnet.html">ImageNet Classification with Deep Convolutional Neural Networks</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/study/2025/02/04/resnet.html">Deep Residual Learning for Image Recognition</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/study/2025/02/06/vit.html">An Image is Worth 16x16 Words, Transformers For Image Recognition At Scale</a>
         </li>
       
     </ul>
@@ -2223,60 +2237,6 @@ Vector: 크기와 방향을 가지는 양으로, 2차원 공간의 벡터는 $\v
               
                 
                 <!--  The comments switcher -->
-
-  
-  <!-- https://utteranc.es/ -->
-<script src="https://utteranc.es/client.js"
-        repo="denev6/utterances"
-        issue-term="pathname"
-        crossorigin="anonymous"
-        async>
-</script>
-
-<script type="text/javascript">
-  $(function() {
-    const origin = "https://utteranc.es";
-    const iframe = "iframe.utterances-frame";
-    const lightTheme = "github-light";
-    const darkTheme = "github-dark";
-    let initTheme = lightTheme;
-
-    if ($("html[data-mode=dark]").length > 0
-        || ($("html[data-mode]").length == 0
-            && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-      initTheme = darkTheme;
-    }
-
-    addEventListener("message", (event) => {
-      let theme;
-
-      /* credit to <https://github.com/utterance/utterances/issues/170#issuecomment-594036347> */
-      if (event.origin === origin) {
-        /* page initial */
-        theme = initTheme;
-
-      } else if (event.source === window && event.data &&
-            event.data.direction === ModeToggle.ID) {
-        /* global theme mode changed */
-        const mode = event.data.message;
-        theme = (mode === ModeToggle.DARK_MODE ? darkTheme : lightTheme);
-
-      } else {
-        return;
-      }
-
-      const message = {
-        type: "set-theme",
-        theme: theme
-      };
-
-      const utterances = document.querySelector(iframe).contentWindow;
-      utterances.postMessage(message, origin);
-    });
-
-  });
-</script>
-
 
 
               

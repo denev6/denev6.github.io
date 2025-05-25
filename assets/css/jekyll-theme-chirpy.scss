@@ -4,3 +4,21 @@
 @import 'main';
 
 /* append your custom style below */
+
+
+div.content > blockquote > p {
+  margin-bottom: 0px;
+}
+
+blockquote {
+  color: var(--blockquote-text-color);
+  border-left-width: 2px;
+  border-radius: 0px;
+  padding: 0px;
+  padding-left: 1rem;
+}
+
+div[class^=language-] .code-header::before {
+  background-color: var(--code-header-muted-color);
+  box-shadow: 1.25rem 0 0 var(--code-header-muted-color),2.5rem 0 0 var(--code-header-muted-color);
+}
