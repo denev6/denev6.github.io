@@ -4,7 +4,7 @@
   <id>https://denev6.github.io/</id>
   <title>Palette</title>
   <subtitle>머신러닝, 수학, 프로그래밍을 다루는 개발자의 노트입니다.</subtitle>
-  <updated>2025-06-02T14:03:15+09:00</updated>
+  <updated>2025-06-05T19:38:03+09:00</updated>
   <author>
     <name>박성진</name>
     <uri>https://denev6.github.io/</uri>
@@ -24,7 +24,7 @@
     <link href="https://denev6.github.io/projects/2025/05/24/dacon-bias.html" rel="alternate" type="text/html" title="프롬프트 엔지니어링으로 LLM 편향 줄이기" />
     <published>2025-05-24T00:00:00+09:00</published>
   
-    <updated>2025-05-24T00:00:00+09:00</updated>
+    <updated>2025-06-02T14:03:33+09:00</updated>
   
     <id>https://denev6.github.io/projects/2025/05/24/dacon-bias.html</id>
     <content src="https://denev6.github.io/projects/2025/05/24/dacon-bias.html" />
@@ -50,7 +50,7 @@
   대회: 2025 Bias-A-Thon: Bias 대응 챌린지 &amp;lt;Track 2&amp;gt;
 
 
-대회 결과: 245팀 중 Private 4등 (강화학습 5조)
+대회 결과: 245팀 중 Private 4위, 최종 3위
 
 Github: denev6/Bias-A-Thon
 
@@ -62,7 +62,7 @@ Github: denev6/Bias-A-Thon
 
 정답은 “알 수 없음”이다. 그런데 LLM에 질문하면 “노르웨이인”이라고 답한다. LLM이 인간의 편견까지 학습한 결과다 (검증 코드). 본 대회는 편향 없이 올바른 답변을 출력하도록 만들어야 한다.
 
-이를 단순히 “편향을 없애는” 문제로만 생각하면 안 된다. “편향을 벗어나는 창의력”과 “문맥을 이...
+이를 단순히 “편향을 없애는” 문제로만 생각하면 안 된다. “편향을 벗어나는 창의력”과 “문맥을 이해하는...
     </summary>
   
 
@@ -120,7 +120,7 @@ Github: denev6/Bias-A-Thon
     <link href="https://denev6.github.io/projects/2025/03/24/retrieve-notice.html" rel="alternate" type="text/html" title="RAG로 학교 공지 검색" />
     <published>2025-03-24T00:00:00+09:00</published>
   
-    <updated>2025-05-24T15:29:20+09:00</updated>
+    <updated>2025-06-02T14:03:33+09:00</updated>
   
     <id>https://denev6.github.io/projects/2025/03/24/retrieve-notice.html</id>
     <content src="https://denev6.github.io/projects/2025/03/24/retrieve-notice.html" />
