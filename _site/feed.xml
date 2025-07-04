@@ -4,7 +4,7 @@
   <id>https://denev6.github.io/</id>
   <title>Palette</title>
   <subtitle>머신러닝, 수학, 프로그래밍을 다루는 개발자의 노트입니다.</subtitle>
-  <updated>2025-06-14T21:11:26+09:00</updated>
+  <updated>2025-07-04T23:17:21+09:00</updated>
   <author>
     <name>박성진</name>
     <uri>https://denev6.github.io/</uri>
@@ -20,11 +20,51 @@
 
   
   <entry>
+    <title>네이버가 말하는 의료 챗봇과 장기 기억</title>
+    <link href="https://denev6.github.io/study/2025/07/04/long-term-memory.html" rel="alternate" type="text/html" title="네이버가 말하는 의료 챗봇과 장기 기억" />
+    <published>2025-07-04T00:00:00+09:00</published>
+  
+    <updated>2025-07-04T00:00:00+09:00</updated>
+  
+    <id>https://denev6.github.io/study/2025/07/04/long-term-memory.html</id>
+    <content src="https://denev6.github.io/study/2025/07/04/long-term-memory.html" />
+    <author>
+      <name>박성진</name>
+    </author>
+
+  
+    
+    <category term="Study" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      본 글은 ‘신뢰 가능한’ 의료 AI 챗봇에 대한 고민을 담고 있다. 네이버(NAVER)의 연구를 중심으로 설명하며, ‘장기기억(Long-term memory)’이 중요한 키워드다.
+
+내담자는 상담자에게 솔직한가?
+
+심리 상담 치료에서 내담자와 상담자의 신뢰 관계 형성이 중요하다. 내담자가 상담자를 신뢰하지 않으면 진솔한 이야기를 털어놓을 수 없다. 내담자가 정보를 제공하지 않으면, 정확한 진단과 치료가 어려워진다. 아무리 이론적으로 완벽한 치료 세션이 있다해도 내담자의 정보가 없다면 아무 소용이 없다. 그렇다면 의료 챗봇은 어떨까?
+
+최근 LLM을 활용한 의료 챗봇이 활발히 연구되고 있다. 기존에 인간 전문가가 수행하던 세션을 챗봇이 대신하는 형태가 많다. 하지만, 앞서 말했듯, 이론적 배경이 완벽하더...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
     <title>프롬프트 엔지니어링으로 LLM 편향 줄이기</title>
     <link href="https://denev6.github.io/projects/2025/05/24/dacon-bias.html" rel="alternate" type="text/html" title="프롬프트 엔지니어링으로 LLM 편향 줄이기" />
     <published>2025-05-24T00:00:00+09:00</published>
   
-    <updated>2025-06-05T19:49:33+09:00</updated>
+    <updated>2025-06-14T21:11:51+09:00</updated>
   
     <id>https://denev6.github.io/projects/2025/05/24/dacon-bias.html</id>
     <content src="https://denev6.github.io/projects/2025/05/24/dacon-bias.html" />
@@ -199,50 +239,6 @@ Github: ADHD-EEG-ViT
 주의력결핍 과잉행동장애(Attention deficit / hyperactivity disorder, ADHD)는 아동 및 청소년기에 가장 흔한 신경발달장애로, 조기에 적절한 진단과 개입이 이루어지지 않으면 학업 성취, 사회적 관계, 정서 발달에 장기적인 부정적 영향을 미칠 수 있다. ADHD 진단에 도움을 줄 수 있는 여러 뇌파 신호 중, EEG(Electroencephalogram)는 비침습적 방법으로 뇌 활동을 측정할 수 있어 신경과학 연구와 임상 진단 분야에서 널리 활용되고 있다.
 
 본 연구는 EEG 신호를 활용해 청소년 ADHD 진단을 돕는 딥러닝 모델을 설계하고 실험했다. Vision-Transformer(A. Dosovitskiy et al.,...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Image Segmentation with FCN</title>
-    <link href="https://denev6.github.io/study/2025/02/08/fcn.html" rel="alternate" type="text/html" title="Image Segmentation with FCN" />
-    <published>2025-02-08T00:00:00+09:00</published>
-  
-    <updated>2025-05-24T15:29:20+09:00</updated>
-  
-    <id>https://denev6.github.io/study/2025/02/08/fcn.html</id>
-    <content src="https://denev6.github.io/study/2025/02/08/fcn.html" />
-    <author>
-      <name>박성진</name>
-    </author>
-
-  
-    
-    <category term="Study" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      이미지 segmentation에 대해 다루며, CNN을 활용한 FCN(Fullly Convolutional Network)을 중심으로 소개한다. FCN은 논문 “Fully Convolutional Networks for Semantic Segmentation“에서 소개되었다.
-
-Image Segmentation
-
-
-
-이미지 segmentation은 픽셀 단위로 객체 클래스를 분류하는 문제를 말한다. 이는 각 픽셀마다 이미지 분류 문제를 푸는 것과 같다. c개의 레이블이 있다면 배경(0)을 하나의 레이블로 두고 총 c+1개의 레이블로 분류하는 문제가 된다.
-
-
-
-기존의 CNN classification 모델은 2차원 feature map을 1차원으로 압축해 결과를 출력한다. 만약 2차원 정보를 유지한 채...
     </summary>
   
 
