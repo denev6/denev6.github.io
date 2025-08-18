@@ -4,7 +4,7 @@
   <id>https://denev6.github.io/</id>
   <title>Palette</title>
   <subtitle>머신러닝, 수학, 프로그래밍을 다루는 개발자의 노트입니다.</subtitle>
-  <updated>2025-07-04T23:17:21+09:00</updated>
+  <updated>2025-08-18T16:40:39+09:00</updated>
   <author>
     <name>박성진</name>
     <uri>https://denev6.github.io/</uri>
@@ -17,6 +17,48 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>PyCon KR 2025</title>
+    <link href="https://denev6.github.io/experience/2025/08/17/pycon2025.html" rel="alternate" type="text/html" title="PyCon KR 2025" />
+    <published>2025-08-17T00:00:00+09:00</published>
+  
+    <updated>2025-08-17T00:00:00+09:00</updated>
+  
+    <id>https://denev6.github.io/experience/2025/08/17/pycon2025.html</id>
+    <content src="https://denev6.github.io/experience/2025/08/17/pycon2025.html" />
+    <author>
+      <name>박성진</name>
+    </author>
+
+  
+    
+    <category term="Experience" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+
+PyCon 2025에 다녀왔다. 처음 참여하는 개발 컨퍼런스라 긴장 반 설렘 반으로 참여했다. 컨퍼런스라고 하면 전문가분들이 모이는 진지한 자리 같아서 멀게만 느껴졌지만, 현업에서 Python을 사용하시는 분들의 이야기가 듣고 싶어 참여를 결정했다.
+
+Django와 HTMX에 설득되다
+
+
+
+필자는 주로 ML 모델을 다루다보니 벡엔드는 API를 던지고 받는 정도만 해왔다. 그렇다보니 고민 없이 FastAPI만 사용해왔고, Django는 머리 속에서 잊혀져 있었다. 그러다 여러 세션에서 Django의 장점을 듣게 되었다. 특히 세션 로그인이나 DB migration 등 작업을 Django가 아주 쉽게 할 수 있다는 내용이었다. 물론 앞으로도 간단한 API 서버는 FastAPI로 열겠지만, 머리 속에 D...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -199,46 +241,6 @@ Github 보기
 
 
 그래서 그날 ...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>EEG 신호를 활용한 청소년 ADHD 진단</title>
-    <link href="https://denev6.github.io/projects/2025/03/05/eeg-transformer.html" rel="alternate" type="text/html" title="EEG 신호를 활용한 청소년 ADHD 진단" />
-    <published>2025-03-05T00:00:00+09:00</published>
-  
-    <updated>2025-05-24T15:29:20+09:00</updated>
-  
-    <id>https://denev6.github.io/projects/2025/03/05/eeg-transformer.html</id>
-    <content src="https://denev6.github.io/projects/2025/03/05/eeg-transformer.html" />
-    <author>
-      <name>박성진</name>
-    </author>
-
-  
-    
-    <category term="Projects" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      요약
-
-Github: ADHD-EEG-ViT
-
-주의력결핍 과잉행동장애(Attention deficit / hyperactivity disorder, ADHD)는 아동 및 청소년기에 가장 흔한 신경발달장애로, 조기에 적절한 진단과 개입이 이루어지지 않으면 학업 성취, 사회적 관계, 정서 발달에 장기적인 부정적 영향을 미칠 수 있다. ADHD 진단에 도움을 줄 수 있는 여러 뇌파 신호 중, EEG(Electroencephalogram)는 비침습적 방법으로 뇌 활동을 측정할 수 있어 신경과학 연구와 임상 진단 분야에서 널리 활용되고 있다.
-
-본 연구는 EEG 신호를 활용해 청소년 ADHD 진단을 돕는 딥러닝 모델을 설계하고 실험했다. Vision-Transformer(A. Dosovitskiy et al.,...
     </summary>
   
 

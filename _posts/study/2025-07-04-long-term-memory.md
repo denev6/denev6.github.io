@@ -101,7 +101,7 @@ DELETE가 필요한 예시는 다음과 같다.
 
 연구는 T5 모델을 fine-tune해 분류 모델을 학습시켰고, 88%가 넘는 정확도로 올바른 연산을 잘 선택했다.
 
-참고로, 위 연구는 2022에 제안된 기법이며, 현재 (2025년 기준) SOTA 방법론은 [Mem0](https://arxiv.org/html/2504.19413v1)이다. 의료 인공지능보다는 개방형 대화 요약을 목적으로 설계되었다. 메시지를 비동기로 요약하는 extraction phase와 { ADD, UPDATE, DELETE, NOOP } 연산을 수행하는 update phase를 가진다. 네이버는 분리된 분류 모델(T5)을 학습해 연산을 지정했지만, mem0는 GPT-4o-mini의 reasoning을 활용했다.
+참고로, 위 연구는 2022에 제안된 기법이며, 최근(2025년)에는 [Mem0](https://arxiv.org/html/2504.19413v1)라는 기법이 제안되었고 오픈소스로 공개되었다. Mem0는 의료 인공지능보다 개방형 대화 요약을 목적으로 설계되었다. 메시지를 비동기로 요약하는 extraction phase와 { ADD, UPDATE, DELETE, NOOP } 연산을 수행하는 update phase를 가진다. 네이버는 분리된 분류 모델(T5)을 학습해 연산을 지정했지만, mem0는 GPT-4o-mini의 reasoning을 활용했다.
 
 ## 결론
 
@@ -113,3 +113,6 @@ DELETE가 필요한 예시는 다음과 같다.
 - 클로바 케어콜 논문(2): 챗봇의 장기기억과 자기표현: [CLOVA TECH-BLOG](https://clova.ai/tech-blog/ko-clova-%EC%BC%80%EC%96%B4%EC%BD%9C-%EC%97%B0%EA%B5%AC-%EB%85%BC%EB%AC%B8-%EC%86%8C%EA%B0%9C-2)
 - Keep Me Updated! Memory Management in Long-term Conversations: [arXiv](https://arxiv.org/abs/2210.08750)
 - Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory: [arXiv](https://arxiv.org/html/2504.19413v1)
+- Advancing Conversational Psychotherapy: Integrating Privacy, Dual-Memory, and Domain Expertise with Large Language Models: [arXiv](https://arxiv.org/abs/2412.02987)
+- MemoryBank: Enhancing Large Language Models with Long-Term Memory: [arXiv](https://arxiv.org/abs/2305.10250)
+- In Prospect and Retrospect: Reflective Memory Management for Long-term Personalized Dialogue Agents: [arXiv](https://arxiv.org/abs/2503.08026)

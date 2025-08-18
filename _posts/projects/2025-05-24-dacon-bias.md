@@ -3,7 +3,6 @@ title: 프롬프트 엔지니어링으로 LLM 편향 줄이기
 tags: [AI, LLM]
 category: Projects 
 toc: true
-pin: true
 img_path: /assets/posts/dacon-bias/
 ---
 

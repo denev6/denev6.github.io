@@ -5,7 +5,6 @@ category: Projects
 img_path: /assets/posts/eeg-vit/
 math: true
 toc: true
-pin: true
 ---
 
 ## 요약

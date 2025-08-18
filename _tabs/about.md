@@ -59,7 +59,7 @@ Sung-jin Park
 
 - ⚖️ LLM 편향 완화를 위한 한국어 프롬프트 엔지니어링(AI 경진대회): [코드](https://github.com/denev6/Bias-A-Thon), [블로그](/projects/2025/05/24/dacon-bias.html)
 - 🐕 RAG + LLM API를 활용한 학교 공지 검색 챗봇: [코드](https://github.com/denev6/retrieve-notice), [블로그](/projects/2025/03/24/retrieve-notice.html)
-- 😀 문장 분석을 통해 발화자 감정 인식(AI 경진대회): [코드](https://github.com/denev6/deep-learning-codes/tree/main/roberta), [블로그](/projects/2022/12/17/dacon.html)
+- 😀 문장 분석을 통해 발화자 감정 인식(AI 경진대회): [코드](https://github.com/denev6/deep-learning-codes/tree/main/roberta), [블로그](/projects/2022/12/17/dacon-roberta.html)
 
 ## 자격증 및 논문
 
