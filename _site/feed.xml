@@ -3,8 +3,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://denev6.github.io/</id>
   <title>Palette</title>
-  <subtitle>머신러닝, 수학, 프로그래밍을 다루는 개발자의 노트입니다.</subtitle>
-  <updated>2025-08-18T16:40:39+09:00</updated>
+  <subtitle>개발을 좋아하는 학부생의 노트입니다.</subtitle>
+  <updated>2025-08-27T00:06:05+09:00</updated>
   <author>
     <name>박성진</name>
     <uri>https://denev6.github.io/</uri>
@@ -66,7 +66,7 @@ Django와 HTMX에 설득되다
     <link href="https://denev6.github.io/study/2025/07/04/long-term-memory.html" rel="alternate" type="text/html" title="네이버가 말하는 의료 챗봇과 장기 기억" />
     <published>2025-07-04T00:00:00+09:00</published>
   
-    <updated>2025-07-04T00:00:00+09:00</updated>
+    <updated>2025-08-18T16:40:55+09:00</updated>
   
     <id>https://denev6.github.io/study/2025/07/04/long-term-memory.html</id>
     <content src="https://denev6.github.io/study/2025/07/04/long-term-memory.html" />
@@ -106,7 +106,7 @@ Django와 HTMX에 설득되다
     <link href="https://denev6.github.io/projects/2025/05/24/dacon-bias.html" rel="alternate" type="text/html" title="프롬프트 엔지니어링으로 LLM 편향 줄이기" />
     <published>2025-05-24T00:00:00+09:00</published>
   
-    <updated>2025-06-14T21:11:51+09:00</updated>
+    <updated>2025-08-18T16:40:55+09:00</updated>
   
     <id>https://denev6.github.io/projects/2025/05/24/dacon-bias.html</id>
     <content src="https://denev6.github.io/projects/2025/05/24/dacon-bias.html" />
@@ -201,20 +201,20 @@ Github: denev6/Bias-A-Thon
   
   <entry>
     <title>RAG로 학교 공지 검색</title>
-    <link href="https://denev6.github.io/projects/2025/03/24/retrieve-notice.html" rel="alternate" type="text/html" title="RAG로 학교 공지 검색" />
+    <link href="https://denev6.github.io/playground/2025/03/24/retrieve-notice.html" rel="alternate" type="text/html" title="RAG로 학교 공지 검색" />
     <published>2025-03-24T00:00:00+09:00</published>
   
-    <updated>2025-06-02T14:03:33+09:00</updated>
+    <updated>2025-03-24T00:00:00+09:00</updated>
   
-    <id>https://denev6.github.io/projects/2025/03/24/retrieve-notice.html</id>
-    <content src="https://denev6.github.io/projects/2025/03/24/retrieve-notice.html" />
+    <id>https://denev6.github.io/playground/2025/03/24/retrieve-notice.html</id>
+    <content src="https://denev6.github.io/playground/2025/03/24/retrieve-notice.html" />
     <author>
       <name>박성진</name>
     </author>
 
   
     
-    <category term="Projects" />
+    <category term="Playground" />
     
   
 

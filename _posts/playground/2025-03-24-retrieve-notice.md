@@ -1,7 +1,7 @@
 ---
 title: RAG로 학교 공지 검색
 tags: [AI, NLP, Python, LLM]
-category: Projects 
+category: Playground 
 img_path: /assets/posts/retrieve-notice/
 toc: true
 ---

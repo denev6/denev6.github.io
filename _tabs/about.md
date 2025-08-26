@@ -16,14 +16,14 @@ Sung-jin Park
 
 🛠️ 기능 구현 경험이 있는 기술
 
-- Programing Languages: `Python`
-- Framework/ Library: `PyTorch`, `HuggingFace`, `LangChain`, `OpenCV`
-- Tools: `Git`, `Docker`, `uv`, `WandB`
+- Programing Languages: `Python`, `Go`
+- Framework/ Library: `PyTorch`, `LangChain`, `OpenCV`, `FastAPI`
+- Tools: `Git`, `Docker`, `uv`
 
 📚 이론적 지식이 있는 기술
 
-- Programing Languages: `C++`, `Go`, `SQL`
-- ETC: `FastAPI`, `Tensorflow`, `Scikit-learn`, `Spark`
+- Programing Languages: `C++`, `SQL`
+- ETC: `Tensorflow`, `Scikit-learn`, `Spark`
 
 ## 소개
 

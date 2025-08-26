@@ -20,10 +20,10 @@ timezone: Asia/Seoul
 
 title: Palette
 
-tagline: 개발자의 노트 # it will display as the sub-title
+tagline: 개발자 노트 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  머신러닝, 수학, 프로그래밍을 다루는 개발자의 노트입니다.
+  개발을 좋아하는 학부생의 노트입니다.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://denev6.github.io"
@@ -44,7 +44,6 @@ social:
     - https://github.com/denev6
     # Uncomment below to add more social links
     - https://denev6.tistory.com/
-    - https://www.instagram.com/color_dnv
     - https://www.linkedin.com/in/denev6
 
 google_site_verification: # fill in to your verification string
