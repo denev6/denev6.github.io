@@ -14,16 +14,35 @@ Sung-jin Park
 
 ## 기술 스택
 
-🛠️ 기능 구현 경험이 있는 기술
+### 🛠️ 주요 기술
 
-- Programing Languages: `Python`, `Go`
-- Framework/ Library: `PyTorch`, `LangChain`, `OpenCV`, `FastAPI`
-- Tools: `Git`, `Docker`, `uv`
+<span>
+  <img width="50" alt="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">&nbsp;&nbsp;
+  <img width="50" alt="Go" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg">&nbsp;&nbsp;
+  <img width="50" alt="PyTorch" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg">&nbsp;&nbsp;
+  <img width="50" alt="LangChain" src="https://cdn.simpleicons.org/langchain/1C3C3C">&nbsp;&nbsp;
+  <img width="50" alt="FastAPI" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg">&nbsp;&nbsp;
+  <img width="50" alt="NumPy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg">&nbsp;&nbsp;
+  <img width="50" alt="OpenCV" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg">&nbsp;&nbsp;
+  <img width="50" alt="Ubuntu" src="https://cdn.simpleicons.org/ubuntu/E95420">&nbsp;&nbsp;
+  <img width="50" alt="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">&nbsp;&nbsp;
+  <img width="50" alt="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">&nbsp;&nbsp;
+  <img width="50" alt="Astral" src="https://cdn.simpleicons.org/astral/261230">
+</span>
 
-📚 이론적 지식이 있는 기술
+### 📚 지식이 있는 기술
 
-- Programing Languages: `C++`, `SQL`
-- ETC: `Tensorflow`, `Scikit-learn`, `Spark`
+<span>
+  <img width="50" alt="TypeScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">&nbsp;&nbsp;
+  <img width="50" alt="C++" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg">&nbsp;&nbsp;
+  <img width="50" alt="SQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg">&nbsp;&nbsp;
+  <img width="50" alt="Tensorflow" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg">&nbsp;&nbsp;
+  <img width="50" alt="Scikit-learn" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg">&nbsp;&nbsp;
+  <img width="50" alt="Polars" src="https://cdn.simpleicons.org/polars/0075FF">&nbsp;&nbsp;
+  <img width="50" alt="Gin" src="https://cdn.simpleicons.org/gin/008ECF">&nbsp;&nbsp;
+  <img width="50" alt="Svelte" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg">&nbsp;&nbsp;
+  <img width="50" alt="Spark" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg">&nbsp;&nbsp;
+  <img width="50" alt="Kafka" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg">
 
 ## 소개
 
