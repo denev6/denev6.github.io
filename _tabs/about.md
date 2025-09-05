@@ -30,7 +30,7 @@ Sung-jin Park
   <img width="50" alt="Astral" src="https://cdn.simpleicons.org/astral/261230">
 </span>
 
-### 📚 지식이 있는 기술
+### 📘 경험이 있는 기술
 
 <span>
   <img width="50" alt="TypeScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">&nbsp;&nbsp;
@@ -62,7 +62,7 @@ Sung-jin Park
 - 사용언어 및 환경: `Python3`, `Mediapipe`, `Opencv`, `Pyautogui`
 - 코드: [face-mouse-control](https://github.com/denev6/face-mouse-control)
 - 논문: [koreascience/JAKO202228049092231](https://koreascience.or.kr/article/JAKO202228049092231.page)
-- 블로그: [기록 보기](/projects/2022/10/07/face-mouse-control.html)
+- 블로그: [기록 보기](/projects/2025/05/22/facemouse.html)
 
 ## 개인 프로젝트
 

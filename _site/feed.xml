@@ -4,7 +4,7 @@
   <id>https://denev6.github.io/</id>
   <title>Palette</title>
   <subtitle>개발을 좋아하는 학부생의 노트입니다.</subtitle>
-  <updated>2025-09-03T14:33:42+09:00</updated>
+  <updated>2025-09-06T01:19:01+09:00</updated>
   <author>
     <name>박성진</name>
     <uri>https://denev6.github.io/</uri>
@@ -190,21 +190,21 @@ Github: denev6/Bias-A-Thon
 
   
   <entry>
-    <title>Human-level control through deep reinforcement learning</title>
-    <link href="https://denev6.github.io/study/2025/04/25/dqn.html" rel="alternate" type="text/html" title="Human-level control through deep reinforcement learning" />
-    <published>2025-04-25T00:00:00+09:00</published>
+    <title>FaceMouse - Empowering Web Accessibility with a Lightweight and Open-Source Interaction System</title>
+    <link href="https://denev6.github.io/projects/2025/05/22/facemouse.html" rel="alternate" type="text/html" title="FaceMouse - Empowering Web Accessibility with a Lightweight and Open-Source Interaction System" />
+    <published>2025-05-22T00:00:00+09:00</published>
   
-    <updated>2025-05-24T15:29:20+09:00</updated>
+    <updated>2025-05-22T00:00:00+09:00</updated>
   
-    <id>https://denev6.github.io/study/2025/04/25/dqn.html</id>
-    <content src="https://denev6.github.io/study/2025/04/25/dqn.html" />
+    <id>https://denev6.github.io/projects/2025/05/22/facemouse.html</id>
+    <content src="https://denev6.github.io/projects/2025/05/22/facemouse.html" />
     <author>
       <name>박성진</name>
     </author>
 
   
     
-    <category term="Study" />
+    <category term="Projects" />
     
   
 
@@ -216,19 +216,18 @@ Github: denev6/Bias-A-Thon
 
 
 
-      문제 정의
+      
 
 
-
-게임(Atari 2600)을 플레이하는 상황을 State, Action, Reward를 가진 MDP(Markov Decision Process) 상황으로 해석할 수 있다. 하지만 각 state가 복잡해서 state-action value를 정의하기 어렵다. 따라서 Convolutional Network을 사용해 state에서 특징을 추출하고, Feed Forward Network를 통해 state-action value를 예측한다.
-
-
-  State: 게임 화면 (픽셀 이미지)
-  Action: 게임기를 통해 각 time-step마다 입력된다.
-  Reward: 게임 내 점수 변화
+  v1: 2022-07
+  v2: 2025-05
 
 
-학습된 agent가 게임기를 통해 reward를 높이는 방향으로 행동하는 것이 최종 목표다. 참고로 본...
+본 연구는 상지 장애인의 디지털 접근성을 개선하기 위해 세 가지 기여를 통한 새로운 비접촉 입력 시스템을 제안한다.
+
+
+  첫째, 마우스를 대체하는 새로운 입력 기법을 개발했다. Face Mesh 모델을 활용하여 머리 움직임을 통한 정밀한 커서 제어를 구현하고, 눈 깜박임 감지로 클릭 명령을 처리하는 직관적 상호작용 방식을 제시했다. 성능 평가 결과 저전력 CPU 환경에서 100% 성공률과 최대 37.7도의 각도 측정 범위를 달성하여 실용적인 마우스 대체 솔루션임을 입증했다.
+  둘째, 저비용·저사양 환경에서 사용 가능한 실용적 시스템을 구축했다. 전용 하드웨어나 GPU 없이 표준 웹캠과 일반 CPU만으로 12.4% CPU 사용률, 32.93M...
     </summary>
   
 
