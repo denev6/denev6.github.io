@@ -1,5 +1,5 @@
 ---
-title: 월간 DACON 발화자의 감정 인식 AI
+title: 발화자의 감정인식 AI 경진대회
 tags: [AI, NLP, Python]
 category: Projects 
 toc: true

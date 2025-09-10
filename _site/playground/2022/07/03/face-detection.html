@@ -1630,9 +1630,9 @@ Palette
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="3279 단어"
+  title="3173 단어"
 >
-  <em>18 
+  <em>17 
 분</em>
 읽는 시간
 </span>
@@ -1646,7 +1646,7 @@ Palette
 
 
 <div class="content">
-  <p><a href="/projects/2022/10/07/face-mouse-control.html">실시간 얼굴 인식을 활용한 프로젝트</a>를 진행할 당시, 여러 얼굴 인식 모델을 찾고 테스트했다. 영상 정보를 실시간으로 처리해야 했기 때문에 빠르고 정확한 모델이 필요했다. 여러 모델이 있지만 준수한 성능을 보였던 두 모델에 대해 적어보았다.</p>
+  <p><a href="/projects/2025/05/22/facemouse.html">실시간 얼굴 인식을 활용한 프로젝트</a>를 진행할 당시, 여러 얼굴 인식 모델을 찾고 테스트했다. 영상 정보를 실시간으로 처리해야 했기 때문에 빠르고 정확한 모델이 필요했다. 여러 모델이 있지만 준수한 성능을 보였던 두 모델에 대해 적어보았다.</p>
 
 <p>이 글에서 ‘모델이 성능이 준수하다’의 기준은 ‘실시간으로 얼굴을 인식하고 처리할 수 있는가’이다. 예를 들어, dlib의 CNN을 기반으로한 모델의 경우 이미지 처리 성능은 좋지만 실시간 영상 처리에서는 무거운 모델이다.</p>
 
@@ -2027,12 +2027,8 @@ Palette
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed=""><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
 </pre></td><td class="rouge-code"><pre><span class="nv">$ </span>pip <span class="nb">install </span>mediapipe
-<span class="nv">$ </span>pip <span class="nb">install </span><span class="nv">protobuf</span><span class="o">==</span>3.20.<span class="k">*</span>
 </pre></td></tr></tbody></table></code></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">pip</code>를 통해 <code class="language-plaintext highlighter-rouge">mediapipe</code>를 설치한 후, <code class="language-plaintext highlighter-rouge">protobuf</code>를 다운그레이드 해줘야 한다.</p>
 
 <h3 id="랜드마크-그리기"><span class="me-2">랜드마크 그리기</span><a href="#랜드마크-그리기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -2118,13 +2114,9 @@ Palette
 
 <p><code class="language-plaintext highlighter-rouge">mp.solutions.face_mesh.DrawingSpec</code>은 랜드마크 출력을 위한 객체다. <code class="language-plaintext highlighter-rouge">draw_landmarks</code>를 이용하면 이미지에 Face Mesh가 출력된다. 아래 사진을 참고하자.</p>
 
+<p><a href="/assets/posts/face-detect/facemesh.png" class="popup img-link "><img data-src="/assets/posts/face-detect/facemesh.png" alt="facemesh" class="lazyload" data-proofer-ignore></a></p>
+
 <h3 id="facemesh-장단점"><span class="me-2">FaceMesh 장단점</span><a href="#facemesh-장단점" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p>심심할까봐 식상한 사진말고 날 것을 가지고 와봤다.</p>
-
-<p><a href="/assets/posts/face-detect/facemesh.png" class="popup img-link "><img data-src="/assets/posts/face-detect/facemesh.png" alt="" class="lazyload" data-proofer-ignore></a></p>
-
-<p>사람이 많아도, 모자를 써도, 선글라스를 써도 잘 찾아내는 모습이다. (물론 이미지를 처리할 때는 모자이크 안 된 원본을 썼다.)</p>
 
 <p><code class="language-plaintext highlighter-rouge">Face Mesh</code>는 모바일 GPU 환경/ CPU 환경에서 잘 작동하도록 제작되었기 때문에 고성능 컴퓨팅 자원을 요구하지 않는다. 또 한 대의 카메라만으로도 잘 동작한다는 장점이 있다. 만약 디바이스에 GPU가 있다면 알아서 GPU 자원을 잘 사용한다. 데이터를 학습하며 여러 조명(lighting) 환경에서 촬영된 데이터를 사용했기 때문에 빛의 영향을 적게 받는다.</p>
 
@@ -3317,7 +3309,7 @@ Image Segmentation
       class="btn btn-outline-primary"
       aria-label="다음 글"
     >
-      <p>월간 DACON 발화자의 감정 인식 AI</p>
+      <p>발화자의 감정인식 AI 경진대회</p>
     </a>
   
 </nav>

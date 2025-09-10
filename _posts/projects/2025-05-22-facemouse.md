@@ -1,5 +1,5 @@
 ---
-title: FaceMouse - Empowering Web Accessibility with a Lightweight and Open-Source Interaction System
+title: 웹 접근성 향상을 위한 FaceMouse 개발
 tags: [AI, CV, Python]
 category: Projects 
 toc: true
@@ -10,6 +10,8 @@ img_path: /assets/posts/facemouse/
 
 - v1: 2022-07
 - **v2: 2025-05**
+
+**FaceMouse**: Empowering Web Accessibility with a Lightweight and Open-Source Interaction System
 
 본 연구는 상지 장애인의 디지털 접근성을 개선하기 위해 세 가지 기여를 통한 새로운 비접촉 입력 시스템을 제안한다.
 

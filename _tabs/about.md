@@ -10,75 +10,57 @@ Sung-jin Park
 
 - sungjin.code@gmail.com
 - Github: [denev6](https://github.com/denev6)
-- 🇰🇷 Seoul, South Korea.
-
-## 기술 스택
-
-### 🛠️ 주요 기술
-
-<span>
-  <img width="50" alt="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">&nbsp;&nbsp;
-  <img width="50" alt="Go" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg">&nbsp;&nbsp;
-  <img width="50" alt="PyTorch" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg">&nbsp;&nbsp;
-  <img width="50" alt="LangChain" src="https://cdn.simpleicons.org/langchain/1C3C3C">&nbsp;&nbsp;
-  <img width="50" alt="FastAPI" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg">&nbsp;&nbsp;
-  <img width="50" alt="NumPy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg">&nbsp;&nbsp;
-  <img width="50" alt="OpenCV" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg">&nbsp;&nbsp;
-  <img width="50" alt="Ubuntu" src="https://cdn.simpleicons.org/ubuntu/E95420">&nbsp;&nbsp;
-  <img width="50" alt="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">&nbsp;&nbsp;
-  <img width="50" alt="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">&nbsp;&nbsp;
-  <img width="50" alt="Astral" src="https://cdn.simpleicons.org/astral/261230">
-</span>
-
-### 📘 경험이 있는 기술
-
-<span>
-  <img width="50" alt="TypeScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">&nbsp;&nbsp;
-  <img width="50" alt="C++" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg">&nbsp;&nbsp;
-  <img width="50" alt="SQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg">&nbsp;&nbsp;
-  <img width="50" alt="Tensorflow" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg">&nbsp;&nbsp;
-  <img width="50" alt="Scikit-learn" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg">&nbsp;&nbsp;
-  <img width="50" alt="Polars" src="https://cdn.simpleicons.org/polars/0075FF">&nbsp;&nbsp;
-  <img width="50" alt="Gin" src="https://cdn.simpleicons.org/gin/008ECF">&nbsp;&nbsp;
-  <img width="50" alt="Svelte" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg">&nbsp;&nbsp;
-  <img width="50" alt="Spark" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg">&nbsp;&nbsp;
-  <img width="50" alt="Kafka" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg">
+- Seoul, South Korea.
 
 ## 소개
 
-인공지능을 전공하고 있는 학부생입니다. 이론도 중요하지만, 실제 서비스를 만들고 배포하는데 더 큰 보람을 느낍니다. 새로운 기술을 빠르게 익히고, 실제 문제를 해결하는 걸 좋아합니다.
+인공지능을 전공하고 있는 학부생입니다.
 
-배운 내용을 정리하고 나누는 과정을 중요하게 생각합니다. 이런 습관 덕분에 스스로도 더 깊이 이해하게 되고, 팀원들에게도 도움이 될 수 있었습니다. 함께 성장할 수 있는 개발자가 되고 싶습니다.
+- 실제 서비스를 만들고 배포하는데 더 큰 보람을 느낍니다.
+- 새로운 기술을 빠르게 익히고, 문제를 해결하는 걸 좋아합니다.
+- 배운 내용을 정리하고 나누는 과정을 중요하게 생각합니다.
+- 함께 성장할 수 있는 개발자가 되고 싶습니다.
 
-## 팀 프로젝트
+## 기술 스택
 
-### 💻 실시간 얼굴 인식을 통한 대체 입력 기법 연구
+- `Python`에 능숙하고, `Go`에 익숙합니다.
+- **ML & Data**
+  - `Pytorch`를 이용한 딥러닝 모델 학습에 익숙합니다.
+  - `Numpy`, `Polars`, `Scikit-learn`를 이용한 데이터 분석에 익숙합니다.
+- **Application**
+  - `Langchain`을 이용한 LLM 파이프라인 구축에 익숙합니다.
+  - `OpenCV`를 이용한 이미지 전처리 경험이 있습니다.
+  - `FastAPI`, `Gin`를 이용한 API 서버 구축이 가능합니다.
+  - `Git`, `Docker`, `Ubuntu`를 함께 사용합니다.
 
-- 2022.04 ~ 11(팀), 2025. 03 ~ 05(개인)
-- 학부생 3명 및 지도 교수
-- 주요 내용:
-  - 실시간 **얼굴 방향 및 눈 깜빡임 인식** 기능 구현
-  - **사용자 테스트 및 전문가 피드백**을 통한 성능 개선
-- 사용언어 및 환경: `Python3`, `Mediapipe`, `Opencv`, `Pyautogui`
-- 코드: [face-mouse-control](https://github.com/denev6/face-mouse-control)
-- 논문: [koreascience/JAKO202228049092231](https://koreascience.or.kr/article/JAKO202228049092231.page)
-- 블로그: [기록 보기](/projects/2025/05/22/facemouse.html)
+## 프로젝트
 
-## 개인 프로젝트
+### 💻 FaceMouse: 얼굴 인식을 활용한 접근성 개선
+
+- '22.04 ~ 11(팀), '25. 03 ~ 05(개인)
+- 얼굴 주시 방향을 통해 마우스를 제어하는 소프트웨어입니다.
+- 주요 기여:
+  - 개발 팀 리드
+  - 얼굴 랜드마크 인식 모델 비교
+  - 실시간 이미지 처리 파이프라인 구현
+  - 사용자 테스트 및 전문가 피드백을 통한 성능 개선
+- 사용언어 및 환경: `Python3`, `Mediapipe`, `OpenCV`
+- [자세히 보기](/projects/2025/05/22/facemouse.html)
 
 ### 🧠 EEG 뇌파 신호를 활용한 청소년 ADHD 탐지
 
-- 97%의 높은 정확도로 ADHD 환자 뇌파 분류
-- CNN + Transformer 모델 설계 및 학습
+- '25.02 ~ 04(개인)
+- 청소년 EEG 뇌파 신호 데이터를 활용해 ADHD 분류 문제를 풉니다.
+- 주요 기여:
+  - 97%의 높은 정확도로 선행 연구를 뛰어넘는 성능 보고
+  - CNN + Transformer 모델 설계 및 학습
 - 사용언어 및 환경: `Python3`, `Pytorch`, `Colab`
-- 코드: [ADHD-EEG-ViT](https://github.com/denev6/ADHD-EEG-ViT)
-- 블로그: [기록 보기](/projects/2025/03/05/eeg-transformer.html)
+- [자세히 보기](/projects/2025/03/05/eeg-transformer.html)
 
 ### 기타
 
-- ⚖️ LLM 편향 완화를 위한 한국어 프롬프트 엔지니어링(AI 경진대회): [코드](https://github.com/denev6/Bias-A-Thon), [블로그](/projects/2025/05/24/dacon-bias.html)
-- 🐕 RAG + LLM API를 활용한 학교 공지 검색 챗봇: [코드](https://github.com/denev6/retrieve-notice), [블로그](/projects/2025/03/24/retrieve-notice.html)
-- 😀 문장 분석을 통해 발화자 감정 인식(AI 경진대회): [코드](https://github.com/denev6/deep-learning-codes/tree/main/roberta), [블로그](/projects/2022/12/17/dacon-roberta.html)
+- ⚖️ LLM 편향 완화를 위한 한국어 프롬프트 엔지니어링(AI 경진대회): [자세히 보기](/projects/2025/05/24/dacon-bias.html)
+- 😀 문장 분석을 통해 발화자 감정 인식(AI 경진대회): [자세히 보기](/projects/2022/12/17/dacon-roberta.html)
 
 ## 자격증 및 논문
 
@@ -86,11 +68,11 @@ Sung-jin Park
 
 ## 수상 내역
 
-- **2025 Bias-A-Thon**(Bias 대응 챌린지 Track 2): 최종 3위 (2025.06.04)
-- 월간 DACON **발화자의 감정인식 AI 경진대회**: 최종 2위 (2022.12.26)
-- 성균관대학교 **Co-Deep Learning**: 우수상 (Team Palette) (2022.08.10)
+- **2025 Bias-A-Thon**(Bias 대응 챌린지 Track 2): 최종 3위 ('25.06.04)
+- 월간 DACON **발화자의 감정인식 AI 경진대회**: 최종 2위 ('22.12.26)
+- 성균관대학교 **Co-Deep Learning**: 우수상 ('22.08.10)
 
 ## 학력 및 경력
 
 - 성균관대학교 LAMDA Lab 학부연구생
-- 성균관대학교 인공지능융합학과 재학 중: 2021.03 ~ (현재)
+- 성균관대학교 인공지능융합학과: '21.03 ~ (GPA: 4.41)

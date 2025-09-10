@@ -7,9 +7,9 @@ math: true
 img_path: /assets/posts/face-detect/
 ---
 
-[실시간 얼굴 인식을 활용한 프로젝트](/projects/2022/10/07/face-mouse-control.html)를 진행할 당시, 여러 얼굴 인식 모델을 찾고 테스트했다. 영상 정보를 실시간으로 처리해야 했기 때문에 빠르고 정확한 모델이 필요했다. 여러 모델이 있지만 준수한 성능을 보였던 두 모델에 대해 적어보았다.
+[실시간 얼굴 인식을 활용한 프로젝트](/projects/2025/05/22/facemouse.html)를 진행할 당시, 여러 얼굴 인식 모델을 찾고 테스트했다. 영상 정보를 실시간으로 처리해야 했기 때문에 빠르고 정확한 모델이 필요했다. 여러 모델이 있지만 준수한 성능을 보였던 두 모델에 대해 적어보았다.
 
-이 글에서 '모델이 성능이 준수하다'의 기준은 '실시간으로 얼굴을 인식하고 처리할 수 있는가'이다. 예를 들어, dlib의 CNN을 기반으로한 모델의 경우 이미지 처리 성능은 좋지만 실시간 영상 처리에서는 무거운 모델이다. 
+이 글에서 '모델이 성능이 준수하다'의 기준은 '실시간으로 얼굴을 인식하고 처리할 수 있는가'이다. 예를 들어, dlib의 CNN을 기반으로한 모델의 경우 이미지 처리 성능은 좋지만 실시간 영상 처리에서는 무거운 모델이다.
 
 ---
 
@@ -278,11 +278,7 @@ cv2.imshow(img)
 
 ```bash
 $ pip install mediapipe
-$ pip install protobuf==3.20.*
 ```
-
-`pip`를 통해 `mediapipe`를 설치한 후, `protobuf`를 다운그레이드 해줘야 한다. 
-
 
 ### 랜드마크 그리기
 
@@ -321,11 +317,11 @@ if results.multi_face_landmarks:
 cv2.imshow(image)
 ```
 
-`mp.solutions.face_mesh.FaceMesh`는 얼굴의 랜드마크 검출을 위한 객체이다. 
+`mp.solutions.face_mesh.FaceMesh`는 얼굴의 랜드마크 검출을 위한 객체이다.
 
 - `refine_landmarks`: True일 때, 눈과 입술 주변 랜드마크를 정교하게 검출한다.
 - `static_image_mode`: True일 경우, 모든 프레임에 대해 얼굴 검출을 진행한다. False일 경우, 얼굴을 추적(tracking)해 랜드마크를 검출한다. (모든 프레임에 대해 얼굴 검출을 진행하지 않고, 첫 프레임에서 얼굴을 검출한 후 이후 프레임은 tracking 방식으로 랜드마크를 추출한다. 만약 tracking을 통해 얼굴 검출이 되지 않을 경우 다시 얼굴 검출을 진행한다.)
-- `max_num_faces`: 최대로 검출할 얼굴의 개수를 설정한다. 
+- `max_num_faces`: 최대로 검출할 얼굴의 개수를 설정한다.
 
 [FaceMesh configurations_options](https://developers.google.com/mediapipe/solutions/vision/face_landmarker/#configurations_options)에서 다른 파라미터 정보를 확인할 수 있다.
 
@@ -333,15 +329,11 @@ cv2.imshow(image)
 
 `mp.solutions.face_mesh.DrawingSpec`은 랜드마크 출력을 위한 객체다. `draw_landmarks`를 이용하면 이미지에 Face Mesh가 출력된다. 아래 사진을 참고하자.
 
+![facemesh](facemesh.png)
+
 ### FaceMesh 장단점
 
-심심할까봐 식상한 사진말고 날 것을 가지고 와봤다.
-
-![](facemesh.png)
-
-사람이 많아도, 모자를 써도, 선글라스를 써도 잘 찾아내는 모습이다. (물론 이미지를 처리할 때는 모자이크 안 된 원본을 썼다.) 
-
-`Face Mesh`는 모바일 GPU 환경/ CPU 환경에서 잘 작동하도록 제작되었기 때문에 고성능 컴퓨팅 자원을 요구하지 않는다. 또 한 대의 카메라만으로도 잘 동작한다는 장점이 있다. 만약 디바이스에 GPU가 있다면 알아서 GPU 자원을 잘 사용한다. 데이터를 학습하며 여러 조명(lighting) 환경에서 촬영된 데이터를 사용했기 때문에 빛의 영향을 적게 받는다. 
+`Face Mesh`는 모바일 GPU 환경/ CPU 환경에서 잘 작동하도록 제작되었기 때문에 고성능 컴퓨팅 자원을 요구하지 않는다. 또 한 대의 카메라만으로도 잘 동작한다는 장점이 있다. 만약 디바이스에 GPU가 있다면 알아서 GPU 자원을 잘 사용한다. 데이터를 학습하며 여러 조명(lighting) 환경에서 촬영된 데이터를 사용했기 때문에 빛의 영향을 적게 받는다.
 
 기존 방식은 영상의 모든 프레임에서 detector를 거쳐 얼굴을 검출하는 반면, Face Mesh는 (트래킹 모드에서) 이전 프레임 정보를 활용해 얼굴을 검출한다. 그리고 얼굴을 인식하기 힘든 특별한 상황이 발생했을 때 detector를 거쳐 얼굴을 재검출한다. 이 기능은 성능에 큰 이점을 준다. 정말 좋은 아이디어라고 생각한다.
 
