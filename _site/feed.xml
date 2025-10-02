@@ -4,7 +4,7 @@
   <id>https://denev6.github.io/</id>
   <title>Palette</title>
   <subtitle>개발을 좋아하는 학부생의 노트입니다.</subtitle>
-  <updated>2025-09-11T00:58:37+09:00</updated>
+  <updated>2025-10-03T02:09:32+09:00</updated>
   <author>
     <name>박성진</name>
     <uri>https://denev6.github.io/</uri>
@@ -17,6 +17,58 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Co-learning을 활용한 멀티모달 학습</title>
+    <link href="https://denev6.github.io/study/2025/09/20/co-learning.html" rel="alternate" type="text/html" title="Co-learning을 활용한 멀티모달 학습" />
+    <published>2025-09-20T00:00:00+09:00</published>
+  
+    <updated>2025-09-20T00:00:00+09:00</updated>
+  
+    <id>https://denev6.github.io/study/2025/09/20/co-learning.html</id>
+    <content src="https://denev6.github.io/study/2025/09/20/co-learning.html" />
+    <author>
+      <name>박성진</name>
+    </author>
+
+  
+    
+    <category term="Study" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Co-learning
+
+Multi-modal learning에서 co-learning은 모달리티를 학습하기 위해 다른 모달리티를 활용하는 방법을 말한다. 예를 들어, “강아지”라는 텍스트의 특성을 파악하기 위해 강아지 이미지를 함께 학습하는 식이다.
+
+본 글은 대표적인 두 모델 ViLBERT와 CLIP을 살펴본다.
+
+ViLBERT
+
+
+  ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks
+
+
+
+
+기본적으로 BERT 구조를 사용해 특징을 추출한다. 각 모달리티의 데이터를 embed한 뒤 co-attention을 통해 모달리티 간 정보를 상호 학습한다.
+
+
+
+co-attention은 자...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -183,53 +235,6 @@ Github: denev6/Bias-A-Thon
 정답은 “알 수 없음”이다. 그런데 LLM에 질문하면 “노르웨이인”이라고 답한다. LLM이 인간의 편견까지 학습한 결과다 (검증 코드). 본 대회는 편향 없이 올바른 답변을 출력하도록 만들어야 한다.
 
 이를 단순히 “편향을 없애는” 문제로만 생각하면 안 된다. “편향을 벗어나는 창의력”과 “문맥을 이해...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>웹 접근성 향상을 위한 FaceMouse 개발</title>
-    <link href="https://denev6.github.io/projects/2025/05/22/facemouse.html" rel="alternate" type="text/html" title="웹 접근성 향상을 위한 FaceMouse 개발" />
-    <published>2025-05-22T00:00:00+09:00</published>
-  
-    <updated>2025-05-22T00:00:00+09:00</updated>
-  
-    <id>https://denev6.github.io/projects/2025/05/22/facemouse.html</id>
-    <content src="https://denev6.github.io/projects/2025/05/22/facemouse.html" />
-    <author>
-      <name>박성진</name>
-    </author>
-
-  
-    
-    <category term="Projects" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      
-
-
-  v1: 2022-07
-  v2: 2025-05
-
-
-FaceMouse: Empowering Web Accessibility with a Lightweight and Open-Source Interaction System
-
-본 연구는 상지 장애인의 디지털 접근성을 개선하기 위해 세 가지 기여를 통한 새로운 비접촉 입력 시스템을 제안한다.
-
-
-  첫째, 마우스를 대체하는 새로운 입력 기법을 개발했다. Face Mesh 모델을 활용하여 머리 움직임을 통한 정밀한 커서 제어를 구현하고, 눈 깜박임 감지로 클릭 명령을 처리하는 직관적 상호작용 방식을 제시했다. 성능 평가 결과 저전력 CPU 환경에서 100% 성공률과 최대 37.7도의 각도 측정 범위를 달성하여 실용적인 마우스 대체 솔루션임을 입증했다.
-...
     </summary>
   
 
