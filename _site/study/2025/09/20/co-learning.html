@@ -44,8 +44,8 @@
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Co-learning을 활용한 멀티모달 학습" />
 <meta property="og:locale" content="ko_KR" />
-<meta name="description" content="Co-learning" />
-<meta property="og:description" content="Co-learning" />
+<meta name="description" content="ViLBERT, SimCLR, CLIP, ImageBind 4가지 모델을 예시로, 이미지와 다른 모달리티 간 co-learning을 살펴본다." />
+<meta property="og:description" content="ViLBERT, SimCLR, CLIP, ImageBind 4가지 모델을 예시로, 이미지와 다른 모달리티 간 co-learning을 살펴본다." />
 <link rel="canonical" href="https://denev6.github.io/study/2025/09/20/co-learning.html" />
 <meta property="og:url" content="https://denev6.github.io/study/2025/09/20/co-learning.html" />
 <meta property="og:site_name" content="Palette" />
@@ -55,7 +55,7 @@
 <meta property="twitter:title" content="Co-learning을 활용한 멀티모달 학습" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-20T00:00:00+09:00","datePublished":"2025-09-20T00:00:00+09:00","description":"Co-learning","headline":"Co-learning을 활용한 멀티모달 학습","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/study/2025/09/20/co-learning.html"},"url":"https://denev6.github.io/study/2025/09/20/co-learning.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-10-03T02:09:56+09:00","datePublished":"2025-09-20T00:00:00+09:00","description":"ViLBERT, SimCLR, CLIP, ImageBind 4가지 모델을 예시로, 이미지와 다른 모달리티 간 co-learning을 살펴본다.","headline":"Co-learning을 활용한 멀티모달 학습","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/study/2025/09/20/co-learning.html"},"url":"https://denev6.github.io/study/2025/09/20/co-learning.html"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -1012,6 +1012,74 @@ Palette
     
 
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+      
+    
+
+    <!-- combine -->
+    
+
+  
 
   
 
@@ -1090,6 +1158,18 @@ Palette
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
       
 
       
@@ -1251,9 +1331,9 @@ Palette
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1961 단어"
+  title="2268 단어"
 >
-  <em>10 
+  <em>12 
 분</em>
 읽는 시간
 </span>
@@ -1267,7 +1347,9 @@ Palette
 
 
 <div class="content">
-  <h2 id="co-learning"><span class="me-2">Co-learning</span><a href="#co-learning" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+  <p><code class="language-plaintext highlighter-rouge">ViLBERT</code>, <code class="language-plaintext highlighter-rouge">SimCLR</code>, <code class="language-plaintext highlighter-rouge">CLIP</code>, <code class="language-plaintext highlighter-rouge">ImageBind</code> 4가지 모델을 예시로, 이미지와 다른 모달리티 간 co-learning을 살펴본다.</p>
+
+<h2 id="co-learning"><span class="me-2">Co-learning</span><a href="#co-learning" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <p>Multi-modal learning에서 co-learning은 모달리티를 학습하기 위해 다른 모달리티를 활용하는 방법을 말한다. 예를 들어, “강아지”라는 텍스트의 특성을 파악하기 위해 강아지 이미지를 함께 학습하는 식이다.</p>
 
@@ -1361,9 +1443,29 @@ Palette
 
 <p><a href="/assets/posts/co-learning/clip.png" class="popup img-link "><img data-src="/assets/posts/co-learning/clip.png" alt="CLIP" class="lazyload" data-proofer-ignore></a></p>
 
-<p>Contrastive Learning을 사용하는 가장 대표적인 예시가 CLIP이다. 하나의 batch는 $N$개의 (image, text) pair로 구성된다. 위에서 살펴본 Contrastive Loss를 이용해 이미지와 텍스트 임베딩 유사도 높아지는 방향으로 이미지 인코더와 텍스트 인코더를 학습한다. 동시에 $N^2 - N$개의 negative pair와의 유사도는 작아지도록 학습한다.</p>
+<p>Contrastive Learning을 사용하는 가장 대표적인 예시가 CLIP이다. 하나의 batch는 $N$개의 (image, text) pair로 구성된다. 위에서 살펴본 Contrastive Loss를 이용해 이미지와 텍스트 임베딩 유사도가 높아지는 방향으로 이미지 인코더와 텍스트 인코더를 학습한다. 동시에 $N^2 - N$개의 negative pair와의 유사도는 작아지도록 학습한다.</p>
 
 <p>이렇게 학습된 multi-modal representation은 OCR, geo-localization, action recognition 등 많은 과제를 수행하는데 사용되고 있다.</p>
+
+<h3 id="imagebind"><span class="me-2">ImageBind</span><a href="#imagebind" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<blockquote>
+  <p>Imagebind: One embedding space to bind them all</p>
+</blockquote>
+
+<p>Imagebind는 contrastive loss를 이용해 이미지와 텍스트, 오디오, depth(깊이), thermal(온도) 등을 align한다.</p>
+
+<p><a href="/assets/posts/co-learning/imagebind-overview.png" class="popup img-link "><img data-src="/assets/posts/co-learning/imagebind-overview.png" alt="ImageBind" class="lazyload" data-proofer-ignore></a></p>
+
+<p>이미지-텍스트, 이미지-오디오와 같이 이미지를 중심으로 다른 모달리티와의 관계를 학습한다. 이때는 InfoNCE loss라는 조금 다른 형태를 사용한다.</p>
+
+\[L_{\mathcal{I}, \mathcal{M}} = -\log \frac{\exp(\mathbf{q}_i^\top \mathbf{k}_i / \tau)}{\exp(\mathbf{q}_i^\top \mathbf{k}_i / \tau) + \sum_{j \neq i} \exp(\mathbf{q}_i^\top \mathbf{k}_j / \tau)}\]
+
+\[\mathbf{q}_i = f(\mathbf{I}_i) \ , \ \mathbf{k}_i = g(\mathbf{M}_i)\]
+
+<p>이미지와 다른 모달리티의 positive pair $(\mathcal{I}, \mathcal{M})$를 각각 deep network로 normalized embedding한 벡터를 $\mathbf{q}$와 $\mathbf{k}$으로 표현한다. InfoNCE loss 또한 positive pair를 가깝게, negative pair를 멀게 한다는 맥락은 동일하다. 실제 구현에서는 symmetric loss $L_{\mathcal{I}, \mathcal{M}}+L_{\mathcal{M}, \mathcal{I}}$을 사용했다.</p>
+
+<p>모델을 학습한 결과, <em>emergent compositionality</em>가 발생하며 학습하지 않은 모달리티 간 align이 관찰되었다. 이러한 풍부한 능력을 바탕으로 여러 downstream task도 잘 해결해냈다.</p>
 
 </div>
 
@@ -1523,6 +1625,13 @@ Palette
         
         
         <li class="text-truncate lh-lg">
+          <a href="/study/2025/09/20/co-learning.html">Co-learning을 활용한 멀티모달 학습</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/projects/2025/05/22/facemouse.html">웹 접근성 향상을 위한 FaceMouse 개발</a>
         </li>
       
@@ -1545,13 +1654,6 @@ Palette
         
         <li class="text-truncate lh-lg">
           <a href="/playground/2025/01/17/ml-api.html">FastAPI 기반 딥러닝 모델 API 구축하기</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/projects/2025/03/05/eeg-transformer.html">EEG 신호를 활용한 청소년 ADHD 진단</a>
         </li>
       
     </ul>

@@ -4,7 +4,7 @@
   <id>https://denev6.github.io/</id>
   <title>Palette</title>
   <subtitle>개발을 좋아하는 학부생의 노트입니다.</subtitle>
-  <updated>2025-10-03T02:09:32+09:00</updated>
+  <updated>2025-10-06T02:09:53+09:00</updated>
   <author>
     <name>박성진</name>
     <uri>https://denev6.github.io/</uri>
@@ -24,7 +24,7 @@
     <link href="https://denev6.github.io/study/2025/09/20/co-learning.html" rel="alternate" type="text/html" title="Co-learning을 활용한 멀티모달 학습" />
     <published>2025-09-20T00:00:00+09:00</published>
   
-    <updated>2025-09-20T00:00:00+09:00</updated>
+    <updated>2025-10-03T02:09:56+09:00</updated>
   
     <id>https://denev6.github.io/study/2025/09/20/co-learning.html</id>
     <content src="https://denev6.github.io/study/2025/09/20/co-learning.html" />
@@ -46,7 +46,9 @@
 
 
 
-      Co-learning
+      ViLBERT, SimCLR, CLIP, ImageBind 4가지 모델을 예시로, 이미지와 다른 모달리티 간 co-learning을 살펴본다.
+
+Co-learning
 
 Multi-modal learning에서 co-learning은 모달리티를 학습하기 위해 다른 모달리티를 활용하는 방법을 말한다. 예를 들어, “강아지”라는 텍스트의 특성을 파악하기 위해 강아지 이미지를 함께 학습하는 식이다.
 
@@ -60,11 +62,7 @@ ViLBERT
 
 
 
-기본적으로 BERT 구조를 사용해 특징을 추출한다. 각 모달리티의 데이터를 embed한 뒤 co-attention을 통해 모달리티 간 정보를 상호 학습한다.
-
-
-
-co-attention은 자...
+기본적으로 BERT 구조를 사용해 특징을 추출...
     </summary>
   
 
