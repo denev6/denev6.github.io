@@ -536,6 +536,74 @@ Palette
     
 
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+      
+    
+
+    <!-- combine -->
+    
+
+  
 
   
 
@@ -727,7 +795,7 @@ Palette
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1994 단어"
+  title="2095 단어"
 >
   <em>11 
 분</em>
@@ -743,7 +811,7 @@ Palette
 
 
 <div class="content">
-  <p><a href="/assets/posts/others/ai-robot-aha.jpg" class="popup img-link "><img data-src="/assets/posts/others/ai-robot-aha.jpg" alt="" class="lazyload" data-proofer-ignore></a></p>
+  <p><a href="/assets/posts/agent-memory/ai-robot-aha.jpg" class="popup img-link "><img data-src="/assets/posts/agent-memory/ai-robot-aha.jpg" alt="" class="lazyload" data-proofer-ignore></a></p>
 
 <h2 id="fine-tuning은-가성비가-떨어진다"><span class="me-2">Fine-tuning은 가성비가 떨어진다</span><a href="#fine-tuning은-가성비가-떨어진다" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -757,7 +825,11 @@ Palette
 
 <h2 id="오답노트를-쓰게-하다"><span class="me-2">오답노트를 쓰게 하다</span><a href="#오답노트를-쓰게-하다" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>LLM을 사용하다보면 비슷한 실수를 반복하는 경향이 있다. 연구자들은 이 지점에 주목했다. 과거에 잘못했던 내용을 기록하고, 다음에 비슷한 상황이 왔을 때 참고하도록 한다. 아래에서 소개할 <code class="language-plaintext highlighter-rouge">Reasoning Bank</code>와 <code class="language-plaintext highlighter-rouge">Training-Free GRPO</code>는 각각 google가 tencent에서 제시한 오답노트 작성법이다.</p>
+<p>LLM을 사용하다보면 비슷한 실수를 반복하는 경향이 있다. 연구자들은 이 지점에 주목했다. 과거에 잘못했던 내용을 기록하고, 다음에 비슷한 상황이 왔을 때 참고하도록 한다. 아래에서 소개할 <code class="language-plaintext highlighter-rouge">Reasoning Bank</code>와 <code class="language-plaintext highlighter-rouge">Training-Free GRPO</code>는 각각 google가 tencent에서 제시한 오답노트 작성법이다. 그리고 본 글에서 소개하진 않지만 <code class="language-plaintext highlighter-rouge">ACE</code>라는 기법도 비슷한 맥락의 이야기를 하는 논문이다.</p>
+
+<blockquote>
+  <p>Building on the adaptive memory introduced by Dynamic Cheatsheet, we introduce ACE (Agentic Context Engineering), a framework that treats contexts as evolving playbooks that accumulate, refine, and organize strategies through a modular process of generation, reflection, and curation. ACE prevents collapse with structured, incremental updates that preserve detailed knowledge and scale with long-context models.</p>
+</blockquote>
 
 <h3 id="reasoning-bank"><span class="me-2">Reasoning Bank</span><a href="#reasoning-bank" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -774,7 +846,7 @@ Palette
 
 <p>Google에서 제시한 ReasoningBank는 추상화된 전략을 찾아 기록하며, 성공했던 전략 뿐만 아니라 실패에서 얻을 수 있는 주요 전략도 함께 기억한다.</p>
 
-<p><a href="/assets/posts/others/reasoningbank.png" class="popup img-link "><img data-src="/assets/posts/others/reasoningbank.png" alt="Reasoning Bank" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/posts/agent-memory/reasoningbank.png" class="popup img-link "><img data-src="/assets/posts/agent-memory/reasoningbank.png" alt="Reasoning Bank" class="lazyload" data-proofer-ignore></a></p>
 
 <p>Agent는 기억 중 현재 상황과 가장 유사한 k개의 기억을 가져와 프롬프트와 함께 입력한다. Agent는 해당 프롬프트를 이용해 결정을 내리고, 이 행동의 결과에서 새로운 지식을 찾아내고, 이 지식을 title, description, content 형식으로 정리한다. 이렇게 정리된 memory item은 새로운 기억으로 추가된다.</p>
 
@@ -796,6 +868,8 @@ Palette
 
 <p>Tencent는 과거 경험이 마치 학습된 token prior 역할을 해 파라미터를 업데이트한 것과 유사한 효과를 낸다고 주장한다. 기존 강화학습에서 사용하던 Group Relative Policy Optimization (GRPO)의 개념을 가져와 파라미터 학습 없이 모델 성능을 개선했다. 강화학습에서의 GRPO는 입력 query에 대해 여러 출력을 생성하고, 각 출력이 독립적인 reward를 받는다. Training-Free GRPO는 동일한 아이디어를 가져와 각 출력에 성공/실패를 판단하고 하나의 공통된 원인을 요약하고 저장한다. 눈치챘겠지만 google에서 제안한 Parallel Scaling과 같은 이야기를 하고 있다.</p>
 
+<p><a href="/assets/posts/agent-memory/grpo.png" class="popup img-link "><img data-src="/assets/posts/agent-memory/grpo.png" alt="GRPO" class="lazyload" data-proofer-ignore></a></p>
+
 <p>GRPO는 reward를 이용해 그룹 내에서 상대적인 advantage를 계산하고 PPO로 파라미터를 업데이트한다. Training-Free GRPO는 대신에 위 단계에서 생성된 지식을 추가함으로써 optimization을 수행한다. 이때 Add, Delete, Modify, Keep 연산 중 하나를 선택해 기억을 업데이트한다. 이 아이디어도 이전에 <em>Long-term Memory</em>라는 이름으로 제안되어 왔던 방법론을 응용한 것이다.</p>
 
 <p>실험 결과, Training-Free GRPO는 눈에 띄는 성능 향상을 보였다. 이 방법은 올바른 reasoning을 유도했을 뿐만 아니라, agent가 적절한 tool을 사용을 하도록 가르치는 효과도 관찰되었다. 그리고 출력 그룹을 사용해 여러 경로를 생성하는 것이 하나의 출력만 생성하는 것보다 좋은 성능을 보였다.</p>
@@ -815,6 +889,7 @@ Palette
 <ul>
   <li>ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory, 2025.</li>
   <li>Training-Free Group Relative Policy Optimization, 2025.</li>
+  <li>Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models, 2025.</li>
   <li>Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory, 2025.</li>
   <li>LoRA: Low-Rank Adaptation of Large Language Models, 2021.</li>
   <li>A Survey on In-context Learning, 2024.</li>
@@ -978,14 +1053,21 @@ Palette
         
         
         <li class="text-truncate lh-lg">
-          <a href="/study/2025/09/20/co-learning.html">Co-learning을 활용한 멀티모달 학습</a>
+          <a href="/projects/2025/05/22/facemouse.html">웹 접근성 향상을 위한 FaceMouse 개발</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/projects/2025/05/22/facemouse.html">웹 접근성 향상을 위한 FaceMouse 개발</a>
+          <a href="/study/2025/10/11/agent-human-comm.html">RL Agent와 인간은 어떻게 협업해야 할까</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/study/2025/09/20/co-learning.html">Co-learning을 활용한 멀티모달 학습</a>
         </li>
       
         
@@ -1000,13 +1082,6 @@ Palette
         
         <li class="text-truncate lh-lg">
           <a href="/projects/2022/12/17/dacon-roberta.html">발화자의 감정인식 AI 경진대회</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/playground/2025/01/17/ml-api.html">FastAPI 기반 딥러닝 모델 API 구축하기</a>
         </li>
       
     </ul>
