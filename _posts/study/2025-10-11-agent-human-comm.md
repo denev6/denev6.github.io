@@ -14,7 +14,7 @@ img_path: /assets/posts/agent-human-comm/
 >
 > Learning to Ground Multi-Agent Communication with Autoencoders, 2021.
 
-Agent 간의 협업을 크게 2가지로 나눌 수 있다.
+Agent 간의 협업을 '인간이 해석할 수 있는가'에 따라 2가지로 나눌 수 있다.
 
 1. 자연어를 이용한 LLM 간의 소통 (NLP)
 2. Communication vector를 이용한 소통 (RL, Embodied)

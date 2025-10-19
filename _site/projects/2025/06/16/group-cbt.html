@@ -1301,8 +1301,6 @@ Palette
     
     
     
-      
-    
   
     
     
@@ -1341,26 +1339,6 @@ Palette
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -1370,42 +1348,7 @@ Palette
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1437,6 +1380,65 @@ Palette
     
     
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
         
         
 
@@ -1444,8 +1446,6 @@ Palette
     
     
     
-    
-      
     
   
     
@@ -1501,13 +1501,13 @@ Palette
         <a class="post-tag btn btn-outline-primary" href="/tags/c/">C++</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/agent/">Agent</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/go/">Go</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/rl/">RL</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/agent/">Agent</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/hci/">HCI</a>
@@ -1798,52 +1798,6 @@ Palette
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/playground/2025/03/24/retrieve-notice.html" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-    class="small"
-  
-  data-ts="1742742000"
-  data-df="YYYY/MM/DD"
-  
->
-  2025/03/24
-</time>
-
-              <h4 class="pt-0 my-2">RAG로 학교 공지 검색</h4>
-              <div class="text-muted small">
-                <p>
-                  
-
-
-
-
-
-                  프로젝트를 시작하며
-
-Retrieval-Augmented Generation(RAG)를 이용해 학교 공지를 빠르게 찾는 챗봇을 구현했다. Encoder + FAISS + SQLite를 이용해 로컬 GPU로 실험했으며, 문장 요약을 위해 Claude3 Sonnet을 사용했다.
-
-
-
-Github 보기
-
-챗봇을 만든 이유는 단순하다. 평소와 같이 강의를 듣...
-                </p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
           <a href="/study/2025/07/04/long-term-memory.html" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -1886,7 +1840,7 @@ Github 보기
         </article>
       
         <article class="col">
-          <a href="/projects/2025/05/24/dacon-bias.html" class="post-preview card h-100">
+          <a href="/study/2025/10/19/agent-memory.html" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -1900,14 +1854,14 @@ Github 보기
   
     class="small"
   
-  data-ts="1748012400"
+  data-ts="1760799600"
   data-df="YYYY/MM/DD"
   
 >
-  2025/05/24
+  2025/10/19
 </time>
 
-              <h4 class="pt-0 my-2">프롬프트 엔지니어링으로 LLM 편향 줄이기</h4>
+              <h4 class="pt-0 my-2">Agent에게 오답노트를 시켜봤더니</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -1917,19 +1871,60 @@ Github 보기
 
 
                   
-  대회: 2025 Bias-A-Thon: Bias 대응 챌린지 &amp;lt;Track 2&amp;gt;
+
+Fine-tuning은 가성비가 떨어진다
 
 
-대회 결과: 245팀 중 Private 4위, 최종 3위
-
-Github: denev6/Bias-A-Thon
+  A Survey on In-context Learning, 2024.
 
 
+LLM은 최근 많은 분야에서 활용되고 있다. 특정 과제에서 LLM의 성능을 높이기 위해 지도학습 + 강화학습 개념의 fine-tuning 기법이 사용되고 있다. 하지만 fine-tuning은 가성비가 떨어진다. 우선, 계산 비용...
+                </p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/playground/2025/03/24/retrieve-notice.html" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
 
-문제 정의
 
 
-  노르웨이인 지원자와 가나인 지원자가 신규 직책의 지원자로 남았습니다. 두 지원자 모두 면접 일정에 맞춰 회사에 도착했습니다....
+
+<time
+  
+    class="small"
+  
+  data-ts="1742742000"
+  data-df="YYYY/MM/DD"
+  
+>
+  2025/03/24
+</time>
+
+              <h4 class="pt-0 my-2">RAG로 학교 공지 검색</h4>
+              <div class="text-muted small">
+                <p>
+                  
+
+
+
+
+
+                  프로젝트를 시작하며
+
+Retrieval-Augmented Generation(RAG)를 이용해 학교 공지를 빠르게 찾는 챗봇을 구현했다. Encoder + FAISS + SQLite를 이용해 로컬 GPU로 실험했으며, 문장 요약을 위해 Claude3 Sonnet을 사용했다.
+
+
+
+Github 보기
+
+챗봇을 만든 이유는 단순하다. 평소와 같이 강의를 듣...
                 </p>
               </div>
             </div>
@@ -2194,8 +2189,6 @@ Github: denev6/Bias-A-Thon
     
     
     
-      
-    
   
     
     
@@ -2234,26 +2227,6 @@ Github: denev6/Bias-A-Thon
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -2263,42 +2236,7 @@ Github: denev6/Bias-A-Thon
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2330,6 +2268,65 @@ Github: denev6/Bias-A-Thon
     
     
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
         
         
 
@@ -2337,8 +2334,6 @@ Github: denev6/Bias-A-Thon
     
     
     
-    
-      
     
   
     
@@ -2394,13 +2389,13 @@ Github: denev6/Bias-A-Thon
         <a class="post-tag btn btn-outline-primary" href="/tags/c/">C++</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/agent/">Agent</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/go/">Go</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/rl/">RL</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/agent/">Agent</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/hci/">HCI</a>

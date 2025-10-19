@@ -3,6 +3,7 @@ title: 웹 접근성 향상을 위한 FaceMouse 개발
 tags: [AI, CV, Python]
 category: Projects 
 toc: true
+pin: true
 img_path: /assets/posts/facemouse/
 ---
 
