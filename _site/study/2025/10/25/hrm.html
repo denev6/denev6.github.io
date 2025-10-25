@@ -42,25 +42,25 @@
   
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="FastAPI 기반 딥러닝 모델 API 구축하기" />
+<meta property="og:title" content="Less is more, Reasoning Model의 등장" />
 <meta property="og:locale" content="ko_KR" />
-<meta name="description" content="항상 공부를 하면서 궁금한 점이 있었다. 내가 만드는 기술이 사용자에게 닿기까지 어떤 과정이 있을까? 머신러닝 모델을 공부하면서도 같은 의문이 들었다. 그래서 이미지 파일을 받아 딥러닝 모델로 예측하는 API를 만들어 보았다." />
-<meta property="og:description" content="항상 공부를 하면서 궁금한 점이 있었다. 내가 만드는 기술이 사용자에게 닿기까지 어떤 과정이 있을까? 머신러닝 모델을 공부하면서도 같은 의문이 들었다. 그래서 이미지 파일을 받아 딥러닝 모델로 예측하는 API를 만들어 보았다." />
-<link rel="canonical" href="https://denev6.github.io/playground/2025/01/17/ml-api.html" />
-<meta property="og:url" content="https://denev6.github.io/playground/2025/01/17/ml-api.html" />
+<meta name="description" content="LLM을 활용한 연구가 쏟아지는 동시에 LLM의 한계도 점점 명확해져 가고 있다. 그로 인해 MicroSoft의 BitNet과 같이 작은 모델을 만들기 위한 시도가 계속 이어져왔다. 그러다 최근 몇 달 동안 reasoning 분야에서 새로운 아키텍쳐가 논의되고 있다. 오늘은 Hierarchical Reasoning Model이라고 불리는 아키텍쳐에 대해 이야기해 보려 한다." />
+<meta property="og:description" content="LLM을 활용한 연구가 쏟아지는 동시에 LLM의 한계도 점점 명확해져 가고 있다. 그로 인해 MicroSoft의 BitNet과 같이 작은 모델을 만들기 위한 시도가 계속 이어져왔다. 그러다 최근 몇 달 동안 reasoning 분야에서 새로운 아키텍쳐가 논의되고 있다. 오늘은 Hierarchical Reasoning Model이라고 불리는 아키텍쳐에 대해 이야기해 보려 한다." />
+<link rel="canonical" href="https://denev6.github.io/study/2025/10/25/hrm.html" />
+<meta property="og:url" content="https://denev6.github.io/study/2025/10/25/hrm.html" />
 <meta property="og:site_name" content="Palette" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-01-17T00:00:00+09:00" />
+<meta property="article:published_time" content="2025-10-25T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="FastAPI 기반 딥러닝 모델 API 구축하기" />
+<meta property="twitter:title" content="Less is more, Reasoning Model의 등장" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-27T00:06:49+09:00","datePublished":"2025-01-17T00:00:00+09:00","description":"항상 공부를 하면서 궁금한 점이 있었다. 내가 만드는 기술이 사용자에게 닿기까지 어떤 과정이 있을까? 머신러닝 모델을 공부하면서도 같은 의문이 들었다. 그래서 이미지 파일을 받아 딥러닝 모델로 예측하는 API를 만들어 보았다.","headline":"FastAPI 기반 딥러닝 모델 API 구축하기","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/playground/2025/01/17/ml-api.html"},"url":"https://denev6.github.io/playground/2025/01/17/ml-api.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-10-25T00:00:00+09:00","datePublished":"2025-10-25T00:00:00+09:00","description":"LLM을 활용한 연구가 쏟아지는 동시에 LLM의 한계도 점점 명확해져 가고 있다. 그로 인해 MicroSoft의 BitNet과 같이 작은 모델을 만들기 위한 시도가 계속 이어져왔다. 그러다 최근 몇 달 동안 reasoning 분야에서 새로운 아키텍쳐가 논의되고 있다. 오늘은 Hierarchical Reasoning Model이라고 불리는 아키텍쳐에 대해 이야기해 보려 한다.","headline":"Less is more, Reasoning Model의 등장","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/study/2025/10/25/hrm.html"},"url":"https://denev6.github.io/study/2025/10/25/hrm.html"}</script>
 <!-- End Jekyll SEO tag -->
 
   
 
-  <title>FastAPI 기반 딥러닝 모델 API 구축하기 | 
+  <title>Less is more, Reasoning Model의 등장 | 
 Palette
   </title>
 
@@ -312,7 +312,7 @@ Palette
         
           
             
-              <span>FastAPI 기반 딥러닝 모델 API 구축하기</span>
+              <span>Less is more, Reasoning Model의 등장</span>
             
 
           
@@ -604,6 +604,278 @@ Palette
     
 
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+      
+    
+
+    <!-- combine -->
+    
+
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+      
+    
+
+    <!-- combine -->
+    
+
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+      
+    
+
+    <!-- combine -->
+    
+
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+      
+    
+
+    <!-- combine -->
+    
+
+  
 
   
 
@@ -654,30 +926,6 @@ Palette
       
 
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
 
     
 
@@ -685,77 +933,6 @@ Palette
 
   
   
-
-  
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-
-    
 
   
 
@@ -778,7 +955,7 @@ Palette
 
 
 <header>
-  <h1 data-toc-skip>FastAPI 기반 딥러닝 모델 API 구축하기</h1>
+  <h1 data-toc-skip>Less is more, Reasoning Model의 등장</h1>
 
   <div class="post-meta text-muted">
     <!-- published date -->
@@ -794,13 +971,13 @@ Palette
 
 <time
   
-  data-ts="1737039600"
+  data-ts="1761318000"
   data-df="YYYY/MM/DD"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  2025/01/17
+  2025/10/25
 </time>
 
     </span>
@@ -843,9 +1020,9 @@ Palette
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1803 단어"
+  title="1627 단어"
 >
-  <em>10 
+  <em>9 
 분</em>
 읽는 시간
 </span>
@@ -859,269 +1036,78 @@ Palette
 
 
 <div class="content">
-  <p>항상 공부를 하면서 궁금한 점이 있었다. 내가 만드는 기술이 사용자에게 닿기까지 어떤 과정이 있을까? 머신러닝 모델을 공부하면서도 같은 의문이 들었다. 그래서 <strong>이미지 파일을 받아 딥러닝 모델로 예측하는 API</strong>를 만들어 보았다.</p>
+  <p>LLM을 활용한 연구가 쏟아지는 동시에 LLM의 한계도 점점 명확해져 가고 있다. 그로 인해 MicroSoft의 BitNet과 같이 작은 모델을 만들기 위한 시도가 계속 이어져왔다. 그러다 최근 몇 달 동안 reasoning 분야에서 새로운 아키텍쳐가 논의되고 있다. 오늘은 Hierarchical Reasoning Model이라고 불리는 아키텍쳐에 대해 이야기해 보려 한다.</p>
 
-<p>Github: <a href="https://github.com/denev6/serve-models">serve-models</a></p>
+<h2 id="인간의-뇌에서-영감을-받다"><span class="me-2">인간의 뇌에서 영감을 받다</span><a href="#인간의-뇌에서-영감을-받다" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<h2 id="model-학습"><span class="me-2">Model 학습</span><a href="#model-학습" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<blockquote>
+  <p>Hierarchical Reasoning Model, 2025.</p>
+</blockquote>
 
-<p>모델과 데이터셋을 고르는 기준은 단순하다. 로컬에서 가볍게 돌릴 수 있어야 한다. 지금은 모델이 중요한 게 아니라 그럴싸한 API를 만드는 것이 목표이기 때문에 성능보다 속도를 우선시했다. 데이터셋은 가벼운 <code class="language-plaintext highlighter-rouge">Fashion MNIST</code>를 사용했다. 28 x 28의 작은 크기 덕분에 빠르게 학습할 수 있다.</p>
+<p>추론 문제를 풀기 위해 CoT(Chain-of-Thought) 같은 방법론이 제시되어 왔지만 기대만큼의 성능 향상을 보이지는 못했다. HRM(Hierarchical Reasoning Model)은 “latent reasoning”을 제안한다. 내부의 hidden state space에서 재귀적인 구조를 통해 여러 번 생각을 거쳐 답을 출력하는 구조를 말한다.</p>
 
-<p>참고로 Fashion MNIST는 부츠, 운동화, 티셔츠, 가방 등 의류 이미지로 구성된 데이터셋이다.</p>
+<p><a href="/assets/posts/hrm/brain-arch.png" class="popup img-link "><img data-src="/assets/posts/hrm/brain-arch.png" alt="뇌와 HRM 구조 비교" class="lazyload" data-proofer-ignore></a></p>
 
-<p><a href="/assets/posts/ml-api/fashion-mnist.png" class="popup img-link "><img data-src="/assets/posts/ml-api/fashion-mnist.png" alt="Fashion MNIST 예시" class="lazyload" data-proofer-ignore></a></p>
+<p>이러한 구조는 인간의 뇌가 추론하는 과정에서 영감을 받았다. 추론 과정을 high-level과 low-level로 나눌 수 있는데, high-level은 추상적인 개념을 이해하기 위해 천천히 생각한다면 low-level은 세부적인 계산을 빠르게 수행한다. 여러 번의 low-level 추론을 반복한 뒤 high-level 추론을 거치면 효율적으로 representation을 만들어낸다.</p>
 
-<h3 id="데이터-정규화"><span class="me-2">데이터 정규화</span><a href="#데이터-정규화" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p><a href="/assets/posts/hrm/forward-residual.png" class="popup img-link "><img data-src="/assets/posts/hrm/forward-residual.png" alt="forward residual" class="lazyload" data-proofer-ignore></a></p>
 
-<p>Pytorch에서 제공하는 사전학습 모델 중 가장 가벼운 <code class="language-plaintext highlighter-rouge">MobileNet_v2</code>를 사용했다.</p>
+<p>HRM의 forward residual을 보면 high-level(HRM H)는 일정하게 수렴한다. 그러면서 low-level(HRM L)은 일정 주기를 가지고 수렴한다. 이는 high-level에서 큰 방향을 결정하고, low-level은 high-level의 결정에 따라 반복 추론을 하는 모습을 볼 수 있다. HRM의 재귀 구조가 RNN과 유사해 보일 수 있는데, RNN은 모든 연산을 저장했다가 한 번에 업데이트 하는 BackPropagation Through Time을 사용하지만, HRM은 one-step approximation이라는 방법을 사용한다. 덕분에 RNN은 빠르게 수렴하는데 반해, HRM은 더 오랫동안 탐색하는 모습을 볼 수 있다.</p>
 
-<p>먼저 의문이 든 부분은 정규화 방식이었다. 본 모델은 흑백 이미지를 사용하기 때문에 각 채널에 같은 평균과 표준편차를 주는 게 맞다고 생각했다. 그런데 사전학습된 원본 모델은 각 채널에 다른 평균과 표준편차를 사용한다. 학습된 모델 파라미터를 활용하기 위해서는 원본 모델이 사용한 정규화 방식을 그대로 사용해야 할 것도 같다. 구글링을 해보니 이 부분에 대해서 의견이 다양했다. 그래서 같은 조건[batch: 64, learning rate: 0.005] + Early stopping을 적용해 정규화 결과를 비교해 보았다.</p>
+<p><a href="/assets/posts/hrm/hrm-arch.png" class="popup img-link "><img data-src="/assets/posts/hrm/hrm-arch.png" alt="HRM 구조" class="lazyload" data-proofer-ignore></a></p>
 
-<ul>
-  <li>원본 모델의 정규화 방식: accuracy 91.75%</li>
-  <li>같은 값을 모든 채널에 적용: accuracy 89.15%</li>
-</ul>
+<p>그림에서 볼 수 있듯이 HRM은 여러 번의 low-level 추론과 한 번의 high-level 추론이 결합된 구조이다. 이때 마지막에 발생한 한 번의 low-level과 high-level 추론의 gradient만 사용해 가중치를 업데이트한다. 이 방식은 latent vector가 하나의 고정된 점으로 수렴한다고 가정하기 때문에 가능한다. (물론 이 가정이 완벽하지 않아 뒤에서 소개할 TRM에서 이 논리를 반박한다.)</p>
 
-<p>유의미한 결과라고 확신할 수 없지만 <strong>원본 모델의 정규화가 더 좋은 성능</strong>을 보였다.</p>
+<p>low-level의 반복 횟수는 모델이 직접 결정한다. 모델이 low-level을 반복할지, high-level로 넘어갈지 판단하는 과정을 ACT(Adaptive Computational Time)라고 한다. 판단 여부는 Q-learning으로 학습한다. 따라서 전체 Loss function은 네트워크를 자체를 학습하는 loss와 Q-learning을 위한 loss가 결합된 형태로 정의된다.</p>
 
-<h3 id="mobilenet_v2-학습"><span class="me-2">MobileNet_v2 학습</span><a href="#mobilenet_v2-학습" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+\[L^m_{ACT}=Loss(\hat{y}^m , y) + \text{BCE}(\hat{Q}^m, \hat{G}^m)\]
 
-<p>데이터는 <a href="https://pytorch.org/hub/pytorch_vision_mobilenet_v2/">Pytorch 문서</a>에 따라 사전 학습 데이터와 동일한 정규화를 진행한다.</p>
+<p>모델의 입출력은 모두 토큰 시퀀스로 표현되며, low-level과 high-level 모듈 모두 동일한 차원의 encoder-only Transformer block으로 구현되었다.</p>
 
-<div class="language-python highlighter-rouge"><div class="code-header">
-        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed=""><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre><span class="n">transform</span> <span class="o">=</span> <span class="n">transforms</span><span class="p">.</span><span class="nc">Compose</span><span class="p">([</span>
-    <span class="n">transforms</span><span class="p">.</span><span class="nc">Grayscale</span><span class="p">(</span><span class="n">num_output_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
-    <span class="n">transforms</span><span class="p">.</span><span class="nc">Resize</span><span class="p">(</span><span class="mi">224</span><span class="p">),</span>
-    <span class="n">transforms</span><span class="p">.</span><span class="nc">ToTensor</span><span class="p">(),</span>
-    <span class="n">transforms</span><span class="p">.</span><span class="nc">Normalize</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="p">[</span><span class="mf">0.485</span><span class="p">,</span> <span class="mf">0.456</span><span class="p">,</span> <span class="mf">0.406</span><span class="p">],</span> <span class="n">std</span><span class="o">=</span><span class="p">[</span><span class="mf">0.229</span><span class="p">,</span> <span class="mf">0.224</span><span class="p">,</span> <span class="mf">0.225</span><span class="p">]),</span>
-<span class="p">])</span>
-</pre></td></tr></tbody></table></code></div></div>
+<p><a href="/assets/posts/hrm/hrm-result.png" class="popup img-link "><img data-src="/assets/posts/hrm/hrm-result.png" alt="HRM 성능 평가" class="lazyload" data-proofer-ignore></a></p>
 
-<p>학습: <a href="https://github.com/denev6/serve-models/blob/main/src/lib/server/MobileNet/final.ipynb">final.ipynb</a></p>
+<p>HRM이 스도쿠, 미로 등 고난이도 추론이 필요한 문제를 학습한 결과 o3-mini-high, Claude-3.7, Deepseek-R1보다 뛰어난 성능을 보였다. 이는 단순히 성능이 높아진 것을 넘어 훨씬 적은 파라미터(27M)로 학습해냈다는 데 큰 의미가 있다.</p>
+
+<h2 id="더-단순하게-만들-수-없을까"><span class="me-2">더 단순하게 만들 수 없을까</span><a href="#더-단순하게-만들-수-없을까" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<blockquote>
+  <p>Less is More: Recursive Reasoning with Tiny Networks, 2025.</p>
+</blockquote>
+
+<p>물론 HRM이 새로운 reasoning 구조를 제안했다는 데 큰 의의가 있지만, 여전히 의문이 드는 지점이 있다.</p>
 
 <ul>
-  <li>Training set: 54000 (90%)</li>
-  <li>Validation set: 6000 (10%)</li>
-  <li>Test set: 10000</li>
-  <li>Batch: 32</li>
-  <li>Learning rate: (1차) 0.003, (2차) 0.001</li>
-  <li>Epoch: (1차) 10, (2차) 7</li>
-  <li>Optimizer: Adam</li>
+  <li>1-step gradient approximation은 타당한가?</li>
+  <li>ACT가 반드시 필요한가?</li>
+  <li>구조를 더 단순하게 만들 수는 없는가?</li>
 </ul>
 
-<div class="language-text highlighter-rouge"><div class="code-header">
-        <span data-label-text="Text"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed=""><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-</pre></td><td class="rouge-code"><pre>##### 1차 #####
-[1] Train: 0.38468 | Validation: 0.29368
-[2] Train: 0.27225 | Validation: 0.24403
-...
-[10] Train: 0.13610 | Validation: 0.17212
+<p>삼성에서 제안한 TRM(Iiny Recursion Model)은 뇌과학에 기반한 접근 대신 공학적인 시각에서 모델을 바라본다. 그 덕분에 위에서 들었던 의문을 해결하고 더 단순하고 직관적인 구조를 제안한다.</p>
 
-Accuracy 93.01
+<p><a href="/assets/posts/hrm/trm-arch.png" class="popup img-link "><img data-src="/assets/posts/hrm/trm-arch.png" alt="TRM 구조" class="lazyload" data-proofer-ignore></a></p>
 
-##### 2차 #####
-[1] Train: 0.09615 | Validation: 0.07122
-...
-[6] Train: 0.05107 | Validation: 0.06074
-[7] Train: 0.04638 | Validation: 0.06033
-[8] Train: 0.04151 | Validation: 0.06148
-[9] Train: 0.03675 | Validation: 0.06153
-EarlyStopping: [Epoch: 7]
+<p>먼저, HRM은 1-step gradient approximation을 사용하지 않는다. HRM은 latent vector를 재귀 반복하며 추론하기 때문에 복잡한 수학적인 설명(IFT)이 필요했다. TRM은 low-level과 high-level을 구분하지 않고 하나의 네트워크가 완전한 출력을 생성한다. 이 출력을 다시 네트워크 입력으로 사용하며 재귀적인 forward pass를 수행한다. 그리고 마지막 한 번의 재귀 반복에 대해서만 gradient를 계산하고 back-propagate한다. 코드로 표현하면 다음과 같다.</p>
 
-Accuracy: 94.36
-</pre></td></tr></tbody></table></code></div></div>
+<p><a href="/assets/posts/hrm/trm-code.png" class="popup img-link "><img data-src="/assets/posts/hrm/trm-code.png" alt="TRM 수도코드" class="lazyload" data-proofer-ignore></a></p>
 
-<p>옷장에서 사진을 몇 장 찍어 테스트 했다.</p>
+<p>따라서 HRM이 latent space를 계층으로 나눠 복잡하게 표현했던 것과 달리, TRM은 입출력을 더 단순하게 정의할 수 있다. 이제 입력하는 문제 $x$, 이전 출력 답변 $y$, latent reasoning feature $z$로 표현한다. 여기서 독립적인 단계별 $z$를 두거나, $z$와 $y$를 통합하는 방식도 시도했지만 성능이 하락했다.</p>
 
-<p><a href="/assets/posts/ml-api/prediction-img.png" class="popup img-link "><img data-src="/assets/posts/ml-api/prediction-img.png" alt="모델 예측 예시" class="lazyload" data-proofer-ignore></a></p>
+<p>이 외에도 저자는 많은 부분을 단순화했다. 네트워크의 경우, layer를 2개만 쌓았을 때 가장 좋은 성능을 보였다. 성능을 높이기 위해 layer를 4개까지 쌓아봤지만 오히려 성능이 떨어졌다고 한다. (참고로, 여기서 하나의 layer는 Self-Attention + MLP 구조의 Transformer block을 말한다.) Q-learning을 이용한 halt 학습도 없앴다. Binary-Cross Entropy를 통해 halt 여부를 함께 학습하도록 했으며, 성능에는 차이가 없었다.</p>
 
-<p><strong>대부분 잘 예측했다.</strong> 비록 부츠를 운동화라고 농담도 하지만 API 만드는 연습을 하기에는 그럴싸한 모델이라고 판단했다.</p>
+<p><a href="/assets/posts/hrm/trm-result.png" class="popup img-link "><img data-src="/assets/posts/hrm/trm-result.png" alt="TRM 결과" class="lazyload" data-proofer-ignore></a></p>
 
-<h2 id="fastapi"><span class="me-2">FastAPI</span><a href="#fastapi" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p>API를 생성하기 위해 기존에 작성했던 Flask 코드를 바탕으로 코드를 완성했다. 그런데 Flask에 대해 찾아보다보니 틈틈히 <code class="language-plaintext highlighter-rouge">FastAPI</code>가 보였다. FastAPI 소개 영상에는 FastAPI를 찬양하는 댓글이 많았고, 궁금해서 이번 기회에 사용해 보았다. 결론만 말하면 마음에 들었다. 이유는 다음과 같다.</p>
-
-<ul>
-  <li><strong>데이터 검증</strong>이 쉽다. 타입 힌트를 이용해 입력 타입을 강제할 수 있다.</li>
-  <li><strong>자동 생성된 /docs</strong>를 통해 POST 요청을 쉽게 보낼 수 있다.</li>
-  <li>속도가 <strong>빠르다</strong>. 필자가 체감할 수준은 아니지만 여러 지표가 그렇게 말하고 있다.</li>
-  <li>쉽다. 벡엔드를 잘 모르는 필자도 쉽게 짤 수 있었다.</li>
-</ul>
-
-<h3 id="api-구현"><span class="me-2">API 구현</span><a href="#api-구현" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p>목표는 <strong>사용자로부터 이미지를 입력받아 모델 추론 결과를 돌려주는 API</strong>이다.</p>
-
-<div class="language-python highlighter-rouge"><div class="code-header">
-        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed=""><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre><span class="nd">@app.post</span><span class="p">(</span><span class="sh">"</span><span class="s">/fashion-mnist</span><span class="sh">"</span><span class="p">)</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">predict_fashion</span><span class="p">(</span><span class="nb">file</span><span class="p">:</span> <span class="n">UploadFile</span> <span class="o">=</span> <span class="nc">File</span><span class="p">()):</span>
-    <span class="nb">file</span> <span class="o">=</span> <span class="k">await</span> <span class="nf">is_valid_size</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
-    <span class="nb">file</span> <span class="o">=</span> <span class="k">await</span> <span class="nf">is_valid_image</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
-
-    <span class="n">img_tensor</span> <span class="o">=</span> <span class="nf">convert_image</span><span class="p">(</span><span class="nb">file</span><span class="p">.</span><span class="nb">file</span><span class="p">)</span>
-    <span class="n">label</span><span class="p">,</span> <span class="n">probs</span> <span class="o">=</span> <span class="nf">predict</span><span class="p">(</span><span class="n">img_tensor</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">{</span><span class="sh">"</span><span class="s">label</span><span class="sh">"</span><span class="p">:</span> <span class="n">label</span><span class="p">,</span> <span class="sh">"</span><span class="s">probs</span><span class="sh">"</span><span class="p">:</span> <span class="n">probs</span><span class="p">}</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="request로-테스트"><span class="me-2">Request로 테스트</span><a href="#request로-테스트" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p>Python을 통해 요청을 날려봤다.</p>
-
-<p>코드: <a href="https://github.com/denev6/serve-models/blob/main/src/lib/server/test.py">server/test.py</a></p>
-
-<div class="language-python highlighter-rouge"><div class="code-header">
-        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed=""><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="n">requests</span>
-
-<span class="n">port</span> <span class="o">=</span> <span class="sh">"</span><span class="s">8000</span><span class="sh">"</span>
-<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">http://127.0.0.1:</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s">/fashion-mnist</span><span class="sh">"</span>
-<span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="sh">"</span><span class="s">./static/sample/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">.png</span><span class="sh">"</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">(</span><span class="sh">"</span><span class="s">Sneaker</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Trouser</span><span class="sh">"</span><span class="p">)]</span>
-
-<span class="k">for</span> <span class="n">img</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>
-    <span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="sh">"</span><span class="s">rb</span><span class="sh">"</span><span class="p">)</span> <span class="k">as</span> <span class="n">image_file</span><span class="p">:</span>
-        <span class="c1"># { Field-name: File-name, File-object, File-type }
-</span>        <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="sh">"</span><span class="s">file</span><span class="sh">"</span><span class="p">:</span> <span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">image_file</span><span class="p">,</span> <span class="sh">"</span><span class="s">image/png</span><span class="sh">"</span><span class="p">)}</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
-        <span class="n">resp_json</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="nf">json</span><span class="p">()</span>
-
-    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Status:</span><span class="sh">"</span><span class="p">,</span> <span class="n">response</span><span class="p">.</span><span class="n">status_code</span><span class="p">)</span>
-    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Response:</span><span class="sh">"</span><span class="p">,</span> <span class="n">resp_json</span><span class="p">)</span>
-
-    <span class="k">assert</span> <span class="n">response</span><span class="p">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<div class="language-text highlighter-rouge"><div class="code-header">
-        <span data-label-text="Text"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed=""><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre>Status: 200
-Response: {'label': 'Sneaker', 'prob': 0.8817731738090515}
-Status: 200
-Response: {'label': 'Trouser', 'prob': 0.9963659048080444}
-</pre></td></tr></tbody></table></code></div></div>
-
-<p>원하는 결과를 잘 받아왔다. 코드로 주고 받는 방식은 결과를 받아와 추가적인 작업을 진행할 수 있다. 결과를 바탕으로 데이터 분석 등을 수행한다면 템플릿보다 유용한 방법이다.</p>
-
-<h3 id="frontend에서-요청"><span class="me-2">FrontEnd에서 요청</span><a href="#frontend에서-요청" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/assets/posts/ml-api/prediction-template.png" class="popup img-link "><img data-src="/assets/posts/ml-api/prediction-template.png" alt="템플릿 실행 결과" class="lazyload" data-proofer-ignore></a></p>
-
-<p>수정: 25-03-01</p>
-
-<p>위 사진을 보면 예상한대로 잘 작동하는 것처럼 보인다. 이렇게 템플릿을 활용하면 코드를 잘 모르는 사람도 이미지를 넣어보고 테스트할 수 있는 환경이 만들어진다.</p>
-
-<h2 id="docker"><span class="me-2">Docker</span><a href="#docker" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p>마지막으로 완성한 API를 실행할 Docker 환경을 구축했다.</p>
-
-<p>Dockerfile 원본: <a href="https://github.com/denev6/serve-models/blob/main/src/lib/server/Dockerfile">Dockerfile</a></p>
-
-<div class="language-dockerfile highlighter-rouge"><div class="code-header">
-        <span data-label-text="Dockerfile"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed=""><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-</pre></td><td class="rouge-code"><pre><span class="k">FROM</span><span class="s"> python:3.10-slim</span>
-
-<span class="c"># 생략...</span>
-
-<span class="k">RUN </span>pip <span class="nb">install </span><span class="nv">torch</span><span class="o">==</span>2.5.1 <span class="nt">--index-url</span> https://download.pytorch.org/whl/cpu
-<span class="k">RUN </span>pip <span class="nb">install </span><span class="nv">torchvision</span><span class="o">==</span>0.20.1 <span class="nt">--index-url</span> https://download.pytorch.org/whl/cpu
-
-<span class="k">EXPOSE</span><span class="s"> 8000</span>
-
-<span class="k">CMD</span><span class="s"> ["uvicorn", "main:app", "--host=0.0.0.0", "--port=8000"]</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<p>처음에는 평범하게 torch와 torchvision을 설치했다. 그랬더니 도커 이미지 크기가 10G를 넘어갔다. 그런데 어차피 모델을 CPU에서 돌릴 거라면 CUDA 관련 라이브러리는 설치할 필요가 없다. 그래서 <code class="language-plaintext highlighter-rouge">whl/cpu</code>를 통해 <strong>CPU 버전을 설치했더니 용량이 1.8G로 눈에 띄게 줄었다</strong>.</p>
-
-<p>컨테이너 외부에서 접속할 수 있도록 host는 <code class="language-plaintext highlighter-rouge">0.0.0.0</code>으로 열어주었고, port는 도커 <code class="language-plaintext highlighter-rouge">EXPOSE</code>와 동일하게 설정했다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed=""><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre>docker build <span class="nt">-t</span> app:0.1 <span class="nb">.</span>
-docker run <span class="nt">-p</span> 8080:8000 <span class="nt">--name</span> <span class="nb">test </span>app:0.1
-</pre></td></tr></tbody></table></code></div></div>
-
-<p>빌드하고 실행해보면 위에서 봤던 것과 같이 POST 요청을 잘 처리한다.</p>
+<p>TRM은 훨씬 적은 파라미터(7M)로 LLM과 HRM의 성능을 뛰어넘었다. TRM-Att는 attention을 사용한 경우이고, TRM-MLP는 attention 대신 MLP만 사용한 경우다. Context 길이가 작은 문제에서는 TRM-MLP가 더 뛰어난 결과를 보이기도 했지만, context 크기가 커지면 attention을 사용한 모델이 더 좋은 일반화 성능을 보이는 것으로 드러났다. (아마도 inductive bias 때문으로 추정된다.)</p>
 
 <hr />
 
-<p>모델 학습부터 사용자에게 전달하는 과정을 살펴보았다.</p>
+<p><strong>참고문헌</strong></p>
 
-<p>*여담으로 <a href="https://github.com/denev6/serve-models/tree/main/src/lib/server/MobileNet/_model">Github</a>에 가면 버려진 파일이 있다. 원래는 모델 학습에서 보여줬던 실험을 로컬에서 MLFlow를 사용해 돌릴 계획이었다. 그런데 base 모델을 학습해보니 생각보다 시간이 오려 걸렸고, 결국 Colab의 도움을 받았다.</p>
-
-<h2 id="추가-풀스택으로-챗봇-구현"><span class="me-2">(추가) 풀스택으로 챗봇 구현</span><a href="#추가-풀스택으로-챗봇-구현" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p>(2025.06.06) 학교 과제를 하며 본 프로젝트와 같이 프론트엔드 + 백엔드를 모두 구현해야 하는 상황이 생겼다. 이 경험을 바탕으로 챗봇 UI를 구현하고, 백엔드는 FastAPI로 간단한 POST 요청을 구현했다.</p>
-
-<blockquote>
-  <p>코드: <a href="https://github.com/denev6/skku-swe2025">skku-swe2025</a></p>
-</blockquote>
-
-<p>미리 공부한 덕분에 크게 시간을 들이지 않고 빠르게 구현할 수 있었다.</p>
+<ul>
+  <li>Hierarchical Reasoning Model, 2025.</li>
+  <li>Emergent Hierarchical Reasoning in LLMs through Reinforcement Learning, 2025.</li>
+  <li>Less is More: Recursive Reasoning with Tiny Networks, 2025.</li>
+  <li>1-bit AI Infra: Part 1.1, Fast and Lossless BitNet b1.58 Inference on CPUs, 2024.</li>
+</ul>
 
 </div>
 
@@ -1133,7 +1119,7 @@ docker run <span class="nt">-p</span> 8080:8000 <span class="nt">--name</span> <
     <div class="post-meta mb-3">
       <i class="far fa-folder-open fa-fw me-1"></i>
       
-        <a href="/categories/playground/">Playground</a>
+        <a href="/categories/study/">Study</a>
     </div>
   
 
@@ -1142,9 +1128,9 @@ docker run <span class="nt">-p</span> 8080:8000 <span class="nt">--name</span> <
   <div class="post-tags">
     <i class="fa fa-tags fa-fw me-1"></i>
     
-    <a href="/tags/python/" class="post-tag no-text-decoration">Python</a>
+    <a href="/tags/nlp/" class="post-tag no-text-decoration">NLP</a>
     
-    <a href="/tags/mlops/" class="post-tag no-text-decoration">MLOps</a>
+    <a href="/tags/ai/" class="post-tag no-text-decoration">AI</a>
     
   </div>
   
@@ -1175,7 +1161,7 @@ docker run <span class="nt">-p</span> 8080:8000 <span class="nt">--name</span> <
     
       
       <a
-        href="https://twitter.com/intent/tweet?text=FastAPI%20%EA%B8%B0%EB%B0%98%20%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EB%AA%A8%EB%8D%B8%20API%20%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0%20-%20Palette&url=https%3A%2F%2Fdenev6.github.io%2Fplayground%2F2025%2F01%2F17%2Fml-api.html"
+        href="https://twitter.com/intent/tweet?text=Less%20is%20more,%20Reasoning%20Model%EC%9D%98%20%EB%93%B1%EC%9E%A5%20-%20Palette&url=https%3A%2F%2Fdenev6.github.io%2Fstudy%2F2025%2F10%2F25%2Fhrm.html"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Twitter"
@@ -1188,7 +1174,7 @@ docker run <span class="nt">-p</span> 8080:8000 <span class="nt">--name</span> <
     
       
       <a
-        href="https://www.facebook.com/sharer/sharer.php?title=FastAPI%20%EA%B8%B0%EB%B0%98%20%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EB%AA%A8%EB%8D%B8%20API%20%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0%20-%20Palette&u=https%3A%2F%2Fdenev6.github.io%2Fplayground%2F2025%2F01%2F17%2Fml-api.html"
+        href="https://www.facebook.com/sharer/sharer.php?title=Less%20is%20more,%20Reasoning%20Model%EC%9D%98%20%EB%93%B1%EC%9E%A5%20-%20Palette&u=https%3A%2F%2Fdenev6.github.io%2Fstudy%2F2025%2F10%2F25%2Fhrm.html"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Facebook"
@@ -1201,7 +1187,7 @@ docker run <span class="nt">-p</span> 8080:8000 <span class="nt">--name</span> <
     
       
       <a
-        href="https://t.me/share/url?url=https%3A%2F%2Fdenev6.github.io%2Fplayground%2F2025%2F01%2F17%2Fml-api.html&text=FastAPI%20%EA%B8%B0%EB%B0%98%20%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EB%AA%A8%EB%8D%B8%20API%20%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0%20-%20Palette"
+        href="https://t.me/share/url?url=https%3A%2F%2Fdenev6.github.io%2Fstudy%2F2025%2F10%2F25%2Fhrm.html&text=Less%20is%20more,%20Reasoning%20Model%EC%9D%98%20%EB%93%B1%EC%9E%A5%20-%20Palette"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Telegram"
@@ -1214,7 +1200,7 @@ docker run <span class="nt">-p</span> 8080:8000 <span class="nt">--name</span> <
     
       
       <a
-        href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fdenev6.github.io%2Fplayground%2F2025%2F01%2F17%2Fml-api.html"
+        href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fdenev6.github.io%2Fstudy%2F2025%2F10%2F25%2Fhrm.html"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Linkedin"
@@ -1764,31 +1750,139 @@ docker run <span class="nt">-p</span> 8080:8000 <span class="nt">--name</span> <
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -1936,7 +2030,7 @@ docker run <span class="nt">-p</span> 8080:8000 <span class="nt">--name</span> <
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/study/2025/01/31/alexnet.html" class="post-preview card h-100">
+          <a href="/projects/2022/12/17/dacon-roberta.html" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -1950,14 +2044,14 @@ docker run <span class="nt">-p</span> 8080:8000 <span class="nt">--name</span> <
   
     class="small"
   
-  data-ts="1738249200"
+  data-ts="1671202800"
   data-df="YYYY/MM/DD"
   
 >
-  2025/01/31
+  2022/12/17
 </time>
 
-              <h4 class="pt-0 my-2">ImageNet Classification with Deep Convolutional Neural Networks</h4>
+              <h4 class="pt-0 my-2">발화자의 감정인식 AI 경진대회</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -1966,11 +2060,17 @@ docker run <span class="nt">-p</span> 8080:8000 <span class="nt">--name</span> <
 
 
 
-                  ImageNet Classification with Deep Convolutional Neural Networks: 논문은 AlexNet을 소개한 논문으로 CNN 모델의 각 레이어가 어떤 역할을 하는지 잘 분석했다.
+                  
+  대회: 월간 데이콘 발화자의 감정인식 AI 경진대회
+제출 코드: dacon.io/codeshare
+인터뷰: 우승자 인터뷰: 219
 
-논문을 정리한 글이며, CNN의 기본적인 개념을 생략하고 정리했다. 자세한 부분은 BLOG: CNN에 볼 수 있다.
 
-본 글에서 분석을...
+
+
+동기
+
+자연어처리 대회를 소개받아 DACON 대회에 참가하게 되었다. 자연어처리 과목을 수강하고 있었는데 교수님께서 대회를 소개해주셨다. 당시 멀티모달 우울증 탐지 연구를 하고 있었기 때문에 감정 분석 모델에 ...
                 </p>
               </div>
             </div>
@@ -1978,7 +2078,7 @@ docker run <span class="nt">-p</span> 8080:8000 <span class="nt">--name</span> <
         </article>
       
         <article class="col">
-          <a href="/study/2025/02/08/fcn.html" class="post-preview card h-100">
+          <a href="/playground/2025/03/24/retrieve-notice.html" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -1992,14 +2092,14 @@ docker run <span class="nt">-p</span> 8080:8000 <span class="nt">--name</span> <
   
     class="small"
   
-  data-ts="1738940400"
+  data-ts="1742742000"
   data-df="YYYY/MM/DD"
   
 >
-  2025/02/08
+  2025/03/24
 </time>
 
-              <h4 class="pt-0 my-2">Image Segmentation with FCN</h4>
+              <h4 class="pt-0 my-2">RAG로 학교 공지 검색</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -2008,13 +2108,15 @@ docker run <span class="nt">-p</span> 8080:8000 <span class="nt">--name</span> <
 
 
 
-                  이미지 segmentation에 대해 다루며, CNN을 활용한 FCN(Fullly Convolutional Network)을 중심으로 소개한다. FCN은 논문 “Fully Convolutional Networks for Semantic Segmentation“에서 소개되었다.
+                  프로젝트를 시작하며
 
-Image Segmentation
+Retrieval-Augmented Generation(RAG)를 이용해 학교 공지를 빠르게 찾는 챗봇을 구현했다. Encoder + FAISS + SQLite를 이용해 로컬 GPU로 실험했으며, 문장 요약을 위해 Claude3 Sonnet을 사용했다.
 
 
 
-이미지 segmentation은 픽...
+Github 보기
+
+챗봇을 만든 이유는 단순하다. 평소와 같이 강의를 듣...
                 </p>
               </div>
             </div>
@@ -2022,7 +2124,7 @@ Image Segmentation
         </article>
       
         <article class="col">
-          <a href="/projects/2025/03/05/eeg-transformer.html" class="post-preview card h-100">
+          <a href="/study/2025/09/20/co-learning.html" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2036,14 +2138,14 @@ Image Segmentation
   
     class="small"
   
-  data-ts="1741100400"
+  data-ts="1758294000"
   data-df="YYYY/MM/DD"
   
 >
-  2025/03/05
+  2025/09/20
 </time>
 
-              <h4 class="pt-0 my-2">EEG 신호를 활용한 청소년 ADHD 진단</h4>
+              <h4 class="pt-0 my-2">Co-learning을 활용한 멀티모달 학습</h4>
               <div class="text-muted small">
                 <p>
                   
@@ -2052,11 +2154,11 @@ Image Segmentation
 
 
 
-                  요약
+                  ViLBERT, SimCLR, CLIP, ImageBind 4가지 모델을 예시로, 이미지와 다른 모달리티 간 co-learning을 살펴본다.
 
-Github: ADHD-EEG-ViT
+Co-learning
 
-주의력결핍 과잉행동장애(Attention deficit / hyperactivity disorder, ADHD)는 아동 및 청소년기에 가장 흔한 신경발달장애로, 조기에 적절한 진단과 개입이 이루어지지 않으면 학업 성취, 사회적 관계, 정서 발달에 장기적인 부정적 영향을 미칠 수 있다. ADHD 진단에 도움...
+Multi-modal learning에서 co-learning은 모달리티를 학습하기 위해 다른 모달리티를 활용하는 방법을 말한다. 예를 들어, “강아지”라는 텍스트의 특성을 파악하기 위...
                 </p>
               </div>
             </div>
@@ -2078,22 +2180,18 @@ Github: ADHD-EEG-ViT
 
   
     <a
-      href="/study/2025/01/08/svd.html"
+      href="/study/2025/10/19/agent-memory.html"
       class="btn btn-outline-primary"
       aria-label="이전 글"
     >
-      <p>SVD를 이용한 이미지 압축</p>
+      <p>Agent에게 오답노트를 시켜봤더니</p>
     </a>
   
 
   
-    <a
-      href="/study/2025/01/27/hog.html"
-      class="btn btn-outline-primary"
-      aria-label="다음 글"
-    >
-      <p>Histograms of Oriented Gradients for Human Detection</p>
-    </a>
+    <div class="btn btn-outline-primary disabled" aria-label="다음 글">
+      <p>-</p>
+    </div>
   
 </nav>
 
@@ -2676,6 +2774,27 @@ Github: ADHD-EEG-ViT
 
 <script defer src="/assets/js/dist/post.min.js"></script>
 
+
+  <!-- MathJax -->
+  <script>
+    /* see: <https://docs.mathjax.org/en/latest/options/input/tex.html#tex-options> */
+    MathJax = {
+      tex: {
+        /* start/end delimiter pairs for in-line math */
+        inlineMath: [
+          ['$', '$'],
+          ['\\(', '\\)']
+        ],
+        /* start/end delimiter pairs for display math */
+        displayMath: [
+          ['$$', '$$'],
+          ['\\[', '\\]']
+        ]
+      }
+    };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
 
 
 

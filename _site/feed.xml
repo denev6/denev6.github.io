@@ -4,7 +4,7 @@
   <id>https://denev6.github.io/</id>
   <title>Palette</title>
   <subtitle>개발을 좋아하는 학부생의 노트입니다.</subtitle>
-  <updated>2025-10-21T00:44:17+09:00</updated>
+  <updated>2025-10-26T01:40:48+09:00</updated>
   <author>
     <name>박성진</name>
     <uri>https://denev6.github.io/</uri>
@@ -17,6 +17,48 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Less is more, Reasoning Model의 등장</title>
+    <link href="https://denev6.github.io/study/2025/10/25/hrm.html" rel="alternate" type="text/html" title="Less is more, Reasoning Model의 등장" />
+    <published>2025-10-25T00:00:00+09:00</published>
+  
+    <updated>2025-10-25T00:00:00+09:00</updated>
+  
+    <id>https://denev6.github.io/study/2025/10/25/hrm.html</id>
+    <content src="https://denev6.github.io/study/2025/10/25/hrm.html" />
+    <author>
+      <name>박성진</name>
+    </author>
+
+  
+    
+    <category term="Study" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      LLM을 활용한 연구가 쏟아지는 동시에 LLM의 한계도 점점 명확해져 가고 있다. 그로 인해 MicroSoft의 BitNet과 같이 작은 모델을 만들기 위한 시도가 계속 이어져왔다. 그러다 최근 몇 달 동안 reasoning 분야에서 새로운 아키텍쳐가 논의되고 있다. 오늘은 Hierarchical Reasoning Model이라고 불리는 아키텍쳐에 대해 이야기해 보려 한다.
+
+인간의 뇌에서 영감을 받다
+
+
+  Hierarchical Reasoning Model, 2025.
+
+
+추론 문제를 풀기 위해 CoT(Chain-of-Thought) 같은 방법론이 제시되어 왔지만 기대만큼의 성능 향상을 보이지는 못했다. HRM(Hierarchical Reasoning Model)은 “latent reasoning”...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -194,46 +236,6 @@ Django와 HTMX에 설득되다
 
 
 필자는 주로 ML 모델을 다루다보니 벡엔드는 API를 던지고 받는 정도만 해왔다. 그렇다보니 고민 없이 FastAPI만 사용해왔고, Django는 머리 속에서 잊혀져 있었다. 그러다 여러 세션에서 Django의 장점을 듣게 되었다. 특히 세션 로그인이나 DB migration 등 작업을 Django가 아주 쉽게 할 수 있다는 내용이었다. 물론 앞으로도 간단한 API 서버는 FastAPI로 열겠지만, 머리 속에 D...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>네이버가 말하는 의료 챗봇과 장기 기억</title>
-    <link href="https://denev6.github.io/study/2025/07/04/long-term-memory.html" rel="alternate" type="text/html" title="네이버가 말하는 의료 챗봇과 장기 기억" />
-    <published>2025-07-04T00:00:00+09:00</published>
-  
-    <updated>2025-08-18T16:40:55+09:00</updated>
-  
-    <id>https://denev6.github.io/study/2025/07/04/long-term-memory.html</id>
-    <content src="https://denev6.github.io/study/2025/07/04/long-term-memory.html" />
-    <author>
-      <name>박성진</name>
-    </author>
-
-  
-    
-    <category term="Study" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      본 글은 ‘신뢰 가능한’ 의료 AI 챗봇에 대한 고민을 담고 있다. 네이버(NAVER)의 연구를 중심으로 설명하며, ‘장기기억(Long-term memory)’이 중요한 키워드다.
-
-내담자는 상담자에게 솔직한가?
-
-심리 상담 치료에서 내담자와 상담자의 신뢰 관계 형성이 중요하다. 내담자가 상담자를 신뢰하지 않으면 진솔한 이야기를 털어놓을 수 없다. 내담자가 정보를 제공하지 않으면, 정확한 진단과 치료가 어려워진다. 아무리 이론적으로 완벽한 치료 세션이 있다해도 내담자의 정보가 없다면 아무 소용이 없다. 그렇다면 의료 챗봇은 어떨까?
-
-최근 LLM을 활용한 의료 챗봇이 활발히 연구되고 있다. 기존에 인간 전문가가 수행하던 세션을 챗봇이 대신하는 형태가 많다. 하지만, 앞서 말했듯, 이론적 배경이 완벽하더...
     </summary>
   
 
