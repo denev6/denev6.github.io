@@ -4,7 +4,7 @@
   <id>https://denev6.github.io/</id>
   <title>Palette</title>
   <subtitle>개발을 좋아하는 학부생의 노트입니다.</subtitle>
-  <updated>2025-10-26T01:40:48+09:00</updated>
+  <updated>2025-11-02T23:54:47+09:00</updated>
   <author>
     <name>박성진</name>
     <uri>https://denev6.github.io/</uri>
@@ -17,6 +17,48 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>멀티모달과 멀티에이전트 조합</title>
+    <link href="https://denev6.github.io/study/2025/11/02/agent-training.html" rel="alternate" type="text/html" title="멀티모달과 멀티에이전트 조합" />
+    <published>2025-11-02T00:00:00+09:00</published>
+  
+    <updated>2025-11-02T00:00:00+09:00</updated>
+  
+    <id>https://denev6.github.io/study/2025/11/02/agent-training.html</id>
+    <content src="https://denev6.github.io/study/2025/11/02/agent-training.html" />
+    <author>
+      <name>박성진</name>
+    </author>
+
+  
+    
+    <category term="Study" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Agent의 변화와 정의
+
+
+  ReAct: Synergizing Reasoning and Acting in Language Models, 2023.
+
+  Counterfactual Multi-Agent Policy Gradients, 2024.
+
+
+Agent는 전통적인 관점에서 policy를 가지며, 자율적으로 판단하고 행동하는 모델을 말한다. 오래 전부터 강화학습 분야에서 사용되던 용어다. Policy를 가진 네트워크는 학습을 거쳐야 하며, 학습된 경험을 바탕으로 판단을 내린다. 최근에는 LLM의 체급을 믿고 LLM 자체를 두뇌로 사용하는 agent가 등장하기 시작했다. 대표적으로 ReAct(Reasoning and Acting) 프레임워크가 있다. 이러한 형태의 agent는 LLM이 가진 배경지식...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -46,7 +88,7 @@
 
 
 
-      LLM을 활용한 연구가 쏟아지는 동시에 LLM의 한계도 점점 명확해져 가고 있다. 그로 인해 MicroSoft의 BitNet과 같이 작은 모델을 만들기 위한 시도가 계속 이어져왔다. 그러다 최근 몇 달 동안 reasoning 분야에서 새로운 아키텍쳐가 논의되고 있다. 오늘은 Hierarchical Reasoning Model이라고 불리는 아키텍쳐에 대해 이야기해 보려 한다.
+      LLM을 활용한 연구가 쏟아지는 동시에 LLM의 한계도 점점 명확해져 가고 있다. 그로 인해 Microsoft의 BitNet과 같이 작은 모델을 만들기 위한 시도가 계속 이어져왔다. 그러다 최근 몇 달 동안 reasoning 분야에서 새로운 아키텍쳐가 논의되고 있다. 오늘은 Hierarchical Reasoning Model이라고 불리는 아키텍쳐에 대해 이야기해 보려 한다.
 
 인간의 뇌에서 영감을 받다
 
@@ -194,48 +236,6 @@ ViLBERT
 
 
 기본적으로 BERT 구조를 사용해 특징을 추출...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>PyCon KR 2025</title>
-    <link href="https://denev6.github.io/experience/2025/08/17/pycon2025.html" rel="alternate" type="text/html" title="PyCon KR 2025" />
-    <published>2025-08-17T00:00:00+09:00</published>
-  
-    <updated>2025-08-17T00:00:00+09:00</updated>
-  
-    <id>https://denev6.github.io/experience/2025/08/17/pycon2025.html</id>
-    <content src="https://denev6.github.io/experience/2025/08/17/pycon2025.html" />
-    <author>
-      <name>박성진</name>
-    </author>
-
-  
-    
-    <category term="Experience" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      
-
-PyCon 2025에 다녀왔다. 처음 참여하는 개발 컨퍼런스라 긴장 반 설렘 반으로 참여했다. 컨퍼런스라고 하면 전문가분들이 모이는 진지한 자리 같아서 멀게만 느껴졌지만, 현업에서 Python을 사용하시는 분들의 이야기가 듣고 싶어 참여를 결정했다.
-
-Django와 HTMX에 설득되다
-
-
-
-필자는 주로 ML 모델을 다루다보니 벡엔드는 API를 던지고 받는 정도만 해왔다. 그렇다보니 고민 없이 FastAPI만 사용해왔고, Django는 머리 속에서 잊혀져 있었다. 그러다 여러 세션에서 Django의 장점을 듣게 되었다. 특히 세션 로그인이나 DB migration 등 작업을 Django가 아주 쉽게 할 수 있다는 내용이었다. 물론 앞으로도 간단한 API 서버는 FastAPI로 열겠지만, 머리 속에 D...
     </summary>
   
 
