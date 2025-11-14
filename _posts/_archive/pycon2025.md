@@ -1,10 +1,11 @@
 ---
+# 25-08-17
 title: PyCon KR 2025
 category: Experience
 img_path: /assets/posts/pycon2025/
 ---
 
-![preview](preview.png)
+![preview](/assets/posts/pycon2025/preview.png)
 
 [PyCon 2025](https://2025.pycon.kr/)에 다녀왔다. 처음 참여하는 개발 컨퍼런스라 긴장 반 설렘 반으로 참여했다. 컨퍼런스라고 하면 전문가분들이 모이는 진지한 자리 같아서 멀게만 느껴졌지만, 현업에서 Python을 사용하시는 분들의 이야기가 듣고 싶어 참여를 결정했다.
 

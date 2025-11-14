@@ -1,5 +1,5 @@
 ---
-# the default layout is 'page'
+# the default layout is 'page', 'tag' and 'archives' are also available.
 icon: fas fa-info-circle
 order: 1
 ---
