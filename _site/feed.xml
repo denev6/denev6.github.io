@@ -4,7 +4,7 @@
   <id>https://denev6.github.io/</id>
   <title>Palette</title>
   <subtitle>개발을 좋아하는 학부생의 노트입니다.</subtitle>
-  <updated>2025-11-15T00:13:45+09:00</updated>
+  <updated>2025-12-21T02:21:15+09:00</updated>
   <author>
     <name>박성진</name>
     <uri>https://denev6.github.io/</uri>
@@ -17,6 +17,50 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Multimodal Training with Tiny Reasoning</title>
+    <link href="https://denev6.github.io/playground/2025/12/20/multimodal-trm.html" rel="alternate" type="text/html" title="Multimodal Training with Tiny Reasoning" />
+    <published>2025-12-20T00:00:00+09:00</published>
+  
+    <updated>2025-12-20T00:00:00+09:00</updated>
+  
+    <id>https://denev6.github.io/playground/2025/12/20/multimodal-trm.html</id>
+    <content src="https://denev6.github.io/playground/2025/12/20/multimodal-trm.html" />
+    <author>
+      <name>박성진</name>
+    </author>
+
+  
+    
+    <category term="Playground" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+  Github: Hateful-Meme
+
+
+Multi-modal과 Reasoning
+
+학기 중에 수업 기말 프로젝트로 컴퓨터비전 기술을 이용한 무언가를 만들어야 했다. 그런데 거창한 비전 모델을 학습할 GPU가 없었고돈도 없었고, 최근 논문으로만 읽었던 ‘멀티모달’과 ‘reasoning’을 모두 구현해 보면서 동시에 GPU도 적게 드는 과제를 찾다가 Facebook AI의 Hateful Memes 데이터셋을 찾게 되었다.
+
+
+
+밈은 이미지와 텍스트를 결합해 강력한 메시지를 전달한다. 문제는 같은 텍스트라도 어떤 이미지와 결합되느냐에 따라 완전히 다른 의미를 가질 수 있다는 점이다. 예를 들어, 특정 문구가 중립적인 이미지와 함께 있으면 무해하지만, 다른 이미지와 결합되면 혐오 표현이 될 수 있다. ...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -186,56 +230,6 @@ Agent 간의 협업을 ‘인간이 해석할 수 있는가’에 따라 2가지
 
 
   자연어를 이용한 LLM 간의 소통...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Co-learning을 활용한 멀티모달 학습</title>
-    <link href="https://denev6.github.io/study/2025/09/20/co-learning.html" rel="alternate" type="text/html" title="Co-learning을 활용한 멀티모달 학습" />
-    <published>2025-09-20T00:00:00+09:00</published>
-  
-    <updated>2025-10-06T02:15:43+09:00</updated>
-  
-    <id>https://denev6.github.io/study/2025/09/20/co-learning.html</id>
-    <content src="https://denev6.github.io/study/2025/09/20/co-learning.html" />
-    <author>
-      <name>박성진</name>
-    </author>
-
-  
-    
-    <category term="Study" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      ViLBERT, SimCLR, CLIP, ImageBind 4가지 모델을 예시로, 이미지와 다른 모달리티 간 co-learning을 살펴본다.
-
-Co-learning
-
-Multi-modal learning에서 co-learning은 모달리티를 학습하기 위해 다른 모달리티를 활용하는 방법을 말한다. 예를 들어, “강아지”라는 텍스트의 특성을 파악하기 위해 강아지 이미지를 함께 학습하는 식이다.
-
-본 글은 대표적인 두 모델 ViLBERT와 CLIP을 살펴본다.
-
-ViLBERT
-
-
-  ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks
-
-
-
-
-기본적으로 BERT 구조를 사용해 특징을 추출...
     </summary>
   
 
