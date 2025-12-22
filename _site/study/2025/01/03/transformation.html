@@ -41,7 +41,7 @@
 
   
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<meta name="generator" content="Jekyll v4.3.4" />
+<meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="이미지 변환 행렬과 OpenCV" />
 <meta property="og:locale" content="ko_KR" />
 <meta name="description" content="이미지 행렬의 이동, 확대, 축소 등 기하학적 변환에 대해 다룬다. C++로 작성한 OpenCV 코드를 사용한다. 원본 이미지 좌표는 $(x, y)$로, 변환된 이미지 좌표는 $(x’,y’)$로 표현한다. 간결한 코드를 위해 네임스페이스를 생략하며, 이미지를 읽는 과정도 생략한다. 코드에서 img는 원본 이미지, dst는 변환된 이미지이다." />
@@ -1953,7 +1953,7 @@ Output:
 3
 4
 5
-</pre></td><td class="rouge-code"><pre><span class="n">Point2f</span> <span class="nf">center</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="n">cols</span> <span class="o">/</span> <span class="mf">2.</span><span class="n">f</span><span class="p">,</span> <span class="n">img</span><span class="p">.</span><span class="n">rows</span> <span class="o">/</span> <span class="mf">2.</span><span class="n">f</span><span class="p">);</span> <span class="c1">// 이미지 중심</span>
+</pre></td><td class="rouge-code"><pre><span class="n">Point2f</span> <span class="nf">center</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="n">cols</span> <span class="o">/</span> <span class="mf">2.f</span><span class="p">,</span> <span class="n">img</span><span class="p">.</span><span class="n">rows</span> <span class="o">/</span> <span class="mf">2.f</span><span class="p">);</span> <span class="c1">// 이미지 중심</span>
 <span class="kt">double</span> <span class="n">angle</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
 
 <span class="n">Mat</span> <span class="n">rotation_matrix</span> <span class="o">=</span> <span class="n">getRotationMatrix2D</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
@@ -2264,6 +2264,13 @@ Output:
         
         
         <li class="text-truncate lh-lg">
+          <a href="/projects/2025/05/22/facemouse.html">웹 접근성 향상을 위한 FaceMouse 개발</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/study/2025/10/25/hrm.html">Less is more, Reasoning Model의 등장</a>
         </li>
       
@@ -2272,13 +2279,6 @@ Output:
         
         <li class="text-truncate lh-lg">
           <a href="/study/2025/10/19/agent-memory.html">Agent에게 오답노트를 시켜봤더니</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/projects/2025/05/22/facemouse.html">웹 접근성 향상을 위한 FaceMouse 개발</a>
         </li>
       
         
