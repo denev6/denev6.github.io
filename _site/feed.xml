@@ -4,7 +4,7 @@
   <id>https://denev6.github.io/</id>
   <title>Palette</title>
   <subtitle>AI를 다루는 개발자의 노트입니다.</subtitle>
-  <updated>2025-12-23T00:13:20+09:00</updated>
+  <updated>2025-12-24T00:00:31+09:00</updated>
   <author>
     <name>박성진</name>
     <uri>https://denev6.github.io/</uri>
@@ -17,6 +17,46 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Generalist Robot Policy 살펴보기</title>
+    <link href="https://denev6.github.io/study/2025/12/24/general-vla.html" rel="alternate" type="text/html" title="Generalist Robot Policy 살펴보기" />
+    <published>2025-12-24T00:00:00+09:00</published>
+  
+    <updated>2025-12-24T00:00:00+09:00</updated>
+  
+    <id>https://denev6.github.io/study/2025/12/24/general-vla.html</id>
+    <content src="https://denev6.github.io/study/2025/12/24/general-vla.html" />
+    <author>
+      <name>박성진</name>
+    </author>
+
+  
+    
+    <category term="Study" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      범용 지능인 LLM의 성능이 크게 발전하면서 이 능력을 물리 세계로 옮기고자 하는 시도가 활발히 이루어지고 있다. 본 글에서는 물리 세계를 이해하고 상호작용할 수 있는 Physical AI의 동향을 정리하고 각 논문에서 소개한 주요 아이디어를 알아보려 한다. 논문 선정은 앵지유니버스님의 영상을 참고했다.
+
+Generalist VLA의 등장
+
+
+
+기존의 로봇은 센서, 동작 범위 등 요소가 바뀌면 처음부터 새로 학습해야하는 문제가 있었다. 이 때문에 다양한 downstream task에 적용할 수 있는 범용 모델이 필요했고 Octo가 등장했다. Octo는 transformer 기반의 정책 $\pi$를 사용한다. 입력 tokenizer는 language instruction $l$, goal $g$, obs...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -183,53 +223,6 @@ Fine-tuning은 가성비가 떨어진다
 
 
 LLM은 최근 많은 분야에서 활용되고 있다. 특정 과제에서 LLM의 성능을 높이기 위해 지도학습 + 강화학습 개념의 fine-tuning 기법이 사용되고 있다. 하지만 fine-tuning은 가성비가 떨어진다. 우선, 계산 비용이 아주 비싸다. 물론 LoRA를 필두로 효율적인 학습 방법이 제안되고 있지만, LLM을 돌린다는 것만으로 엄청난 GPU 연산이 들어간다. 이렇게 학습된 모델은 특정 downstream task만 수행할 수 있다. 특정 작업은 잘 하게 되었지만, LLM이 가지는 범용성은 포기해야 한다. 뿐만 아니라 fine-tuning을 잘 하기 위해서는 많은 양질의 데이...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>RL Agent와 인간은 어떻게 협업해야 할까</title>
-    <link href="https://denev6.github.io/study/2025/10/11/agent-human-comm.html" rel="alternate" type="text/html" title="RL Agent와 인간은 어떻게 협업해야 할까" />
-    <published>2025-10-11T00:00:00+09:00</published>
-  
-    <updated>2025-10-20T00:52:16+09:00</updated>
-  
-    <id>https://denev6.github.io/study/2025/10/11/agent-human-comm.html</id>
-    <content src="https://denev6.github.io/study/2025/10/11/agent-human-comm.html" />
-    <author>
-      <name>박성진</name>
-    </author>
-
-  
-    
-    <category term="Study" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      최근 능동적으로 생각하고, 계획하고, 행동하는 Agent가 다양한 분야에서 연구되고 있다. 그리고 Agent 간의 협업을 통해 과제를 수행하는 Multi-Agent가 주목받고 있다. 관련 연구를 따라가다 보니 재밌는 직관이 생각나 글을 통해 풀어보려고 한다.
-
-Agent 간 협업 이해하기
-
-
-  Improving Factuality and Reasoning in Language Models through Multiagent Debate, 2024.
-
-  Learning to Ground Multi-Agent Communication with Autoencoders, 2021.
-
-
-Agent 간의 협업을 ‘인간이 해석할 수 있는가’에 따라 2가지로 나눌 수 있다.
-
-
-  자연어를 이용한 LLM 간의 소통...
     </summary>
   
 
