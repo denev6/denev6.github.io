@@ -28,9 +28,9 @@ Sung-jin Park
 
 - Language: `Python`, `Go`
 - Data: `Numpy`, `OpenCV`, `Pandas`, `Scikit-learn`, `Matplotlib`
-- Machine-learning: `Pytorch`, `Huggingface`, `Hydra`, `LangGraph`, `Mediapipe`
+- Machine-learning: `Pytorch`, `Huggingface`, `Hydra`, `LangGraph`, `Mediapipe` <!--, `Unsloth`-->
 - MLOps: `Docker`, `vLLM`, `TensorRT` <!--, `Kubernetes`, `Kubeflow`, `Prometheus`, `Kafka`-->
-- Backend: `FastAPI` <!--, `gRPC`-->
+- Backend: `FastAPI` <!--, `Gin`, `gRPC`-->
 - DB: `RDBMS`, `VectorDB`
 - Tools: `Git`, `Ubuntu`, `Conda`, `uv`, `WandB`, `Jira`
 
@@ -59,7 +59,7 @@ Sung-jin Park
 ### 기타
 
 - 😎 Tiny Reasoning을 이용한 Multi-modal 분류 모델 학습: [더보기](/playground/2025/12/20/multimodal-trm.html)
-- 🎙️ 실시간 음성인식 파이프라인 최적화 및 LLM 기반 모바일 GUI 제어: (coming soon)
+- 🎙️ 실시간 음성인식 파이프라인 최적화 및 LLM 기반 모바일 GUI 제어: [더보기](/playground/2025/11/20/speak2ui.html)
 
 ## 논문 및 특허
 
