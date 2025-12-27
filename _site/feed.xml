@@ -4,7 +4,7 @@
   <id>https://denev6.github.io/</id>
   <title>Palette</title>
   <subtitle>AI를 다루는 개발자의 노트입니다.</subtitle>
-  <updated>2025-12-24T16:23:05+09:00</updated>
+  <updated>2025-12-27T22:20:11+09:00</updated>
   <author>
     <name>박성진</name>
     <uri>https://denev6.github.io/</uri>
@@ -17,6 +17,46 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Generalist Robot Policy 살펴보기</title>
+    <link href="https://denev6.github.io/study/2025/12/27/general-vla.html" rel="alternate" type="text/html" title="Generalist Robot Policy 살펴보기" />
+    <published>2025-12-27T00:00:00+09:00</published>
+  
+    <updated>2025-12-27T00:00:00+09:00</updated>
+  
+    <id>https://denev6.github.io/study/2025/12/27/general-vla.html</id>
+    <content src="https://denev6.github.io/study/2025/12/27/general-vla.html" />
+    <author>
+      <name>박성진</name>
+    </author>
+
+  
+    
+    <category term="Study" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      범용 지능인 LLM의 성능이 크게 발전하면서 이 능력을 물리 세계로 옮기고자 하는 시도가 활발히 이루어지고 있다. 본 글에서는 물리 세계를 이해하고 상호작용할 수 있는 Physical AI의 동향을 정리하고 각 논문에서 소개한 주요 아이디어를 알아보려 한다. 논문 선정은 앵지유니버스님의 영상을 참고했다.
+
+Generalist VLA의 등장
+
+
+
+기존의 로봇은 센서, 동작 범위 등 요소가 바뀌면 처음부터 새로 학습해야하는 문제가 있었다. 이 때문에 다양한 downstream task에 적용할 수 있는 범용 모델이 필요했고 Octo가 등장했다. Octo는 transformer 기반의 정책을 사용한다. 입력 tokenizer는 language instruction, goal, observation seque...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -52,7 +92,7 @@
 
 
 
-기획 단계를 배우기 위해 ‘사용자경험설계’를 수강하며 실제 기업과 협업하고 대표님께 발표하는 기회를 얻었다. 살면서 처음으로 페르소나, 유저맵, 블루프린트, 인터뷰 등 개념을 배우고 익혔다. 이때까지 기획은 창의성이 중요한 일이라 생각했지만, 실제로는 논리적 분석과 구조화된 접근이 더 중요하다는 점을 깨달았다. 또 기업...
+기획 단계를 배우기 위해 ‘사용자경험설계’를 수강하며 실제 기업과 협업하고 대표님께 발표하는 기회를 얻었다. 살면서 처음으로 페르소나, 유저맵, 블루프린트, 인터뷰 등 개념을 배우고 익혔다. 이때까지 기획은 창의성이 중요한 일이라 생각했지만, 실제로는 데이터 기반의 논리적 분석이 더 중요하다는 점을 깨달았다. 또 기업의...
     </summary>
   
 
@@ -108,7 +148,7 @@ Multi-modal과 Reasoning
     <link href="https://denev6.github.io/playground/2025/11/20/speak2ui.html" rel="alternate" type="text/html" title="모바일 제어를 위한 음성 파이프라인 최적화" />
     <published>2025-11-20T00:00:00+09:00</published>
   
-    <updated>2025-11-20T00:00:00+09:00</updated>
+    <updated>2025-12-24T16:26:37+09:00</updated>
   
     <id>https://denev6.github.io/playground/2025/11/20/speak2ui.html</id>
     <content src="https://denev6.github.io/playground/2025/11/20/speak2ui.html" />
@@ -133,6 +173,8 @@ Multi-modal과 Reasoning
       
   Github: Jin-A-Park/Speak2UI
 
+  Demo: speak2ui_demo.mp4
+
 
 
 
@@ -142,7 +184,7 @@ Multi-modal과 Reasoning
 
 
 
-처음에는 시선 추적을 이용해 화면을 조작하려 했다. 하지만 시선 추적 정확도가 높지 않을뿐더러, 정확한 시선 추적이 된다 하더라도 모바일 ...
+처음에는 시선 추적을 이용해 화면을 조작하려 했다. 하지만 시선 추적 정확도가 높지 않을뿐...
     </summary>
   
 
@@ -185,48 +227,6 @@ Multi-modal과 Reasoning
 
 
 Agent는 전통적인 관점에서 policy를 가지며, 자율적으로 판단하고 행동하는 모델을 말한다. 오래 전부터 강화학습 분야에서 사용되던 용어다. Policy를 가진 네트워크는 학습을 거쳐야 하며, 학습된 경험을 바탕으로 판단을 내린다. 최근에는 LLM의 체급을 믿고 LLM 자체를 두뇌로 사용하는 agent가 등장하기 시작했다. 대표적으로 ReAct(Reasoning and Acting) 프레임워크가 있다. 이러한 형태의 agent는 LLM이 가진 배경지식...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Less is more, Reasoning Model의 등장</title>
-    <link href="https://denev6.github.io/study/2025/10/25/hrm.html" rel="alternate" type="text/html" title="Less is more, Reasoning Model의 등장" />
-    <published>2025-10-25T00:00:00+09:00</published>
-  
-    <updated>2025-11-03T00:02:33+09:00</updated>
-  
-    <id>https://denev6.github.io/study/2025/10/25/hrm.html</id>
-    <content src="https://denev6.github.io/study/2025/10/25/hrm.html" />
-    <author>
-      <name>박성진</name>
-    </author>
-
-  
-    
-    <category term="Study" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      LLM을 활용한 연구가 쏟아지는 동시에 LLM의 한계도 점점 명확해져 가고 있다. 그로 인해 Microsoft의 BitNet과 같이 작은 모델을 만들기 위한 시도가 계속 이어져왔다. 그러다 최근 몇 달 동안 reasoning 분야에서 새로운 아키텍쳐가 논의되고 있다. 오늘은 Hierarchical Reasoning Model이라고 불리는 아키텍쳐에 대해 이야기해 보려 한다.
-
-인간의 뇌에서 영감을 받다
-
-
-  Hierarchical Reasoning Model, 2025.
-
-
-추론 문제를 풀기 위해 CoT(Chain-of-Thought) 같은 방법론이 제시되어 왔지만 기대만큼의 성능 향상을 보이지는 못했다. HRM(Hierarchical Reasoning Model)은 “latent reasoning”...
     </summary>
   
 
