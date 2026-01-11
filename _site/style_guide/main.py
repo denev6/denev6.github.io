@@ -113,16 +113,19 @@ def evaluate_sentence(file_name: str, model="gpt-4o"):
     return output_path, token_cost
 
 
-def main(files: list[str], model="gpt=4o", do_eval=False):
-    print(f"Found {len(files)} files!\n")
+def main(files: list[str], model="gpt=4o", do_rewrite=True, do_eval=False):
+    print(f"Found {len(files)} file(s)!\n")
 
     for idx, file in enumerate(files, start=1):
+        token_cost = 0
         try:
-            output_path, token_cost = rewrite_tone(file, model=model)
+            if do_rewrite:
+              _, rewrite_token_cost = rewrite_tone(file, model=model)
+              token_cost += rewrite_token_cost
             if do_eval:
-                _, eval_token_cost = evaluate_sentence(file, model=model)
-                token_cost += eval_token_cost
-            print(f"[{idx}] Saved at '{output_path}' (${token_cost:.6f})")
+              _, eval_token_cost = evaluate_sentence(file, model=model)
+              token_cost += eval_token_cost
+            print(f"[{idx}] Saved '{remove_time_stamp(file)}' (${token_cost:.6f})")
             time.sleep(3)
 
         except Exception as exp:
@@ -138,7 +141,7 @@ if __name__ == "__main__":
     files = [
         f"_posts/{f}.md"
         for f in (
-            "projects/2026-01-10-eirene",
+            "playground/2026-01-12-dev-roo",
         )
     ]
-    main(files, model="gpt-4o", do_eval=False)
+    main(files, model="gpt-4o", do_rewrite=True, do_eval=True)

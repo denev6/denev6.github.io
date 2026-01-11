@@ -1,0 +1,59 @@
+<blockquote>
+  <p>Github: <a href="https://github.com/denev6/tistory-skin">denev6/tistory-skin</a></p>
+
+  <p>Tistory: <a href="https://dev-roo.tistory.com/">dev-roo.tistory.com</a></p>
+</blockquote>
+
+<p><img src="preview.png" alt="목업 예시" style="600px;" /></p>
+
+<p>티스토리 스킨 dev-roo를 만들고 배포한 지 거의 2년이 되었어요. 지금까지 총 4번의 업데이트를 했고, 4,400명 이상이 블로그를 방문했어요. 누적 조회수도 15,600회를 넘었어요. 오늘은 블로그 스킨을 왜 개발하게 되었고, 개발과 관리하면서 겪었던 고민들을 공유해 보려고 해요.</p>
+
+<p>2022년 1월부터 티스토리를 작성하기 시작했어요. 하지만 마음에 드는 스킨이 없어서 불편했죠. 그래서 스스로 커스터마이징하면서 사용했어요. 그러던 중 한 댓글이 달렸어요. <em>“스킨이 너무 마음에 드는데 어떤 건지 여쭤봐도 될까요?!!? 그대로 글쓴이님 스킨을 갖고 싶은데 혹시 공유라도 가능할까요,,??”</em> 이 댓글로 인해 스킨을 공유하려고 했는데, 문제가 생겼어요. <em>“스킨 공유해드리려고 작업하는데 저까지 기존 스킨이 적용이 안 되네요🤣 아마 업데이트가 안 된 스킨이라 그런 듯합니다.”</em> 그래서 제대로 된 개발자 스킨을 만들어 보자는 결심으로 프로젝트 dev-roo가 시작되었어요.</p>
+
+<h2 id="심플하면서-세련된-건-뭘까">심플하면서 세련된 건 뭘까</h2>
+
+<p>제품을 사용할 유저 페르소나는 2023년의 저입니다. 블로그를 작성하며 AI를 공부하는 학생·취준생·주니어죠. 이런 사용자는 크게 3가지 니즈가 있다고 생각했어요. 먼저, 수식과 코드 블록을 지원해야 해요. AI를 공부하다 보면 수식과 코드가 빠질 수 없어요. 그런데 수식과 코드 블록을 기본으로 지원하는 스킨이 많지 않아요. 프론트를 잘 모른다면 직접 수정하기도 번거롭죠. 두 번째 니즈는 프로필 노출이에요. 저는 주니어의 개인 블로그는 단순히 정보 전달에서 그치면 안 된다고 생각해요. 블로그는 본인이 어떤 사람인지 알리는 공간이기도 해요. 그래서 독자가 글이 마음에 들면, 계속 블로거에 대해 찾아볼 수 있도록 공간을 설계해야 한다고 생각했어요. 이를 위해, 커스텀 가능한 사이드 바와 상단 네비게이션 바가 있으면 좋겠다고 생각했어요. 아래 그림처럼 말이에요.</p>
+
+<p><img src="layout.png" alt="layout" /></p>
+
+<p>세 번째는 ‘심플함’이에요. 많은 사용자가 이상형으로 심플하지만 세련된 디자인을 이야기해요. 그런데 그게 참 어렵죠. 저는 ‘심플하다’를 ‘거슬리지 않는다’라고 해석했어요. 구체적으로, (1) 일관된 경험을 제공하고, (2) 글을 읽는 데 불편함이 없으며, (3) 버벅임이 없어야 해요. 다시 말해, 일관된 디자인, 높은 가독성, 쾌적한 성능을 모두 잡아야 해요. 이 기준은 이후 개발이나 업데이트 과정에서도 중요한 기준이 돼요. 그럼 이제 본격적으로 개발 과정으로 넘어가 볼게요.</p>
+
+<h2 id="잘-만든-스킨을-최대한-활용하자">잘 만든 스킨을 최대한 활용하자</h2>
+
+<p>당시 저는 군복무 중이었고, 스킨을 만들기 위해 10일 휴가를 계획했어요. 만약 스킨을 바닥부터 만든다면 10일로 부족해요. 그래서 잘 만든 스킨을 가져와서 수정하는 방향으로 계획을 잡았어요. <a href="https://toyou101.tistory.com/">한눈에</a> 스킨이 최적화가 잘 되어 있었어요. 티스토리의 가장 큰 문제는 불필요한 에셋을 로드한다는 거예요. 이 문제 때문에 처음 접속했을 때 렌더링이 지연될 수 있어요. 한눈에 스킨은 스크립트를 통해 불필요한 에셋을 불러오지 않도록 처리했어요. 덕분에 초기 지연을 크게 낮출 수 있었죠. 추가로 이미지 lazy-loading도 적용되어 있기 때문에 이 스킨을 사용한다면 최적화는 걱정하지 않아도 되겠다고 생각했어요. 그리고 사이드바와 네비게이션을 지원하는 레이아웃이라 수정도 비교적 쉬울 거라고 판단했어요. 하지만 한눈에 스킨도 문제점이 있었어요. 앞에서 정의한 ‘심플한’ 디자인보다는 개성 있는 디자인에 가까웠어요. 선의 패턴이 다양하고, 일부 요소에만 그림자 효과가 적용되어 있었어요. 카드 디자인의 여백이나 곡률도 일정하지 않았어요. 심플한 디자인을 위해서 일관성을 잡고 디테일을 수정하는 작업이 필요했어요.</p>
+
+<h2 id="디테일을-잡아가면서">디테일을 잡아가면서</h2>
+
+<p>블로그에서 가장 중요한 건 글이에요. 가독성을 위해 san-serif를 사용해야 한다는 건 알지만, 구체적으로 어떤 폰트를 쓸 지가 고민이었어요. 이때 ‘일관성’이라는 기준을 적용했어요. 개성이 중요한 브랜드 디자인이 아니라 가독성 높은 블로그가 목적이라면, 독자가 익숙한 폰트를 사용하는 게 좋지 않을까 생각했어요. 평소에 자주 보던 폰트를 그대로 볼 수 있게 하면 ‘거슬리지 않겠다’ 싶었죠. 이 전략은 Github에서 아이디어를 얻었어요. Github은 애플 시스템 폰트를 우선으로 적용하고, 없다면 BlinkMacSystemFont, “Segoe UI”, … sans-serif를 적용하도록 설정되어 있어요. 이 시스템도 동일한 전략을 가져가기로 결정했어요. 폰트는 결정되었고, 다음은 자간과 행간을 고민해야 해요. 자간과 행간은 가독성에 큰 영향을 미치는 요소예요. 한국어 폰트는 영어 폰트에 비해 자간이 약간 넓기 때문에 자간을 좁혀주는 게 도움이 된다고 해요. 이때 행간은 여유롭게 줘야 해요. 그렇지 않으면 아래 문장이 시야에 겹쳐 보이면서 헷갈릴 수 있어요.</p>
+
+<p><img src="line-height.png" alt="행간" /></p>
+
+<p>색은 최소한으로 절제하고 싶었어요. Primary color는 필요할 때 등장해야 임팩트가 있지, 너무 자주 등장하면 그 힘을 잃는다고 생각해요. 그럴려면 회색 계열 색상의 계층이 정확히 잡혀 있어야 한다고 생각해요. 이를 위해서 모든 색상을 CSS 토큰으로 정의하고, 일관되게 적용될 수 있도록 했어요. 색상 팔레트는 tailwindcss를 참고했어요.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="nt">--text-color</span><span class="o">:</span> <span class="nt">var</span><span class="o">(</span><span class="nt">--grey-900</span><span class="o">);</span>
+<span class="nt">--text-light</span><span class="o">:</span> <span class="nt">var</span><span class="o">(</span><span class="nt">--grey-800</span><span class="o">);</span>
+<span class="nt">--text-lighter</span><span class="o">:</span> <span class="nt">var</span><span class="o">(</span><span class="nt">--grey-700</span><span class="o">);</span>
+<span class="nt">--bg-btn</span><span class="o">:</span> <span class="nt">var</span><span class="o">(</span><span class="nt">--grey-dimmed-10</span><span class="o">);</span>
+<span class="nt">--bg-btn-hover</span><span class="o">:</span> <span class="nt">var</span><span class="o">(</span><span class="nt">--grey-dimmed-20</span><span class="o">);</span>
+<span class="nt">--bg-overlay</span><span class="o">:</span> <span class="nt">var</span><span class="o">(</span><span class="nt">--grey-dimmed-05</span><span class="o">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>또 색의 대비 정도도 중요했어요. 배경색과 텍스트의 대비가 약하면 가독성이 매우 떨어져요. 그래서 Primary color를 선택할 때 접근성 기준 WCGA Level AA를 만족하는 색상들로만 구성했어요. 물론 텍스트 색상도 대비 값을 고려해 선택했어요.</p>
+
+<p><img src="contrast.png" alt="대비 값 정리" /></p>
+
+<p>다음으로 개발자를 위한 디자인이 필요했어요. 먼저 <code class="language-plaintext highlighter-rouge">인라인 블록</code>이 필요해요. 특정 용어나 값을 표현하기 위해 자주 사용하죠. 그런데 티스토리는 인라인 블록을 에디터에서 지원하지 않아요. 그래서 <u>밑줄</u>로 편집하면 <code class="language-plaintext highlighter-rouge">인라인 블록</code>으로 보이는 꼼수를 사용했어요. 밑줄은 평소에 자주 사용하지 않기 때문에 덮어씌워도 큰 문제가 없다고 판단했어요. 또한 다양한 sematic blockquote도 필요하다고 생각했어요. 블록 색상도 티스토리 에디터에서 지원하지 않기 때문에 인용 박스 첫줄에 <code class="language-plaintext highlighter-rouge">@키워드</code>를 사용하면 페이지가 렌더링될 때 CSS가 적용되도록 트릭을 주었어요. 개발자라면 <code class="language-plaintext highlighter-rouge">{:.패턴}</code>이나 <code class="language-plaintext highlighter-rouge">@패턴</code>이 익숙할 거라 생각했고, 그 중 티스토리 에디터에서 더 직관적으로 보이는 패턴을 선택했어요.</p>
+
+<p>마지막으로 수식 포맷팅과 코드 하이라이팅을 기본으로 지원해요. 수식은 latex 문법으로 작성하면 Mathjax를 이용해 렌더링 되는 방식이에요. 하지만 코드와 달리 수식이 필요 없는 개발자도 많을 거라고 생각해요. 그래서 수식 변환을 원하지 않는다면, 스킨에서 토글해서 비활성화할 수 있도록 했어요. 코드 하이라이팅은 highlight.js를 이용해 구현했고, 스킨에서 라이트 모드와 다크 모드를 선택할 수 있도록 했어요.</p>
+
+<p><img src="math-n-code.png" alt="수식 및 코드 설정" /></p>
+
+<h2 id="앞으로의-방향성에-대해">앞으로의 방향성에 대해</h2>
+
+<p>10일 만에 만든 스킨이다 보니 초기에 여러 문제가 있었어요. 제가 발견하기도 하고, 사용자분들이 댓글로 문의 주시기도 했어요. 그렇게 해서 총 4차례의 버전 업데이트가 있었어요. 댓글로 수정 요청이 올 때가 있는데, 위에서 말했던 ‘심플함’의 기준에 크게 벗어나는 요청은 거절하고 있어요. 원래 넣는 것보다 빼는 게 더 힘들다고 하잖아요. 잘못된 요소를 넣는 건 쉽지만, 나중에 이 요소를 뺄지 말지 결정하는 건 많은 고민이 필요해요. 그래서 처음부터 신중하게 생각하려고 해요. 앞으로도 의견은 계속 열어두되, 방향성은 분명히 유지하려 해요. 이 스킨이 선택한 ‘심플함’은 타협의 대상이 아니라, 설계의 출발점이기 때문이에요.</p>

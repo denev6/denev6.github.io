@@ -2,10 +2,11 @@
 
 - Projects & Playground:
   - Icons: [doodle-icons](www.svgrepo.com/collection/doodle-icons/)
-  - Fonts: Architects Daughter, Kyobo Handwriting 2021
+  - Fonts: Architects Daughter, 네이버나눔손글씨_장미체, (Alternatives: 교보손글씨 2021, 네이버나눔손글씨_따악단단)
 - Study:
   - Icons: Google Material Icons
   - Font: Pretendard
+- Preview Font: Chango
 
 ```sh
 $ python style_guide/main.py

@@ -4,7 +4,7 @@
   <id>https://denev6.github.io/</id>
   <title>Palette</title>
   <subtitle>AI를 다루는 개발자의 노트입니다.</subtitle>
-  <updated>2026-01-11T15:12:16+09:00</updated>
+  <updated>2026-01-12T03:14:32+09:00</updated>
   <author>
     <name>박성진</name>
     <uri>https://denev6.github.io/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>티스토리 캥거루 스킨 제작기</title>
+    <link href="https://denev6.github.io/posts/dev-roo/" rel="alternate" type="text/html" title="티스토리 캥거루 스킨 제작기" />
+    <published>2026-01-12T00:00:00+09:00</published>
+  
+    <updated>2026-01-12T00:00:00+09:00</updated>
+  
+    <id>https://denev6.github.io/posts/dev-roo/</id>
+    <content type="text/html" src="https://denev6.github.io/posts/dev-roo/" />
+    <author>
+      <name>박성진</name>
+    </author>
+
+  
+    
+    <category term="Playground" />
+    
+  
+
+  <summary>Github: denev6/tistory-skin    Tistory: dev-roo.tistory.com     티스토리 스킨 dev-roo를 만들고 배포한 지 거의 2년이 되었어요. 지금까지 총 4번의 업데이트를 했고 4,400명 이상이 블로그를 방문했어요. 누적 조회수도 15,600회를 넘었어요. 오늘은 블로그 스킨을 왜 개발하게 되었고, 개발과 관리하면서 겪었던 고민들을 공유해 보려고 해요.  저는 2022년 1월부터 티스토리를 작성하기 시작했어요. 하지만 마음에 드는 스킨이 없어서 불편했죠. 그래서 스스로 커스터마이징하면서 사용했어요. 그러던 중 한 댓글이 달렸어요.     “스킨이 너무 마음에 드는데 어떤 건지 여쭤봐도 될까요?!!? 그대로 글쓴이님 스킨을 갖고 싶은데 혹시 공유라도 가능할까...</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>Github: Hateful-Meme   Multi-modal과 Reasoning  학기 중에 수업 기말 프로젝트로 컴퓨터비전 기술을 이용한 무언가를 만들어야 했어요. 하지만 거창한 비전 모델을 학습할 GPU가 없었고, 최근 논문으로만 접했던 ‘멀티모달’과 ‘reasoning’을 모두 구현하면서 GPU 자원을 적게 사용하는 과제를 찾다가 Facebook AI의 Hateful Memes 데이터셋을 발견했어요.    밈은 이미지와 텍스트를 결합해 강력한 메시지를 전달해요. 문제는 같은 텍스트라도 어떤 이미지와 결합되느냐에 따라 의미가 완전히 달라질 수 있다는 점이에요. 예를 들어, 특정 문구가 중립적인 이미지와 함께 있으면 무해하지만, 다른 이미지와 결합되면 혐오 표현이 될 수 있어요. 단순히 텍스트에 특...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>모바일 제어를 위한 음성 파이프라인 최적화</title>
-    <link href="https://denev6.github.io/posts/speak2ui/" rel="alternate" type="text/html" title="모바일 제어를 위한 음성 파이프라인 최적화" />
-    <published>2025-11-20T00:00:00+09:00</published>
-  
-    <updated>2025-11-20T00:00:00+09:00</updated>
-  
-    <id>https://denev6.github.io/posts/speak2ui/</id>
-    <content type="text/html" src="https://denev6.github.io/posts/speak2ui/" />
-    <author>
-      <name>박성진</name>
-    </author>
-
-  
-    
-    <category term="Playground" />
-    
-  
-
-  <summary>Github: Jin-A-Park/Speak2UI    Demo: speak2ui_demo.mp4     이 프로젝트는 실시간으로 음성 명령을 입력받아 LLM으로 사용자 명령을 분석하고, Android A11y API를 통해 동작을 실행해요. 안드로이드 단에서 정보를 불러오고 조작하는 코드는 주로 Jin-A-Park님께서 작업했으며, 저는 주로 LLM 기반 명령 해석 모듈의 개발 및 실험을 담당했어요. 추가로 음성 파이프라인 최적화와 코드 리팩토링을 맡았어요. LLM 단의 작업은 뻔한 내용이라, 이 글에서는 음성 파이프라인을 최적화해야 했던 이유와 방법을 중심으로 소개할게요.  왜 하필 음성인가요    처음에는 시선 추적을 이용해 화면을 조작하려 했어요. 하지만 시선 추적의 정확도가 높지 않았고, 정확...</summary>
 
   </entry>
 
