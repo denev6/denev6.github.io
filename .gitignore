@@ -3,10 +3,12 @@
 vendor
 Gemfile.lock
 
-# Jekyll cache
+# Cache
 .jekyll-cache
 .jekyll-metadata
-_site
+.ruff_cache
+__pycache__
+# _site
 
 # RubyGems
 *.gem
@@ -25,3 +27,13 @@ package-lock.json
 # Misc
 _sass/vendors
 assets/js/dist
+
+# Custom
+**/.DS_Store
+*.old
+desktop.ini
+*.bat
+NOTE
+/tmp.md
+.env
+style_guide/output/*

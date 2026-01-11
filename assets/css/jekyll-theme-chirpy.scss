@@ -1,0 +1,37 @@
+---
+---
+
+@use "main";
+
+/* append your custom style below */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+#post-list .card .card-body .card-title,
+main h1,
+main h2,
+main h3,
+main h4,
+main h5 {
+  font-weight: 600;
+}
+
+code.highlighter-rouge {
+  font-family: inherit;
+}
+
+.categories .mx-2 {
+  font-weight: 600;
+}
+
+.card.categories .category-trigger.disabled {
+  display: none;
+}
+
+a.sharp > img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
