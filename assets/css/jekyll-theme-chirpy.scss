@@ -30,6 +30,11 @@ code.highlighter-rouge {
   display: none;
 }
 
+#sidebar .profile-wrapper #avatar {
+  background-color: var(--sidebar-bg);
+  box-shadow: none;
+}
+
 a.sharp > img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;

@@ -15,6 +15,8 @@ img_path: /assets/posts/DIR/
 ---
 ```
 
+tags: `NLP`, `Vision`, `Multimodal`, `RL`, `HCI`, `Agent`, `Application`, `Python`, `Golang`, `Journey`
+
 ```sh
 bundle exec jekyll serve
 bundle exec jekyll b -d "_site" --incremental

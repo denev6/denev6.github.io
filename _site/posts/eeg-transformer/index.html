@@ -255,7 +255,7 @@
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper">
-    <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/avatar.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
+    <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/avatar.png" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
     <a class="site-title d-block" href="/">Palette</a>
     <p class="site-subtitle fst-italic mb-0">개발자 노트</p>
@@ -1105,7 +1105,7 @@
 
 <p><strong>주의력결핍 과잉행동장애</strong>(Attention deficit / hyperactivity disorder, <strong>ADHD</strong>)는 아동 및 청소년기에 흔히 발생하는 신경발달장애예요. 조기에 적절히 진단하고 개입하지 않으면 학업 성취, 사회적 관계, 정서 발달에 장기적으로 부정적 영향을 줄 수 있죠. 여러 뇌파 신호 중 <strong>EEG</strong>(Electroencephalogram)는 비침습적으로 뇌 활동을 측정할 수 있어 신경과학 연구와 임상 진단 분야에서 널리 활용되고 있어요.</p>
 
-<p>본 연구에서는 EEG 신호를 활용해 청소년 ADHD 진단을 돕는 딥러닝 모델을 설계하고 실험했어요. <strong>Vision-Transformer</strong>(A. Dosovitskiy et al., 2021)와 <strong>EEG-Transformer</strong>(Y. He et al., 2023)의 아이디어를 바탕으로 transformer 기반 <a href="https://github.com/denev6/ADHD-EEG-ViT/blob/main/models/transformer.py">모델</a>을 구현했어요. IEEE에서 제공하는 “<em>EEG Data ADHD-Control Children</em>” 데이터셋을 활용하여 <strong>0.972의 높은 정확도</strong>를 달성했답니다.</p>
+<p>본 연구에서는 EEG 신호를 활용해 청소년 ADHD 진단을 돕는 딥러닝 모델을 설계하고 실험했어요. <strong>Vision-Transformer</strong>(A. Dosovitskiy et al., 2021)와 <strong>EEG-Transformer</strong>(Y. He et al., 2023)의 아이디어를 바탕으로 transformer 기반 모델을 구현했어요. IEEE에서 제공하는 “<em>EEG Data ADHD-Control Children</em>” 데이터셋을 활용하여 <strong>0.972의 높은 정확도</strong>를 달성했답니다.</p>
 
 <p>본 모델의 주요 장점은 다음과 같아요.</p>
 
@@ -1305,7 +1305,7 @@
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         
-          <a href="/categories/playground/">Playground</a>
+          <a href="/categories/article/">Article</a>
       </div>
     
 
@@ -1315,24 +1315,14 @@
         <i class="fa fa-tags fa-fw me-1"></i>
         
           <a
-            href="/tags/ai/"
+            href="/tags/vision/"
             class="post-tag no-text-decoration"
-          >AI</a>
-        
-          <a
-            href="/tags/cv/"
-            class="post-tag no-text-decoration"
-          >CV</a>
+          >Vision</a>
         
           <a
             href="/tags/python/"
             class="post-tag no-text-decoration"
           >Python</a>
-        
-          <a
-            href="/tags/pytorch/"
-            class="post-tag no-text-decoration"
-          >Pytorch</a>
         
       </div>
     
@@ -1444,14 +1434,7 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/facemouse/">웹 접근성 향상을 위한 FaceMouse 개발</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/dev-roo/">티스토리 캥거루 스킨 제작기</a>
+          <a href="/posts/dev-roo/">티스토리 캥거루 스킨 개발기</a>
         </li>
       
         
@@ -1473,6 +1456,13 @@
         
         <li class="text-truncate lh-lg">
           <a href="/posts/memoir/">2025년 개발자의 연말결산</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/multimodal-trm/">Multimodal Training with Tiny Reasoning</a>
         </li>
       
     </ul>
@@ -1506,49 +1496,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1618,50 +1565,12 @@
     
     
     
-      
-        
-        
-
   
     
     
     
     
       
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1692,6 +1601,26 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1706,27 +1635,25 @@
     
     
     
+      
+        
+        
+
   
     
     
     
     
       
-    
+        
+        
+
   
     
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -1777,6 +1704,32 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -1806,12 +1759,48 @@
     
     
     
+      
+    
   
     
     
     
     
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1829,34 +1818,34 @@
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/ai/">AI</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/cv/">CV</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/python/">Python</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/llm/">LLM</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/agent/">Agent</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/vision/">Vision</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/c/">C++</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/application/">Application</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/agent/">Agent</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/multimodal/">Multimodal</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/hci/">HCI</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/journey/">Journey</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/rl/">RL</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/go/">Go</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/hci/">HCI</a>
       
     </div>
   </section>
@@ -2120,91 +2109,7 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -2288,7 +2193,7 @@
         </article>
       
         <article class="col">
-          <a href="/posts/svd/" class="post-preview card h-100">
+          <a href="/posts/hog/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2300,16 +2205,16 @@
 
 <time
   
-  data-ts="1736262000"
+  data-ts="1737903600"
   data-df="YYYY/MM/DD"
   
 >
-  2025/01/08
+  2025/01/27
 </time>
 
-              <h4 class="pt-0 my-2">SVD를 이용한 이미지 압축</h4>
+              <h4 class="pt-0 my-2">Histograms of Oriented Gradients for Human Detection</h4>
               <div class="text-muted">
-                <p>SVD, 즉 Singular Vector Decomposition에 대해 다뤄볼게요. 각 수식이 어떤 의미를 가지고 있으며, 이미지 압축에 어떻게 사용되는지 설명해요. 이 글을 이해하려면 아래 개념을 숙지해야 해요.  Vector: 크기와 방향을 가지는 양으로, 2차원 공간의 벡터는 $\vec{v}=\begin{bmatrix}u_1 &amp; u_2\...</p>
+                <p>Histograms of Oriented Gradients for Human Detection(vision.stanford) 논문을 바탕으로 HOG descriptor의 작동 원리를 분석해요. 이 글은 논문을 완전히 번역한 것이 아니라 내용을 분석하고 정리한 글이에요. 따라서 실제 논문 목차와 다르며, 필자의 설명이 추가되었어요.  여기서 gradie...</p>
               </div>
             </div>
           </a>
@@ -2421,49 +2326,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2533,50 +2395,12 @@
     
     
     
-      
-        
-        
-
   
     
     
     
     
       
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2607,6 +2431,26 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2621,27 +2465,25 @@
     
     
     
+      
+        
+        
+
   
     
     
     
     
       
-    
+        
+        
+
   
     
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -2692,6 +2534,32 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -2721,12 +2589,48 @@
     
     
     
+      
+    
   
     
     
     
     
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2744,34 +2648,34 @@
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/ai/">AI</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/cv/">CV</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/python/">Python</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/llm/">LLM</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/agent/">Agent</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/vision/">Vision</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/c/">C++</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/application/">Application</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/agent/">Agent</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/multimodal/">Multimodal</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/hci/">HCI</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/journey/">Journey</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/rl/">RL</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/go/">Go</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/hci/">HCI</a>
       
     </div>
   </section>
