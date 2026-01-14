@@ -5,13 +5,13 @@ category: Experience
 img_path: /assets/posts/pycon2025/
 ---
 
-![preview](/assets/posts/pycon2025/preview.png)
+![preview](/assets/posts/pycon2025/preview.webp)
 
 [PyCon 2025](https://2025.pycon.kr/)에 다녀왔다. 처음 참여하는 개발 컨퍼런스라 긴장 반 설렘 반으로 참여했다. 컨퍼런스라고 하면 전문가분들이 모이는 진지한 자리 같아서 멀게만 느껴졌지만, 현업에서 Python을 사용하시는 분들의 이야기가 듣고 싶어 참여를 결정했다.
 
 ## Django와 HTMX에 설득되다
 
-![django 발표자료](django.jpg)
+![django 발표자료](django.webp)
 
 필자는 주로 ML 모델을 다루다보니 벡엔드는 API를 던지고 받는 정도만 해왔다. 그렇다보니 고민 없이 FastAPI만 사용해왔고, Django는 머리 속에서 잊혀져 있었다. 그러다 여러 세션에서 Django의 장점을 듣게 되었다. 특히 세션 로그인이나 DB migration 등 작업을 Django가 아주 쉽게 할 수 있다는 내용이었다. 물론 앞으로도 간단한 API 서버는 FastAPI로 열겠지만, 머리 속에 Django라는 새로운 옵션이 생겼다. 곧 서비스 레벨로 ML inference를 제공하는 문제를 풀 예정인데 이때 팀에 Django를 도입해도 괜찮겠다는 생각이 들었다.
 
@@ -37,6 +37,6 @@ LLM hallucination 문제를 해결하기 위해 팀에서 RAG를 도입하려 �
 
 ---
 
-![pycon 25](pycon.jpg)
+![pycon 25](pycon.webp)
 
 오픈소스 커뮤니티는 개발자이기에 경험할 수 있는 특별한 문화다. Python을 좋아하는 사람들이 자발적으로 모여 지식을 나눈다는 게 정말 멋진 일인 거 같다. 또 이틀이라는 짧은 시간에 많은 인사이트를 배울 수 있어 보람찼다. 다음은 11월에 있을 GopherCon이 기다리고 있다. GopherCon KR 2025 빨리 왔으면 좋겠다.

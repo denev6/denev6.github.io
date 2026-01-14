@@ -43,7 +43,7 @@ media_subpath: /assets/posts/py-asyncio/
 - `Blocking`: 함수가 호출되어 제어권을 받은 후 다시 넘겨주지 않는다.
 - `Non-Blocking`: 함수가 호출되어 제어권을 받은 후 즉시 넘겨준다.
 
-![](blocking.png)
+![](blocking.webp)
 
 쉽게 생각해서 자신이 실행되는 동안 다른 함수가 실행되도록 허락하지 않는 상태가 `blocking`이다. 반면 `non-blocking`은 호출된 후 제어권을 다시 main 측으로 넘겨준다. 따라서 main 측에서는 다른 작업을 수행할 수 있게 된다. 
 
@@ -51,13 +51,13 @@ media_subpath: /assets/posts/py-asyncio/
 
 그렇다면 효율적으로 비동기를 실행하기 위해서는 `Asynchronous`+`Non-blocking`으로 실행되어야 한다는 것을 알 수 있다. 크롤링을 수행하는 상황을 가정해 보았다.
 
-![](non-blocking-sim.png)
+![](non-blocking-sim.webp)
 
 request가 먼저 실행되었다고 해서 결과를 먼저 반환하지 않는다. 따라서 `async(비동기)`라고 할 수 있다. 또한 main 측에서 제어권을 받아 요청 1을 실행한 후 다른 요청을 보낼 수 있도록 main 측에 제어권을 반납한다. main 측은 요청 2를 실행하고, 위 과정을 계속 반복한다. 제어권을 즉시 주고받으며 main 측에서 다른 작업을 수행할 수 있도록 하는 것으로 보아 request 과정은 `non-blocking`이다. 
 
 만약 별도의 장치 없이 `Python`을 이용해 request 작업을 수행하면 `Synchronous + Blocking 방식`으로 작업하게 된다. 
 
-![](blocking-sim.png)
+![](blocking-sim.webp)
 
 이 방식은 request를 실행하고 결과 값을 받기까지 대기 시간이 발생한다. 하지만 `blocking` 상태이기 때문에 main 측에서도 별다른 작업을 하지 못하고 무작정 기다려야 한다. 이 과정에서 시간이 낭비되는 것이다. 
 

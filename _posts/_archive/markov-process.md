@@ -21,7 +21,7 @@ media_subpath: /assets/posts/mdp/
 
 **Markov Decision Process**, 줄여서 **MDP**라고 부른다. MDP는 $<S, A, P, R, \gamma>$로 표현하며, 각 의미를 정확히 이해해야 한다.
 
-![MDP 시각화](mdp.png)
+![MDP 시각화](mdp.webp)
 
 - $S$: State. Agent의 현재 상태.
 - $A$: Action. Agent의 행동.
@@ -32,7 +32,7 @@ media_subpath: /assets/posts/mdp/
 
 택시 운전 시뮬레이션을 상상해보자.
 
-![택시 시뮬레이션](mdp-example.png)
+![택시 시뮬레이션](mdp-example.webp)
 
 주행 중인 상태에서 {차선 변경, 직진}이라는 행동을 선택할 수 있다. 보다시피 직진을 해야 목적지에 도착할 수 있기 때문에 학습된 agent는 직진하고 싶어한다. 이처럼 행동을 선택할 확률을 정하는 방법이 policy이다. 차선 변경한 경우를 보면, {주행, 미끌림, 충돌} 등 다양한 상황이 확률적으로 발생할 수 있다. 예시에서는 90% 확률로 주행을 이어가고, 작은 확률로 미끌리거나 충돌할 수 있다. 이러한 확률을 transition probability라고 한다. Agent는 이 확률을 알지 못하며, 행동을 취하고 나온 결과만 관찰할 뿐이다.
 
@@ -46,7 +46,7 @@ MDP에서 각 요소가 무엇을 의미하고, 어디에서 어떤 값을 받�
 
 State를 평가할 때는 $v$: state-value를, Action을 평가할 때는 $q$: action-value를 사용한다.
 
-![Values](value.png)
+![Values](value.webp)
 
 Value는 다음 단계의 가중합으로 생각할 수 있다. $v$는 Reward + 여러 $q$의 가중합으로, $q$는 여러 $v$의 가중합으로 계산한다.
 

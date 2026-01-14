@@ -44,7 +44,7 @@
 <meta property="twitter:title" content="Histograms of Oriented Gradients for Human Detection" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-27T00:00:00+09:00","datePublished":"2025-01-27T00:00:00+09:00","description":"Histograms of Oriented Gradients for Human Detection(vision.stanford) 논문을 바탕으로 HOG descriptor의 작동 원리를 분석해요. 이 글은 논문을 완전히 번역한 것이 아니라 내용을 분석하고 정리한 글이에요. 따라서 실제 논문 목차와 다르며, 필자의 설명이 추가되었어요.","headline":"Histograms of Oriented Gradients for Human Detection","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/hog/"},"url":"https://denev6.github.io/posts/hog/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-14T17:14:42+09:00","datePublished":"2025-01-27T00:00:00+09:00","description":"Histograms of Oriented Gradients for Human Detection(vision.stanford) 논문을 바탕으로 HOG descriptor의 작동 원리를 분석해요. 이 글은 논문을 완전히 번역한 것이 아니라 내용을 분석하고 정리한 글이에요. 따라서 실제 논문 목차와 다르며, 필자의 설명이 추가되었어요.","headline":"Histograms of Oriented Gradients for Human Detection","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/hog/"},"url":"https://denev6.github.io/posts/hog/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1531,6 +1531,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          업데이트
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1768378482"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2026/01/14
+</time>
+
+        </span>
+      
 
       
 
@@ -1626,17 +1649,17 @@
 
 <h2 id="요약"><span class="me-2">요약</span><a href="#요약" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p><a href="/assets/posts/hog/overview.png" class="popup img-link shimmer"><img src="/assets/posts/hog/overview.png" alt="전체 흐름" loading="lazy"></a></p>
+<p><a href="/assets/posts/hog/overview.webp" class="popup img-link shimmer"><img src="/assets/posts/hog/overview.webp" alt="전체 흐름" loading="lazy"></a></p>
 
 <p>객체의 부분적 특징은 gradient 크기와 방향으로 나타낼 수 있어요. 이 연구에서는 <code class="language-plaintext highlighter-rouge">Cell</code>이라는 단위로 공간을 나누어 계산하고, 각 cell에 대해 gradient 히스토그램을 생성해요. 그런 다음 <code class="language-plaintext highlighter-rouge">Block</code>이라는 더 큰 단위로 묶어 정규화를 진행해요. 이렇게 정규화된 block을 <code class="language-plaintext highlighter-rouge">HOG descriptor</code>라고 해요.</p>
 
-<p><a href="/assets/posts/hog/cell-block.png" class="popup img-link shimmer"><img src="/assets/posts/hog/cell-block.png" alt="cell과 block" loading="lazy"></a></p>
+<p><a href="/assets/posts/hog/cell-block.webp" class="popup img-link shimmer"><img src="/assets/posts/hog/cell-block.webp" alt="cell과 block" loading="lazy"></a></p>
 
 <p>참고로 cell은 픽셀을 n x n으로 묶은 단위이며, block은 cell을 m x m으로 묶은 단위예요. 위 예시는 8 x 8 픽셀의 cell과 2 x 2 cell을 묶은 block이에요.</p>
 
 <p><strong>HOG는 경계와 gradient 구조를 잘 파악해요.</strong> 또 약간의 이미지 변환(왜곡, 회전 등)에도 강해요. 사람 탐지 문제에서는 넓은 범위의 정규화가 도움이 돼요. 이는 사람이 서 있는 모습은 유지한 상태로 팔다리를 앞뒤로 움직이기 때문으로 보이는데, 다시 말해 큰 형태는 유지한 채 작은 변화가 발생하기 때문에 <strong>넓은 공간에 대한 일반화가 모델 성능에 영향을 줘요.</strong></p>
 
-<p><a href="/assets/posts/hog/fig2.png" class="popup img-link shimmer"><img src="/assets/posts/hog/fig2.png" alt="학습 이미지 샘플" loading="lazy"></a></p>
+<p><a href="/assets/posts/hog/fig2.webp" class="popup img-link shimmer"><img src="/assets/posts/hog/fig2.webp" alt="학습 이미지 샘플" loading="lazy"></a></p>
 
 <h2 id="구현-및-성능"><span class="me-2">구현 및 성능</span><a href="#구현-및-성능" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -1658,7 +1681,7 @@
 
 <p>Power law (gamma) equation을 이용해 이미지 정규화를 시도했어요.</p>
 
-<p><a href="/assets/posts/hog/gamma.png" class="popup img-link shimmer"><img src="/assets/posts/hog/gamma.png" alt="gamma compression" loading="lazy"></a></p>
+<p><a href="/assets/posts/hog/gamma.webp" class="popup img-link shimmer"><img src="/assets/posts/hog/gamma.webp" alt="gamma compression" loading="lazy"></a></p>
 
 <ul>
   <li>컬러 이미지를 보정했을 때 약간의 성능 향상을 보였어요. 이후 단계에서 정규화를 따로 진행하기 때문에 큰 효과가 없는 것으로 보이네요.</li>
@@ -1677,7 +1700,7 @@
 
 <p>컬러 이미지는 각 채널에 대해 gradient를 구해요. 각 픽셀에 대해 3개 채널의 gradient 중 norm(크기)이 가장 큰 벡터를 최종 gradient로 채택해요. 이는 각 채널(색상) 중 가장 강한 특징을 gradient(변화율)로 사용하기 위해서예요.</p>
 
-<p><a href="/assets/posts/hog/rgb-norm.png" class="popup img-link shimmer"><img src="/assets/posts/hog/rgb-norm.png" alt="RGB norm 비교" loading="lazy"></a></p>
+<p><a href="/assets/posts/hog/rgb-norm.webp" class="popup img-link shimmer"><img src="/assets/posts/hog/rgb-norm.webp" alt="RGB norm 비교" loading="lazy"></a></p>
 
 <h3 id="방향-binning"><span class="me-2">방향 binning</span><a href="#방향-binning" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1687,7 +1710,7 @@
 
 <p>bin은 0° ~ 180°(unsigned) 또는 0° ~ 360°(signed)에 대해 균일하게 나눠요. 예를 들어, unsigned 방향에 대해 9개 bin을 지정한다면 [0°, 20°, 40° … 160°]가 돼요. 만약 현재 픽셀의 방향 정보가 105라면 가장 가까운 100 구간으로 분류할 수 있어요. 하지만 이는 aliasing을 만들어요. 따라서 더 정교한 분류를 위해 <strong>bilinear interpolation을 사용해요.</strong></p>
 
-<p><a href="/assets/posts/hog/hist.png" class="popup img-link shimmer"><img src="/assets/posts/hog/hist.png" alt="히스토그램 구성" loading="lazy"></a></p>
+<p><a href="/assets/posts/hog/hist.webp" class="popup img-link shimmer"><img src="/assets/posts/hog/hist.webp" alt="히스토그램 구성" loading="lazy"></a></p>
 
 <p>4개의 픽셀에 대해 히스토그램을 생성하는 예시에요. 초록 픽셀(48, 110)을 살펴보세요. 110은 100과 120 사이의 값이에요. 100으로부터 10만큼 떨어져 있고, 120으로부터도 10만큼 떨어져 있어요. 따라서 거리를 기반으로 가중치를 주어 100과 120에 gradient를 나누어 줄 수 있어요.</p>
 
@@ -1706,7 +1729,7 @@
 
 <p>정규화는 성능에 큰 영향을 줘요. cell을 block 단위로 묶어 정규화를 진행해요. 정규화에서 <strong>stride를 사용해 cell이 겹치도록</strong> 할 경우, 성능이 크게 올라가요. 예를 들어, 16 x 16 블록을 8 픽셀씩 겹치도록 정규화를 수행할 경우 한 cell은 4번의 정규화에 사용돼요. 이를 <code class="language-plaintext highlighter-rouge">4-fold coverage</code>라고 표현해요. 아래 그림을 보면 쉽게 이해할 수 있을 거예요.</p>
 
-<p><a href="/assets/posts/hog/stride.png" class="popup img-link shimmer"><img src="/assets/posts/hog/stride.png" alt="stride를 이용한 정규화" loading="lazy"></a></p>
+<p><a href="/assets/posts/hog/stride.webp" class="popup img-link shimmer"><img src="/assets/posts/hog/stride.webp" alt="stride를 이용한 정규화" loading="lazy"></a></p>
 
 <p>빨간 테두리는 현재 단계에서 정규화가 진행되고 있는 block 크기의 구역을 나타내고 있어요. 초록 색으로 표현한 cell은 총 4번의 정규화에 영향을 줘요. 다른 cell도 중복으로 총 4번의 정규화에 사용돼요.</p>
 
@@ -1728,7 +1751,7 @@
 
 <p>Block 모양을 정의하는 방법에 따라 <code class="language-plaintext highlighter-rouge">R-HOG</code>와 <code class="language-plaintext highlighter-rouge">C-HOG</code>로 나뉘어요.</p>
 
-<p><a href="/assets/posts/hog/rc-hog.png" class="popup img-link shimmer"><img src="/assets/posts/hog/rc-hog.png" alt="R-HOG, C-HOG 예시" loading="lazy"></a></p>
+<p><a href="/assets/posts/hog/rc-hog.webp" class="popup img-link shimmer"><img src="/assets/posts/hog/rc-hog.webp" alt="R-HOG, C-HOG 예시" loading="lazy"></a></p>
 
 <p>R-HOG: Radial HOG는 정사각형의 n x n 크기를 하나의 셀로 정의해요. 사람 탐지 문제에서는 6 x 6 픽셀의 cell과 3 x 3개 cell로 이루어진 block이 가장 좋은 성능을 보였어요. 학습에 사용한 이미지에서 사람의 신체(손, 다리 등)가 약 6 ~ 8 픽셀 정도였기 때문이에요. 2 x 2나 3 x 3 블록은 효과가 좋았으나, 너무 크거나 작은 블록은 특징을 과하게 또는 작게 반영해 성능이 좋지 않았어요.</p>
 
@@ -1755,7 +1778,7 @@
 
 <p>계산된 descriptor는 SVM에 입력되기 전 detection window로 조각조각 나눠져요.</p>
 
-<p><a href="/assets/posts/hog/window.png" class="popup img-link shimmer"><img src="/assets/posts/hog/window.png" alt="detecion window" loading="lazy"></a></p>
+<p><a href="/assets/posts/hog/window.webp" class="popup img-link shimmer"><img src="/assets/posts/hog/window.webp" alt="detecion window" loading="lazy"></a></p>
 
 <p><strong>64 x 128 크기의 window는 여백(margin)을 포함하며</strong>, 여백을 줄이면 성능이 감소해요. 필자가 이미지를 이용해 테스트 해보니 사람 주변에 충분한 여백이 없다면 사람을 찾지 못하더라고요.</p>
 
@@ -1829,7 +1852,7 @@
 
 <p>기본 HOG descriptor를 코드로 정리했어요. 각 단계의 결과를 시각화하면 다음과 같아요.</p>
 
-<p><a href="/assets/posts/hog/code-result.png" class="popup img-link shimmer"><img src="/assets/posts/hog/code-result.png" alt="실행 결과" loading="lazy"></a></p>
+<p><a href="/assets/posts/hog/code-result.webp" class="popup img-link shimmer"><img src="/assets/posts/hog/code-result.webp" alt="실행 결과" loading="lazy"></a></p>
 
 <p>학습된 OpenCV의 HOG 모델을 이용해 추론하면 원하는 결과를 잘 찾아내죠. 자세한 코드는 <a href="https://github.com/denev6/deep-learning-codes/blob/main/OpencvCpp/src/geometry/detection.cpp#L63">Github: detection.cpp</a>에 있어요.</p>
 
@@ -1847,7 +1870,7 @@
 <span class="n">hog</span><span class="p">.</span><span class="n">detectMultiScale</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">detected</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Size</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="n">Size</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">));</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p><a href="/assets/posts/hog/hog-result.png" class="popup img-link shimmer"><img src="/assets/posts/hog/hog-result.png" alt="HOG 탐지 결과" loading="lazy"></a></p>
+<p><a href="/assets/posts/hog/hog-result.webp" class="popup img-link shimmer"><img src="/assets/posts/hog/hog-result.webp" alt="HOG 탐지 결과" loading="lazy"></a></p>
 
 <h3 id="시각화"><span class="me-2">시각화</span><a href="#시각화" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1877,7 +1900,7 @@
 </span><span class="n">hog_image</span> <span class="o">=</span> <span class="n">exposure</span><span class="p">.</span><span class="nf">rescale_intensity</span><span class="p">(</span><span class="n">hog_image</span><span class="p">,</span> <span class="n">in_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p><a href="/assets/posts/hog/hog-features.png" class="popup img-link shimmer"><img src="/assets/posts/hog/hog-features.png" alt="HOG 특징" loading="lazy"></a></p>
+<p><a href="/assets/posts/hog/hog-features.webp" class="popup img-link shimmer"><img src="/assets/posts/hog/hog-features.webp" alt="HOG 특징" loading="lazy"></a></p>
 
   </div>
 
@@ -2016,35 +2039,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/dev-roo/">티스토리 캥거루 스킨 개발기</a>
+          <a href="/posts/agent-human-comm/">RL Agent와 인간은 어떻게 협업해야 할까</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/eirene/">임종 결정 지원을 위한 AI 챗봇 개발기</a>
+          <a href="/posts/agent-memory/">Agent에게 오답노트를 시켜봤더니</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/general-vla/">Generalist Robot Policy 살펴보기</a>
+          <a href="/posts/hrm/">Less is more, Reasoning Model의 등장</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/memoir/">2025년 개발자의 연말결산</a>
+          <a href="/posts/agent-training/">멀티모달과 멀티에이전트 조합</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/multimodal-trm/">Multimodal Training with Tiny Reasoning</a>
+          <a href="/posts/speak2ui/">모바일 제어를 위한 음성 파이프라인 최적화</a>
         </li>
       
     </ul>

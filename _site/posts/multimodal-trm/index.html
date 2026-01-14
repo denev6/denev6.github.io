@@ -44,7 +44,7 @@
 <meta property="twitter:title" content="Multimodal Training with Tiny Reasoning" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-12-20T00:00:00+09:00","datePublished":"2025-12-20T00:00:00+09:00","description":"Github: Hateful-Meme","headline":"Multimodal Training with Tiny Reasoning","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/multimodal-trm/"},"url":"https://denev6.github.io/posts/multimodal-trm/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-14T17:14:42+09:00","datePublished":"2025-12-20T00:00:00+09:00","description":"Github: Hateful-Meme","headline":"Multimodal Training with Tiny Reasoning","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/multimodal-trm/"},"url":"https://denev6.github.io/posts/multimodal-trm/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -880,6 +880,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          업데이트
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1768378482"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2026/01/14
+</time>
+
+        </span>
+      
 
       
 
@@ -964,13 +987,13 @@
 
 <p>학기 중에 수업 기말 프로젝트로 컴퓨터비전 기술을 이용한 무언가를 만들어야 했어요. 하지만 거창한 비전 모델을 학습할 GPU가 없었고, 최근 논문으로만 접했던 ‘멀티모달’과 ‘reasoning’을 모두 구현하면서 GPU 자원을 적게 사용하는 과제를 찾다가 Facebook AI의 Hateful Memes 데이터셋을 발견했어요.</p>
 
-<p><a href="/assets/posts/hateful-meme/confounder.png" class="popup img-link shimmer"><img src="/assets/posts/hateful-meme/confounder.png" alt="confounder" loading="lazy"></a></p>
+<p><a href="/assets/posts/hateful-meme/confounder.webp" class="popup img-link shimmer"><img src="/assets/posts/hateful-meme/confounder.webp" alt="confounder" loading="lazy"></a></p>
 
 <p>밈은 이미지와 텍스트를 결합해 강력한 메시지를 전달해요. 문제는 같은 텍스트라도 어떤 이미지와 결합되느냐에 따라 의미가 완전히 달라질 수 있다는 점이에요. 예를 들어, 특정 문구가 중립적인 이미지와 함께 있으면 무해하지만, 다른 이미지와 결합되면 혐오 표현이 될 수 있어요. 단순히 텍스트에 특정 단어가 있거나 이미지에 특정 객체가 있다는 표면적 단서만으로는 판단할 수 없어요. 이미지와 텍스트의 상호작용에서 발생하는 미묘한 의미를 포착해야 하죠. 이 지점에서 reasoning을 적용할 가능성을 봤어요. Hateful Memes 데이터셋의 핵심 특징은 <strong>Benign Confounders</strong>(양성 교란 요소)로, 이는 혐오 밈의 이미지나 텍스트를 최소한으로 변경해 비혐오 밈으로 만든 것이에요. 이런 설계 덕분에 모델은 단일 모달리티에만 의존할 수 없고, 반드시 이미지-텍스트 간 상호작용을 이해해야 해요. 실험에서는 총 10,000개의 밈 중 6,800개를 학습에, 1,700개를 검증에, 500개를 테스트에 사용했어요.</p>
 
 <h2 id="모델-설계"><span class="me-2">모델 설계</span><a href="#모델-설계" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p><a href="/assets/posts/hateful-meme/TRM.png" class="popup img-link shimmer"><img src="/assets/posts/hateful-meme/TRM.png" alt="TRM" loading="lazy"></a></p>
+<p><a href="/assets/posts/hateful-meme/TRM.webp" class="popup img-link shimmer"><img src="/assets/posts/hateful-meme/TRM.webp" alt="TRM" loading="lazy"></a></p>
 
 <p>CLIP(Contrastive Language-Image Pretraining)을 백본으로 사용해 이미지와 텍스트를 각각 고차원 특징 벡터로 변환해요. CLIP은 선행 연구에서도 baseline으로 좋은 성능을 보였기 때문에 신뢰하고 사용했어요. 이미지 $I$와 텍스트 $T$는 CLIP 인코더를 통해 독립적으로 처리되고, 추출된 특징 벡터들은 연결되어 통합 표현 $\mathbf{x}$를 형성해요.</p>
 
@@ -1028,7 +1051,7 @@
 
 <p>전체 학습 과정에 대한 수도 코드는 다음과 같아요.</p>
 
-<p><a href="/assets/posts/hateful-meme/trm-pseudo.png" class="popup img-link shimmer"><img src="/assets/posts/hateful-meme/trm-pseudo.png" alt="trm-pseudo" loading="lazy"></a></p>
+<p><a href="/assets/posts/hateful-meme/trm-pseudo.webp" class="popup img-link shimmer"><img src="/assets/posts/hateful-meme/trm-pseudo.webp" alt="trm-pseudo" loading="lazy"></a></p>
 
 <h2 id="실험-결과"><span class="me-2">실험 결과</span><a href="#실험-결과" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -1101,7 +1124,7 @@
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         
-          <a href="/categories/article/">Article</a>
+          <a href="/categories/playground/">Playground</a>
       </div>
     
 
@@ -1235,35 +1258,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/dev-roo/">티스토리 캥거루 스킨 개발기</a>
+          <a href="/posts/agent-human-comm/">RL Agent와 인간은 어떻게 협업해야 할까</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/eirene/">임종 결정 지원을 위한 AI 챗봇 개발기</a>
+          <a href="/posts/agent-memory/">Agent에게 오답노트를 시켜봤더니</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/general-vla/">Generalist Robot Policy 살펴보기</a>
+          <a href="/posts/hrm/">Less is more, Reasoning Model의 등장</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/memoir/">2025년 개발자의 연말결산</a>
+          <a href="/posts/agent-training/">멀티모달과 멀티에이전트 조합</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/multimodal-trm/">Multimodal Training with Tiny Reasoning</a>
+          <a href="/posts/speak2ui/">모바일 제어를 위한 음성 파이프라인 최적화</a>
         </li>
       
     </ul>
@@ -1922,6 +1945,18 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
 
 
@@ -1936,34 +1971,6 @@
   <aside id="related-posts" aria-labelledby="related-label">
     <h3 class="mb-4" id="related-label">관련된 글</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
-      
-        <article class="col">
-          <a href="/posts/general-vla/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1766761200"
-  data-df="YYYY/MM/DD"
-  
->
-  2025/12/27
-</time>
-
-              <h4 class="pt-0 my-2">Generalist Robot Policy 살펴보기</h4>
-              <div class="text-muted">
-                <p>범용 지능인 LLM의 성능이 크게 발전하면서 이 능력을 물리 세계로 옮기려는 시도가 활발해지고 있어요. 본 글에서는 물리 세계를 이해하고 상호작용할 수 있는 Physical AI의 동향을 정리하고 각 논문에서 소개한 주요 아이디어를 알아보려고 해요. 논문 선정은 앵지유니버스님의 영상을 참고했어요.  Generalist VLA의 등장    기존의 로봇은...</p>
-              </div>
-            </div>
-          </a>
-        </article>
       
         <article class="col">
           <a href="/posts/agent-training/" class="post-preview card h-100">
@@ -2016,6 +2023,34 @@
               <h4 class="pt-0 my-2">Co-learning을 활용한 멀티모달 학습</h4>
               <div class="text-muted">
                 <p>ViLBERT, SimCLR, CLIP, ImageBind 4가지 모델을 예시로, 이미지와 다른 모달리티 간 co-learning을 살펴봐요.  Co-learning  Multi-modal learning에서 co-learning은 한 모달리티를 학습하기 위해 다른 모달리티를 활용하는 방법이에요. 예를 들어, “강아지”라는 텍스트의 특성을 파악하기 위...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/facemouse/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1747839600"
+  data-df="YYYY/MM/DD"
+  
+>
+  2025/05/22
+</time>
+
+              <h4 class="pt-0 my-2">웹 접근성 향상을 위한 FaceMouse 개발</h4>
+              <div class="text-muted">
+                <p>v1: 2022-07   v2: 2025-05   FaceMouse: Empowering Web Accessibility with a Lightweight and Open-Source Interaction System  요약  본 연구는 상지 장애인의 디지털 접근성을 개선하기 위해 세 가지 기여를 통한 새로운 비접촉 입력 시스템을 제안해요.     첫...</p>
               </div>
             </div>
           </a>

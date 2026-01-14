@@ -44,7 +44,7 @@
 <meta property="twitter:title" content="EEG 신호를 활용한 청소년 ADHD 진단" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-05T00:00:00+09:00","datePublished":"2025-03-05T00:00:00+09:00","description":"요약","headline":"EEG 신호를 활용한 청소년 ADHD 진단","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/eeg-transformer/"},"url":"https://denev6.github.io/posts/eeg-transformer/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-14T17:14:42+09:00","datePublished":"2025-03-05T00:00:00+09:00","description":"요약","headline":"EEG 신호를 활용한 청소년 ADHD 진단","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/eeg-transformer/"},"url":"https://denev6.github.io/posts/eeg-transformer/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1023,6 +1023,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          업데이트
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1768378482"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2026/01/14
+</time>
+
+        </span>
+      
 
       
 
@@ -1127,7 +1150,7 @@
 
 <p>본 연구에서는 <a href="https://ieee-dataport.org/open-access/eeg-data-adhd-control-children">IEEE data-port</a>의 “<em>EEG Data ADHD-Control Children</em>” 데이터셋을 활용했어요.</p>
 
-<p><a href="/assets/posts/eeg-vit/eeg-sample.png" class="popup img-link shimmer"><img src="/assets/posts/eeg-vit/eeg-sample.png" alt="EEG 시각화" loading="lazy"></a></p>
+<p><a href="/assets/posts/eeg-vit/eeg-sample.webp" class="popup img-link shimmer"><img src="/assets/posts/eeg-vit/eeg-sample.webp" alt="EEG 시각화" loading="lazy"></a></p>
 
 <p>데이터 주요 특징은 다음과 같아요.</p>
 
@@ -1148,7 +1171,7 @@
 
 <p>IEEE 데이터셋은 아이들이 캐릭터 수를 세는 과제 중 측정된 EEG 신호를 포함하고 있어요. 참가자마다 과제 완료 시간이 다르기 때문에 EEG 신호의 길이도 다양해요. 구체적으로 신호 길이는 7,983부터 43,252까지 다양하며, 대체로 ADHD 그룹의 과제 완료 시간이 더 길었어요.</p>
 
-<p><a href="/assets/posts/eeg-vit/eeg-length.png" class="popup img-link shimmer"><img src="/assets/posts/eeg-vit/eeg-length.png" alt="EEG 신호 길이" loading="lazy"></a></p>
+<p><a href="/assets/posts/eeg-vit/eeg-length.webp" class="popup img-link shimmer"><img src="/assets/posts/eeg-vit/eeg-length.webp" alt="EEG 신호 길이" loading="lazy"></a></p>
 
 <p>선행 연구(M. Y. Esas and F. Latifoğlu)에서는 <strong>데이터 길이를 9,250으로 고정하는 접근 방식</strong>을 제안했어요. 이 방법은 여러 장점이 있답니다.</p>
 
@@ -1170,7 +1193,7 @@
 
 <p>본 모델은 크게 Embedding과 Transformer 두 부분으로 구성되어 있어요. <strong>Embedding</strong>은 Vision Transformer(A. Dosovitskiy et al., 2021)를 참고했으며, <strong>Transformer</strong>는 EEG-Transformer(Y. He et al., 2023)의 구조를 기반으로 일부 파라미터를 수정했어요.</p>
 
-<p><a href="/assets/posts/eeg-vit/model-structure.png" class="popup img-link shimmer"><img src="/assets/posts/eeg-vit/model-structure.png" alt="모델 구조" loading="lazy"></a></p>
+<p><a href="/assets/posts/eeg-vit/model-structure.webp" class="popup img-link shimmer"><img src="/assets/posts/eeg-vit/model-structure.webp" alt="모델 구조" loading="lazy"></a></p>
 
 <h3 id="convolutional-embedding"><span class="me-2">Convolutional Embedding</span><a href="#convolutional-embedding" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1266,7 +1289,7 @@
 
 <p>학습 과정에서 validation loss를 통해 모델의 <strong>과적합(overfitting) 현상을 관찰</strong>했어요.</p>
 
-<p><a href="/assets/posts/eeg-vit/loss-history.png" class="popup img-link shimmer"><img src="/assets/posts/eeg-vit/loss-history.png" alt="Loss 기록" loading="lazy"></a></p>
+<p><a href="/assets/posts/eeg-vit/loss-history.webp" class="popup img-link shimmer"><img src="/assets/posts/eeg-vit/loss-history.webp" alt="Loss 기록" loading="lazy"></a></p>
 
 <p>Dropout이나 weight decay와 같은 정규화 기법을 적용했음에도 불구하고 과적합 문제를 완전히 해결하지 못했어요. 이는 제한된 데이터셋의 근본적인 한계로 보입니다.</p>
 
@@ -1305,7 +1328,7 @@
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         
-          <a href="/categories/article/">Article</a>
+          <a href="/categories/playground/">Playground</a>
       </div>
     
 
@@ -1434,35 +1457,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/dev-roo/">티스토리 캥거루 스킨 개발기</a>
+          <a href="/posts/agent-human-comm/">RL Agent와 인간은 어떻게 협업해야 할까</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/eirene/">임종 결정 지원을 위한 AI 챗봇 개발기</a>
+          <a href="/posts/agent-memory/">Agent에게 오답노트를 시켜봤더니</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/general-vla/">Generalist Robot Policy 살펴보기</a>
+          <a href="/posts/hrm/">Less is more, Reasoning Model의 등장</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/memoir/">2025년 개발자의 연말결산</a>
+          <a href="/posts/agent-training/">멀티모달과 멀티에이전트 조합</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/multimodal-trm/">Multimodal Training with Tiny Reasoning</a>
+          <a href="/posts/speak2ui/">모바일 제어를 위한 음성 파이프라인 최적화</a>
         </li>
       
     </ul>
@@ -2097,19 +2120,31 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   

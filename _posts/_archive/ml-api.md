@@ -17,7 +17,7 @@ Github: [denev6/serve-models](https://github.com/denev6/serve-models) (deprecate
 
 참고로 Fashion MNIST는 부츠, 운동화, 티셔츠, 가방 등 의류 이미지로 구성된 데이터셋이다.
 
-![Fashion MNIST 예시](fashion-mnist.png)
+![Fashion MNIST 예시](fashion-mnist.webp)
 
 ### 데이터 정규화
 
@@ -74,7 +74,7 @@ Accuracy: 94.36
 
 옷장에서 사진을 몇 장 찍어 테스트 했다.
 
-![모델 예측 예시](prediction-img.png)
+![모델 예측 예시](prediction-img.webp)
 
 **대부분 잘 예측했다.** 비록 부츠를 운동화라고 농담도 하지만 API 만드는 연습을 하기에는 그럴싸한 모델이라고 판단했다.
 
@@ -137,7 +137,7 @@ Response: {'label': 'Trouser', 'prob': 0.9963659048080444}
 
 ### FrontEnd에서 요청
 
-![템플릿 실행 결과](prediction-template.png)
+![템플릿 실행 결과](prediction-template.webp)
 
 수정: 25-03-01
 

@@ -12,7 +12,7 @@ media_subpath: /assets/posts/dacon-bias/
 
 Github: [denev6/Bias-A-Thon](https://github.com/denev6/Bias-A-Thon)
 
-![대회 상장](dacon-award.jpg)
+![대회 상장](dacon-award.webp)
 
 ## 문제 정의
 
@@ -186,7 +186,7 @@ Rule-based masking은 "핀란드인" <> "핀란드 사람"과 같이 마스킹�
 
 여담으로 팀명이 '*강화학습 5조*'인 이유는 정말 '강화학습' 교과목에서 다섯 번째 조였기 때문이에요. 대회에서 얻은 등수가 교과목의 기말 프로젝트 성적으로 들어갔어요. 그래서 Github repo를 보면 강화학습을 시도한 흔적이 남아있어요. 예를 들어, 강화학습 알고리즘인 PPO를 이용해 temperature를 조절하는 실험을 했고, 정확도를 약 4.8%p ~ 6.0%p 높이기도 했어요.
 
-![심포지엄 현장](symposium.jpg)
+![심포지엄 현장](symposium.webp)
 _출처: DACON_
 
 더불어 대회 시상식과 함께 *2025 International Symposium on AI Bias*에 참석했어요. 여러 전문가 분들을 통해 AI Bias에 대한 최신 연구를 배울 수 있었고, 앞으로 LLM 발전에 있어 bias를 어떻게 고려해야 할 지 고민해보는 뜻깊은 시간이 되었어요.

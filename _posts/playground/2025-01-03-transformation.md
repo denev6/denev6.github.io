@@ -11,7 +11,7 @@ media_subpath: /assets/posts/transform/
 
 원본 이미지의 모습이에요.
 
-![img](original.jpg)
+![img](original.webp)
 
 OpenCV는 `warpAffine`과 `perspectiveTransform` 메서드를 지원해요.
 
@@ -22,7 +22,7 @@ OpenCV는 `warpAffine`과 `perspectiveTransform` 메서드를 지원해요.
 
 ## 이동 변환
 
-![resized img](translation.png)
+![resized img](translation.webp)
 
 `이동(translation)` 변환은 이미지 좌표를 x, y 방향으로 이동(shift)하는 것이에요. 평행 이동은 간단한 **덧셈**으로 구현할 수 있어요.
 
@@ -49,11 +49,11 @@ warpAffine(img, dst, affine_matrix, Size());
 
 ## 전단 변환
 
-![shear-x](shear-x.png)
+![shear-x](shear-x.webp)
 
 `전단(shear)` 변환은 직사각형을 평행사변형으로 비트는 변환이에요. 위 이미지는 x(가로) 방향으로 비튼 모습이에요. 아래쪽으로 갈수록, 다시 말해 y 좌표가 증가할수록 변화가 커져요. 즉, x 좌표의 변화는 y에 비례해요.
 
-![explain shearing](shear-explain.png)
+![explain shearing](shear-explain.webp)
 
 $$x' = x + m_x y$$
 
@@ -65,7 +65,7 @@ $$\begin{bmatrix} x' \\ y' \end{bmatrix} = \begin{bmatrix} 1 & m_x & 0 \\ 0 & 1 
 
 위 행렬은 x 방향으로 비트는 형태라면, y(세로) 방향으로 비트는 경우도 생각할 수 있어요.
 
-![shear-y](shear-y.png)
+![shear-y](shear-y.webp)
 
 $$x' = x$$
 
@@ -104,7 +104,7 @@ warpAffine(img, dst, affine_matrix, dst_size);
 
 ## 크기 변환
 
-![resized](resize.png)
+![resized](resize.webp)
 
 `크기(scale)` 변환은 이미지를 확대하거나 축소하는 변환이에요. x, y에 확대/축소할 비율을 곱하면 크기가 변해요.
 
@@ -140,7 +140,7 @@ resize(img, dst, Size(), s_x, s_y);
 
 예를 들어 2 x 2 이미지를 4 x 3으로 확대해 보죠.
 
-![2x2to4x3](inter-linear-1.png)
+![2x2to4x3](inter-linear-1.webp)
 
 노란색으로 표시한 $P_{2, 1}$ 값은 다음과 같이 계산해요.
 
@@ -166,7 +166,7 @@ Output:
 
 좌표를 할당하는 과정에서 차이가 발생하는 것으로 보여요. (출처: [stackoverflow](https://stackoverflow.com/questions/68976813/how-inter-linear-interpolation-in-opencv-resize-work))
 
-![coordinate system](inter-linear-2.png)
+![coordinate system](inter-linear-2.webp)
 
 가로 행에 4개의 픽셀이 할당되어야 해요. 따라서 같은 거리로 값을 배치하다 보니 $P_{2,1}'$는 $(0.25, 0)$에 위치하게 돼요. 이 가정을 바탕으로 $P_{2,1}'$을 계산해 보죠.
 
@@ -188,7 +188,7 @@ $$P_{2,1}'=\cfrac{P_{1,1} \cdot 0.75 + P_{2,1} \cdot 0.25}{0.25 + 0.75}=20$$
 
 ## 회전 변환
 
-![rotated](rotate.png)
+![rotated](rotate.webp)
 
 `회전(rotation)` 변환은 이미지를 시계 또는 반시계 방향으로 회전하는 변환이에요. 먼저 시계 방향(clockwise) 회전에 대해 알아보죠. 간단한 이해를 위해 단위 원 $x^2+y^2=1$을 살펴보세요. 아래는 단위 원을 그리는 Python 코드예요.
 
@@ -202,7 +202,7 @@ ax.plot(x, y)
 
 단위 원은 $[0, 2\pi]$ 범위의 $\theta$에 대한 $P(cos\theta , sin\theta )$의 집합이에요. 즉, $cos\theta$는 x축과 $sin\theta$는 y축과 관계가 있어요.
 
-![explain with unit-circle](rotate-circle.png)
+![explain with unit-circle](rotate-circle.webp)
 
 구체적으로 $P(cos30^\circ , sin30^\circ)$를 찍어보면 $P(1,0)$를 반시계 방향으로 회전한 모습이에요. 시계 방향으로 회전한 파란 점은 빨간 점에 대해 x축 대칭이므로 $P(cos30^\circ ,-sin30^\circ)$예요. 구체적인 유도 과정은 [gaussian37](https://gaussian37.github.io/math-la-rotation_matrix/#%ED%9A%8C%EC%A0%84-%EB%B3%80%ED%99%98-%ED%96%89%EB%A0%AC-%EC%9C%A0%EB%8F%84-1)님의 블로그에 잘 정리되어 있어요.
 
@@ -237,7 +237,7 @@ Mat rotation_matrix = getRotationMatrix2D(center, angle, 1);
 warpAffine(img, dst, rotation_matrix, Size());
 ```
 
-![rotate center](rotate-center.png)
+![rotate center](rotate-center.webp)
 
 또는 `rotate`를 통해 쉽게 처리할 수 있어요. 하지만 이는 각도를 조절할 수 없고 고정된 각도로만 회전할 수 있다는 제한이 있어요.
 
@@ -249,11 +249,11 @@ rotate(img, dst, ROTATE_90_CLOCKWISE);
 
 ## 대칭 변환
 
-![horizontal flip](flip-h.png)
+![horizontal flip](flip-h.webp)
 
 `대칭(reflection)` 변환은 축을 기준으로 이미지를 뒤집는 변환이에요. 먼저 y축을 기준으로 대칭인 이미지를 만들어볼게요.
 
-![explain flip](flip-explain.png)
+![explain flip](flip-explain.webp)
 
 수평 대칭인 이미지의 y 좌표는 같고 x 좌표의 부호만 변해요.
 
@@ -289,7 +289,7 @@ Mat affine_matrix = Mat_<double>(
 warpAffine(img, dst, affine_matrix, Size());
 ```
 
-![vertical flip](flip-v.png)
+![vertical flip](flip-v.webp)
 
 OpenCV는 `flip`을 통해 쉽게 이미지를 뒤집을 수 있어요.
 
@@ -307,7 +307,7 @@ filp(img, dst, flipCode=1);
 
 ## 투시 변환
 
-![perspective transform](perspective.png)
+![perspective transform](perspective.webp)
 
 `투시(perspective)` 변환은 네 점을 기준으로 임의의 사각형을 직사각형 형태로 변환하는 것이에요. 먼저 변환을 위해 네 점의 좌표가 필요해요. 왼쪽 카드의 네 꼭짓점 좌표를 $p=(x,y)$라고 정의할게요. 그리고 좌표 $p$가 이동할 최종 좌표도 필요해요. 오른쪽 이미지의 네 꼭짓점 좌표를 $q=(x',y')$라고 해볼게요. 결론부터 이야기하면 변환 과정은 아래와 같아요.
 

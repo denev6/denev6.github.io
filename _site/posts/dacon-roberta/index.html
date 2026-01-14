@@ -44,7 +44,7 @@
 <meta property="twitter:title" content="발화자의 감정인식 AI 경진대회" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-17T00:00:00+09:00","datePublished":"2022-12-17T00:00:00+09:00","description":"대회: 월간 데이콘 발화자의 감정인식 AI 경진대회 제출 코드: dacon.io/codeshare","headline":"발화자의 감정인식 AI 경진대회","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/dacon-roberta/"},"url":"https://denev6.github.io/posts/dacon-roberta/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-14T17:14:42+09:00","datePublished":"2022-12-17T00:00:00+09:00","description":"대회: 월간 데이콘 발화자의 감정인식 AI 경진대회 제출 코드: dacon.io/codeshare","headline":"발화자의 감정인식 AI 경진대회","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/dacon-roberta/"},"url":"https://denev6.github.io/posts/dacon-roberta/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -920,6 +920,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          업데이트
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1768378482"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2026/01/14
+</time>
+
+        </span>
+      
 
       
 
@@ -1015,7 +1038,7 @@
 
 <p>대부분 데이터는 20 단어 이내의 문장이고, 2~5개 단어로 구성된 문장도 포함돼 있었어요.</p>
 
-<p><a href="/assets/posts/dacon-2022/word-count.png" class="popup img-link shimmer"><img src="/assets/posts/dacon-2022/word-count.png" alt="word count" loading="lazy"></a></p>
+<p><a href="/assets/posts/dacon-2022/word-count.webp" class="popup img-link shimmer"><img src="/assets/posts/dacon-2022/word-count.webp" alt="word count" loading="lazy"></a></p>
 
 <p>발화 문장은 특수 문자가 많이 포함된 구어체 문장인데요. didn’t 같은 축약형에서 사용하는 apostrophe(‘)도 두 종류가 섞여 있는 등 불균일한 모습이에요. Aaaaaaawwwww나 Oh-oh-oh-oh-oh처럼 같은 패턴의 문자가 반복되는 경우도 볼 수 있어요.</p>
 
@@ -1097,7 +1120,7 @@
 
 <p><a href="https://github.com/tae898/erc/blob/main/utils/utils.py">tae898/utils.py</a>에서 레이블을 확인할 수 있었고, 동일하게 학습하도록 <code class="language-plaintext highlighter-rouge">LabelEncoder</code>를 생성했어요.</p>
 
-<p><a href="/assets/posts/dacon-2022/labels.png" class="popup img-link shimmer"><img src="/assets/posts/dacon-2022/labels.png" alt="labels" loading="lazy"></a></p>
+<p><a href="/assets/posts/dacon-2022/labels.webp" class="popup img-link shimmer"><img src="/assets/posts/dacon-2022/labels.webp" alt="labels" loading="lazy"></a></p>
 
 <div class="language-python highlighter-rouge"><div class="code-header">
         <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
@@ -1157,7 +1180,7 @@
   <li>Classifier 층 대신 GRU 결합 후 학습</li>
 </ul>
 
-<p><a href="/assets/posts/dacon-2022/model.png" class="popup img-link shimmer"><img src="/assets/posts/dacon-2022/model.png" alt="model" loading="lazy"></a>
+<p><a href="/assets/posts/dacon-2022/model.webp" class="popup img-link shimmer"><img src="/assets/posts/dacon-2022/model.webp" alt="model" loading="lazy"></a>
 <em>모델 기본 구조</em></p>
 
 <p>분류 모델은 <code class="language-plaintext highlighter-rouge">RoBERTa</code>+<code class="language-plaintext highlighter-rouge">Classifier</code> 형태를 가져요. 따라서 <code class="language-plaintext highlighter-rouge">RoBERTa</code>는 학습되지 않도록 하고, <code class="language-plaintext highlighter-rouge">Classifier</code> 가중치만 학습시켰어요. 학습된 모델과 해결하려는 문제가 동일하기 때문에 효과가 있을 수 있죠.</p>
@@ -1220,7 +1243,7 @@
 
 <p>모델 Accuracy는 0.76877, F1-macro는 0.66016가 나왔어요. test set에 대해서는 F1-macro가 0.56172로 대회 2위를 수상했답니다.</p>
 
-<p><a href="/assets/posts/dacon-2022/award.png" class="popup img-link shimmer"><img src="/assets/posts/dacon-2022/award.png" alt="ranked in 2nd" loading="lazy"></a></p>
+<p><a href="/assets/posts/dacon-2022/award.webp" class="popup img-link shimmer"><img src="/assets/posts/dacon-2022/award.webp" alt="ranked in 2nd" loading="lazy"></a></p>
 
 <h2 id="느낀점"><span class="me-2">느낀점</span><a href="#느낀점" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -1367,35 +1390,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/dev-roo/">티스토리 캥거루 스킨 개발기</a>
+          <a href="/posts/agent-human-comm/">RL Agent와 인간은 어떻게 협업해야 할까</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/eirene/">임종 결정 지원을 위한 AI 챗봇 개발기</a>
+          <a href="/posts/agent-memory/">Agent에게 오답노트를 시켜봤더니</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/general-vla/">Generalist Robot Policy 살펴보기</a>
+          <a href="/posts/hrm/">Less is more, Reasoning Model의 등장</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/memoir/">2025년 개발자의 연말결산</a>
+          <a href="/posts/agent-training/">멀티모달과 멀티에이전트 조합</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/multimodal-trm/">Multimodal Training with Tiny Reasoning</a>
+          <a href="/posts/speak2ui/">모바일 제어를 위한 음성 파이프라인 최적화</a>
         </li>
       
     </ul>

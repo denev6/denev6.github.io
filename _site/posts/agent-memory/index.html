@@ -44,7 +44,7 @@
 <meta property="twitter:title" content="Agent에게 오답노트를 시켜봤더니" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-10-19T00:00:00+09:00","datePublished":"2025-10-19T00:00:00+09:00","description":"AI를 다루는 개발자의 노트입니다.","headline":"Agent에게 오답노트를 시켜봤더니","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/agent-memory/"},"url":"https://denev6.github.io/posts/agent-memory/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-14T17:14:42+09:00","datePublished":"2025-10-19T00:00:00+09:00","description":"AI를 다루는 개발자의 노트입니다.","headline":"Agent에게 오답노트를 시켜봤더니","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/agent-memory/"},"url":"https://denev6.github.io/posts/agent-memory/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -843,6 +843,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          업데이트
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1768378482"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2026/01/14
+</time>
+
+        </span>
+      
 
       
 
@@ -919,7 +942,7 @@
   
 
   <div class="content">
-    <p><a href="/assets/posts/agent-memory/ai-robot-aha.jpg" class="popup img-link shimmer"><img src="/assets/posts/agent-memory/ai-robot-aha.jpg" alt="" loading="lazy"></a></p>
+    <p><a href="/assets/posts/agent-memory/ai-robot-aha.webp" class="popup img-link shimmer"><img src="/assets/posts/agent-memory/ai-robot-aha.webp" alt="" loading="lazy"></a></p>
 
 <h2 id="fine-tuning은-가성비가-떨어진다"><span class="me-2">Fine-tuning은 가성비가 떨어진다</span><a href="#fine-tuning은-가성비가-떨어진다" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -954,7 +977,7 @@
 
 <p>Google에서 제시한 ReasoningBank는 추상화된 전략을 찾아 기록하며 성공과 실패에서 얻은 주요 전략을 함께 기억해요.</p>
 
-<p><a href="/assets/posts/agent-memory/reasoningbank.png" class="popup img-link shimmer"><img src="/assets/posts/agent-memory/reasoningbank.png" alt="Reasoning Bank" loading="lazy"></a></p>
+<p><a href="/assets/posts/agent-memory/reasoningbank.webp" class="popup img-link shimmer"><img src="/assets/posts/agent-memory/reasoningbank.webp" alt="Reasoning Bank" loading="lazy"></a></p>
 
 <p>Agent는 가장 유사한 k개의 기억을 가져와 프롬프트와 함께 입력해요. 이 프롬프트를 사용해 결정을 내리고, 결과에서 새로운 지식을 찾아 title, description, content 형식으로 정리해요. 이렇게 정리된 memory item은 새로운 기억으로 추가돼요.</p>
 
@@ -976,7 +999,7 @@
 
 <p>Tencent는 과거 경험이 학습된 token prior 역할을 해 파라미터 업데이트와 유사한 효과를 낸다고 주장해요. 기존 강화학습에서 사용하던 Group Relative Policy Optimization (GRPO) 개념을 가져와 파라미터 학습 없이 모델 성능을 개선했어요. 강화학습에서의 GRPO는 여러 출력을 생성하고 각 출력이 독립적인 reward를 받는 방식이에요. Training-Free GRPO는 이 아이디어를 가져와 각 출력의 성공/실패를 판단해 공통 원인을 요약하고 저장해요. Google의 Parallel Scaling과 같은 이야기를 하고 있어요.</p>
 
-<p><a href="/assets/posts/agent-memory/grpo.png" class="popup img-link shimmer"><img src="/assets/posts/agent-memory/grpo.png" alt="GRPO" loading="lazy"></a></p>
+<p><a href="/assets/posts/agent-memory/grpo.webp" class="popup img-link shimmer"><img src="/assets/posts/agent-memory/grpo.webp" alt="GRPO" loading="lazy"></a></p>
 
 <p>GRPO는 reward를 이용해 그룹 내 상대적 advantage를 계산하고 PPO로 파라미터를 업데이트해요. Training-Free GRPO는 이 과정 대신 생성된 지식을 추가해 optimization을 수행해요. Add, Delete, Modify, Keep 연산 중 하나를 선택해 기억을 업데이트하는 방식이에요. 이 아이디어는 이전 <em>Long-term Memory</em>라는 이름으로 제안되었던 방법론을 응용한 것이에요.</p>
 
@@ -1140,35 +1163,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/dev-roo/">티스토리 캥거루 스킨 개발기</a>
+          <a href="/posts/agent-human-comm/">RL Agent와 인간은 어떻게 협업해야 할까</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/eirene/">임종 결정 지원을 위한 AI 챗봇 개발기</a>
+          <a href="/posts/agent-memory/">Agent에게 오답노트를 시켜봤더니</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/general-vla/">Generalist Robot Policy 살펴보기</a>
+          <a href="/posts/hrm/">Less is more, Reasoning Model의 등장</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/memoir/">2025년 개발자의 연말결산</a>
+          <a href="/posts/agent-training/">멀티모달과 멀티에이전트 조합</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/multimodal-trm/">Multimodal Training with Tiny Reasoning</a>
+          <a href="/posts/speak2ui/">모바일 제어를 위한 음성 파이프라인 최적화</a>
         </li>
       
     </ul>

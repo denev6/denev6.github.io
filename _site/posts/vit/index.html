@@ -44,7 +44,7 @@
 <meta property="twitter:title" content="An Image is Worth 16x16 Words, Transformers For Image Recognition At Scale" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-06T00:00:00+09:00","datePublished":"2025-02-06T00:00:00+09:00","description":"논문: arXiv 공식 구현: Pytorch-vision 분석 코드: Github","headline":"An Image is Worth 16x16 Words, Transformers For Image Recognition At Scale","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/vit/"},"url":"https://denev6.github.io/posts/vit/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-14T17:14:42+09:00","datePublished":"2025-02-06T00:00:00+09:00","description":"논문: arXiv 공식 구현: Pytorch-vision 분석 코드: Github","headline":"An Image is Worth 16x16 Words, Transformers For Image Recognition At Scale","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/vit/"},"url":"https://denev6.github.io/posts/vit/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1066,6 +1066,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          업데이트
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1768378482"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2026/01/14
+</time>
+
+        </span>
+      
 
       
 
@@ -1177,7 +1200,7 @@
 
 <p>Transformer는 일련의 1D token embedding을 입력으로 받아요. 우리는 <strong>이미지를 일련의 2D patch로 나누어 사용</strong>해요.</p>
 
-<p><a href="/assets/posts/vit/architecture.png" class="popup img-link shimmer"><img src="/assets/posts/vit/architecture.png" alt="전체 구조" loading="lazy"></a></p>
+<p><a href="/assets/posts/vit/architecture.webp" class="popup img-link shimmer"><img src="/assets/posts/vit/architecture.webp" alt="전체 구조" loading="lazy"></a></p>
 
 <p>Transformer는 정해진 크기의 latent vector를 가지기 때문에 이미지 patch가 정해진 차원으로 매핑될 수 있도록 해요.</p>
 
@@ -1223,7 +1246,7 @@
 
 <p>ViT는 CNN처럼 이미지에 특화된 inductive bias가 없어요. 따라서 position embedding을 이용해 위치 정보를 조정하며, patch의 2차원 위치 정보를 처음부터 학습해야 해요.</p>
 
-<p><a href="/assets/posts/vit/hybrid.png" class="popup img-link shimmer"><img src="/assets/posts/vit/hybrid.png" alt="Hybrid 모델" loading="lazy"></a></p>
+<p><a href="/assets/posts/vit/hybrid.webp" class="popup img-link shimmer"><img src="/assets/posts/vit/hybrid.webp" alt="Hybrid 모델" loading="lazy"></a></p>
 
 <p>대안으로 <strong>CNN의 feature map을 입력으로 사용</strong>하는 방법이 있어요 (<a href="https://github.com/pytorch/vision/blob/main/torchvision/models/vision_transformer.py#L213">L213</a>). 이러한 방법을 <code class="language-plaintext highlighter-rouge">hybrid</code>라고 표현해요. 만약에 1x1 필터를 사용하면 이미지를 feature map 차원으로 flatten하는 과정이 돼요.</p>
 
@@ -1275,17 +1298,17 @@
 
 <h3 id="inspecting-vision-transformer"><span class="me-2">Inspecting Vision Transformer</span><a href="#inspecting-vision-transformer" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="/assets/posts/vit/filters.png" class="popup img-link shimmer"><img src="/assets/posts/vit/filters.png" alt="filters" loading="lazy"></a></p>
+<p><a href="/assets/posts/vit/filters.webp" class="popup img-link shimmer"><img src="/assets/posts/vit/filters.webp" alt="filters" loading="lazy"></a></p>
 
 <p>첫 레이어는 이미지를 저차원으로 매핑시켜요. 위 이미지는 학습된 필터 중 PCA를 통해 찾아낸 주요 28개 필터 모습이에요. 이미지 patch에서 구조를 찾아내기 위한 모양으로 보여요.</p>
 
-<p><a href="/assets/posts/vit/position-embedding.png" class="popup img-link shimmer"><img src="/assets/posts/vit/position-embedding.png" alt="position embedding" loading="lazy"></a></p>
+<p><a href="/assets/posts/vit/position-embedding.webp" class="popup img-link shimmer"><img src="/assets/posts/vit/position-embedding.webp" alt="position embedding" loading="lazy"></a></p>
 
 <p>이후 position embedding이 더해져요. <strong>가까운 patch는 유사한 position embedding</strong>을 보여줘요. 위 이미지는 patch와 position embedding 간의 유사도를 2차원으로 나타내요.</p>
 
 <p>Attention 가중치를 바탕으로 어느 정도 깊이(거리)의 네트워크에서 전반적인 정보를 수집해 내는지 확인했어요. 여기서 “attention distance”는 CNN의 receptive field 크기와 같아요. 몇몇 head는 초기에 대부분의 정보를 잡아내기도 했어요. 다른 head는 지속적으로 작은 attention distance를 보여줬어요. 이렇게 강한 localized attention은 hybrid model에서 적게 나타났어요. 이는 CNN이 지역적인 정보를 찾기 때문에 attention head에서 지역적인 패턴을 찾을 필요가 없기 때문으로 보여요. 다시 말해, <strong>CNN은 지역적인 정보를, Attention은 넓은 범위의 정보를 찾는데 유리</strong>하다고 볼 수 있어요. 이러한 정보를 바탕으로 분류에 필요한 이미지 부분을 찾아내요.</p>
 
-<p><a href="/assets/posts/vit/attention.png" class="popup img-link shimmer"><img src="/assets/posts/vit/attention.png" alt="attention image" loading="lazy"></a></p>
+<p><a href="/assets/posts/vit/attention.webp" class="popup img-link shimmer"><img src="/assets/posts/vit/attention.webp" alt="attention image" loading="lazy"></a></p>
 
 <p>Attention 가중치를 이미지에 투영한 예시에요. 강아지의 윤곽(귀, 앞발 등)에 강한 가중치를 주어 중요도가 높은 정보로 판단해요. 반면 뒤에 사람은 낮은 가중치를 줘요. 따라서 분류 문제를 풀 때, 강아지가 있는 부분은 강하게, 사람이 있는 부분은 약하게 반영돼요.</p>
 
@@ -1437,35 +1460,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/dev-roo/">티스토리 캥거루 스킨 개발기</a>
+          <a href="/posts/agent-human-comm/">RL Agent와 인간은 어떻게 협업해야 할까</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/eirene/">임종 결정 지원을 위한 AI 챗봇 개발기</a>
+          <a href="/posts/agent-memory/">Agent에게 오답노트를 시켜봤더니</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/general-vla/">Generalist Robot Policy 살펴보기</a>
+          <a href="/posts/hrm/">Less is more, Reasoning Model의 등장</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/memoir/">2025년 개발자의 연말결산</a>
+          <a href="/posts/agent-training/">멀티모달과 멀티에이전트 조합</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/multimodal-trm/">Multimodal Training with Tiny Reasoning</a>
+          <a href="/posts/speak2ui/">모바일 제어를 위한 음성 파이프라인 최적화</a>
         </li>
       
     </ul>

@@ -6,7 +6,7 @@ toc: true
 media_subpath: /assets/posts/agent-memory/
 ---
 
-![](ai-robot-aha.jpg)
+![](ai-robot-aha.webp)
 
 ## Fine-tuning은 가성비가 떨어진다
 
@@ -33,7 +33,7 @@ Agent memory를 통해 과거 경험을 재활용하려는 연구가 있었지�
 
 Google에서 제시한 ReasoningBank는 추상화된 전략을 찾아 기록하며 성공과 실패에서 얻은 주요 전략을 함께 기억해요.
 
-![Reasoning Bank](reasoningbank.png)
+![Reasoning Bank](reasoningbank.webp)
 
 Agent는 가장 유사한 k개의 기억을 가져와 프롬프트와 함께 입력해요. 이 프롬프트를 사용해 결정을 내리고, 결과에서 새로운 지식을 찾아 title, description, content 형식으로 정리해요. 이렇게 정리된 memory item은 새로운 기억으로 추가돼요.
 
@@ -51,7 +51,7 @@ Agent는 가장 유사한 k개의 기억을 가져와 프롬프트와 함께 입
 
 Tencent는 과거 경험이 학습된 token prior 역할을 해 파라미터 업데이트와 유사한 효과를 낸다고 주장해요. 기존 강화학습에서 사용하던 Group Relative Policy Optimization (GRPO) 개념을 가져와 파라미터 학습 없이 모델 성능을 개선했어요. 강화학습에서의 GRPO는 여러 출력을 생성하고 각 출력이 독립적인 reward를 받는 방식이에요. Training-Free GRPO는 이 아이디어를 가져와 각 출력의 성공/실패를 판단해 공통 원인을 요약하고 저장해요. Google의 Parallel Scaling과 같은 이야기를 하고 있어요.
 
-![GRPO](grpo.png)
+![GRPO](grpo.webp)
 
 GRPO는 reward를 이용해 그룹 내 상대적 advantage를 계산하고 PPO로 파라미터를 업데이트해요. Training-Free GRPO는 이 과정 대신 생성된 지식을 추가해 optimization을 수행해요. Add, Delete, Modify, Keep 연산 중 하나를 선택해 기억을 업데이트하는 방식이에요. 이 아이디어는 이전 *Long-term Memory*라는 이름으로 제안되었던 방법론을 응용한 것이에요.
 

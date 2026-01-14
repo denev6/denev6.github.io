@@ -10,7 +10,7 @@ img_path: /assets/posts/multimodal-dep/
 
 성균관대 우수학부생 프로그램을 통해 우울증 챗봇 개발에 참여하는 기회를 얻었다.
 
-![](chat-bot.png)
+![](chat-bot.webp)
 
 ## 논문 요약 (번역/ 정리)
 
@@ -37,14 +37,14 @@ img_path: /assets/posts/multimodal-dep/
 - TDCN은 긴 영상에서 시간(temporal) 정보를 효과적으로 추출해낸다. TDCN 내에는 두 개의 평행한 dilated convolution 모듈이 적용되어 우울증 탐지에 필요한 유용한 정보를 학습하도록 했다.
 - FWA 모듈은 TDCN branch로부터 학습된 정보를 융합하기 위해 설계했다. Attention 모듈은 더 중요한 정보를 강조해 ADD의 정확도를 높인다.
 
-![](tdcn-fwa.jpg)
+![](tdcn-fwa.webp)
 _Fig. 1_
 
 ### Temporal Dilated Convolution Network
 
 `TDCN`은 일반적으로 multi-layer로, 하나의 layer는 5개의 Dilated Convolutional Blocks(DCB)과 4개의 Max-Pooling layers로 구성된다. 각 TDCN 층의 DCB는 다른 범위의 지각 정보(perceptive ranges)를 탐색한다. 그리고 TDCN 파이프라인에서 Max-Pooling 층은 계속해서 특징의 크기(resolution)를 줄여나가며 중요 반응을 점진적으로 추출한다. 
 
-![](dcb.jpg)
+![](dcb.webp)
 _Fig. 2_
 
 `Fig 2`는 평행한 두 dilated convolution이 어떻게 구성되어 있는지 볼 수 있다. 
@@ -71,7 +71,7 @@ e^x-1 & \text{if } x<0
 
 ### Feature-Wise Attention
 
-![](fwa.jpg)
+![](fwa.webp)
 _Fig. 4_
 
 `FWA`는 다른 종류의 시각 정보를 효과적으로 합치기 위해 설계됐다. 먼저 다른 TDCN branch에서 학습된 특징을 직접적으로 연결(concatenate)해 $ X\in \mathbb{R}^{T\times kD} $를 도출한다. 여기서 $ D $는 특징의 차원, $ k $는 TDCN brach의 개수다. 본 연구에 $ k $는 2이다. 그 다음, global average pooling이 적용돼 특징별 벡터 $ s\in \mathbb{R}^{kD} $를 얻는다. global average pooling은 아래와 같이 정의된다. 
@@ -166,7 +166,7 @@ FWA를 제거한 모델, Max-Pooling 대신 Average-Pooling을 사용한 모델�
 
 논문에서 제안한 `TDCN`을 단순화한 모델을 목표로 했다. 
 
-![](model-structure.png)
+![](model-structure.webp)
 
 변경된 내용
 

@@ -4,7 +4,7 @@
   <id>https://denev6.github.io/</id>
   <title>Palette</title>
   <subtitle>AI를 다루는 개발자의 노트입니다.</subtitle>
-  <updated>2026-01-13T01:20:29+09:00</updated>
+  <updated>2026-01-14T17:19:01+09:00</updated>
   <author>
     <name>박성진</name>
     <uri>https://denev6.github.io/</uri>
@@ -20,11 +20,11 @@
 
   
   <entry>
-    <title>티스토리 캥거루 스킨 개발기</title>
-    <link href="https://denev6.github.io/posts/dev-roo/" rel="alternate" type="text/html" title="티스토리 캥거루 스킨 개발기" />
+    <title>심플함을 스킨에 녹여내기까지</title>
+    <link href="https://denev6.github.io/posts/dev-roo/" rel="alternate" type="text/html" title="심플함을 스킨에 녹여내기까지" />
     <published>2026-01-12T00:00:00+09:00</published>
   
-    <updated>2026-01-12T03:21:31+09:00</updated>
+    <updated>2026-01-12T00:00:00+09:00</updated>
   
     <id>https://denev6.github.io/posts/dev-roo/</id>
     <content type="text/html" src="https://denev6.github.io/posts/dev-roo/" />
@@ -34,7 +34,7 @@
 
   
     
-    <category term="Playground" />
+    <category term="Insight" />
     
   
 
@@ -48,7 +48,7 @@
     <link href="https://denev6.github.io/posts/eirene/" rel="alternate" type="text/html" title="임종 결정 지원을 위한 AI 챗봇 개발기" />
     <published>2026-01-10T00:00:00+09:00</published>
   
-    <updated>2026-01-10T00:00:00+09:00</updated>
+    <updated>2026-01-14T17:14:42+09:00</updated>
   
     <id>https://denev6.github.io/posts/eirene/</id>
     <content type="text/html" src="https://denev6.github.io/posts/eirene/" />
@@ -72,7 +72,7 @@
     <link href="https://denev6.github.io/posts/general-vla/" rel="alternate" type="text/html" title="Generalist Robot Policy 살펴보기" />
     <published>2025-12-27T00:00:00+09:00</published>
   
-    <updated>2025-12-27T00:00:00+09:00</updated>
+    <updated>2026-01-14T17:14:42+09:00</updated>
   
     <id>https://denev6.github.io/posts/general-vla/</id>
     <content type="text/html" src="https://denev6.github.io/posts/general-vla/" />
@@ -106,7 +106,7 @@
 
   
     
-    <category term="Playground" />
+    <category term="Insight" />
     
   
 
@@ -120,7 +120,7 @@
     <link href="https://denev6.github.io/posts/multimodal-trm/" rel="alternate" type="text/html" title="Multimodal Training with Tiny Reasoning" />
     <published>2025-12-20T00:00:00+09:00</published>
   
-    <updated>2025-12-20T00:00:00+09:00</updated>
+    <updated>2026-01-14T17:14:42+09:00</updated>
   
     <id>https://denev6.github.io/posts/multimodal-trm/</id>
     <content type="text/html" src="https://denev6.github.io/posts/multimodal-trm/" />
@@ -130,7 +130,7 @@
 
   
     
-    <category term="Article" />
+    <category term="Playground" />
     
   
 

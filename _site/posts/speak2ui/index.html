@@ -44,7 +44,7 @@
 <meta property="twitter:title" content="모바일 제어를 위한 음성 파이프라인 최적화" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-11-20T00:00:00+09:00","datePublished":"2025-11-20T00:00:00+09:00","description":"Github: Jin-A-Park/Speak2UI Demo: speak2ui_demo.mp4","headline":"모바일 제어를 위한 음성 파이프라인 최적화","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/speak2ui/"},"url":"https://denev6.github.io/posts/speak2ui/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-14T17:14:42+09:00","datePublished":"2025-11-20T00:00:00+09:00","description":"Github: Jin-A-Park/Speak2UI Demo: speak2ui_demo.mp4","headline":"모바일 제어를 위한 음성 파이프라인 최적화","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/speak2ui/"},"url":"https://denev6.github.io/posts/speak2ui/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -811,6 +811,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          업데이트
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1768378482"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2026/01/14
+</time>
+
+        </span>
+      
 
       
 
@@ -899,11 +922,11 @@
 
 <h2 id="왜-하필-음성인가요"><span class="me-2">왜 하필 음성인가요</span><a href="#왜-하필-음성인가요" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p><a href="/assets/posts/speak2ui/experiment.png" class="popup img-link shimmer"><img src="/assets/posts/speak2ui/experiment.png" alt="작은 버튼 예시" loading="lazy"></a></p>
+<p><a href="/assets/posts/speak2ui/experiment.webp" class="popup img-link shimmer"><img src="/assets/posts/speak2ui/experiment.webp" alt="작은 버튼 예시" loading="lazy"></a></p>
 
 <p>처음에는 시선 추적을 이용해 화면을 조작하려 했어요. 하지만 시선 추적의 정확도가 높지 않았고, 정확한 시선 추적이 된다 해도 모바일 상의 버튼이 너무 작아서 정밀한 조작이 어렵다고 판단했어요. 그래서 버튼의 물리적인 크기에 구애받지 않는 인터페이스가 필요했고, 결국 음성 명령에 도달했어요. 음성으로 조작하기 위해서는 화면 상에 상호작용 가능한 요소를 파싱하고, 사용자의 명령을 어떤 요소와 매핑할지 실시간으로 추론해야 했어요. 그래서 우리 팀은 tooltip과 LLM을 활용하기로 했죠.</p>
 
-<p><a href="/assets/posts/speak2ui/tooltips.png" class="popup img-link shimmer"><img src="/assets/posts/speak2ui/tooltips.png" alt="tooltip 예시" loading="lazy"></a></p>
+<p><a href="/assets/posts/speak2ui/tooltips.webp" class="popup img-link shimmer"><img src="/assets/posts/speak2ui/tooltips.webp" alt="tooltip 예시" loading="lazy"></a></p>
 
 <p>상호작용 가능한 요소를 정확히 매핑하기 위해 레이블이 명확하지 않은 요소는 실시간으로 숫자를 매기도록 했어요. 이 기능을 tooltip이라고 이름 붙였어요. 사용자 명령이 어떤 요소를 의도했는지 판단하는 데는 LLM의 추론 능력을 활용했어요. 자세한 구현은 논문(공개 예정)에서 확인할 수 있어요. 이 방식을 통해 버튼의 물리적인 크기에 제약받지 않으면서도 직관적인 인터페이스를 제공할 수 있답니다.</p>
 
@@ -911,7 +934,7 @@
 
 <p>제가 음성 처리 파이프라인 쪽으로 넘어갔을 때, VAD가 구현되어 있었지만 짧은 발화를 인식하는 데 10초가 걸렸어요. 처음에 의심했던 부분은 I/O로 인한 딜레이였어요. 사용자 발화를 메모리에 모두 저장했다가 발화가 종료되면 wav 파일로 저장되기 때문에, 메모리에서 디스크로 저장하는 과정에서 딜레이가 발생할 거라 생각했죠. 그래서 한 번에 wav로 저장하는 대신 실시간으로 디스크에 음성 정보를 밀어넣고, 입력이 끝나면 wav 포맷으로 재구성하는 방식을 이용해 I/O 딜레이를 해결했어요. 그림으로 표현하면 아래와 같아요.</p>
 
-<p><a href="/assets/posts/speak2ui/io-delay.png" class="popup img-link shimmer"><img src="/assets/posts/speak2ui/io-delay.png" alt="I/O delay 해결 방법" loading="lazy"></a></p>
+<p><a href="/assets/posts/speak2ui/io-delay.webp" class="popup img-link shimmer"><img src="/assets/posts/speak2ui/io-delay.webp" alt="I/O delay 해결 방법" loading="lazy"></a></p>
 
 <p>하지만 여전히 음성 처리에 10초가 걸렸어요. 문제를 디버깅해보니 VAD 자체에 문제가 있었어요. VAD는 특정 크기(db) 이상의 소리가 들리면 사용자가 발화를 시작했다고 판단해요. 그런데 소음을 판단하는 기준(threshold)이 낮게 설정되어 있으면 잡음까지 발화라고 인식하는 현상이 생겼어요. 추가로 시스템에서 발화의 최대 길이를 10초로 제한해뒀기 때문에 음성 인식에 항상 10초가 걸렸던 거예요. 해결 방법은 간단해요. 음성 인식을 받기 전 짧게 주변 소음 수준을 인식해 동적으로 임계값을 조절하면 돼요. 그럼 완벽하진 않지만 주변의 소음 수준을 지속적으로 반영할 수 있게 돼요. 이 방식을 적용했더니 10초가 걸리던 음성 인식을 1초대로 단축할 수 있었어요.</p>
 
@@ -1061,35 +1084,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/dev-roo/">티스토리 캥거루 스킨 개발기</a>
+          <a href="/posts/agent-human-comm/">RL Agent와 인간은 어떻게 협업해야 할까</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/eirene/">임종 결정 지원을 위한 AI 챗봇 개발기</a>
+          <a href="/posts/agent-memory/">Agent에게 오답노트를 시켜봤더니</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/general-vla/">Generalist Robot Policy 살펴보기</a>
+          <a href="/posts/hrm/">Less is more, Reasoning Model의 등장</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/memoir/">2025년 개발자의 연말결산</a>
+          <a href="/posts/agent-training/">멀티모달과 멀티에이전트 조합</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/multimodal-trm/">Multimodal Training with Tiny Reasoning</a>
+          <a href="/posts/speak2ui/">모바일 제어를 위한 음성 파이프라인 최적화</a>
         </li>
       
     </ul>
@@ -1725,18 +1748,6 @@
 
   
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   

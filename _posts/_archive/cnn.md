@@ -11,7 +11,7 @@ media_subpath: /assets/posts/cnn-mnist/
 
 결과: [Github: cnn](https://github.com/denev6/deep-learning-codes/blob/main/models/cnn.ipynb)
 
-![](cnn-model.png)
+![](cnn-model.webp)
 _CNN 모델 구조_
 
 ---
@@ -185,11 +185,11 @@ Pytorch에서는 `nn.Conv2d`라는 이름으로 Convolution 객체를 제공한�
 
 `in_channels`는 입력 이미지 차원을 의미한다. 일반적으로 흑백 이미지는 1, 색상(RGB) 이미지는 3이 된다. 
 
-![](rgb.png)
+![](rgb.webp)
 
 `out_channels`은 다음 은닉층으로 전달할 출력 크기이다. 
 
-![](channels.png)
+![](channels.webp)
 
 위 예시는 흑백 이미지를 입력으로 받으므로 `in_channels`는 1이며, 출력으로 4개의 `Feature map`이 만들어지므로 `out_channels`가 4인 예시다. Conv2d에서는 (out\_channels, in\_channels) 크기의 Kernel을 만들어 out\_channels개의 출력을 만들어낸다. ~~CNN을 만들기 위해 크기가 어떻게 변환되는지 반드시 이해해야 한다.~~
 
@@ -208,7 +208,7 @@ torch.nn.Conv2d(
 
 `dilation`은 Convolution 연산에서 Kernel의 간격을 조정할 때 사용한다. 
 
-![](dilation.png)
+![](dilation.webp)
 
 dilation 값을 늘리면, 이미지를 탐색할 때 Kernel 값들의 사이 간격이 커진다. 기본값은 1로 설정되어 여백 없는 Kernel 형태로 탐색된다. dilation이 2인 예시를 보면 (3 x 3) Kernel을 이용해 (5 x 5) Kernel이 커버하는 범위를 탐색하고 있다. Dilational Conv는 이미지를 넓은 범위로 탐색해야 하거나 큰 Kernel을 사용할 여유가 안 될 때 연산 효율을 높여준다. 
 
@@ -222,7 +222,7 @@ dilation 값을 늘리면, 이미지를 탐색할 때 Kernel 값들의 사이 �
 torch.nn.ReLU(inplace=False)
 ```
 
-![](relu.png)
+![](relu.webp)
 
 $$ReLU(x) = max(0, x)$$
 
@@ -326,7 +326,7 @@ torch.nn.MaxPool2d(
 
 `padding`이란 MaxPooling을 수행하기 전 가장자리에 0 값을 추가하는 과정을 뜻한다. Pytorch의 경우, 0 값을 채우는 `zero-padding`을 수행한다.
 
-![](padding.png)
+![](padding.webp)
 
 ---
 
@@ -340,7 +340,7 @@ torch.nn.Flatten(start_dim=1, end_dim=-1)
 
 `Flatten` Layer는 추출된 특징 값을 1차원의 데이터로 변환해준다.
 
-![](flatten.png)
+![](flatten.webp)
 
 Batch size를 고려하지 않았을 때, (32, 7, 7)의 크기를 가진 데이터를 (32 x 7 x 7 =)1568의 1차원 데이터로 변환해주는 식이다. 이렇게 변환된 데이터는 `Linear` Layer에 들어가 분류 문제를 해결하는 데 사용된다. 
 
@@ -353,7 +353,7 @@ torch.nn.Linear(in_features, out_features, bias=True)
 > 모델 출력값은 각 레이블일 확률(또는 logit) 값이다. 따라서 레이블이 6개인 분류 문제를 푼다면 출력도 6개여야 한다. 모델 내부에서 어떤 과정을 거쳤든 마지막 값은 레이블 개수가 되도록 조정해야 한다. Linear는 자유롭게 출력 크기를 조정할 수 있다. 따라서 마지막에 Linear를 붙여준다.
 {: .prompt-tip }
 
-![](linear.png)
+![](linear.webp)
 
 만약 모델의 출력 값이 6개이고 정답 레이블이 2개라면, `Linear(6, 2)`와 같은 형태로 사용되어 최종적으로 2개의 값을 반환하도록 조정한다. 
 
@@ -391,7 +391,7 @@ logits.argmax(dim=-1)
 
 MNIST 이미지 데이터는 (28 x 28) 크기의 2차원 이미지다. 0 ~ 9까지의 숫자 이미지를 가지고 있으므로 Label의 개수는 10개다. 
 
-![](cnn-model.png)
+![](cnn-model.webp)
 
 ```python
 class CNN(nn.Module):
@@ -468,7 +468,7 @@ Logits: -7.427, 8.698, 0.407, -4.990, -4.264, -3.783, -4.286, -3.159, -2.024, -4
   True:  1
 ```
 
-![](one.png)
+![](one.webp)
 
 ---
 

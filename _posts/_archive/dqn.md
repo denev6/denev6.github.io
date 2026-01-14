@@ -10,7 +10,7 @@ img_path: /assets/posts/dqn/
 
 ## 문제 정의
 
-![MDP](mdp.png)
+![MDP](mdp.webp)
 
 게임(Atari 2600)을 플레이하는 상황을 State, Action, Reward를 가진 MDP(Markov Decision Process) 상황으로 해석할 수 있다. 하지만 각 state가 복잡해서 state-action value를 정의하기 어렵다. 따라서 **Convolutional Network**을 사용해 state에서 특징을 추출하고, **Feed Forward Network**를 통해 state-action value를 예측한다.
 
@@ -42,7 +42,7 @@ $$Q(s,a;\theta) \approx Q^*(s,a)$$
 
 먼저 Correlated data란 상관관계가 높은 데이터를 뜻한다. 강화학습은 연속된 데이터를 받기 때문에 가까운 time-step의 정보는 비슷한 특성을 가질 확률이 높다.
 
-![correlation 예제](correlated.png)
+![correlation 예제](correlated.webp)
 
 예를 들어, Regression 문제를 푼다고 했을 때 가까운 데이터만 활용할 경우 편항이 발생한다. 반면 떨어진 정보를 이용하면 더 안정적으로 학습할 수 있다. 본 연구는 **Non-stationary distribution**을 이용해 문제를 해결했다.
 
@@ -54,7 +54,7 @@ $$Q(S,A)\leftarrow Q(S,A)+\alpha [\textrm{Target}-Q(S,A)]$$
 
 Q-learning에서 Target도 결국 Q-function을 사용하기 때문이다.
 
-![Non-stationary 예시](pig-carrot.png)
+![Non-stationary 예시](pig-carrot.webp)
 _Non-stationary Target_
 
 다시 말해 목표가 계속 움직이다는 의미고, 불안정한 학습을 하게 된다. 문제를 해결하기 위해 행동을 결정하는 Q-network와 학습을 위한 **Target network를 분리**했다. Target network는 고정해 사용하다가 일정 시간이 지나서야 업데이트한다.
@@ -80,7 +80,7 @@ $$y_i=\mathbb{E}[r+\gamma\max_{a'}Q(s',a';\theta_{i-1}^{-})\mid s,a]$$
 
 Experience replay는 agent의 경험 $e_t=(s_t,a_t,r_t,s_{t+1})$을 $D=e_1,...,e_N$에 저장한다. $y_i$를 구하기 위해 $D$로부터 랜덤하게 minibatch를 샘플링해 **replay memory**를 만든다.
 
-![전체 흐름](flow.png)
+![전체 흐름](flow.webp)
 
 이 방법은 여러 장점이 있다.
 
@@ -91,13 +91,13 @@ Experience replay는 agent의 경험 $e_t=(s_t,a_t,r_t,s_{t+1})$을 $D=e_1,...,e
 
 전체 과정을 정리하면 다음과 같다.
 
-![수도 코드](pseudo.png)
+![수도 코드](pseudo.webp)
 
 위 코드는 2013 논문에 실린 코드로, Target network를 따로 분리하고 있지 않다. 하지만 본 글에서 소개한 알고리즘은 $y_j$를 계산하는 과정에서 $Q(\phi_{i+1},a';\theta^{-})$를 사용한다는 차이가 있다.
 
 ## 전처리와 모델 구조
 
-![모델 구조](network.png)
+![모델 구조](network.webp)
 
 - 게임 플레이 화면은 210x160 크기에 128개 색상을 가지는 RGB 이미지다.
 - 110x84 크기, gray-scale 이미지로 변환한다.

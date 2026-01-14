@@ -37,3 +37,4 @@ NOTE
 /tmp.md
 .env
 style_guide/output/*
+.venv

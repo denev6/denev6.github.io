@@ -46,7 +46,7 @@ cv2.destroyAllWindows()
 >만약 Jupyter-notebook에서 imshow를 한다면 plt.imshow()를 이용하거나, Colab의 경우 cv2_imshow를 제공한다.
 {: .prompt-info }
 
-![](rgb-dog.png)
+![](rgb-dog.webp)
 _각각 BGR 채널의 모습이다._
 
 ### 흑백 이미지
@@ -58,7 +58,7 @@ img.shape
 # (669, 669) -> (가로, 세로)
 ```
 
-![](grey-dog.png)
+![](grey-dog.webp)
 
 직접 채널을 조작할 수도 있지만 `cvtColor`를 통해 간단하게 처리할 수 있다. 보다시피 흑백 이미지는 1개의 채널만 가진다.
 
@@ -100,7 +100,7 @@ cap.release()
 
 남아프리카에 있을 때 찍은 펭귄이다. 이 영상도 이미지들이 연속으로 이어져 있는 구조다.
 
-![](penguin-frames.png)
+![](penguin-frames.webp)
 _위 영상을 분리한 결과_
 
 따라서, 영상 처리는 이미지 처리와 동일하다. 이때 영상의 각 이미지를 `frame`이라고 한다. 
@@ -121,7 +121,7 @@ dlib의 `get_frontal_face_detector`는 `HOG(Histogram of Oriented Gradient)`+`SV
 
 `HOG`는 이미지의 `Gradient` 정보를 이용해 특정 사물/ 인물의 윤곽을 찾아내는 알고리즘이다.
 
-![](koala.png)
+![](koala.webp)
 _경계선과 물체의 색(밝기)이 다르다._
 
 우리는 사물의 경계를 인식할 때 밝기 또는 특정 색상 값의 차이를 이용한다. 위 그림의 경우, 코알라와 배경의 색상이 뚜렷하게 차이난다. 따라서 코알라가 어디있는지 알 수 있다. 이 원리를 이용하면 사람/ 사물의 경계를 찾을 수 있다.
@@ -130,7 +130,7 @@ _경계선과 물체의 색(밝기)이 다르다._
 
 색상 이미지는 `pixel` 단위로 구성되어 있고, 각 pixel은 0~255 사이의 값을 가진다. 이때 인접한 pixel과의 차이가 `Gradient`이다. 
 
-![](4x4.png)
+![](4x4.webp)
 
 `210` 값을 가진 pixel을 기준으로 계산해보자.
 
@@ -155,7 +155,7 @@ Gradient 방향을 기준으로 해당하는 `bin(histogram의 범위)`을 찾�
 
 4x4로 예시를 들면 아래와 같다.
 
-![](4x4-2.png)
+![](4x4-2.webp)
 
 첫 셀의 방향은 170이다. 따라서 160~180 구간에 해당한다. 이 셀은 30의 크기를 가지므로 160~180 구간에 30을 더한다. ...
 
@@ -170,7 +170,7 @@ Gradient 방향을 기준으로 해당하는 `bin(histogram의 범위)`을 찾�
 
 ```
 
-![](hist.png)
+![](hist.webp)
 
 계산된 히스토그램은 "어느 방향"으로 "얼마나 큰" 차이가 있는지 나타낸다. 
 
@@ -220,9 +220,9 @@ for face in faces:
 cv2.imshow(img)
 ```
 
-![](dlib-after.png)
+![](dlib-after.webp)
 
-![](dlib-cord.png)
+![](dlib-cord.webp)
 
 위 사진에서 보는 것과 같이 인식된 얼굴의 `top`, `bottom`, `left`, `right` 좌표를 가져올 수 있다.
 
@@ -250,7 +250,7 @@ for face in faces:
 cv2.imshow(img)
 ```
 
-![](dlib-blur.png)
+![](dlib-blur.webp)
 
 얼굴이 인식되면 얼굴을 `blur`한 후 화면에 보여주는 예시이다.
 
@@ -330,7 +330,7 @@ cv2.imshow(image)
 
 `mp.solutions.face_mesh.DrawingSpec`은 랜드마크 출력을 위한 객체다. `draw_landmarks`를 이용하면 이미지에 Face Mesh가 출력된다. 아래 사진을 참고하자.
 
-![facemesh](facemesh.png)
+![facemesh](facemesh.webp)
 
 ### FaceMesh 장단점
 

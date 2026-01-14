@@ -14,11 +14,11 @@ toc: true
 
 이후에도 챗봇을 이용해 여러 실험을 해봤지만 계속 모른다는 이야기만 반복됐어요.
 
-<img src="kingo.png" alt="학교 챗봇 예시" class="sharp" />
+<img src="kingo.webp" alt="학교 챗봇 예시" class="sharp" />
 
 그래서 그날 밤 혼자 만든 챗봇이 바로 이 프로젝트예요.
 
-![architecture](overview.png)
+![architecture](overview.webp)
 
 위쪽 파이프라인은 새로운 데이터를 수집하고 저장하는 과정이고, 아래쪽은 사용자가 공지를 검색하는 과정이에요.
 
@@ -76,7 +76,7 @@ FAISS에서 검색을 완료하면 공지 내용과 id(공지번호)를 반환�
 
 LLM은 가져온 정보를 요약해서 보여줘요. 물론 LLM 없이도 검색 시스템은 만들 수 있어요.
 
-<img src="compare-demo.png" alt="데모 비교" class="sharp" />
+<img src="compare-demo.webp" alt="데모 비교" class="sharp" />
 
 하지만 정보를 그대로 던져주는 것보다는 짧게 요약해서 보여주는 게 사용자 입장에서 더 편할 거예요. 그래서 Retriever가 물어온 정보를 LLM API를 이용해 요약해요. Version 1에서는 **GPT-3.5-turbo**를, Version 2는 **Claude3 Sonnet**을 사용했어요.
 

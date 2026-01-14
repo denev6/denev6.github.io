@@ -21,7 +21,7 @@ media_subpath: /assets/posts/dacon-2022/
 
 대부분 데이터는 20 단어 이내의 문장이고, 2~5개 단어로 구성된 문장도 포함돼 있었어요.
 
-![word count](word-count.png)
+![word count](word-count.webp)
 
 발화 문장은 특수 문자가 많이 포함된 구어체 문장인데요. didn't 같은 축약형에서 사용하는 apostrophe(')도 두 종류가 섞여 있는 등 불균일한 모습이에요. Aaaaaaawwwww나 Oh-oh-oh-oh-oh처럼 같은 패턴의 문자가 반복되는 경우도 볼 수 있어요.
 
@@ -78,7 +78,7 @@ media_subpath: /assets/posts/dacon-2022/
 
 [tae898/utils.py](https://github.com/tae898/erc/blob/main/utils/utils.py)에서 레이블을 확인할 수 있었고, 동일하게 학습하도록 `LabelEncoder`를 생성했어요.
 
-![labels](labels.png)
+![labels](labels.webp)
 
 ```python
 class LabelEncoder(object):
@@ -114,7 +114,7 @@ class LabelEncoder(object):
 - Classifier 층 (Linear~)만 학습
 - Classifier 층 대신 GRU 결합 후 학습
 
-![model](model.png)
+![model](model.webp)
 _모델 기본 구조_
 
 분류 모델은 `RoBERTa`+`Classifier` 형태를 가져요. 따라서 `RoBERTa`는 학습되지 않도록 하고, `Classifier` 가중치만 학습시켰어요. 학습된 모델과 해결하려는 문제가 동일하기 때문에 효과가 있을 수 있죠.
@@ -156,7 +156,7 @@ Batch size는 32가 가장 좋은 결과를 보였어요. Gradient Accumulation�
 
 모델 Accuracy는 0.76877, F1-macro는 0.66016가 나왔어요. test set에 대해서는 F1-macro가 0.56172로 대회 2위를 수상했답니다.
 
-![ranked in 2nd](award.png)
+![ranked in 2nd](award.webp)
 
 ## 느낀점
 

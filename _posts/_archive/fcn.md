@@ -11,11 +11,11 @@ img_path: /assets/posts/fcn/
 
 ## Image Segmentation
 
-![segmentation 픽셀](segmentation.png)
+![segmentation 픽셀](segmentation.webp)
 
 이미지 `segmentation`은 픽셀 단위로 객체 클래스를 분류하는 문제를 말한다. 이는 **각 픽셀마다 이미지 분류 문제를 푸는 것**과 같다. c개의 레이블이 있다면 배경(0)을 하나의 레이블로 두고 총 c+1개의 레이블로 분류하는 문제가 된다.
 
-![분류 문제 비교](classification-compare.png)
+![분류 문제 비교](classification-compare.webp)
 
 기존의 CNN classification 모델은 2차원 feature map을 1차원으로 압축해 결과를 출력한다. 만약 2차원 정보를 유지한 채로 분류를 진행한다면 어떨까? Linear 대신 **CNN을 이용해 2차원 공간 정보를 유지**할 수 있다. 이때 분류 결과로 나온 **2차원 레이블은 각 픽셀의 레이블**로 해석할 수 있다.
 
@@ -57,7 +57,7 @@ Upscaling은 **bilinear interpolation**과 **de-convolution**을 사용한다.
 
 CNN 모델은 초반에 넓은(global) 영역에 대해 특징을 추출한다. 레이어가 깊어질수록 좁은(local) 영역에 대한 특징을 추출하게 된다. **Skip connection은 넓은 영역의 특징과 좁은 영역의 특징을 결합**하는 과정이다.
 
-![skip connection 시각화](overview.png)
+![skip connection 시각화](overview.webp)
 
 레이어마다 feature map 크기가 다르기 때문에 upscaling(de-convolution)을 진행하며 크기를 맞춰간다. 크기가 같아진 두 행렬은 원소별 덧셈을 통해 더해진다. 마지막으로 계산된 행렬을 원본 이미지와 같은 크기로 키우면 segmentation map이 완성된다.
 
@@ -105,7 +105,7 @@ unique_classes = torch.unique(classes)
 
 출력을 확인해보면 dog(12)와 person(15)에 대해 강한 확신을 보인다. Segmentation 결과를 입력 이미지에 겹치면 직관적으로 이해할 수 있다.
 
-![segmentation 결과](segmentation-result.png)
+![segmentation 결과](segmentation-result.webp)
 
 - 좌측 이미지는 모델 출력에 `softmax` + `argmax`를 적용해 레이블만 시각화한 결과다.
 - 중앙 이미지는 좌측 label을 입력 이미지 위에 겹친 모습이다.

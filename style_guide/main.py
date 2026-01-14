@@ -120,11 +120,11 @@ def main(files: list[str], model="gpt=4o", do_rewrite=True, do_eval=False):
         token_cost = 0
         try:
             if do_rewrite:
-              _, rewrite_token_cost = rewrite_tone(file, model=model)
-              token_cost += rewrite_token_cost
+                _, rewrite_token_cost = rewrite_tone(file, model=model)
+                token_cost += rewrite_token_cost
             if do_eval:
-              _, eval_token_cost = evaluate_sentence(file, model=model)
-              token_cost += eval_token_cost
+                _, eval_token_cost = evaluate_sentence(file, model=model)
+                token_cost += eval_token_cost
             print(f"[{idx}] Saved '{remove_time_stamp(file)}' (${token_cost:.6f})")
             time.sleep(3)
 
@@ -138,10 +138,5 @@ if __name__ == "__main__":
     load_dotenv()
 
     # 예시: `files = ["_posts/playground/2025-12-24-memoir.md"]`
-    files = [
-        f"_posts/{f}.md"
-        for f in (
-            "playground/2026-01-12-dev-roo",
-        )
-    ]
+    files = [f"_posts/{f}.md" for f in ("playground/2026-01-12-dev-roo",)]
     main(files, model="gpt-4o", do_rewrite=True, do_eval=True)

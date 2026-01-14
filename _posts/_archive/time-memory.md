@@ -474,7 +474,7 @@ plt.ylabel("Memory (MiB)")
 plt.show()
 ```
 
-![](/assets/posts/others/memory-usage.png)
+![](/assets/posts/others/memory-usage.webp)
 
 ```
      event   내용

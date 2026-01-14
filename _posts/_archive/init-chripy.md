@@ -11,7 +11,7 @@ media_subpath: /assets/posts/init-chripy/
 
 지금 보고 있듯이 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy)은 정말 깔끔한 Jekyll 테마이다. 하지만 막상 시작하려니 계속 문제가 생겨서 5시간 정도를 허무하게 날렸다. 모드 변경도 안 되고 난리도 아니였다. 심지어 로컬 PC를 사용할 수 없는 상황이라 `Ruby`를 설치하고 build를 할 수 없어 더 골치 아팠다. 같은 문제를 겪지 않을 수 있게 과정을 기록해봤다.
 
-![](test-in-prod.png)
+![](test-in-prod.webp)
 
 > 처음 글을 작성할 당시는 군 복무 중이었기 때문에 Github 웹 에디터에서 글을 작성하고 바로 build, deploy하는 묘기를 선보였다. 하지만 현재(2025)는 로컬 환경에서 작업하고 있다. 따라서 글도 로컬 환경에서 확인 후 빌드하는 방법으로 수정하였다.
 {: .prompt-info }
@@ -22,11 +22,11 @@ media_subpath: /assets/posts/init-chripy/
 
 [Repo](https://github.com/denev6/denev6.github.io)로 가면 이 블로그가 돌아가고 있는 Repo(저장소)가 보인다.
 
-![fork](fork.png)
+![fork](fork.webp)
 
 여기서 상단의 `Fork`를 클릭하자. 그럼 해당 Repo가 자신의 Repo로 복사된다. 복사된 곳에서 본인의 블로그로 수정해 쓸 수 있다.
 
-![create repo](mk-repo.png)
+![create repo](mk-repo.webp)
 
 중간에 생략한 부분은 나중에 수정할 수 있으니 중요하지 않다. 중요한 건 딱 하나다.
 
@@ -39,7 +39,7 @@ media_subpath: /assets/posts/init-chripy/
 
 아직은 Repo만 복사된 상태이다. Github Pages를 해줘야 서버에 올릴 수 있다.
 
-![actions](actions.png)
+![actions](actions.webp)
 
 > Settings > Pages > Build and deployment > Source
 {: .prompt-info }
@@ -249,7 +249,7 @@ image:
 
 썸네일 이미지를 지정할 수 있다.
 
-![avatar](avatar100.png)
+![avatar](avatar100.webp)
 _아바타 이미지_
 
 ```markdown
@@ -260,30 +260,30 @@ _Caption_
 이미지 바로 밑에 `_캡션_`을 작성할 수 있다.
 
 ```markdown
-![alt](img.png){: w="700" h="400" }
+![alt](img.webp){: w="700" h="400" }
 ```
 
 이미지 크기를 지정할 수 있다.
 
 ```markdown
-![alt](img.png){: .normal }
-![alt](img.png){: .left }
-![alt](img.png){: .right }
+![alt](img.webp){: .normal }
+![alt](img.webp){: .left }
+![alt](img.webp){: .right }
 ```
 
 이미지를 정렬할 수 있다.
 
 ```markdown
-![Light mode only](/path/to/light-mode.png){: .light }
-![Dark mode only](/path/to/dark-mode.png){: .dark }
+![Light mode only](/path/to/light-mode.webp){: .light }
+![Dark mode only](/path/to/dark-mode.webp){: .dark }
 ```
 
 라이트모드와 다크모드에 이미지를 따로 적용할 수 있다.
 
-![avatar](avatar100.png){: .shadow }
+![avatar](avatar100.webp){: .shadow }
 
 ```markdown
-![alt](img.png){: .shadow }
+![alt](img.webp){: .shadow }
 ```
 
 이미지에 그림자 효과를 줄 수 있다. (다크모드에서는 티가 안 날 수도 있다.)

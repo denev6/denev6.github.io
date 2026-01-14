@@ -24,7 +24,7 @@ Attention mechanisms는 시퀀스 길이에 관계없이 의존성 모델링이 
 
 ## Model Architecture
 
-![overall architecture](fig1.png)
+![overall architecture](fig1.webp)
 _fig1_
 
 \*그림에서 좌측이 Encoder, 우측이 Decoder 구조다.
@@ -41,7 +41,7 @@ residual connection을 쉽게 처리하기 위해 embedding을 포함한 모든 
 
 ### Attention
 
-![attention 종류](fig2.png)
+![attention 종류](fig2.webp)
 _fig2_
 
 #### Scaled Dot-Product Attention
@@ -70,7 +70,7 @@ $W_i^Q,W_i^K,W_i^V$과 $W^O\in\mathbb{R}^{hd_v\times d_{model}}$는 project 될 
 
 Transformer는 multi-head attention을 3가지 방식으로 활용한다.
 
-![K, V, Q 위치](attention.png)
+![K, V, Q 위치](attention.webp)
 
 encoder-decoder attention 층에서 query는 이전 decoder에서 오고, key와 value는 encoder 출력에서 나온다. 따라서 decoder가 모든 입력 시퀀스 위치에 적용된다. 이는 seq2seq에서 전형적인 encoder-decoder attention 구조와 동일하다.
 
@@ -80,7 +80,7 @@ decoder도 마찬가지로 self-attention을 통해 모든 위치를 참조한�
 
 \*Transformer는 순차적으로 정보를 입력하는 encoder-decoder와 달리 모든 값을 한 번에 입력한다. 따라서 미래 정보를 확인할 수 있다. 예를 들어, "the song _Attention_ by _Newjeans_"라는 문장이 있다고 하자. Newjeans는 Attention 뒤에 위치한다. 따라서 시간 상 Attention → Newjeans 관계를 파악하는 것은 바람직하다. 하지만 Newjeans → Attention 순서로 맥락을 파악하는 것은 바람직하지 않은(illegal) 연결이다. 이러한 문제를 해결하기 위해 masking을 사용한다. masking 된 정보를 -∞로 설정하는 이유는 softmax를 거쳤을 때 0이 되도록 하기 위함이다.
 
-![masked matrix](masking.png)
+![masked matrix](masking.webp)
 
 ### Position-wise Feed-Forward Networks
 
@@ -106,13 +106,13 @@ $PE_{(pos,2i+1)}=cos(pos/10000^{2i/d_{model}})$
 
 **positional encoding 추가 설명**
 
-![positional encoding](pos.png)
+![positional encoding](pos.webp)
 
 말 그대로 embedding 된 단어에 위치 정보를 추가해 주는 역할이다. 위치를 표기하는 방법은 다양하다. 예를 들어 첫 번째 단어는 1 ... i번째 단어는 i로 나타낼 수 있다. 그런데 i 값이 너무 커지면 더했을 때 임베딩된 벡터와 관계없이 아주 큰 값이 된다. 임베딩 벡터는 단어 정보를 담고 있기 때문에 중요하다. 따라서 항상 -1 ~ 1 사이 범위를 가지는 sine, cosine 함수를 선택했다.
 
 하지만 sine, cosine은 일정한 주기를 가지기 때문에 i가 커지면 중복 값이 발생할 수 있다. 따라서 논문에서는 i마다 다른 주기를 가지도록 PE 함수를 정의했다. 물론 i 값이 매우 커지면 겹치는 경우가 발생할 수 있지만, 현재 연구에서는 i에 비해 주기가 충분히 크기 때문에 문제가 되지 않는다.
 
-![sine and cosine](sin-cos.png)
+![sine and cosine](sin-cos.webp)
 
 이를 통해 값이 너무 작거나 크지 않으면서 값이 중복되지 않도록 positional encoding을 수행했다.
 
@@ -122,14 +122,14 @@ self-attention을 사용한 이유는 크게 3가지이다.
 
 첫 번째는 **연산 복잡도**가 작다. 다른 하나는 연산을 **병렬로 처리**할 수 있다. 세 번째는 **장거리 의존성**(long-range dependencies)이다. 장거리 의존성을 가지는 학습에서 중요한 요인은 앞뒤로 정보를 주고받을 수 있는 경로의 거리다. 이 거리가 짧을수록 장거리 의존성을 학습하기 쉽다. 그래서 layer 종류에 따라 입력과 출력 간 경로 최대 길이를 비교했다.
 
-![](table1.png)
+![](table1.webp)
 _table1_
 
 표에서 볼 수 있듯이 self-attention은 상수 시간으로 모든 위치를 연결한다. 반면 recurrent 모델은 O(n)이 걸린다. 단일 convolution에서 kernel 크기 k가 n보다 작으면 모든 입출력 위치를 연결할 수 없다. 따라서 contigious kernel에 대해 $O(n/k)$개의 convolutional 층이 필요하고, dilated convolution에 대해 $O(\log_k(n))$가 들어 오히려 최대 길이가 증가한다. convolutional 층은 k 때문에 일반적으로 recurrent 층보다 비용이 많이 든다. seperable convolutional 층은 복잡도를 $O(knd+nd^2)$으로 매우 크게 줄여주지만 k = n이더라도 self-attetion + feed-forward layer와 동일하다.
 
 추가로 self-attention은 더 많은 해석 가능한(interpretable) 모델을 생산해 낼 수 있다. attention distribution을 살펴보면 아래 그림과 같다.
 
-![](fig5.png)
+![](fig5.webp)
 _fig5_
 
 다양한 문제를 잘 해결할 뿐만 아니라 문장 의미와 문법을 잘 나타낸다.
@@ -150,7 +150,7 @@ _fig5_
 
 $lrate=d^{-0.5}_{model}\cdot min(step\\_num^{-0.5},step\\_num\cdot warmup\\_steps^{-1.5})$
 
-![learning rate](lr.png)
+![learning rate](lr.webp)
 
 ### Regularization
 
@@ -168,7 +168,7 @@ WMT 2014 영어-프랑스어 번역 문제에서 big model은 **41.0 BLEU**로 �
 
 base model은 마지막 5개 체크 포인트의 평균으로 구했으며, 각 체크 포인트는 10분 간격으로 나왔다. big model은 마지막 20개 체크 포인트를 평균 내 사용했다. beam search를 사용했고 beam size는 4, length penalty $\alpha$는 0.6이다. 하이퍼파라미터는 validation set을 통해 나온 결과로 결정했다. inference에서 최대 출력 길이를 입력 길이 + 50으로 뒀지만, 가능한 빨리 끝내는 게 좋다.
 
-![](table2.png)
+![](table2.webp)
 _table2_
 
 위 표는 결과를 요약하며 번역 성능과 학습 비용을 비교한다. 학습 시간, 사용한 GPU 개수, GPU의 single-precision floating-point 성능을 고려해 floating point operations를 예측했다.
@@ -177,7 +177,7 @@ _table2_
 
 Transformer의 component 별 중요도를 평가하기 위해 base model을 다양하게 변형해 영어-독일어 번역 성능을 측정했다. 앞서 설명했듯 beam search를 사용했고, 대신 체크포인트를 평균 내는 방식은 사용하지 않았다. 결과는 아래 표에서 볼 수 있다.
 
-![](table3.png)
+![](table3.webp)
 _table3_
 
 Table3 (A) 열에서 attention head 개수, key-value 차원을 다르게 하되 연산 일관성을 유지했다. single-head attention은 0.9 BLEU로 성능이 하락했고, 너무 많은 head는 성능을 떨어뜨린다.

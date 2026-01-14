@@ -44,7 +44,7 @@
 <meta property="twitter:title" content="SVD를 이용한 이미지 압축" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-08T00:00:00+09:00","datePublished":"2025-01-08T00:00:00+09:00","description":"SVD, 즉 Singular Vector Decomposition에 대해 다뤄볼게요. 각 수식이 어떤 의미를 가지고 있으며, 이미지 압축에 어떻게 사용되는지 설명해요. 이 글을 이해하려면 아래 개념을 숙지해야 해요.","headline":"SVD를 이용한 이미지 압축","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/svd/"},"url":"https://denev6.github.io/posts/svd/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-14T17:14:42+09:00","datePublished":"2025-01-08T00:00:00+09:00","description":"SVD, 즉 Singular Vector Decomposition에 대해 다뤄볼게요. 각 수식이 어떤 의미를 가지고 있으며, 이미지 압축에 어떻게 사용되는지 설명해요. 이 글을 이해하려면 아래 개념을 숙지해야 해요.","headline":"SVD를 이용한 이미지 압축","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/svd/"},"url":"https://denev6.github.io/posts/svd/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1325,6 +1325,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          업데이트
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1768378482"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2026/01/14
+</time>
+
+        </span>
+      
 
       
 
@@ -1425,7 +1448,7 @@
 
 \[Av=\begin{bmatrix}2 &amp; 1 \\ 1 &amp; 3 \end{bmatrix}v\]
 
-<p><a href="/assets/posts/svd/eigen-2d.png" class="popup img-link shimmer"><img src="/assets/posts/svd/eigen-2d.png" alt="eigenvectors 시각화" loading="lazy"></a></p>
+<p><a href="/assets/posts/svd/eigen-2d.webp" class="popup img-link shimmer"><img src="/assets/posts/svd/eigen-2d.webp" alt="eigenvectors 시각화" loading="lazy"></a></p>
 
 <p>하지만 <strong>같은 방향을 유지하는 벡터</strong>도 존재해요. 이 벡터를 <strong>eigenvector</strong>라고 부르죠. 방향은 유지하고 있지만 크기는 바뀌었어요. 따라서 변형된 벡터를 $\lambda v$로 표현할 수 있어요. $\lambda$는 크기를 조절하는 scaling factor 역할을 해요. eigenvector의 크기를 결정하는 $\lambda$를 <strong>eigenvalue</strong>라고 해요.</p>
 
@@ -1455,7 +1478,7 @@
 
 <p>$V$는 각 열이 eigenvector인 행렬이에요. $\Sigma =diag(…eigenvalue)$로 eigenvalue를 담고 있는 diagonal matrix예요.</p>
 
-<p><a href="/assets/posts/svd/eigen-matrix.png" class="popup img-link shimmer"><img src="/assets/posts/svd/eigen-matrix.png" alt="eigen 행렬 시각화" loading="lazy"></a></p>
+<p><a href="/assets/posts/svd/eigen-matrix.webp" class="popup img-link shimmer"><img src="/assets/posts/svd/eigen-matrix.webp" alt="eigen 행렬 시각화" loading="lazy"></a></p>
 
 <p>다시 말해, <strong>행렬 A는 eigenvector와 eigenvalue로 분해(decompose)할 수 있고</strong>, 이 값들을 통해 재구성할 수 있어요. 이 개념이 이미지를 압축하고 재구성하는 과정에도 적용돼요. 하지만 eigendecomposition은 n x n의 square matrix에만 적용 가능해요. 따라서 eigenvector 대신 singular vector가 등장해요.</p>
 
@@ -1473,7 +1496,7 @@
 
 <p>이번에는 orthogonal matrix $V$와 선형 변환해도 여전히 orthogonal 한 $U$를 찾는 문제예요.</p>
 
-<p><a href="/assets/posts/svd/svd-plot.png" class="popup img-link shimmer"><img src="/assets/posts/svd/svd-plot.png" alt="singular vectors 시각화" loading="lazy"></a></p>
+<p><a href="/assets/posts/svd/svd-plot.webp" class="popup img-link shimmer"><img src="/assets/posts/svd/svd-plot.webp" alt="singular vectors 시각화" loading="lazy"></a></p>
 
 <p>식을 조금 더 정리해보면,</p>
 
@@ -1483,7 +1506,7 @@
 
 <p>글 초반에 소개했던 행렬의 특성을 이용해 정리한 식이에요. 위 식을 시각화하면 다음과 같아요.</p>
 
-<p><a href="/assets/posts/svd/svd-matrix.png" class="popup img-link shimmer"><img src="/assets/posts/svd/svd-matrix.png" alt="svd 행렬" loading="lazy"></a></p>
+<p><a href="/assets/posts/svd/svd-matrix.webp" class="popup img-link shimmer"><img src="/assets/posts/svd/svd-matrix.webp" alt="svd 행렬" loading="lazy"></a></p>
 
 <p>눈치챘다시피 $U$는 eigenvector와 동일해요. $\Sigma^T\Sigma$는 diagonal matrix로 eigenvalue와 같아요.</p>
 
@@ -1523,7 +1546,7 @@
 
 <p>서로 다른 자연수 m과 n에 대해, m x n 행렬에 SVD를 수행하면 버려지는 singular vector가 존재해요. 3 x 2 행렬을 살펴보세요.</p>
 
-<p><a href="/assets/posts/svd/svd-matrix-trunc.png" class="popup img-link shimmer"><img src="/assets/posts/svd/svd-matrix-trunc.png" alt="3x2 행렬 분해 과정" loading="lazy"></a></p>
+<p><a href="/assets/posts/svd/svd-matrix-trunc.webp" class="popup img-link shimmer"><img src="/assets/posts/svd/svd-matrix-trunc.webp" alt="3x2 행렬 분해 과정" loading="lazy"></a></p>
 
 <p>left singular vector인 $U$는 색칠된 3 x 2 행렬의 값만 연산에 사용해요. 따라서 3 x 3이 아닌 3 x 2 행렬만 저장하면 돼요. singular value인 $\Sigma$ 도 [0 0]을 저장하고 있는 행은 버려도 돼요.</p>
 
@@ -1553,15 +1576,15 @@
 
 <p>가로 500, 세로 600의 600 x 500 행렬에 대해 실험했어요.</p>
 
-<p><a href="/assets/posts/svd/img-composition-all.png" class="popup img-link shimmer"><img src="/assets/posts/svd/img-composition-all.png" alt="단계별 이미지 재구성" loading="lazy"></a></p>
+<p><a href="/assets/posts/svd/img-composition-all.webp" class="popup img-link shimmer"><img src="/assets/posts/svd/img-composition-all.webp" alt="단계별 이미지 재구성" loading="lazy"></a></p>
 
 <p>당연히 벡터를 많이 사용할수록 이미지가 선명해져요.</p>
 
-<p><a href="/assets/posts/svd/img-threshold.png" class="popup img-link shimmer"><img src="/assets/posts/svd/img-threshold.png" alt="singular values 시각화" loading="lazy"></a></p>
+<p><a href="/assets/posts/svd/img-threshold.webp" class="popup img-link shimmer"><img src="/assets/posts/svd/img-threshold.webp" alt="singular values 시각화" loading="lazy"></a></p>
 
 <p>singular value를 시각화해보면 n = 184에서 이미 singular value 총합의 80%를 넘어가요. 184 쌍의 singular vector만으로도 이미지 80%를 복원할 수 있죠.</p>
 
-<p><a href="/assets/posts/svd/img-composition-threshold.png" class="popup img-link shimmer"><img src="/assets/posts/svd/img-composition-threshold.png" alt="50%, 80% 이미지 재구성" loading="lazy"></a></p>
+<p><a href="/assets/posts/svd/img-composition-threshold.webp" class="popup img-link shimmer"><img src="/assets/posts/svd/img-composition-threshold.webp" alt="50%, 80% 이미지 재구성" loading="lazy"></a></p>
 
 <p>만약 600 x 500 행렬을 모두 사용하면 총 300,000개의 정보가 필요해요. 하지만, n = 200이라면 총 220,200개의 정보만 있으면 돼요.</p>
 
@@ -1735,11 +1758,11 @@
 
 <p>공분산 행렬을 구하기 전 원점을 중심으로 $X$를 이동시켜요. 그리고 공분산 행렬에 대해 SVD를 실행해요.</p>
 
-<p><a href="/assets/posts/svd/pca-component.png" class="popup img-link shimmer"><img src="/assets/posts/svd/pca-component.png" alt="공분산 행렬 singular vector 시각화" loading="lazy"></a></p>
+<p><a href="/assets/posts/svd/pca-component.webp" class="popup img-link shimmer"><img src="/assets/posts/svd/pca-component.webp" alt="공분산 행렬 singular vector 시각화" loading="lazy"></a></p>
 
 <p>공분산 행렬에 대한 Singular vector를 시각화한 그래프예요. 데이터의 중심축을 따라 vector가 만들어진 것을 확인할 수 있어요. Singular vector가 만드는 축을 <strong>Principle Component</strong>라고 불러요. 그림에서 빨간 색으로 표현된 Component 1이 가장 큰 singular value를 가져요. 동시에 데이터 정보를 가장 잘 표현한 축이에요. 따라서 3차원 데이터를 Component 1에 대해 매핑하면 차원 축소가 일어나죠.</p>
 
-<p><a href="/assets/posts/svd/pca-result.png" class="popup img-link shimmer"><img src="/assets/posts/svd/pca-result.png" alt="PCA 결과" loading="lazy"></a></p>
+<p><a href="/assets/posts/svd/pca-result.webp" class="popup img-link shimmer"><img src="/assets/posts/svd/pca-result.webp" alt="PCA 결과" loading="lazy"></a></p>
 
 <p>데이터의 주요한 분포를 유지한 채 차원만 축소시켰어요.</p>
 
@@ -1908,35 +1931,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/dev-roo/">티스토리 캥거루 스킨 개발기</a>
+          <a href="/posts/agent-human-comm/">RL Agent와 인간은 어떻게 협업해야 할까</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/eirene/">임종 결정 지원을 위한 AI 챗봇 개발기</a>
+          <a href="/posts/agent-memory/">Agent에게 오답노트를 시켜봤더니</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/general-vla/">Generalist Robot Policy 살펴보기</a>
+          <a href="/posts/hrm/">Less is more, Reasoning Model의 등장</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/memoir/">2025년 개발자의 연말결산</a>
+          <a href="/posts/agent-training/">멀티모달과 멀티에이전트 조합</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/multimodal-trm/">Multimodal Training with Tiny Reasoning</a>
+          <a href="/posts/speak2ui/">모바일 제어를 위한 음성 파이프라인 최적화</a>
         </li>
       
     </ul>
@@ -2511,30 +2534,6 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
   
 
@@ -2627,34 +2626,6 @@
         </article>
       
         <article class="col">
-          <a href="/posts/multimodal-trm/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1766156400"
-  data-df="YYYY/MM/DD"
-  
->
-  2025/12/20
-</time>
-
-              <h4 class="pt-0 my-2">Multimodal Training with Tiny Reasoning</h4>
-              <div class="text-muted">
-                <p>Github: Hateful-Meme   Multi-modal과 Reasoning  학기 중에 수업 기말 프로젝트로 컴퓨터비전 기술을 이용한 무언가를 만들어야 했어요. 하지만 거창한 비전 모델을 학습할 GPU가 없었고, 최근 논문으로만 접했던 ‘멀티모달’과 ‘reasoning’을 모두 구현하면서 GPU 자원을 적게 사용하는 과제를 찾다가 Faceboo...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
           <a href="/posts/agent-training/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -2677,6 +2648,34 @@
               <h4 class="pt-0 my-2">멀티모달과 멀티에이전트 조합</h4>
               <div class="text-muted">
                 <p>Agent의 변화와 정의     ReAct: Synergizing Reasoning and Acting in Language Models, 2023.    Counterfactual Multi-Agent Policy Gradients, 2024.   Agent는 전통적으로 policy를 가지고 자율적으로 판단하고 행동하는 모델을 말해요. 이는 강화학습...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/co-learning/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1758294000"
+  data-df="YYYY/MM/DD"
+  
+>
+  2025/09/20
+</time>
+
+              <h4 class="pt-0 my-2">Co-learning을 활용한 멀티모달 학습</h4>
+              <div class="text-muted">
+                <p>ViLBERT, SimCLR, CLIP, ImageBind 4가지 모델을 예시로, 이미지와 다른 모달리티 간 co-learning을 살펴봐요.  Co-learning  Multi-modal learning에서 co-learning은 한 모달리티를 학습하기 위해 다른 모달리티를 활용하는 방법이에요. 예를 들어, “강아지”라는 텍스트의 특성을 파악하기 위...</p>
               </div>
             </div>
           </a>

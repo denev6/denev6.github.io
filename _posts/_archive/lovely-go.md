@@ -6,12 +6,12 @@ category: Playground
 media_subpath: /assets/posts/lovely-go/
 ---
 
-![](toon1.png)
+![](toon1.webp)
 _@waterglasstoon_
 
 평소 `Python`으로 일상생활에 필요한 프로그램을 만들어 왔다. 하지만 실행 속도가 아쉽다 생각했고, 그 대안으로 `C++`, `Go`를 둘러보던 중 `Go`에 제대로 빠졌다.
 
-![](gopher.png)
+![](gopher.webp)
 
 우리의 귀여운 `Gopher`다. 마스코트는 어벙해보이지만 성능은 야무지다. 
 
@@ -52,7 +52,7 @@ Go는 미니멀한 삶을 추구한다.
 
 `Go`는 정적타입 언어다. 최근 `Typescript`에 대한 반발이 생기는 걸 보면 정적 타입이 장점인가에 대해서는 의견이 갈릴 듯하다.
 
-![Js에 불평하는 Ts](toon2.png)
+![Js에 불평하는 Ts](toon2.webp)
 _@waterglasstoon_
 
 하지만 타입이 의도하지 않은 방향으로 처리돼도 "어쩌라고?"를 시전하는 `Python`을 떠올려보자... 동적 타입핑은 데이터가 찢겨져도 아무 일 없다듯 해맑게 돌아간다. 그렇다고 매번 `assert`할 수는 없으니 서브 언어는 정적 타입 언어를 쓰기로 마음 먹었다.
@@ -79,7 +79,7 @@ func main() {
 
 `Garbage Collector`, GC가 자동적으로 메모리를 관리해 준다. GC로 인해 성능 저하가 발생할 수 있다. 그래도 메모리 누수가 발생하는 것보다는 낫다고 생각한다. 이 부분은 `C++`과 차별되는 점이다. 
 
-![C++: 메모리 줏어 병*아](toon3.jpeg)
+![C++: 메모리 줏어 병*아](toon3.webp)
 _@system32comics_
 
 GC 없이 `C++`은 좀 무섭다.

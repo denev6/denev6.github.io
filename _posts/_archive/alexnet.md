@@ -46,7 +46,7 @@ ImageNet은 22,000개 카테고리로 레이블된 1,500만개 고화질 이미�
 
 원본 데이터는 고화질 이미지이다. 하지만 본 연구는 크기를 256 x 256로 고정하고 down-sampling해 사용했다. 이미지의 짧은 쪽 길이를 256으로 두고, 중앙을 256 x 256 크기로 잘라냈다. 다른 전처리는 하지 않았기 때문에 RGB 픽셀 값을 그대로 사용했다고 할 수 있다.
 
-![전처리 예시](preprocess.png)
+![전처리 예시](preprocess.webp)
 
 ## The Architecture
 
@@ -61,7 +61,7 @@ saturating nonlinearity는 non-saturating nonlinearity에 비해 학습이 느�
 
 본 논문에서 nonlinearity는 Rectified Linear Units(ReLU)를 뜻한다.
 
-![nonlinearity 속도 비교](relu-tanh.png)
+![nonlinearity 속도 비교](relu-tanh.webp)
 
 CIFAR-10 데이터에서 ReLU(실선)는 tanh(점선)에 비해 약 6배 정도 빠르게 학습했다.
 
@@ -69,7 +69,7 @@ CIFAR-10 데이터에서 ReLU(실선)는 tanh(점선)에 비해 약 6배 정도 
 
 GTX 580 GPU는 3GB의 메모리 밖에 없기 때문에 데이터를 완전히 학습할 수 없었다. 따라서 2개의 GPU를 병렬로 처리했다. 각 GPU에 kernel을 절반 씩 나누었으며, 일부 layer에서만 두 GPU가 상호 작용한다.
 
-![병렬 GPU 구조](architecture.png)
+![병렬 GPU 구조](architecture.webp)
 
 1개의 GPU를 최대로 활용했을 때보다 성능이 좋았으며 학습 속도도 약간 더 빨랐다.
 
@@ -90,7 +90,7 @@ $$b^i_{x,y}=a^i_{x,y}/(k+\alpha \sum^{min(N-1,i+n/2)}_{j=max(0,i-n/2)}(a^j_{x,y}
 
 $N$은 전체 feature map 개수이며, $n$은 합산할 인접한 feature map 개수다.
 
-![정규화 예시](normalize.png)
+![정규화 예시](normalize.webp)
 
 위 예시는 $n=5$일 때, $a^j_{x,y}$를 선택하는 모습이다.
 
@@ -102,7 +102,7 @@ $z$ x $z$ 범위에 대해 stride $s$만큼 공간을 두고 pooling을 진행�
 
 우리는 $s=2$와 $z=3$으로 **overlapping pooling**을 진행했다. 이러한 방식은 약간의 overfitting 방지 효과가 있다.
 
-![overlapping pooling](pooling.png)
+![overlapping pooling](pooling.webp)
 
 ### Overall Architecture
 
@@ -157,7 +157,7 @@ AlexNet(
 
 첫 번째 방법은 **256 x 256 이미지에서 랜덤한 224 x 224 패치를 만들고 랜덤하게 가로 방향으로 뒤집는다.**
 
-![crop-and-flip](augmentation1.png)
+![crop-and-flip](augmentation1.webp)
 
 테스트 단계에서는 10개의 랜덤 변환(5개 랜덤 패치 + 가로 뒤집기)한 이미지를 넣고, softmax 출력을 평균내 사용했다.
 
@@ -169,7 +169,7 @@ $$[p_1,p_2,p_3][\alpha_1 \lambda_1,\alpha_2 \lambda_2,\alpha_3 \lambda_3]^T$$
 
 이렇게 계산된 값을 이미지 픽셀에 더한다.
 
-![2nd Augmentation](augmentation2.png)
+![2nd Augmentation](augmentation2.webp)
 
 시각적으로 큰 차이는 없어 보이지만, 코드로 비교했을 때 약간의 색상 차이를 보인다.
 
@@ -198,7 +198,7 @@ learning rate는 0.01로 초기화하고, validation error가 수렴하지 않�
 
 **모델을 거친 벡터 간 Euclidean 거리가 가깝다면, 두 이미지가 비슷하다고 할 수 있다.** 참고로 이미지 픽셀 간 L2 거리가 가까운 것은 아니다.
 
-![이미지 예시](distance.png)
+![이미지 예시](distance.webp)
 
 ```bash
 [1]Pomeranian - [2]Pomeranian: 63.81385

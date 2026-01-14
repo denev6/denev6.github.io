@@ -24,7 +24,7 @@ Agent 간의 협업은 '인간이 해석할 수 있는가'에 따라 두 가지�
 
 두 번째 예시인 communication vector를 활용한 소통은 Embodied agent 간의 협업이 있어요. 쉽게 말해 로봇 간의 협업이라고 생각할 수 있죠. 각 agent는 독립적으로 모델 출력을 계산하고, 출력된 vector를 서로 공유해요. 그런 다음, 공유된 vector와 본인이 출력한 vector를 고려해 행동을 선택해요 (아래 그림 참고). 이는 매우 효율적이고 실제로 잘 작동해요. 하지만 agent 간 어떤 메시지를 주고받았는지 인간이 이해할 수 없다는 문제가 있어요. 따라서 효율성과 이해 가능성 간의 trade-off가 존재한다고 할 수 있죠.
 
-![소통의 종류](communication-type.png)
+![소통의 종류](communication-type.webp)
 
 ## 이거 멀티모달 문제 아닌가?
 
@@ -55,7 +55,7 @@ $$\max_{\pi^i: \Omega \to A \times C} \mathbb{E} \left[ \sum_{t \in T} \sum_{i \
 
 ### 모델 구조
 
-![모델 구조](model-architecture.png)
+![모델 구조](model-architecture.webp)
 
 각 agent는 action과 communication vector를 출력해요. 여기서 probability gate는 communication vector를 다른 agent에게 공유할지 결정하는 역할을 하죠. 공유된 communication vector는 평균으로 계산되어 다른 agent에게 나눠지며, 각 agent는 자신의 출력과 공유된 출력을 고려해 action을 선택하게 돼요. 학습 효율성을 위해 Action policy와 Observation encoder는 같은 파라미터를 공유해요.
 
@@ -75,15 +75,15 @@ Loss function은 (1) $L_{RL}$: REINFORCE 알고리즘으로 gate function을 학
 
 Predator Prey와 Urban Search & Rescue(USAR) 두 가지 시뮬레이션 환경에서 MARL을 학습시켰어요.
 
-![임베딩 시각화](embedding-space.png)
+![임베딩 시각화](embedding-space.webp)
 
 t-SNE를 통해 차원 축소한 결과를 보면 비슷한 메시지는 가까운 공간에 위치하도록 학습된 것을 관찰할 수 있어요. 추가로 vector를 *"Moving down from [0; 3]"*과 같이 자연어로 변환 가능함을 확인했어요.
 
-![과제 성공률](sucess-rate.png)
+![과제 성공률](sucess-rate.webp)
 
 인간-agent 간의 소통뿐만 아니라 MARL 간의 소통도 잘 학습된 것을 볼 수 있어요. 소통이 없을 때(noComm)보다 소통 방식을 학습시켰을 때(LangGround) 과제 성공률이 유의미하게 높아졌어요.
 
-![팀워크 성적](teamwork.png)
+![팀워크 성적](teamwork.webp)
 
 인간과의 협업 가능성을 확인하기 위해 LLM에게 인간의 역할을 부여하고 팀워크 성능을 측정했어요. 과제를 성공하기까지 걸린 step을 측정했고 이는 낮을수록 효율적인 협업이 이루어졌음을 의미해요. Agent끼리 소통했을 때 또는 LLM끼리 소통했을 때 가장 좋은 성능을 보였어요. 이는 완전히 동일한 언어를 사용하는 그룹끼리의 소통이 더 효율적임을 의미하죠. 하지만 다른 언어를 사용한 그룹 중에서는 LangGround를 적용한 방식이 가장 뛰어난 성적을 보였어요.
 

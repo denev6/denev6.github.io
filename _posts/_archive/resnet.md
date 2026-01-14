@@ -23,7 +23,7 @@ vanishing/exploding gradient가 모델 수렴을 방해한다. 이는 normalized
 
 하지만 **degradation 문제**도 발생한다. 정확도가 낮아지지 않고 training error가 얕은 모델보다 크다.
 
-![error rate](layer-error.png)
+![error rate](layer-error.webp)
 
 본 연구는 **deep residual learning framework**로 degradation 문제를 해결했다.
 
@@ -31,7 +31,7 @@ vanishing/exploding gradient가 모델 수렴을 방해한다. 이는 normalized
 
 ### Residual Learning
 
-![residual learning](identity-map.png)
+![residual learning](identity-map.webp)
 
 - layer 입력을 $x$라고 가정
 - layer 출력을 $H(x)$라고 기대. (전체 모델이 아닌 layer 출력도 포함)
@@ -68,7 +68,7 @@ $$\mathrm{y} = \mathcal{F}(\mathrm{x}, \{ W_i \}) + W_s \mathrm{x}$$
 
 stride를 2로 두어 직접적인 down-sampling을 시도한다. 마지막에 global average pooling과 1000-way softmax를 적용한다.
 
-![ResNet architecture](architecture.png)
+![ResNet architecture](architecture.webp)
 
 `Residual Network`: 위에서 소개한 baseline을 기반으로 shortcut을 추가한다. 차원이 증가했을 때는 2가지 옵션 중 하나를 사용한다.
 
@@ -115,7 +115,7 @@ B는 A보다 약간 더 좋았다. 0으로 고정된 부분은 학습되지 않�
 
 학습 시간 단축을 위해 `Bottleneck 구조`를 사용했다.
 
-![3-layer bottleneck 구조](bottleneck.png)
+![3-layer bottleneck 구조](bottleneck.webp)
 
 첫 1x1 conv는 차원을 압축(또는 유지)하고, 마지막 1x1 conv는 차원을 복원한다. 이 구조에서 projection을 사용하면 모델 복잡도가 커진다. 따라서 identity shortcut이 더 효율적이다.
 
@@ -125,7 +125,7 @@ B는 A보다 약간 더 좋았다. 0으로 고정된 부분은 학습되지 않�
 
 모델 별 layer 출력의 표준편차를 비교했다.
 
-![signal-std](layer-std.png)
+![signal-std](layer-std.webp)
 
 출력은 3x3 conv + 정규화 결과로, 비선형 함수(ReLU)를 거치기 전이다. ResNet이 Plain 모델보다 작은 반응을 보였다. 이는 residual 함수가 0과 가까운 값($\mathcal{F}$)을 낼 것이라는 가정을 증명한다. 또 레이어가 많을수록 각 레이어는 큰 변화를 보이지 않았다.
 

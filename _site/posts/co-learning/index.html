@@ -44,7 +44,7 @@
 <meta property="twitter:title" content="Co-learning을 활용한 멀티모달 학습" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-20T00:00:00+09:00","datePublished":"2025-09-20T00:00:00+09:00","description":"ViLBERT, SimCLR, CLIP, ImageBind 4가지 모델을 예시로, 이미지와 다른 모달리티 간 co-learning을 살펴봐요.","headline":"Co-learning을 활용한 멀티모달 학습","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/co-learning/"},"url":"https://denev6.github.io/posts/co-learning/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-14T17:14:42+09:00","datePublished":"2025-09-20T00:00:00+09:00","description":"ViLBERT, SimCLR, CLIP, ImageBind 4가지 모델을 예시로, 이미지와 다른 모달리티 간 co-learning을 살펴봐요.","headline":"Co-learning을 활용한 멀티모달 학습","mainEntityOfPage":{"@type":"WebPage","@id":"https://denev6.github.io/posts/co-learning/"},"url":"https://denev6.github.io/posts/co-learning/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1358,6 +1358,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          업데이트
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1768378482"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2026/01/14
+</time>
+
+        </span>
+      
 
       
 
@@ -1448,21 +1471,21 @@
   <p>ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks</p>
 </blockquote>
 
-<p><a href="/assets/posts/co-learning/vilbert-overview.png" class="popup img-link shimmer"><img src="/assets/posts/co-learning/vilbert-overview.png" alt="ViLBERT" loading="lazy"></a></p>
+<p><a href="/assets/posts/co-learning/vilbert-overview.webp" class="popup img-link shimmer"><img src="/assets/posts/co-learning/vilbert-overview.webp" alt="ViLBERT" loading="lazy"></a></p>
 
 <p>기본적으로 <code class="language-plaintext highlighter-rouge">BERT</code> 구조를 사용해 특징을 추출해요. 각 모달리티의 데이터를 embed한 후 <code class="language-plaintext highlighter-rouge">co-attention</code>을 통해 모달리티 간 정보를 상호 학습해요.</p>
 
-<p><a href="/assets/posts/co-learning/co-attention.png" class="popup img-link shimmer"><img src="/assets/posts/co-learning/co-attention.png" alt="co-attention" loading="lazy"></a></p>
+<p><a href="/assets/posts/co-learning/co-attention.webp" class="popup img-link shimmer"><img src="/assets/posts/co-learning/co-attention.webp" alt="co-attention" loading="lazy"></a></p>
 
 <p><code class="language-plaintext highlighter-rouge">co-attention</code>에서는 자신의 모달리티를 Query로, 다른 모달리티를 Key-Value로 사용해요. 예를 들어 Visual block은 강아지 이미지를 Query로 사용하고, Key와 Value로 <em>“A pile of sleeping puppies”</em>라는 문장을 사용해요. 이렇게 이미지 query와 문장 key의 관계를 파악해 서로 어떤 정보가 연결되어 있는지 학습해요. 마지막으로 value로 들어온 문장 <em>“A pile of sleeping puppies”</em>의 각 토큰이 이미지의 어떤 부분과 얼마나 관련 있는지 매핑해요.</p>
 
-<p><a href="/assets/posts/co-learning/attention-result.png" class="popup img-link shimmer"><img src="/assets/posts/co-learning/attention-result.png" alt="attention" loading="lazy"></a></p>
+<p><a href="/assets/posts/co-learning/attention-result.webp" class="popup img-link shimmer"><img src="/assets/posts/co-learning/attention-result.webp" alt="attention" loading="lazy"></a></p>
 
 <h3 id="언어-모델-학습"><span class="me-2">언어 모델 학습</span><a href="#언어-모델-학습" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p>BERT와 마찬가지로 단어를 토큰 단위로 임베딩하며, <code class="language-plaintext highlighter-rouge">&lt;SEP&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;MASK&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;CLS&gt;</code>와 같은 특수 토큰을 사용해요. Attention block 전에 positional encoding을 통해 위치 정보를 주입해요. 단순히 단어 토큰 간 관계를 파악하는 것이 목적이지만, 이 경우 명확한 ground-truth 레이블을 매기기 힘들어요. 그래서 BERT에서 했던 것과 마찬가지로 2개의 과제를 만들어 학습에 사용해요.</p>
 
-<p><a href="/assets/posts/co-learning/language-learning.png" class="popup img-link shimmer"><img src="/assets/posts/co-learning/language-learning.png" alt="language learning" loading="lazy"></a></p>
+<p><a href="/assets/posts/co-learning/language-learning.webp" class="popup img-link shimmer"><img src="/assets/posts/co-learning/language-learning.webp" alt="language learning" loading="lazy"></a></p>
 
 <p>Masked Language Modeling에서는 랜덤하게 15% 정도의 토큰을 마스킹해요. 이 중 80%는 <code class="language-plaintext highlighter-rouge">&lt;MASK&gt;</code>로 대체되고, 10%는 랜덤한 단어로 대체되며, 10%는 그대로 유지돼요. 마지막에 유지되는 10%의 토큰은 원본과 동일하지만 예측 대상에 포함돼요. 모델은 문장 중간에 비어있는 단어를 예측하거나 올바른지 확인하면서 문맥 이해 능력을 학습해요. 구체적으로, 마지막 hidden layer의 출력을 정답 레이블과 비교해 가중치를 학습해요.</p>
 
@@ -1470,13 +1493,13 @@
 
 <h3 id="시각-정보-학습"><span class="me-2">시각 정보 학습</span><a href="#시각-정보-학습" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="/assets/posts/co-learning/image-embed.png" class="popup img-link shimmer"><img src="/assets/posts/co-learning/image-embed.png" alt="image embeddings" loading="lazy"></a></p>
+<p><a href="/assets/posts/co-learning/image-embed.webp" class="popup img-link shimmer"><img src="/assets/posts/co-learning/image-embed.webp" alt="image embeddings" loading="lazy"></a></p>
 
 <p>먼저 Faster R-CNN을 이용해 이미지 내의 object bounding box를 추출하고 이 정보를 이미지 feature vector와 spatial(positional) encoding 정보로 사용해요. Spatial encoding은 bounding box의 top-left 좌표(2개), bottom-right 좌표(2개), 객체 영역이 전체에서 차지하는 비율(1개)로 구성된 5D 벡터를 가지게 돼요. Faster R-CNN의 내부에서 추출된 feature vector와 spatial encoding을 합쳐 최종적으로 image embedding을 출력해요. 참고로 이미지의 시작은 <code class="language-plaintext highlighter-rouge">&lt;IMG&gt;</code> 토큰을 사용해요.</p>
 
 <p>Multimodal learning도 마찬가지로 masked learning과 alignment prediction 문제를 풀며 학습해요.</p>
 
-<p><a href="/assets/posts/co-learning/visual-learning.png" class="popup img-link shimmer"><img src="/assets/posts/co-learning/visual-learning.png" alt="visual learning" loading="lazy"></a></p>
+<p><a href="/assets/posts/co-learning/visual-learning.webp" class="popup img-link shimmer"><img src="/assets/posts/co-learning/visual-learning.webp" alt="visual learning" loading="lazy"></a></p>
 
 <p>Masked Learning에서는 마스킹할 이미지 토큰 15%를 정하고, 이 중 90%은 0(zero)으로 처리하고 10%는 그대로 둬요. 이렇게 예측된 마스킹 이미지 토큰의 확률 분포는 Faster R-CNN의 분포를 정답으로 간주하고 KL divergence로 학습해요. 예를 들어, ViLBERT가 1번 이미지 패치를 { 80% 강아지, 12% 토끼, … }로 예측했고, Faster R-CNN이 { 93% 강아지, 3% 늑대 … }로 예측했다면 Faster R-CNN의 확률 분포에 가까워지도록 ViLBERT의 가중치를 조정해요.</p>
 
@@ -1484,7 +1507,7 @@
 
 <h3 id="모델-응용"><span class="me-2">모델 응용</span><a href="#모델-응용" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="/assets/posts/co-learning/vilbert-task.png" class="popup img-link shimmer"><img src="/assets/posts/co-learning/vilbert-task.png" alt="vilbert examples" loading="lazy"></a></p>
+<p><a href="/assets/posts/co-learning/vilbert-task.webp" class="popup img-link shimmer"><img src="/assets/posts/co-learning/vilbert-task.webp" alt="vilbert examples" loading="lazy"></a></p>
 
 <p>ViLBERT는 두 모달리티의 관계를 학습하고, 이미지와 텍스트를 모두 이해하는 가중치를 학습하는 것이 목표예요. 이렇게 학습된 베이스 모델은 여러 downstream task를 풀기 위해 fine-tune할 수 있어요.</p>
 
@@ -1494,7 +1517,7 @@
   <p>A Simple Framework for Contrastive Learning of Visual Representations</p>
 </blockquote>
 
-<p><a href="/assets/posts/co-learning/contrastive-overview.png" class="popup img-link shimmer"><img src="/assets/posts/co-learning/contrastive-overview.png" alt="contrastive learning" loading="lazy"></a></p>
+<p><a href="/assets/posts/co-learning/contrastive-overview.webp" class="popup img-link shimmer"><img src="/assets/posts/co-learning/contrastive-overview.webp" alt="contrastive learning" loading="lazy"></a></p>
 
 <p>Contrastive Learning은 positive pair는 가깝게, negative pair는 멀리 위치하도록 데이터를 정렬하는 기법이에요. 다시 말해, 연관 있는 데이터는 유사도를 높게, 반대는 유사도를 낮게 계산하도록 데이터를 학습해요.</p>
 
@@ -1528,7 +1551,7 @@
   <p>CLIP: Learning Transferable Visual Models From Natural Language Supervision</p>
 </blockquote>
 
-<p><a href="/assets/posts/co-learning/clip.png" class="popup img-link shimmer"><img src="/assets/posts/co-learning/clip.png" alt="CLIP" loading="lazy"></a></p>
+<p><a href="/assets/posts/co-learning/clip.webp" class="popup img-link shimmer"><img src="/assets/posts/co-learning/clip.webp" alt="CLIP" loading="lazy"></a></p>
 
 <p>Contrastive Learning을 사용하는 가장 대표적인 예시가 CLIP이에요. 하나의 batch는 $N$개의 (image, text) pair로 구성돼요. 위에서 살펴본 Contrastive Loss를 이용해 이미지와 텍스트 임베딩 유사도가 높아지는 방향으로 이미지 인코더와 텍스트 인코더를 학습해요. 동시에 $N^2 - N$개의 negative pair와의 유사도는 작아지도록 학습해요.</p>
 
@@ -1542,7 +1565,7 @@
 
 <p>Imagebind는 contrastive loss를 이용해 이미지와 텍스트, 오디오, depth(깊이), thermal(온도) 등을 align해요.</p>
 
-<p><a href="/assets/posts/co-learning/imagebind-overview.png" class="popup img-link shimmer"><img src="/assets/posts/co-learning/imagebind-overview.png" alt="ImageBind" loading="lazy"></a></p>
+<p><a href="/assets/posts/co-learning/imagebind-overview.webp" class="popup img-link shimmer"><img src="/assets/posts/co-learning/imagebind-overview.webp" alt="ImageBind" loading="lazy"></a></p>
 
 <p>이미지-텍스트, 이미지-오디오와 같이 이미지를 중심으로 다른 모달리티와의 관계를 학습해요. 이때는 InfoNCE loss라는 조금 다른 형태를 사용해요.</p>
 
@@ -1691,35 +1714,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/dev-roo/">티스토리 캥거루 스킨 개발기</a>
+          <a href="/posts/agent-human-comm/">RL Agent와 인간은 어떻게 협업해야 할까</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/eirene/">임종 결정 지원을 위한 AI 챗봇 개발기</a>
+          <a href="/posts/agent-memory/">Agent에게 오답노트를 시켜봤더니</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/general-vla/">Generalist Robot Policy 살펴보기</a>
+          <a href="/posts/hrm/">Less is more, Reasoning Model의 등장</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/memoir/">2025년 개발자의 연말결산</a>
+          <a href="/posts/agent-training/">멀티모달과 멀티에이전트 조합</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/multimodal-trm/">Multimodal Training with Tiny Reasoning</a>
+          <a href="/posts/speak2ui/">모바일 제어를 위한 음성 파이프라인 최적화</a>
         </li>
       
     </ul>

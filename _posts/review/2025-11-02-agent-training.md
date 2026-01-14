@@ -27,7 +27,7 @@ Agent의 성능이 좋아지면서 여러 agent를 이용해 성능을 높이는
 
 Multi-modal은 여러 모달리티를 각 encoder가 분석한 뒤 fusion을 통해 하나의 출력을 만드는 구조를 가집니다. 이는 각 agent가 경험을 통해 판단한 뒤 협업을 통해 공통된 과제를 수행하는 모습과 닮아있어요. 이 글에서는 '감정 분석' 문제를 예시로 multi-modal & multi-agent 문제를 어떻게 푸는지 소개할게요.
 
-![Co-SA 구조](co-sa.png)
+![Co-SA 구조](co-sa.webp)
 
 아이디어는 간단해요. 영상에서 감정을 분석하기 위해 각 모달리티의 특징과 감정 정보를 인코딩한 후, policy를 통해 각 모달리티 정보를 얼마나 반영할지 판단해 최종 출력을 만드는 구조예요. 더 자세히 보면, SAE 단계에서 각 agent는 2개의 인코더를 통해 모달리티의 특징과 감정 정보를 추출해요. SAC 단계에서는 추출된 특징을 하나의 공통된 표현으로 변환해 어떤 정보가 상대적으로 더 중요한지 판단하죠. 마지막으로 downstream task를 풀고 최종 출력을 생성해요.
 
@@ -90,15 +90,15 @@ $$f=(f_v\times w_v)*(f_a\times w_a)*(f_t\times w_t)$$
 
 ### 결과
 
-![IEMOCAP 평가](result.png)
+![IEMOCAP 평가](result.webp)
 
 학습한 데이터 중 IEMCOCAP를 평가한 표예요. 본 논문에서 제안한 Co-SA가 모든 항목에서 좋은 성능을 보였어요.
 
-![Feature space](features.png)
+![Feature space](features.webp)
 
 Feature가 학습된 공간을 보면 각 모달리티 별로 잘 분리되어 학습된 것을 확인할 수 있어요. 같은 모달리티 내에서도 모달리티 특징과 감정 특징을 따로 학습했답니다.
 
-![dpsr loss 효과](dpsr.png)
+![dpsr loss 효과](dpsr.webp)
 
 $L_{dpsr}$은 프레임 간 다른 감정 정보를 학습하게 해 시간에 따른 감정 변화를 파악해요. 그래프는 프레임 간 유사도가 작게 학습된 것을 보여주고 있어요. 이를 통해 프레임의 특징적인 정보를 추출했다고 해석할 수 있어요.
 
