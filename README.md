@@ -19,20 +19,24 @@ img_path: /assets/posts/DIR/
 
 tags: `NLP`, `Vision`, `Multimodal`, `RL`, `HCI`, `Agent`, `Application`, `Python`, `Golang`, `Journey`
 
-## Build
+## Tools
+
+### Build
 
 ```sh
-bundle exec jekyll serve
-bundle exec jekyll b -d "_site" --incremental
+sh tools/build.sh
 ```
 
-## Tools
+### Serve
+
+```sh
+sh tools/serve.sh
+```
+
+### Utils
 
 ```sh
 uv run style_guide/main.py
-```
-
-```sh
 uv run tools/img_to_webp.py assets/posts
 uv run tools/md_to_webp.py _posts
 ```

@@ -4,11 +4,6 @@
 @use "main";
 
 /* append your custom style below */
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-}
-
 #post-list .card .card-body .card-title,
 main h1,
 main h2,
@@ -39,4 +34,9 @@ a.sharp > img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   image-rendering: pixelated;
+}
+
+/* Hide the date of update */
+.post-meta span:nth-of-type(2) {
+  display: none;
 }
