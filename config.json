@@ -1,0 +1,71 @@
+{
+  "theme": "theme-dark-neutral",
+  "language": "en",
+  "profile": {
+    "name": "Sung-jin Park",
+    "affiliation": "BS @ SKKU",
+    "email": "sungjin.code@gmail.com",
+    "socialLinks": [
+      {
+        "type": "linkedin",
+        "value": "denev6"
+      },
+      {
+        "type": "github",
+        "value": "denev6"
+      }
+    ],
+    "avatar": "",
+    "bio": "Hi there, I'm Sung-jin Park! 👋\nYou can call me _Jin_.\nThese days, I'm diving deep into Multimodal LLMs and Agentic Systems. I love exchanging ideas across disciplines — always open to connecting with people from diverse backgrounds."
+  },
+  "news": [
+    {
+      "date": "26-04",
+      "text": "Joined EXAMPLE Lab @ SKKU!"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Rico: Build your own research homepage",
+      "authors": "Someone, *Sungjin Park*, Corresponding",
+      "venue": "Proceeding of the example conference, 2026.",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://example.com"
+        },
+        {
+          "label": "Github",
+          "url": "https://example.com"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Rico",
+      "duration": "26.04 - 27.09",
+      "members": "Personal",
+      "description": "Build and deploy a static page for researchers."
+    },
+    {
+      "title": "Dev-roo",
+      "duration": "24.03 - 29.03",
+      "members": "Personal",
+      "description": "https://github.com/denev6/tistory-skin"
+    }
+  ],
+  "custom": [
+    {
+      "mainTitle": "Education",
+      "items": [
+        {
+          "title": "Sungkyunkwan University",
+          "detail": "College of Computing and Informatics",
+          "body": ""
+        }
+      ]
+    }
+  ],
+  "ricoVersion": "v1"
+}
