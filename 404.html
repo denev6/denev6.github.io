@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>페이지 이동 중...</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background-color: #fefefe;
+        color: #333;
+      }
+      .container {
+        text-align: center;
+        padding: 20px;
+      }
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <script>
+      // 현재 경로, 쿼리 스트링, 해시를 모두 유지하여 새 도메인으로 전송
+      const subPath =
+        window.location.pathname +
+        window.location.search +
+        window.location.hash;
+      const targetUrl = "https://sungjin-code.github.io" + subPath;
+
+      // 리다이렉션 실행
+      window.location.replace(targetUrl);
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <p>새로운 주소로 이동 중입니다.</p>
+      <p>
+        자동으로 이동하지 않으면
+        <a id="fallback-link" href="https://sungjin-code.github.io">여기</a>를
+        클릭하세요.
+      </p>
+    </div>
+    <script>
+      // 폴백 링크 업데이트
+      document.getElementById("fallback-link").href = targetUrl;
+    </script>
+  </body>
+</html>
