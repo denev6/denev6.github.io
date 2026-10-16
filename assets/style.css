@@ -7,9 +7,6 @@
   --text-heading: #111111;
   --text-muted: #666666;
   --border-color: #eeeeee;
-  --navbar-bg: #ffffff;
-  --navbar-text: #666666;
-  --navbar-hover: #0a66c2;
   --placeholder-bg: #e8e8e8;
   --footer-bg: #1a1a1a;
   --footer-text: #818181;
@@ -48,42 +45,9 @@ b { font-weight: 600; }
   box-shadow: 0 1px 3px var(--shadow-color);
 }
 .navbar-brand { min-width: 0; max-width: 60%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-/* 메뉴 글자는 단어 중간에서 끊지 않는다 (body의 overflow-wrap: anywhere가 좁은 칸에서 "Abou/t"처럼 쪼개던 문제) */
-.navbar .nav-link { white-space: nowrap; overflow-wrap: normal; }
-.navbar-brand, .navbar .nav-link {
+.navbar-brand {
   color: var(--text-heading) !important;
   font-weight: 600;
-}
-.navbar .nav-link:hover, .navbar .nav-link.active {
-  color: var(--navbar-hover) !important;
-}
-.navbar-toggler { 
-  border: none !important; 
-  padding: 0.25rem !important; 
-  outline: none !important; 
-  box-shadow: none !important;
-}
-.navbar-toggler i {
-  color: var(--navbar-text) !important;
-  font-size: 1.4rem;
-  display: block;
-}
-@media (min-width: 768px) {
-  .navbar-nav { 
-    flex-direction: row !important; 
-    flex-wrap: nowrap !important; 
-    align-items: center;
-  }
-  .nav-item {
-    display: flex !important;
-    align-items: center;
-  }
-  .nav-item + .nav-item::before {
-    content: "|";
-    margin: 0 0.25rem;
-    color: var(--navbar-text);
-    opacity: 0.3;
-  }
 }
 
 /* ── Layout ── */
